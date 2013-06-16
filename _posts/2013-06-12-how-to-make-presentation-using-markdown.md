@@ -1,12 +1,14 @@
 ---
 layout: post
-title: How to make presentation using markdown
+title: "How to make presentation using markdown"
+description: "本文介绍如何使用Markdown编写报告。"
+category: Research
 tags:
-- Research
 - Markdown
 - Ubuntu
 ---
 {% include JB/setup %}
+
 How to make presentation using markdown  
 如何使用markdown做报告
 
