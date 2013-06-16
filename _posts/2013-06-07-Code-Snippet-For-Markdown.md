@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  How to blog using markdown efficiently
+title:  "How to blog using markdown efficiently"
+description: "本文介绍如何高效的使用markdown文件来编写blog。"
 tags:
-- Technique
 - Markdown
 ---
 
 如何高效得使用markdown编辑blog
 
+
+Markdown文件因为其plain text特性，被很多人青睐。诸如我们之前说的，可以用它来做报告，写PPT。参见[如何使用markdown做报告](http://anotherbug.com/blog/2013/06/12/how-to-make-presentation-using-markdown/)。 今天我们介绍如何高效得使用markdown编辑博客。
 
 ### 1. Insert colored text 
 > `<p style="color: #ff0000;">这是一段红色的文字</p>`
