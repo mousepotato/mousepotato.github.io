@@ -41,9 +41,9 @@ tags:
 
 我的blog主要关注3个方面：
 
-- Java EE and Web开发技术；
+- Java EE and Web;
 
-- Web2.0 和软件应用；  
+- 开发技术Web2.0 和软件应用;
 
 - 个人生活，工作，音乐休闲等。  
 
