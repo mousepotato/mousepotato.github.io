@@ -6,6 +6,7 @@ category: Technique
 tags:
 - Markdown
 ---
+{% include JB/setup %}
 
 如何高效得使用markdown编辑blog
 
