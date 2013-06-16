@@ -1,0 +1,63 @@
+---
+layout: post
+title: "开始与结束"
+description "首先很高兴的向大家宣布我的博客从今天开始诞生了，一直就有写博客的打算，也曾在大大小小的空间注册了很多blog，但是一向都懒得打理。09年了这次算是一个新的开始，我也要学着勤奋点。"
+category: Life
+tags:
+- Life
+---
+{% include JB/setup %}
+
+首先很高兴的向大家宣布我的博客从今天开始诞生了，一直就有写博客的打算，也曾在大大小小的空间注册了很多blog，但是一向都懒得打理。09年了这次算是一个新的开始，我也要学着勤奋点。
+
+
+同时也通过博客记录下今天。结束了长达半年的CRL Intern经历。可能这也是我打算开始写博客的原因吧。现在没什么事情了。除了做学校的一个项目。可以抽出时间来研究一些技术，同时也可以好好放松一下。我也时刻的要告诉自己好好体验生活吧，虽然现在有太多的压力，前途问题和工作。
+
+
+既然题目叫开始和结束，那就总结下吧：
+
+##1.结束
+
+半年的CRL 实习经历宣告一个段落。最近三天一直在整理工作交接的事情，看着以前写的代码，做的项目，好像离我很远了。期间survey了很多的东东。Cognos BI报表的制作，Java XML， SOAP操作。 ExtJs实现的报表在线制作的portal（像iGoogle那种可以拖动的div的状态保存比较有挑战性），后面的Cognos SDK搞的我也很头大。可能搞这方面的人本来就不多吧。
+
+
+实习感受：
+
+A.工作环境很好，软件和硬件资源也很丰富，分配的任务不是特别的紧，但是有时候会比较开放一点，需要发挥自己的设计和创造。在摸索中开发。（可能各个Team不是特别一样）；  
+
+B.技术只是实现的手段，是Ajax（ExtJs）还是Flex，是JfreeChart还是Cognos。有时候不是特别重要。但是你可能要考虑效率，用户感受，软件和开发工具的Licence（这个国内的一些公司可能不会考虑的吧。）；  
+
+C.注重方法论，解决问题的思路；  
+
+
+D.待遇很好，工资不错，还很想念每天下午泡的绿茶。  
+
+
+
+<a href="/assets/uploads/2009/04/ph20090403144634.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="PH20090403144634" src="/assets/uploads/2009/04/ph20090403144634-thumb.jpg" border="0" alt="PH20090403144634" width="192" height="250" /></a> <a href="/assets/uploads/2009/04/ph20090403144708.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="PH20090403144708" src="/assets/uploads/2009/04/ph20090403144708-thumb.jpg" border="0" alt="PH20090403144708" width="188" height="248" /></a>
+
+
+
+我所在的lab每天泡茶的杯子，捐给IBM了^_^！  
+
+
+
+##2.开始
+
+我的blog主要关注3个方面：
+
+- Java EE&amp;Web开发技术；
+- Web2.0和软件应用；
+- 个人生活，工作，音乐休闲等。
+
+
+这个博客从打算到建立起来花了2天的时间。（主要是上班时间！！）主要情况如下：
+
+1. 主机空间和域名主要使用国外的godaddy服务提供商。<a href="http://www.godaddy.com" target="_blank">在这里</a>，选择的是基于Linux主机的<strong>Economy Plan，</strong>购买了一年的服务. 当购买了主机空间在挑选域名只需$1.99，此外还可以使用优惠代码，能够优惠20%，具体操作和介绍参考了：Godday美国主机推荐，<a href="http://godaddy.idcspy.com/" target="_blank">在这里</a>。用visa信用卡支付整个过程很顺利。总共$47.09。选择国外Godday主机主要是基于稳定和服务，以及鉴于前段时间国内互联网备案的风波。
+
+
+2. 安装blog，Godday会提供一下开源的比较通用的CMS活着blog系统，WordPress, Drupal等。我选择了WordPress2.7,这个是广大blogger用的最多了。插件丰富，主题充足。很好很强大。
+
+3. 管理，主题安装。具体上网搜索相关资料。WordPress中文教程.pdf,wordpress主题制作教程.pdf。这里大家可以直接在Google中输入：<span style="color: #ff00ff;"><a href="http://www.google.cn/search?hl=zh-CN&amp;newwindow=1&amp;ei=_mHWSeOuF82JkQWH-uHNBA&amp;sa=X&amp;oi=spell&amp;resnum=1&amp;ct=result&amp;cd=1&amp;q=filetype%3Apdf+WordPress%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B&amp;spell=1" target="_blank">filetype:pdf WordPress中文教程</a></span>，可以下载参考。 Blogger的书写工具有离线的和在线的。在线的WP的后台也很不错。离线的推荐Windows Live Writer，也是我在用的。可以实现WUSIWUG。
+
+4. 更新，主要是个人博客和技术积累分享所用。尽量勤快点吧！
