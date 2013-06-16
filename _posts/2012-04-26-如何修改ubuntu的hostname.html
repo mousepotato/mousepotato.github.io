@@ -1,0 +1,13 @@
+---
+layout: post
+title: 如何修改Ubuntu的hostname
+tags:
+- Technique
+- Ubuntu
+status: publish
+type: post
+published: true
+meta:
+  views: '775'
+---
+<h5>&#160;</h5>  <ul>   <li>     <p>直接 hostname newname。但是重启后失效</p>   </li>    <li>     <p>首先修改 sudo vi /etc/hostname</p>   </li>    <li>     <p>然后修改 sudo vi /etc/hosts 127.0.0.1 newname</p>   </li>    <li>     <p>重启生效</p>   </li> </ul>

@@ -1,0 +1,128 @@
+---
+layout: post
+title: MySQL 指南
+tags:
+- MySQL
+- Technique
+status: publish
+type: post
+published: true
+meta:
+  views: '780'
+---
+<h3><font color="#0000ff">一、查看MySQL的一些信息</font></h3> <p><font color="#9b00d3"><u>1. 看版本号</u></font></p> <p><u><font color="#9b00d3"></font></u>&nbsp;</p><pre class="prettyprint">mysql&gt; select version();
++------------------------------+
+| version()                    |
++------------------------------+
+| 5.0.45-Debian_1ubuntu3.3-log | 
++------------------------------+
+1 row in set (0.00 sec)</pre><pre class="prettyprint">&nbsp;</pre><pre class="prettyprint"><u><font color="#9b00d3" face="微软雅黑">2. 看当前时间</font></u></pre><pre class="prettyprint">&nbsp;</pre><pre class="prettyprint">mysql&gt; select now();
++---------------------+
+| now()               |
++---------------------+
+| 2008-08-01 16:01:06 | 
++---------------------+
+1 row in et (0.00 sec)s</pre><pre class="prettyprint">&nbsp;</pre><pre class="prettyprint"><font color="#9b00d3" face="微软雅黑"><u>3. 查看用户和当前时间</u></font>&nbsp;</pre><pre class="prettyprint">&nbsp;</pre><pre class="prettyprint">mysql&gt; select user(),current_date;
++----------------+--------------+
+| user()         | current_date |
++----------------+--------------+
+| root@localhost | 2008-08-01   | 
++----------------+--------------+
+1 row in set (0.00 sec)</pre>
+<p><font face="Courier New"></font>&nbsp;</p>
+<p><font face="Courier New"></font>&nbsp;</p>
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* blog_header_menu_link_468&#42;15 */
+google_ad_slot = "5788462734";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+<p><font face="Courier New"></font>&nbsp;</p>
+<p>查看用户和当前时间，注意多条命令可以在一行中输入哦。中间用逗号隔开就可以了。当你输入来一条命令但是又不想再次执行它的时候可以使用：<pre class="prettyprint">&nbsp;</pre><pre class="prettyprint">mysql&gt; select user() \c
+mysql&gt; </pre>
+<p><u><font color="#9b00d3">4. 查看现有的数据库并连接</font></u></p>
+<p><u><font color="#9b00d3"></font></u>&nbsp;</p><pre class="prettyprint">SELECT DATABASE();</pre><pre class="prettyprint">mysql -u root -p000 doffice;&lt;<font face="微软雅黑">注意p和密码之间不能有任何间隔</font>&gt;</pre><pre class="prettyprint">&nbsp;</pre><pre class="prettyprint">&nbsp;</pre>
+<h3><font color="#0000ff">二、常见查询命令</font></h3>
+<p>找出最贵物品的编号、销售商和价格：</p>
+<p>&nbsp;</p><pre class="prettyprint">SELECT article, dealer, price
+
+FROM   shop
+
+WHERE  price=(SELECT MAX(price) FROM shop);</pre>
+<p>&nbsp;</p>
+<p>或者按价格降序排序所有行并用MySQL特定LIMIT子句只得到第一行：</p>
+<p><font face="Courier New"></font>&nbsp;</p><pre class="prettyprint">SELECT article, dealer, price
+
+FROM shop
+
+ORDER BY price DESC
+
+LIMIT 1;</pre>
+<p>&nbsp;</p>
+<p>注:如果有多项最贵的物品( 例如每个的价格为19.95)，LIMIT解决方案仅仅显示其中一个！ 
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* Text/Image_300&#42;250 */
+google_ad_slot = "3868186516";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+<p>&nbsp; <p>&nbsp; <p>&nbsp; <h3><font color="#0000ff">三、定义存储过程</font></h3>
+<p><u><font color="#9b00d3">1. 存储过程定义：</font></u></p>
+<blockquote>
+<p>&nbsp;</p>
+<p>将常用的或很复杂的工作，预先用SQL语句写好并用一个指定的名称存储起来, 那么以后要叫数据库提供与已定义好的存储过程的功能相同的服务时,只需调用execute,即可自动完成命令。</p></blockquote>
+<p>&nbsp;</p>
+<p><font color="#9b00d3"><u>2. 存储过程的优点：</u></font></p>
+<p>&nbsp;</p>
+<p>a) 存储过程只在创造时进行编译，以后每次执行存储过程都不需再重新编译，而一般SQL语句每执行一次就编译一次,所以使用存储过程可提高数据库执行速度。</p>
+<p>&nbsp;</p>
+<p>b) 当对数据库进行复杂操作时(如对多个表进行Update,Insert,Query,Delete时），可将此复杂操作用存储过程封装起来与数据库提供的事务处理结合一起使用。</p>
+<p>&nbsp;</p>
+<p>c) 存储过程可以重复使用,可减少数据库开发人员的工作量。</p>
+<p>&nbsp;</p>
+<p>d) 安全性高,可设定只有某此用户才具有对指定存储过程的使用权。</p>
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* blog_header_menu_link_468&#42;15 */
+google_ad_slot = "5788462734";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><u><font color="#9b00d3">3. 如何定义存储过程：</font></u></p>
+<p>&nbsp;</p><pre class="prettyprint">Create procedure procedue_name
+
+   [@parameter data_type][output]
+
+   [with]{recompile|encryption}
+
+   as
+
+        sql_statement</pre>
+<p>&nbsp;</p>
+<p>解释：</p>
+<p>output：表示此参数是可传回的<br>with {recompile|encryption}<br>recompile:表示每次执行此存储过程时都重新编译一次<br>encryption:所创建的存储过程的内容会被加密 
+<p>&nbsp; <p>如:<br>&nbsp;&nbsp; 表book的内容如下<br>&nbsp;&nbsp; 编号&nbsp;&nbsp;&nbsp; 书名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 价格<br>&nbsp;&nbsp; 001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C语言入门&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $30<br>&nbsp;&nbsp; 002&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PowerBuilder报表开发&nbsp; $52</p>
+<p><br>实例1:查询表Book的内容的存储过程</p>
+<p>&nbsp;</p><pre class="prettyprint">create proc query_book
+
+      as
+
+      select * from book
+
+   go
+
+   exec query_book</pre>
+<p>&nbsp;</p>
+<h3><font color="#0000ff">四、MySQL 存储过程基本函数</font></h3>
+<p>分为字符串类，数学类，时间类等。</p>

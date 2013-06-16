@@ -1,0 +1,13 @@
+---
+layout: post
+title: VirtualBox如何使用NAT 的port forwarding
+tags:
+- Technique
+- VirtualBox
+status: publish
+type: post
+published: true
+meta:
+  views: '688'
+---
+<blockquote>   <p>VBoxManage modifyvm &quot;NameNode&quot; --natpf1 &quot;guestssh,tcp,,2222,,22&quot;</p> </blockquote>  <p>&#160;</p>  <p>“NameNode”就是Guest系统的名字，guestssh还是用户自定义的名字。你可能发现第三个参数和第五个参数空白了，是什么意思呢？当Host系统有多块网卡的时候，通过第三个参数指定那款网卡的2222端口映射；如果Host系统有多块网卡时，通过第五个参数指定那个网卡的22端口接收数据。VBoxManage.exe文件在你的windows下C:\Program Files\Oracle\VirtualBox 路径</p>  <p>&#160;</p>  <p>&#160;</p>  <p>然后 ssh -l -p 2222 localhost</p>

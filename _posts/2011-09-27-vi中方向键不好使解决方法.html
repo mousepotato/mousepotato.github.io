@@ -1,0 +1,26 @@
+---
+layout: post
+title: vi中方向键不好使解决方法
+tags:
+- putty
+- Technique
+- Vim 
+status: publish
+type: post
+published: true
+meta:
+  views: '1050'
+---
+<p>在用Putty访问Ubuntu系统时，vi编辑器里面的方向键有可能打出ABCD字母。解决方法是：</p> <p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* anotherbug.com_blog_rightbelow_200&#42;200 */
+google_ad_slot = "5513493463";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p> <p>1、putty中设置： Terminal—&gt;Features—&gt;勾选 Disable application cursor keys mode</p> <p><a href="/assets/uploads/2011/09/putty.jpg"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="putty" border="0" alt="putty" src="/assets/uploads/2011/09/putty_thumb.jpg" width="328" height="314"></a></p> <p>2、Ubuntu中配置：</p> <p>打开跟目录下的 ~/.vimrc 文件：  <p>写入：</p><pre class="prettyprint">set nocp
+
+set backspace=2
+</pre>
+<p>保存退出。

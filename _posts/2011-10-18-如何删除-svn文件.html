@@ -1,0 +1,121 @@
+---
+layout: post
+title: 如何删除.svn文件
+tags:
+- SVN
+- Technique
+status: publish
+type: post
+published: true
+meta:
+  views: '906'
+---
+<h3><font color="#0000ff">一、在linux下</font></h3> <p>删除这些目录是很简单的，命令如下<br><pre class="prettyprint"><font color="#ff0000">find . -type d -name ".svn"|xargs rm -rf</font></pre>
+<p>或者</p><pre class="prettyprint"><font color="#ff0000">find . -type d -iname ".svn" -exec rm -rf {} \;</font>  
+</pre>
+<p>&nbsp;</p>
+<h3><strong><font color="#0000ff">二、在windows下</font></strong></h3>
+<p>1、在项目平级的目录，执行dos命令：<br><pre class="prettyprint"><font color="#ff0000">xcopy project_dir project_dir_1 /s /i</font></pre>
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* blog_header_menu_link_468&#42;15 */
+google_ad_slot = "5788462734";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>
+<p>2、或者在项目根目录执行以下dos命令<br></p><pre class="prettyprint"><font color="#ff0000">for /r . %%a in (.) do @if exist "%%a\.svn" rd /s /q "%%a\.svn"</font></pre><pre class="prettyprint"><font face="微软雅黑">其实第二种方法可以用来干很多事的，比如把代码中的.svn替换为任意其他文件名并</font></pre><pre class="prettyprint"><font face="微软雅黑">在硬盘根目录下执行，就可以从硬盘上删除所有的这个文件啦。</font></pre><pre class="prettyprint"><font face="微软雅黑"></font>&nbsp;</pre><pre class="prettyprint"><font face="微软雅黑">3、加注册表</font></pre>
+<p><a href="http://weblogs.asp.net/jgalloway/default.aspx">Jon Galloway</a>提供了一段注册表代码，可以将”Delete SVN Folders”命名增加到资源管理器的右键上，这样，鼠标点两下就能把选中目录下的所有.svn目录干掉了。Works just great!
+<p>代码为：<pre class="prettyprint">Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN]@=”Delete </pre><pre class="prettyprint">SVN Folders“
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\DeleteSVN\command]@=</pre><pre class="prettyprint">”cmd.exe /c \”TITLE Removing SVN Folders in %1 &amp;&amp; COLOR 9A &amp;&amp; FOR /r </pre><pre class="prettyprint">\”%1\” %%f IN (.svn) DO RD /s /q \”%%f\” \”“</pre>
+
+<p>&nbsp; <p>将这段代码保存为一个.reg文件，双击确认导入注册表即可。<pre class="prettyprint"><font face="微软雅黑"></font>&nbsp;</pre><font face="微软雅黑"></font>
+<h3><font color="#0000ff">三、在类unix系统上可以使用如下shell脚本</font></h3>
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* blog_header_menu_link_468&#42;15 */
+google_ad_slot = "5788462734";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p><pre class="prettyprint">#!/bin/sh
+echo "recursively removing .svn folders from"
+pwd
+rm -rf `find . -type d -name .svn`</pre>
+
+<h3><font color="#0000ff">四、运用 </font></h3>
+<p>对于一个svn管理的项目，可以把如下代码保存脚本，放在项目的根目录下：</p><pre class="prettyprint">#!/bin/sh
+unset backup
+backup=0
+unset remove
+remove=0
+printf 'Do you want to back up the current folder? (y/n/q): '
+    read yn
+
+ case $yn in
+      y | Y)
+        backup=1
+        ;;
+      n | N)
+ continue
+        ;;
+      q | Q)
+        exit 1
+        ;;
+ *)
+        echo ""
+        echo "Please enter 'y', 'n', or 'q'."
+        ;;
+    esac
+
+## backup
+
+if [ backup ];then
+ SUFFIX=_bak
+ CWD=${PWD##*/}
+ mkdir ../$CWD$SUFFIX
+ cp -rf * ../$CWD$SUFFIX
+ echo done!
+fi
+
+printf 'Do you want to clean the svn hidden folders? (y/n/q): '
+    read yn
+ case $yn in
+      y | Y)
+        remove=1
+        ;;
+      n | N)
+ continue
+        ;;
+      q | Q)
+        exit 1
+        ;;
+ *)
+        echo ""
+        echo "Please enter 'y', 'n', or 'q'."
+        ;;
+    esac
+
+if [ remove ];then
+ echo ""
+ echo "recursively removing .svn folders from"
+ pwd
+ rm -rf `find . -type d -name .svn`
+ echo ""
+ echo done!
+fi
+
+</pre>
+
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* Text/Image_300&#42;250 */
+google_ad_slot = "3868186516";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>

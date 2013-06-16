@@ -1,0 +1,43 @@
+---
+layout: post
+title: Javascript 中的getYear()在firefox中的显示问题
+tags:
+- Javascript
+- Technique
+status: publish
+type: post
+published: true
+meta:
+  views: '853'
+---
+<p>今天在写javascript时候用到了Date object,调用了getYear()方法，在IE下面测试是2006，在firefox下面却成了106。 原因就是 javascript 的兼容性问题<br> <p><pre class="prettyprint">var today = new date();
+var year = today.getYear();</pre>
+
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* blog_header_menu_link_468&#42;15 */
+google_ad_slot = "5788462734";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p><br></p>
+<p>&nbsp;</p>
+<p>在 Firefox 里面 getYear 返回的是 "当前年份-1900" 的值 (以前都如此)<br>而微软很NB的做了一个改动：当today的年份大于等于2000的时候 直接把1900加上了 返回的 200X (而不是10X)<br></p>
+<p>如：today年份是1999 返回99<br>&nbsp;&nbsp;&nbsp; today年份是2000 返回2000</p>
+<p>&nbsp; <p>一个简单的解决是加一个判断：</p><pre class="prettyprint">year = (year&lt;1900?(1900+year):year);</pre>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>也有另外的方法通过 getFullYear getUTCFullYear 去调用<br>var year = today.getFullYear();在IE,FireFox都适用。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* anotherbug.com_blog_rightbelow_200&#42;200 */
+google_ad_slot = "5513493463";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p>

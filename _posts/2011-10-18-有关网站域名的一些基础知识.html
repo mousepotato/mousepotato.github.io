@@ -1,0 +1,46 @@
+---
+layout: post
+title: 有关网站域名的一些基础知识
+tags:
+- computer
+- Technique
+status: publish
+type: post
+published: true
+meta:
+  views: '542'
+---
+<blockquote> <h3 align="justify"><font color="#0000ff"><b>1、A (Address) </b><b>记录</b></font></h3> <p align="justify">是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的web server上。同时也可以设置您域名的二级域名。 <p align="justify">&nbsp; <p align="justify"><b></b> <h3 align="justify"><font color="#0000ff"><b>2、别名记录</b><b>(CNAME)</b> (<b>Canonical Name</b>)记录</font></h3> <p align="justify">也被称为规范名字。这种记录允许您将多个名字映射到同一台计算机。 通常用于同时提供WWW和MAIL服务的计算机。 <p align="justify">例如，有一台计算机名为“host.mydomain.com”（A记录）。 它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名（CNAME）：WWW和MAIL。 这两个别名的全称就是“www.mydomain.com”和“mail.mydomain.com”。实际上他们都指向“host.mydomain.com”。 同样的方法可以用于当您拥有多个域名需要指向同一服务器IP，此时您就可以将一个域名做A记录指向服务器IP然后将其他的域名做别名到之前做A记录的域名上，那么当您的服务器IP地址变更时您就可以不必麻烦的一个一个域名更改指向了 只需要更改做A记录的那个域名其他做别名的那些域名的指向也将自动更改到新的IP地址上了。 <p align="justify"><b></b>&nbsp; <h3 align="justify"><font color="#0000ff"><b>3、MX</b><b>（</b><b>Mail Exchanger</b><b>）记录</b></font></h3> <p align="justify">是邮件交换记录，它指向一个邮件服务器，用于电子邮件系统发邮件时根据 收信人的地址后缀来定位邮件服务器。例如，当Internet上的某用户要发一封信给 user@mydomain.com 时，该用户的邮件系统通过DNS查找mydomain.com这个域名的MX记录，如果MX记录存在， 用户计算机就将邮件发送到MX记录所指定的邮件服务器上。 <p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* Text_336&#42;280 */
+google_ad_slot = "8351080151";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p> <h3 align="justify"><font color="#0000ff"><b>4、如何检查</b><b>MX</b><b>记录是否存在的方法</b></font></h3><b></b><b></b> <p align="justify"><br>进行DNS查询的一个非常有用的工具是nslookup，可以使用它来查询DNS中的各种数据。可以在Windows的命令行下直接运行nslookup进入一个交互模式，在这里能查询各种类型的DNS数据。<br>DNS的名字解析数据可以有各种不同的类型，有设置这个zone的参数的SOA类型数据，有设置名字对应的IP地址的A类型数据，有设置邮件交换的MX类型数据。这些不同类型的数据均可以通过nslookup的交互模式来查询，在查询过程中可以使用 set type命令设置相应的查询类型。</p> <p align="justify"><i></i> <p align="justify">&nbsp;<pre class="prettyprint">C:\Users\paradise&gt;nslookup
+Default Server:  gjjdial.bta.net.cn
+Address:  202.106.195.68
+&gt; set type=mx
+&gt; anotherbug.com
+Server:  gjjdial.bta.net.cn
+Address:  202.106.195.68
+Non-authoritative answer:
+anotherbug.com  MX preference = 30, mail exchanger = ALT2.ASPMX.L.GOOGLE.com
+anotherbug.com  MX preference = 40, mail exchanger = ASPMX2.GOOGLEMAIL.com
+anotherbug.com  MX preference = 50, mail exchanger = ASPMX3.GOOGLEMAIL.com
+anotherbug.com  MX preference = 10, mail exchanger = ASPMX.L.GOOGLE.com
+anotherbug.com  MX preference = 20, mail exchanger = ALT1.ASPMX.L.GOOGLE.com
+&gt; ^C
+</pre>
+
+<p align="justify">&nbsp; <p align="justify">或者通过这种方法（效果是一样的）：<pre class="prettyprint">C:\Users\paradise&gt;nslookup -qt=mx anotherbug.com
+Server:  gjjdial.bta.net.cn
+Address:  202.106.195.68
+Non-authoritative answer:
+anotherbug.com  MX preference = 30, mail exchanger = ALT2.ASPMX.L.GOOGLE.com
+anotherbug.com  MX preference = 40, mail exchanger = ASPMX2.GOOGLEMAIL.com
+anotherbug.com  MX preference = 50, mail exchanger = ASPMX3.GOOGLEMAIL.com
+anotherbug.com  MX preference = 10, mail exchanger = ASPMX.L.GOOGLE.com
+anotherbug.com  MX preference = 20, mail exchanger = ALT1.ASPMX.L.GOOGLE.com
+</pre></blockquote>

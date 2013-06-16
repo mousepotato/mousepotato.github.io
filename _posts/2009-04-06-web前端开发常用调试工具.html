@@ -1,0 +1,30 @@
+---
+layout: post
+title: Web前端开发常用调试工具.
+tags:
+- Javascript
+- Technique
+status: publish
+type: post
+published: true
+meta:
+  views: '592'
+  _edit_last: '1'
+---
+<p>我是一个前端比较没天赋的人。无奈做项目又少不了前端，尤其是Web2.0以及Ajax，RIA的横空出世对UI的要求更高了。最近总结了几个不错的JS，页面CSS的调试工具：（此文不是教程，只是个人使用感受，欲了解详情请G之。）</p> <h3><span style="color: #0080ff">1、FireBug </span><span style="color: #000000">（❤❤❤❤❤）</span></h3> <p>Firebug是Firefox下的一款开发类插件，现属于Firefox的五星级强力推荐插件之一。它集HTML查看和编辑、Javascript控制台、网络状况监视器于一体，是开发JavaScript、CSS、HTML和Ajax的得力助手。它可能是开发的人员了解和使用最多的了。</p> <p>我常使用的两个快捷键：Ctrl+Shift+J和F12.(一个是打开Error Console，一个是打开Firebug)，通过Error Console可以快速定位一些JS和CSS错误。而Firebug可以看到一些页面DOM树以及POST，GET和JS源码等信息。</p> <p><a href="/assets/uploads/2009/04/image.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="/assets/uploads/2009/04/image-thumb.png" width="436" height="212"></a></p> <p>通过它你可以清楚的看到你的DWR提交情况，以及Struts2中dojo js的引用。这对本身理解一些框架的原理也很有帮助。此外Firebug支持Javascript的单步调式，对开发人员也很方便。关于Firefox的更详细介绍可以参考<a href="http://www.ooso.net/archives/294" target="_blank">这里</a>。</p> <p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* blog_header_menu_link_468&#42;15 */
+google_ad_slot = "5788462734";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p> <h3><span style="color: #0080ff">2、</span><a href="http://www.opera.com/dragonfly/" target="_blank"><span style="color: #0080ff">Opera Dragonfly</span></a> <span style="color: #000000">（❤❤❤❤）</span></h3> <p>感觉和Firebug差不多。界面都有几分相像。</p> <p><a href="/assets/uploads/2009/04/image1.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="/assets/uploads/2009/04/image-thumb1.png" width="451" height="178"></a></p> <p>a).支持JS的调式，DOM树的view，感觉有一点是Dragonfly的提示信息比Firebug稍微要详细一点。比如对DWRUtil.setValue()的方法出错都可以提示出来。Firefox好像没有提示。</p> <p>b).DOM的操作选项较多可以方便的和页面元素进行交互，方便定位。</p> <p>唯一缺点可能是在开发人员中Opera的认可度没有 Firefox那么高，主要是我们写的页面优先测试IE和Firefox，这可能是很少开发者使用它进行调式的原因。我的建议是可以用Opera进行辅助的测试。</p> <h3><span style="color: #0080ff">3、微软的Expression Web SuperPreview<span style="color: #000000">（❤❤❤）</span></span></h3> <p>IE8正式版在3月份发布的时候，相像很对开发者尤其是前端的开发者肯定会非常的头痛，因为自己的web页面无形中又要支持新的浏览器了。毕竟在最初的Beta版是可以暂时拖延一下。好在微软也意识到多浏览器兼容性的问题，在 Mix09 上推出了一款全新的工具 Expression Web SuperPreview，SuperPreview 是微软将推出的 Expression Web 3 的一部分，同时，微软也提供了 SuperPreview 的独立安装包。</p><!--more-->用户可以对照观看自己的页面在IE6,IE7,IE8下的不同效果。  <p>SuperPreview现在的功能比较少，可以同时将一个页面以多种浏览器引擎呈现，例如竖排、横排，查看DOM信息，基线比较同一个元素在两个网页上的位置是否一致，还有一个Overlay功能。将两个网页放在一起叠加显示。对于后面的版本好像是声称可以支持Firefox和Opera,下面是我安装和测试的画面。</p> <p><a href="/assets/uploads/2009/04/image2.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="/assets/uploads/2009/04/image-thumb2.png" width="326" height="242"></a></p> <p align="left"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-6960703437272224";
+/* Text/Image_300&#42;250 */
+google_ad_slot = "3868186516";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></p> <p>图一 SuperPreview安装</p> <p><a href="/assets/uploads/2009/04/image3.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="/assets/uploads/2009/04/image-thumb3.png" width="388" height="287"></a></p> <p>图二 测试我的blog在IE7和IE8下的不同显示效果</p> <p>相信SuperPreview的后续版本会更加强大。</p> <p>独立的SuperPreview安装包有250M，但是安装好像只要36M的空间，速度也还不错，英文版本的可以<a href="http://download.microsoft.com/download/5/6/8/568F0D28-0434-4794-B7FC-FB293BCC98FB/SuperPreview_Trial_en.exe" rel="tag" target="_blank">点这</a>下载</p> <p>暂时只写这么多，如果有什么好的调式工具欢迎交流！</p>
