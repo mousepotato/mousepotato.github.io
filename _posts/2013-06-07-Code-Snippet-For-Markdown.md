@@ -2,6 +2,7 @@
 layout: post
 title:  "How to blog using markdown efficiently"
 description: "本文介绍如何高效的使用markdown文件来编写blog。"
+category: Technique
 tags:
 - Markdown
 ---
