@@ -2,7 +2,7 @@
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /blog/:year/:month/:day/:title 
 
-exclude:  [ README.md, mytags.txt]
+exclude:  [ README.md, mytags.txt, git_commit.sh]
 #auto: true
 pygments: true
 safe: false
@@ -86,7 +86,7 @@ JB :
   #  livefyre :
   #    site_id : 123
   #  intensedebate :
-  #    account : zyzhang
+  #    account : 
   #  facebook :
   #    appid : 123
   #    num_posts: 5
