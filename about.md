@@ -6,7 +6,7 @@ group: navigation
 ---
 {% include JB/setup %}
 
-![avatar](/assets/images/sj.jpg)
+![avatar](/assets/images/sj.png)
 
 <div style="line-height: 30px;">
 
