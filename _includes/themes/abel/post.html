@@ -38,16 +38,6 @@
     </ul>
   {% endunless %}  
   
-    <hr>
-  
-  	<div class="sidebar-title">相关文章</div>
-    <ul>
-    {% for related_post in site.related_posts limit:5 %}
-    	<li><a href="{{ BASE_PATH }}{{ related_post.url }}">{{ related_post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    <hr>
-
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-6960703437272224";
 /* anotherbug.com_blog_右侧_4 */
@@ -60,6 +50,16 @@ google_ad_height = 250;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 <br>
+  
+  	<div class="sidebar-title">相关文章</div>
+    <ul>
+    {% for related_post in site.related_posts limit:5 %}
+    	<li><a href="{{ BASE_PATH }}{{ related_post.url }}">{{ related_post.title }}</a></li>
+    {% endfor %}
+    </ul>
+    <hr>
+
+
 
     <div class="sidebar-title">分享到</div><br>
     <!-- JiaThis Button BEGIN -->
