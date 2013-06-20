@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  What to do next for your GTD plan
+title:  "What to do next for your GTD plan"
+description: "如何根据事情的轻重缓急设定执行顺序，也就是GTD 的下一步计划如何选择的标准。"
+category: Personal
 tags:
-- Humanity
+- GTD
 ---
+{% include JB/setup %}
 
 GTD 下一步行动计划
 

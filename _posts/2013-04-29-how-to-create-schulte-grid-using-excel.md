@@ -1,9 +1,14 @@
 ---
 layout: post
-title:  How to Create Schulte Grid Using Excel
+title:  "How to Create Schulte Grid Using Excel"
+descript: "如何使用Excel制作一个建议的舒尔特方格"
+category: Personal
 tags:
-- Humanity 
+- Life
 ---
+{% include JB/setup %}
+
+----------------
 
 如何用Excel做舒尔特方格
 
