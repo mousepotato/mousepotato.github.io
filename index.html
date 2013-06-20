@@ -9,7 +9,7 @@ description: "爱凝依依"
 <tr>
 <td width="70%">
 	<div class="home-page-content">
-		{% for post in site.posts limit:6 %}
+		{% for post in site.posts limit:7 %}
 		<div class="home-page-post">
 			<div class="post-header">
 				<div class="date">{{ post.date | date_to_string }}</div>
@@ -26,7 +26,7 @@ description: "爱凝依依"
 				<div class="abstract">{{ post.description | markdownify }}</div>
 				<div style="float:right;"><a href="{{ BASE_PATH }}{{ post.url }}">阅读全文</a></div>
 			</div>
-			{% if forloop.index != 6 %}
+			{% if forloop.index != 7 %}
 			<div class="post-footer">&nbsp;</div>
 			{% endif %}
 		</div>
