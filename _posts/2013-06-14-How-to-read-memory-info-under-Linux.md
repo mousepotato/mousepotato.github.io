@@ -2,7 +2,7 @@
 layout: post
 title: "Linux 下的查看系统内存信息"
 description: "Linux下查看系统内存的方法"
-category: "Technique"
+category: Technique
 tags: 
 - Linux
 - Ubuntu
