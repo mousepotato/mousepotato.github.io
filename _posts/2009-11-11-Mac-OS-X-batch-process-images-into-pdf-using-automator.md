@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Mac OS 下使用Automator批量将图片转成pdf文件
+title: "Mac OS 下使用Automator批量将图片转成pdf文件"
+description: "Automator是Mac OS X内建的一个应用程序，用于自动化处理很多重复的工作。这个小软件有很多的功能，方便实用。本文介绍Mac OS 下使用Automator批量将图片转成pdf文件"
+category: "Technique"
 tags:
 - Apple
 - Mac
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  views: '1238'
 ---
+
+{% include JB/setup %} 
+
 Automator是Mac OS X内建的一个应用程序，用于自动化处理很多重复的工作。这个小软件有很多的功能.方便实用.
 
 
