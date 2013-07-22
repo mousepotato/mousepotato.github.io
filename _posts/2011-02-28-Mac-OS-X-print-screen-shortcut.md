@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Mac OS 下截屏快捷键
+title: "Mac OS X 下截屏快捷键"
+description: "Mac OS X 下截屏快捷键介绍"
 category: Technique
 tags:
 - Mac

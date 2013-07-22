@@ -1,11 +1,14 @@
 ---
 layout: post
-title: Ubuntu下安装Hadoop
+title: "Ubuntu下安装Hadoop"
+description: "Ubuntu下安装Hadoop教程"
+category: "Technique"
 tags:
-- Technique
 - Hadoop
 - Ubuntu
 ---
+{% include JB/setup %} 
+
 
 Ubuntu下安装Hadoop
 

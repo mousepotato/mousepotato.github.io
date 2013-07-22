@@ -1,11 +1,14 @@
 ---
 layout: post
-title: 如何将Dropbox的容量增加到20G
-tags:
-- Technique
+title: "如何免费将Dropbox的容量增加到20G"
+description: "本文介绍如何免费将Dropbox的容量增加到20G" 
+category: "Technique"
+tags: 
 - Ubuntu
 - VirtualBox
 ---
+{% include JB/setup %} 
+
 如何将Dropbox的容量增加到20G  
 How to increase your dropbox storage up to 20G  
 

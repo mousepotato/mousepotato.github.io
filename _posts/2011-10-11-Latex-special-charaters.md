@@ -1,10 +1,12 @@
 ---
 layout: post
-title: LaTex 几个特殊字符
+title: "LaTex 几个特殊字符"
+description: "LaTex 几个特殊字符介绍"
+category: "Research"
 tags:
-- Research
 - Latex
 ---
+{% include JB/setup %} 
 
 ## 1、LaTex中输入各种单双引号  
 

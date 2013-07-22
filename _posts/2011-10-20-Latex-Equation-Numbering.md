@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Latex 公式编号
+title: "Latex 公式编号"
+description: "Latex 如何给公式编号"
+category: "Research"
 tags:
-- Research
-- Latex
-status: publish
+- LaTex
 ---
+{% include JB/setup %} 
 
 如果不想用自动标号,而是用自己的标号代替比如，  
 

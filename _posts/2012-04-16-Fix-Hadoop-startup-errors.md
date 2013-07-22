@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Hadoop 启动出错解决
+title: "Hadoop 启动出错解决"
+description: "Hadoop issue: jobtracker.info could only be replicated to 0 nodes, instead of 1  启动出错解决"
+category: "Technique"
 tags:
-- Technique
 - Hadoop
 ---
-
+{% include JB/setup %} 
 
 > ### "Hadoop issue: jobtracker.info could only be replicated to 0 nodes, instead of 1"
 

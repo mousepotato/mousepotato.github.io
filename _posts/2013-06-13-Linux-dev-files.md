@@ -2,7 +2,7 @@
 layout: post
 title: "Linux 下的几个文件"
 description: "Linux 下的 /dev/null, /dev/full, /dev/zero文件介绍和使用实例。"
-category: Technique
+category: "Technique"
 tags:
 - Linux
 - Ubuntu

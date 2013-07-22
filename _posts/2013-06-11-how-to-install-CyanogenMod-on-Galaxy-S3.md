@@ -2,7 +2,7 @@
 layout: post
 title:  "How to install CyanogenMod on Galaxy S3"
 description: "CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。玩转Andorid ROM必备。本文介绍在Galaxy S3如何安装CyanogenMod"
-category: Technique
+category: "Technique"
 tags:
 - Android
 ---

@@ -1,10 +1,14 @@
 ---
 layout: post
-title: ~/.bashrc 与 ~/.bash_profile的区别
+title: "~/.bashrc 与 ~/.bash_profile的区别"
+description: "在使用Linux，Unix或者是Mac OS是，当碰到环境变量设置时，大家多数会接触到`~/.bashrc`与 `~/.bash_profile`两个文件。那么他们的区别到底在哪，各自用处是什么，如何使用呢？"
+category: "Technique"
 tags:
-- Technique
 - Linux
+- Ubuntu
 ---
+{% include JB/setup %} 
+
 在使用Linux，Unix或者是Mac OS是，当碰到环境变量设置时，大家多数会接触到`~/.bashrc`与 `~/.bash_profile`两个文件。那么他们的区别到底在哪，各自用处是什么，如何使用呢？
 
 ## 1 .bash_profile 与 .bashrc的区别

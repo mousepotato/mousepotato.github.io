@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox
+title: "Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox"
+description: "本文介绍如何使用Virtualbox搭建具有多个节点的hadoop实例。" 
+category: "Technique"
 tags:
-- Technique
 - Cloud Computing
 - Hadoop
 - Ubuntu
 - VirtualBox
 ---
+{% include JB/setup %} 
 
 Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox
 

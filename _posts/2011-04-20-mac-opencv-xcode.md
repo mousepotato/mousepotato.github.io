@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Mac OS 10.6.7下安装OpenCV 2.2并使用Xcode 3.2.6进行开发教程
+title: "Mac OS 10.6.7下安装OpenCV 2.2并使用Xcode 3.2.6进行开发教程"
+description: "如何在Mac下配置Opencv2.2并且使用Xcode开发环境进行开发教程"
+category: "Research"
 tags:
-- Research
 - Mac
 - OpenCV
-- Xcode
 ---
+{% include JB/setup %} 
+
 如何在Mac下配置Opencv2.2并且使用Xcode开发环境进行开发教程：
 
 ## 一、OpenCV2.2的安装（使用MacPorts安装）

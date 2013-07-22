@@ -1,9 +1,12 @@
 ---
 layout: post
-title:  How to crack the master lock  
+title:  "How to crack the master lock"
+description: "本文介绍如何轻松破解Master Lock锁" 
+category: "Personal"
 tags:
-- Technique 
+- Hacks
 ---
+{% include JB/setup %} 
 
 如何破解master lock的密码
 

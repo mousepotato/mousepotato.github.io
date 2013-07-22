@@ -1,10 +1,25 @@
 ---
 layout: post
-title: 如何进入iPad，iPhone的恢复模式和DFU模式
+title: "如何进入iPad，iPhone的恢复模式和DFU模式"
+description: 
+category: "Technique"
 tags:
-- Apple
-- iPad
 - iPhone
-- Technique
+- iOS
 ---
-<p><span style="font-family:Arial;font-size:15px;">进入恢复模式和DFU模式的办法</span></p><p></p><p style="line-height:normal;"><br style="line-height:normal;" /><span style="color:#ff0000;"><strong>1、恢复模式，此模式有USB和ITUNES图标在IPHONE上显示。</strong></span></p><p style="color:rgb(102,102,102);line-height:normal;"><strong><u>进入方法：关机，然后按住HOME键插数据线，会出现白苹果开机，</u></strong></p><p style="color:rgb(102,102,102);line-height:normal;"><strong><u>不要松开HOME键，直到USB插头和ITUNES图标出现，</u></strong></p><p style="color:rgb(102,102,102);line-height:normal;"><strong><u>itunes会提示找个一个处于恢复模式的IPHONE。</u></strong></p><p style="color:rgb(102,102,102);line-height:normal;"></p><p style="line-height:normal;"><span style="color:#ff0000;"><strong>2、DFU模式，此模式没有任何显示，iphone上没有任何提示，</strong></span></p><p style="line-height:normal;"><span style="color:#ff0000;"><strong>屏幕一直处于关闭状态，没有任何显示的，如同关机一般。</strong></span></p><p style="line-height:normal;"><u>进入方法：开机状态下插着数据线关机，</u></p><p style="line-height:normal;"><u>然后同时按住power键和home键十秒（此处是关键，不多不少10秒，可对着表操作），</u></p><p style="line-height:normal;"><u>然后松开POWER，不要松开home，直到ITUNES提示找个一个处于恢复模式的IPHONE，</u></p><p style="line-height:normal;"><u>这期间iphone是不会有任何显示的。</u></p><p style="color:rgb(102,102,102);line-height:normal;"></p><p style="line-height:normal;"><br style="line-height:normal;" />PS:DUF模式一般降级的时候可以考虑。</p>
+{% include JB/setup %} 
+
+
+## 1. 恢复模式，此模式有USB和iTunes图标在iPhone上显示。
+
+进入方法：
+
+> 关机，然后按住HOME键插数据线，会出现白苹果开机，不要松开HOME键，直到USB插头和iTunes图标出现，iTunes会提示找个一个处于恢复模式的iPhone。
+
+## 2. DFU模式，此模式没有任何显示，iphone上没有任何提示，屏幕一直处于关闭状态，没有任何显示的，如同关机一般。
+进入方法：
+
+> 开机状态下插着数据线关机，然后同时按住Power键和HOME键十秒（此处是关键，不多不少10秒，可对着表操作），然后松开POWER，不要松开home，直到iTunes提示找个一个处于恢复模式的iPhone，这期间iPhone是不会有任何显示的。
+
+
+> DFU模式一般降级的时候可以考虑。
