@@ -10,7 +10,6 @@ tags:
 {% include JB/setup %}
 
 ----------------
-How to install Awesome Vim on 64bit Windows 7
 
 # How to install vim for windows
 
