@@ -24,10 +24,11 @@ Hadoop安装时需要指定HADOOP_HOME位置。可以使用如下三种export方
 		export  
 
 
-![Hadoop](/assets/uploads/2011/10/image.png)
+![Hadoop](/assets/images/2011/10/declare.png)
 
 
-**注意：** <font color="#ff0000">直接用export命令只会对当前shell窗口起作用，重启或者重新打开shell窗口时，环境变量就会丢失。</font>  
+**注意：** 直接用export命令只会对当前shell窗口起作用，重启或者重新打开shell窗口时，环境变量就会丢失。
+
 ## 2. 修改全局profile文件
 
 `/etc/profile` 是一个global config file，会影响系统全局用户，如果你只想对single user生效的话，可以修改 `~/.bash_profile`
@@ -45,9 +46,10 @@ Hadoop安装时需要指定HADOOP_HOME位置。可以使用如下三种export方
 
 检查设置是否成功。
 
-![Hadoop2](/assets/uploads/2011/10/image1.png)    
+![Hadoop2](/assets/images/2011/10/echohome.png)    
 
-**注意：** <font color="#ff0000">直接修改`/etc/profile`文件需要注销系统才能够生效。且永久有效。</font>  
+**注意：** 直接修改`/etc/profile`文件需要注销系统才能够生效。且永久有效。
+ 
 ## 3.  修改`.bashrc`文件
   	 
 		sudo vi ~/.bashrc
@@ -59,4 +61,4 @@ Hadoop安装时需要指定HADOOP_HOME位置。可以使用如下三种export方
 		export HADOOP_HOME=/home/sj/hadoop-0.20.2 
 		export PATH=$PATH:$HADOOP_HOME/bin
 
-**注意：** <font color="#ff0000">修改后必须使用 source ~/.bashrc 命令使其生效。</font>
+**注意：** 修改后必须使用 source ~/.bashrc 命令使其生效。
