@@ -47,5 +47,19 @@ CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。�
 
 ![rev_3](/assets/images/2013/06/11/recv_3.png)
 
+### 4. 安装google play等软件
+默认由于版权问题CyanogenMod不自带google play等软件。通过这个连接[下载 http://goo.im/gapps](http://goo.im/gapps) 你对应版本的google 软件。将其上传到S3，然后再通过重启到恢复模式选择zip安装。  
 
+
+### 5. 如何打开开发者设置( {}develop options) 
+- 打开`Settings -> About phone->Build number`
+
+![dev_1](/assets/images/2013/06/11/dev_1.png)
+
+- 狂点`build number` 几次以后系统提示 `develop settings`已经开启。
+
+![dev_2](/assets/images/2013/06/11/dev_2.png)
+
+
+That's it!!
 
