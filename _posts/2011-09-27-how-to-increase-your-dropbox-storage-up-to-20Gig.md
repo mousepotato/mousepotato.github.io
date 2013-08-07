@@ -22,12 +22,12 @@ Dropbox允许用户通过推荐（refer）其它用户注册的方式来增加�
 
 ## 三、通过软件设置更新Mac Address
 
-![dropbox](/assets/uploads/2011/09/update_macaddress.jpg)  
+![dropbox](/assets/images/2011/09/update_macaddress.jpg)  
 
 ##四、如此反复，可以扩容至16G。使用.edu邮箱，每次refer可扩容512M。
 
-![dropbox2](/assets/uploads/2011/09/referral_status.jpg)
+![dropbox2](/assets/images/2011/09/referral_status.jpg)
 
 ## 五、最终结果
 
-![dropbox3](/assets/uploads/2011/09/total_space.jpg)
+![dropbox3](/assets/images/2011/09/total_space.jpg)
