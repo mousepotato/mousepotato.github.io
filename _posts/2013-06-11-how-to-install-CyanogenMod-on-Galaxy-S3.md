@@ -8,6 +8,8 @@ tags:
 ---
 {% include JB/setup %}
 
+----------------
+
 Galaxy S3 安装CyanogenMod
 
 CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。玩转Andorid ROM必备。下面介绍如何在Galaxy S3上安装CyanogenMod。
