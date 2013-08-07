@@ -12,15 +12,15 @@ tags:
 
 Automator是Mac OS X内建的一个应用程序，用于自动化处理很多重复的工作。这个小软件有很多的功能。方便实用。
 
-1。 打开Automator，位于Application文件夹下，图标如下，可以看到他是一个小bot，自动帮你处理很多琐碎的事情。
+1. 打开Automator，位于Application文件夹下，图标如下，可以看到他是一个小bot，自动帮你处理很多琐碎的事情。
 
-	![au](/assets/images/2009/11/automator.png)
+![au](/assets/images/2009/11/automator.png)
 
-2。 选择新建一个Workflow，完成一个工作流。可以看到Automator几乎涉及了系统常用操作中的很多流程。诸如iCal日历的事件处理，联系人，Mail等。
+2. 选择新建一个Workflow，完成一个工作流。可以看到Automator几乎涉及了系统常用操作中的很多流程。诸如iCal日历的事件处理，联系人，Mail等。
 
 	![aum](/assets/images/2009/11/automator_main.png)
 
-3。 我们要建立一个自动将图片转成pdf的流程
+3. 我们要建立一个自动将图片转成pdf的流程
 
 
 有人可能要问，你这个需求很变态阿。谁有这个要求呢?[哈哈，国外书太贵来。我的书都是从书店拍下来的，所以呢，为了方便阅读还是转成pdf版本的。]
@@ -34,7 +34,7 @@ Automator是Mac OS X内建的一个应用程序，用于自动化处理很多重
 
 
 
-4。	运行
+4. 运行
 
 ![aur](/assets/images/2009/11/automator_run.png)
 
