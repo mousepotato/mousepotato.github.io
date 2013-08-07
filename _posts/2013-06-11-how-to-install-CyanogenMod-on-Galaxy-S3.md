@@ -35,15 +35,15 @@ CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。�
 ### 3. 将S3重启进入recovery 模式进行安装
 
 - 同时按住 `VolumnUp + Home + Power`进入恢复模式  
-- <font color='red'> 首先必须清除</font> `cache partition`和 `wipe data/factory reset`  
+- 首先必须清除 `cache partition`和 `wipe data/factory reset`  
 
- ![rev_1](/assets/images/2013/06/11/recv_1.png)
+ ![rev1](/assets/images/2013/06/11/recv_1.png)
  
 - 之后选择 `install zip from sdcard`  选择 `cm-10.1-20130610-NIGHTLY-i9300.zip`
 
-![rev_2](/assets/images/2013/06/11/recv_2.png)
+ ![rev2](/assets/images/2013/06/11/recv_2.png)
 
-- <font color='red'>最后选择 `Advanced-> fix permissions`</font>，然后重启。
+- 最后选择 `Advanced-> fix permissions`，然后重启。
 
 ![rev_3](/assets/images/2013/06/11/recv_3.png)
 
