@@ -32,5 +32,5 @@ tags:
 
 效果是这样子的：
 
-  ![1000movie](/assets/uploads/2013/02/image.png)
+  ![1000movie](/assets/images/2013/02/1000list.png)
   
