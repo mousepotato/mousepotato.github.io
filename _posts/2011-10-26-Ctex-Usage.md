@@ -16,12 +16,12 @@ tags:
 去 [cTex官网](http://www.ctex.org/CTeXDownload)下载最新版本的CTex，[v2.9.0.152 Full(1.08G)](ftp://ftp.ctex.org/pub/tex/systems/ctex/2.9/CTeX_2.9.0.152_Full.exe)  包含完整版 [MiKTeX](http://www.ctex.org/MiKTeX)。
 建议使用ftp下载，[ftp地址](ftp://ftp.ctex.org/pub/tex/systems/ctex/2.9/CTeX_2.9.0.152_Full.exe)
 
-![cTex1](/assets/uploads/2011/10/ctex1.jpg)  
-![cTex2](/assets/uploads/2011/10/ctex2.jpg)  
+![cTex1](/assets/images/2011/10/ctex1.jpg)  
+![cTex2](/assets/images/2011/10/ctex2.jpg)  
 
 安装完CTeX后，记得安装CTeX FontSetup，因为CTex可以默认支持中文。
 
-![cTex3](/assets/uploads/2011/10/ctex3.jpg)
+![cTex3](/assets/images/2011/10/ctex3.jpg)
 
 
 ## 二、如何安装新的Beamer Theme
@@ -31,7 +31,7 @@ tags:
 
 
 当你添加一个新的theme到这个路径下时，需要Refresh FNDB，这样在编译.tex文件时才不会报错。
-![cTex4](/assets/uploads/2011/10/image14.png)
+![cTex4](/assets/images/2011/10/mikoption.png)
 
 ## 三、常见错误
 1、首次运行.tex文件若出现如下错误
@@ -45,7 +45,7 @@ tags:
 的解决方案是：<font color="#ff0000">CTeX—&gt;MiKTeX—&gt;Maintenance (Admin)—&gt;Update (Admin) 更新MiKTeX</font>
 
 
-![cTex5](/assets/uploads/2011/10/image13.png)  
+![cTex5](/assets/images/2011/10/update_mik.png)  
 
 2、gbk2uni.exe文件无法找到
 

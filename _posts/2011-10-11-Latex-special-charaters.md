@@ -10,7 +10,7 @@ tags:
 
 ## 1、LaTex中输入各种单双引号  
 
-![sign](/assets/uploads/2011/10/latex.jpg)  
+![sign](/assets/images/2011/10/latex_special_characters.jpg)  
 
 
 
