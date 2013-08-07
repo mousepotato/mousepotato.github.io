@@ -18,6 +18,6 @@ Linksys E1550 刷DD-WRT教程
 
 3. 刷完就好了。
 
-![ddwrt1](/assets/uploads/2012/04/image.png)
+![ddwrt1](/assets/images/2012/04/ddwrt_admin.png)
 
-![ddwrt2](/assets/uploads/2012/04/image1.png)
+![ddwrt2](/assets/images/2012/04/ddwrt_console.png)
