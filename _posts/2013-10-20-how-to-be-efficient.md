@@ -12,6 +12,7 @@ tags:
 ----------------
 
 # How to be efficient 如何高效
+----------------
 		
 ## 1. Efficiency comes from familiarity and simplicity.
 
@@ -32,7 +33,7 @@ Things you need to always keep in mind like [You next GTD plan](http://anotherbu
 
 ## 3.	Be well organized.
 
-By saying organized, I am not meaning to have your stuff in order or a neat table. _Organized_ means that you have a set of well defined _living style_, _systems_ or _architectures_ or whatever that could help you do every kind of jobs. You have to define them in advance and purify them for live long. See [Establish and accumulate your little system](http://www.read.org.cn/html/1641-establish-and-accumulate-your-little-system.html).
+By saying organized, I am not meaning to have your stuff in order or a neat table. _Organized_ means that you have a set of well defined _living style_, _systems_ or _architectures_ or whatever that could help you do every kind of jobs. You have to define them in advance and purify them for life long. See [Establish and accumulate your little system](http://www.read.org.cn/html/1641-establish-and-accumulate-your-little-system.html).
 
 
 
