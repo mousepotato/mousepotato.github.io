@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: "How to enable "Cut/Paste" in Lion"    
+title: "How to enable Cut and Paste in Lion"    
 description: "Mac OS Lion中如何使用拷贝粘贴"     
 category: "Technique"    
 tags:  
