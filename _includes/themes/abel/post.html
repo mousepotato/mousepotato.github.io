@@ -31,7 +31,7 @@
   <div class="span4">
     
   {% unless page.tags == empty %}
-    <div class="sidebar-title">标签</div>
+    <div class="sidebar-title">Tags</div>
     <ul class="tag_box">
     {% assign tags_list = page.tags %}
     {% include JB/tags_list %}
@@ -39,7 +39,7 @@
   {% endunless %}  
 <br>
   
-  	<div class="sidebar-title">相关文章</div>
+  	<div class="sidebar-title">Related articles</div>
     <ul>
     {% for related_post in site.related_posts limit:5 %}
     	<li><a href="{{ BASE_PATH }}{{ related_post.url }}">{{ related_post.title }}</a></li>
@@ -47,14 +47,14 @@
     </ul>
     <hr>
 
-    <div class="sidebar-title">分享到</div><br>
+    <div class="sidebar-title">Share</div><br>
     <!-- JiaThis Button BEGIN -->
     <div class="jiathis_style">
     	<a class="jiathis_button_tools_1"></a>
 	  	<a class="jiathis_button_tools_2"></a><br>
   		<a class="jiathis_button_tools_3"></a>
   	    <a class="jiathis_button_tools_4"></a><br>
-	    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+	    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">More</a>
 	    <a class="jiathis_counter_style"></a>
     </div>
     <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1334916632736926" charset="utf-8"></script>

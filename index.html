@@ -24,7 +24,7 @@ description: "爱凝依依"
 			<div class="post-content">
 				<div class="title"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></div>
 				<div class="abstract">{{ post.description | markdownify }}</div>
-				<div style="float:right;"><a href="{{ BASE_PATH }}{{ post.url }}">阅读全文</a></div>
+				<div style="float:right;"><a href="{{ BASE_PATH }}{{ post.url }}">Read the full article</a></div>
 			</div>
 			{% if forloop.index != 7 %}
 			<div class="post-footer">&nbsp;</div>
@@ -38,7 +38,7 @@ description: "爱凝依依"
 
 <td width="30%" style="vertical-align:top;">
 	<div class="home-page-sidebar">
-		<div class="sidebar-title">文章分类</div>
+		<div class="sidebar-title">Categories</div>
 		<div>
 			<ul class="tag_box inline">
 			{% assign categories_list = site.categories %}
@@ -48,7 +48,7 @@ description: "爱凝依依"
 		<br>
     
     <br>
-		<div class="sidebar-title">标签</div>
+		<div class="sidebar-title">Tags/div>
 		<div>
 			<ul class="tag_box inline">
 			{% assign tags_list = site.tags %}  
@@ -61,7 +61,7 @@ description: "爱凝依依"
 </table>
 <hr>
 <div style="width:50%;margin-left:auto;margin-right:auto;text-align:center;clear:both;">
-	<a href="/archive.html">查看所有{{site.posts.size}}篇文章...</a>
+	<a href="/archive.html">Read all {{site.posts.size}} articles...</a>
 </div>
 
 
