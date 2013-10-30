@@ -12,9 +12,10 @@ tags:
 
 {% include JB/setup %}
 
-----------------
 
 # Install Nodejs on Ubuntu 13.10 Saucy Salamander
+
+----------------
 
 ## 1. the command
 
