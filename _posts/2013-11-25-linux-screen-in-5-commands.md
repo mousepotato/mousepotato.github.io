@@ -33,4 +33,9 @@ tags:
 
 `sessionid` can be found by looking `screen -ls`
 
+## 5. 退出已有 screen 窗口
+	
+	exit
+
+
 That's it!!!
