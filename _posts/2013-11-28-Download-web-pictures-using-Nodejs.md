@@ -32,7 +32,6 @@ tags:
 
 ## 3. 代码 Code 
 
-`dl-holypics.js`
 
 ```
 var request = require("request");
