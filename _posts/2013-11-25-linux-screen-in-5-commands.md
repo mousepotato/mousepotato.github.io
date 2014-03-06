@@ -37,5 +37,9 @@ tags:
 	
 	exit
 
+## 6. 退出全部 detached sessions
 
+	screen -ls | grep Detached | cut -d. -f1 | awk '{print $1}' | xargs kill
+	
+	
 That's it!!!
