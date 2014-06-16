@@ -21,7 +21,7 @@ Here I am and this is me!!
 
 ---
 
-[![gmail](/assets/images/third_party_logo/gmail.png)](mailto:lishuangjiang@anotherbug.com) &nbsp;
+[![gmail](/assets/images/third_party_logo/gmail.png)](mailto:sli@anotherbug.com) &nbsp;
 [![weibo](/assets/images/third_party_logo/weibo.png)](http://weibo.com/shuangjiangli) &nbsp;
 [![linkedin](/assets/images/third_party_logo/linkedin.png)](http://www.linkedin.com/in/shuangjiangli) &nbsp;
 [![github](/assets/images/third_party_logo/github.jpeg)](https://github.com/mousepotato) 
