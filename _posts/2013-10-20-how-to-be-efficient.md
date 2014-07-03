@@ -7,7 +7,7 @@ tags:
 - Random Thoughts
 - GTD
 ---
-{% include JB/setup %}
+
 
 
 # How to be efficient 如何高效

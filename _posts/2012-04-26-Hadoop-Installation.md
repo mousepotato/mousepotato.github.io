@@ -7,7 +7,7 @@ tags:
 - Hadoop
 - Ubuntu
 ---
-{% include JB/setup %} 
+
 
 
 Ubuntu下安装Hadoop

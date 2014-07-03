@@ -8,7 +8,6 @@ tags:
 - Linux
 ---
 
-{% include JB/setup %}
 
 
 # Linux screen in 5 command lines

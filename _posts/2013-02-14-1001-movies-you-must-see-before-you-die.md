@@ -8,7 +8,7 @@ tags:
 - Ruby
 - Movie
 ---
-{% include JB/setup %} 
+
 
 网上看到了这个Movie list，想保存下来一一观看。无奈没现成的excel格式。所以，自己动手丰衣足食。这次用的语言是Ruby。15行代码：
 

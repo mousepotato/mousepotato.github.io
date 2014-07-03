@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Android
 ---
-{% include JB/setup %}
+
 
 ----------------
 

@@ -6,7 +6,7 @@ category: "Technique"
 tags: 
 - Mac
 ---
-{% include JB/setup %}  
+
 
 
 Mac OS X 下开启apache web服务器

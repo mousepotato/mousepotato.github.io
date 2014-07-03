@@ -8,7 +8,6 @@ tags:
 - Programming
 ---
 
-{% include JB/setup %}
 
 
 # 使用Node Js批量下载网站的图片

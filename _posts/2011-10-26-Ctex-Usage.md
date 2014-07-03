@@ -6,7 +6,7 @@ category: "Research"
 tags:
 - Latex
 ---
-{% include JB/setup %} 
+
 
 
 最近有折腾了下CTex以及Beamer，遇到不少问题，因为使用了最新版本，网上教程比较少，总结下：

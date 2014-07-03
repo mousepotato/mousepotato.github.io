@@ -6,7 +6,7 @@ category: Technique
 tags:
 - Vim
 ---
-{% include JB/setup %}
+
 
 ----------------
 如何删除Vm中的多余`^M`

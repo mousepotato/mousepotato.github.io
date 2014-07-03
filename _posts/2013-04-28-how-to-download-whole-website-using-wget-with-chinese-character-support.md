@@ -7,7 +7,7 @@ tags:
 - Linux
 - Ubuntu
 ---
-{% include JB/setup %} 
+
 
 如何使用wget下载整个网站同时支持中文命名
 

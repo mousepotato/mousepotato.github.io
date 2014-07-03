@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Hadoop
 ---
-{% include JB/setup %} 
+
 
 > ### "Hadoop issue: jobtracker.info could only be replicated to 0 nodes, instead of 1"
 

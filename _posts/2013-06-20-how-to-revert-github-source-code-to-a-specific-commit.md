@@ -6,7 +6,7 @@ category: Technique
 tags: 
 - Git
 ---
-{% include JB/setup %}
+
 
 ----------------
 如何将Github的代码回退到某一个指定的提交版本  

@@ -9,7 +9,7 @@ tags:
 - Ubuntu
 - VirtualBox
 ---
-{% include JB/setup %} 
+
 
 Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox
 

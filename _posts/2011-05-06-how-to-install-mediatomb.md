@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Mac
 ---
-{% include JB/setup %} 
+
 
 Recently, I did some research on how to use my Mac as a DLNA Sever. Mediatomb is a popular software that you need to know. However, i got some problem to install it on my Mac OS X Snow Leopard.
 

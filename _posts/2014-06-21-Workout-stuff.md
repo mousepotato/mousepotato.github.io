@@ -8,7 +8,7 @@ tags:
 - Hacks
 ---
 
-{% include JB/setup %}
+
 
 
 # Garmin Swim and Running Watches

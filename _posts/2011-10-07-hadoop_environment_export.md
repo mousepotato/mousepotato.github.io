@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hadoop安装过程中环境变量的配置即Ubuntu 中export命令的使用"
+title: "Hadoop安装过程中环境变量的配置即Ubuntu 中export命令的使用"
 description: "Hadoop安装过程中环境变量的配置即Ubuntu 中export命令的使用"
 category: "Technique"
 tags:
@@ -8,9 +8,7 @@ tags:
 - Linux
 - Ubuntu
 ---
-{% include JB/setup %}
 
-Hadoop安装过程中环境变量的配置：Ubuntu 中export命令的使用
 
 Hadoop安装时需要指定HADOOP_HOME位置。可以使用如下三种export方法:
 

@@ -2,11 +2,11 @@
 layout: post
 title: "我的google chrome扩展插件"
 description: "我常用的Google Chrome扩展插件"
-category: "Technique
+category: "Technique"
 tags:
 - Chrome
 ---
-{% include JB/setup %} 
+
 
 ## 我常用的Google Chrome扩展插件
 

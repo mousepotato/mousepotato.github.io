@@ -6,7 +6,7 @@ category: Technique
 tags:
 - dd-wrt
 ---
-{% include JB/setup %}
+
 
 ----------------
 

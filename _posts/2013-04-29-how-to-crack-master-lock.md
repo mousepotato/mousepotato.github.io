@@ -6,7 +6,7 @@ category: "Personal"
 tags:
 - Hacks
 ---
-{% include JB/setup %} 
+
 
 如何破解master lock的密码
 

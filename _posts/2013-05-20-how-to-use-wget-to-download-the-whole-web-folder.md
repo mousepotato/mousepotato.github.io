@@ -7,7 +7,7 @@ tags:
 - Ubuntu
 - Linux
 ---
-{% include JB/setup %} 
+
 
 如何使用wget下载整个网站的文件夹
 How to use wget to donwload the whole web folder

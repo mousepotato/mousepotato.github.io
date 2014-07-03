@@ -7,7 +7,7 @@ tags:
 - iPhone
 - iOS
 ---
-{% include JB/setup %} 
+
 
 
 ## 1. 恢复模式，此模式有USB和iTunes图标在iPhone上显示。

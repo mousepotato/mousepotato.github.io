@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Mac
 ---
-{% include JB/setup %} 
+
 
 Lion 里面设置点击选择的功能：
 

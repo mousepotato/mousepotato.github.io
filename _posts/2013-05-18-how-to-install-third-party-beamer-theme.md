@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Latex
 ---
-{% include JB/setup %} 
+ 
 
 如何安装第三方的Beamer theme
 How to install third party beamer theme 

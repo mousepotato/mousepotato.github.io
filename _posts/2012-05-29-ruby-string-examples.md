@@ -7,7 +7,7 @@ tags:
 - Ruby
 - Programming
 ---
-{% include JB/setup %} 
+
 
 Ruby确实好用，方便灵活。String操作功能很好很强大。实例二则。
 

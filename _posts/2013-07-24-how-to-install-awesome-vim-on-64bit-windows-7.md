@@ -7,7 +7,6 @@ tags:
 - Vim
 - Windows
 ---
-{% include JB/setup %}
 
 ----------------
 

@@ -7,7 +7,7 @@ tags:
 - Mac
 - OpenCV
 ---
-{% include JB/setup %} 
+
 
 如何在Mac下配置Opencv2.2并且使用Xcode开发环境进行开发教程：
 

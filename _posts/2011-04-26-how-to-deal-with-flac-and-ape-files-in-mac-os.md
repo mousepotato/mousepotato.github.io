@@ -7,7 +7,7 @@ tags:
 - iTunes
 - Mac 
 ---
-{% include JB/setup %} 
+
 
 在Mac OS 下很多人都用iTunes听歌，随之面临的问题是对于像Flac和Ape这类质量较高的文件却无法享受。现推荐2款我使用的很方便的软件解决这个问题：
 

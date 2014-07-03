@@ -7,7 +7,7 @@ tags:
 - Linux
 - Ubuntu
 ---
-{% include JB/setup %}
+
 
 ----------------
 

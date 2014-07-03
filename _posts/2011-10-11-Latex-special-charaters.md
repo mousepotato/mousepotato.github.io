@@ -6,7 +6,7 @@ category: "Research"
 tags:
 - Latex
 ---
-{% include JB/setup %} 
+
 
 ## 1、LaTex中输入各种单双引号  
 

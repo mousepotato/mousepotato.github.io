@@ -7,7 +7,7 @@ tags:
 - Markdown
 - Ubuntu
 ---
-{% include JB/setup %}
+
 
 How to make presentation using markdown  
 如何使用markdown做报告

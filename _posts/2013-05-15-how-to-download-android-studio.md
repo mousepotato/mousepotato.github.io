@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Android
 ---
-{% include JB/setup %} 
+
 
 如何下载Android Studio IDE 
 How　to download Android Studio

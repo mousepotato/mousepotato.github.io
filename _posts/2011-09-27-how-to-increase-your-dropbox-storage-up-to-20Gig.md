@@ -7,7 +7,7 @@ tags:
 - Ubuntu
 - VirtualBox
 ---
-{% include JB/setup %} 
+
 
 如何将Dropbox的容量增加到20G  
 How to increase your dropbox storage up to 20G  

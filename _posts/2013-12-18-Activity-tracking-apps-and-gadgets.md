@@ -8,7 +8,7 @@ tags:
 - Hacks
 ---
 
-{% include JB/setup %}
+
 
 
 # Activity tracking apps and gadgets

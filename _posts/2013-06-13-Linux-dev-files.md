@@ -7,7 +7,7 @@ tags:
 - Linux
 - Ubuntu
 ---
-{% include JB/setup %}
+
 
 
 Linux 下的几个文件
@@ -22,7 +22,7 @@ Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是:
 
 所以呢,你心情不好的时候,或者你有个秘密憋的慌想说但是又怕周围人有个big mouth的时候来,可以和这个娃说说. 用程序员的黑话(jargon)说他是个'黑洞'(black hole)或者'位筒'(bit bucket).
 
-![devnull](/assets/uploads/2010/01/dev_null.jpg)
+![devnull](/assets/images/2013/06/13/dev_null.jpg)
 
 知道了这个,下面几个隔行如隔山的话也就好理解了.
 
@@ -52,14 +52,14 @@ Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是:
 
 这个娃天生胃小,整天处于吃饱状态.送啥吃的来都不接受.那你说把这个家伙放在unix里面干嘛.This device is usually used when testing the behaviour of a program when it encounters a disk full error.测试某些程序在磁盘吃饱状态下的错误.
 
-![devfull](/assets/uploads/2010/01/dev_full.jpg) 
+![devfull](/assets/images/2013/06/13/dev_full.jpg) 
 
 
 ## 3. /dev/zero
 
 这哥们有很的0,MS是很有钱.他实际上产生连续不断的null的流（二进制的零流),写入他的东东会丢失不见,然后呢会给你一串的null值,这个一般不好发觉./dev/zero主要的用处是用来创建一个指定长度用于初始化的空文件，就像临时交换文件.
 
-![devzero](/assets/uploads/2010/01/dev_zero.jpg)
+![devzero](/assets/images/2013/06/13/dev_zero.jpg)
 
  
 

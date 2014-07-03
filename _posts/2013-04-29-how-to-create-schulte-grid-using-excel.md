@@ -6,7 +6,7 @@ category: Personal
 tags:
 - Life
 ---
-{% include JB/setup %}
+
 
 ----------------
 

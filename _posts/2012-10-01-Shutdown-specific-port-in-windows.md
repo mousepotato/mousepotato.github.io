@@ -6,7 +6,7 @@ category: "Technique"
 tags:
 - Windows
 ---
-{% include JB/setup %}
+
  
 - `netstat -aon|findstr "9050"`
 

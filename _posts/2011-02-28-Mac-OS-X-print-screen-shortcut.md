@@ -6,7 +6,7 @@ category: Technique
 tags:
 - Mac
 ---
-{% include JB/setup %}
+
 
 ----------------
 

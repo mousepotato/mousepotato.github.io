@@ -6,7 +6,7 @@ category: Personal
 tags:
 - GTD
 ---
-{% include JB/setup %}
+
 
 GTD 下一步行动计划
 
