@@ -10,18 +10,13 @@ tags:
 
 
 
-
-# Activity tracking apps and gadgets
-
-----------------
-
 ## 1. Apps
 
 1. [Moves](http://www.moves-app.com/)
 
 This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 
-![moves1](../assets/images/2013/12/18/moves1.png)
+![moves1](/assets/images/2013/12/18/moves1.png)
 
 ![moves2](../assets/images/2013/12/18/moves2.png)
 
