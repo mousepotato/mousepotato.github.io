@@ -16,9 +16,7 @@ tags:
 
 This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 
-![moves1](/assets/images/2013/12/18/moves1.png)
-
-![moves2](/assets/images/2013/12/18/moves2.png)
+![moves1](/assets/images/2013/12/18/moves1.png =100x200)  ![moves2](/assets/images/2013/12/18/moves2.png =100x200)
 
 - Runtastic
 - RunKeeper 
@@ -29,13 +27,13 @@ This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 - Fitbit force
 This is the current best gadgets on market. Accurate steps and floors climbed and etc
 
-![fitbitforce1](/assets/images/2013/12/18/fitbitforce1.png)
+![fitbitforce1](/assets/images/2013/12/18/fitbitforce1.png =100x200)
 
 - Pebble smartwatch
 - 
 Not very useful, the design is bad also, you will get annoyed by the notification from time to time. BTW, you need the Bluetooth on all the time.
 
-![pebble](/assets/images/2013/12/18/pebble.png)
+![pebble](/assets/images/2013/12/18/pebble.png =250x250)
 
 
 That's it!!
