@@ -21,10 +21,10 @@ This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 <table>
 <tr>
 <td>
-<img src="/assets/images/2013/12/18/moves1.png" alt="moves1" style="width: 150px; height: 200px;"/>
+<img src="/assets/images/2013/12/18/moves1.png" alt="moves1" style="width: 150px; height: 250px;"/>
 </td>
 <td>
-<img src="/assets/images/2013/12/18/moves2.png" alt="moves2" style="width: 150px; height: 200px;"/>
+<img src="/assets/images/2013/12/18/moves2.png" alt="moves2" style="width: 150px; height: 250px;"/>
 </td>
 </tr>
 </table>
@@ -43,7 +43,7 @@ g
 - Fitbit force
 This is the current best gadgets on market. Accurate steps and floors climbed and etc
 
-<img src="/assets/images/2013/12/18/fitbitforce1.png" alt="fitbitforce1" style="width: 150px; height: 200px;"/>
+<img src="/assets/images/2013/12/18/fitbitforce1.png" alt="fitbitforce1" style="width: 150px; height: 250px;"/>
 
 - Pebble smartwatch
  
