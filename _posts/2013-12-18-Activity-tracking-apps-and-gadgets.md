@@ -17,7 +17,15 @@ tags:
 This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 
 <div>
-<img src="/assets/images/2013/12/18/moves1.png" alt="moves1" style="align: left; width: 100px; height: 200px;"/>  <img src="/assets/images/2013/12/18/moves2.png" alt="moves2" style="align: left; width: 100px; height: 200px;"/>
+<table>
+<tr>
+<td>
+<img src="/assets/images/2013/12/18/moves1.png" alt="moves1" style="align: left; width: 100px; height: 200px;"/>
+</td>
+<td>
+<img src="/assets/images/2013/12/18/moves2.png" alt="moves2" style="align: left; width: 100px; height: 200px;"/>
+</td>
+</tr>
 </div>
 
 
