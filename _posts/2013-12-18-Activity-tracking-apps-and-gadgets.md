@@ -16,7 +16,7 @@ tags:
 
 This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 
-<div>
+<div align="center"> 
 
 <table>
 <tr>
