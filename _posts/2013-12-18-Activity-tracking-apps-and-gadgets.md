@@ -16,7 +16,8 @@ tags:
 
 This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 
-![moves1](/assets/images/2013/12/18/moves1.png =100x200)  ![moves2](/assets/images/2013/12/18/moves2.png =100x200)
+![moves1](/assets/images/2013/12/18/moves1.png){ width: 100px; height: 200px }  
+![moves2](/assets/images/2013/12/18/moves2.png){ width: 100px; height: 200px }
 
 - Runtastic
 - RunKeeper 
