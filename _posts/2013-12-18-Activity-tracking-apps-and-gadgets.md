@@ -17,6 +17,7 @@ tags:
 This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 
 <div>
+
 <table>
 <tr>
 <td>
@@ -26,6 +27,8 @@ This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 <img src="/assets/images/2013/12/18/moves2.png" alt="moves2" style="align: left; width: 100px; height: 200px;"/>
 </td>
 </tr>
+</table>
+
 </div>
 
 
@@ -38,13 +41,13 @@ This is an awesome app. Tracks your step, places vistied, calories burned, etc.
 - Fitbit force
 This is the current best gadgets on market. Accurate steps and floors climbed and etc
 
-![fitbitforce1](/assets/images/2013/12/18/fitbitforce1.png =100x200)
+![fitbitforce1](/assets/images/2013/12/18/fitbitforce1.png)
 
 - Pebble smartwatch
 - 
 Not very useful, the design is bad also, you will get annoyed by the notification from time to time. BTW, you need the Bluetooth on all the time.
 
-![pebble](/assets/images/2013/12/18/pebble.png =250x250)
+![pebble](/assets/images/2013/12/18/pebble.png)
 
 
 That's it!!
