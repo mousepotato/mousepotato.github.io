@@ -1,4 +1,4 @@
- q--- 
+--- 
 layout: post
 title: 耶路撒冷-千年殇城 Jerusalem 
 description: "耶路撒冷-千年殇城 Jerusalem"
@@ -8,7 +8,7 @@ tags:
 ---
 
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/6kUwMAZ_FMc" frameborder="0" allowfullscreen></iframe>
+&lt;iframe width="420" height="315" src="//www.youtube.com/embed/6kUwMAZ_FMc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
 ### 歌词
 
