@@ -1,14 +1,14 @@
---- 
+ q--- 
 layout: post
-title: 耶路撒冷 Jerusalem 
-description: "耶路撒冷 Jerusalem"
+title: 耶路撒冷-千年殇城 Jerusalem 
+description: "耶路撒冷-千年殇城 Jerusalem"
 category: Faith
 tags: 
 - Life 
 ---
 
 
-<object width="710" height="498" ><param name="movie" value="http://share.vrs.sohu.com/my/v.swf&topBar=1&id=29552443&autoplay=false"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="Transparent"></param><embed width="710" height="498" wmode="Transparent" allowfullscreen="true" allowscriptaccess="always" quality="high" src="http://share.vrs.sohu.com/my/v.swf&topBar=1&id=29552443&autoplay=false" type="application/x-shockwave-flash"/></embed></object>
+<iframe width="420" height="315" src="//www.youtube.com/embed/6kUwMAZ_FMc" frameborder="0" allowfullscreen></iframe>
 
 ### 歌词
 
