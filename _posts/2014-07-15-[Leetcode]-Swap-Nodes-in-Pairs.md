@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: (Leetcode) Swap Nodes in Pairs
+title: [Leetcode] Swap Nodes in Pairs
 description: "Swap Nodes in Pairs"
 category: Technique
 tags: 
@@ -16,4 +16,4 @@ tags:
 This is a pointer problem, if you have a clear picture in mind it will be very easy to implement. See below the code and illustration picture that I draw.
 
 
-<img src="/assets/images/2014/07/15/pointer.png" alt="pointer" style="width: 200px; height: 200px;"/>
+<img src="/assets/images/2014/07/15/pointer.png" alt="pointer" style="width: 400px; height: 15g0px;"/>
