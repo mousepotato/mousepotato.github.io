@@ -21,8 +21,8 @@ This is a pointer problem, if you have a clear picture in mind it will be very e
 
 
 
-```Java
-public ListNode swapPairs(ListNode head) {
+
+      public ListNode swapPairs(ListNode head) {
         ListNode p = new ListNode(0);
         p.next = head;
         head = p;
@@ -42,5 +42,4 @@ public ListNode swapPairs(ListNode head) {
         }
 
         return head.next;
-    }
-```
+       }
