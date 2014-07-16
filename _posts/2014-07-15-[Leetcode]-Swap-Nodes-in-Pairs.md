@@ -17,4 +17,32 @@ tags:
 This is a pointer problem, if you have a clear picture in mind it will be very easy to implement. See below the code and illustration picture that I draw.
 
 
-<img src="/assets/images/2014/07/15/pointer.png" alt="pointer" style="width: 400px; height: 150px;"/>
+<img src="/assets/images/2014/07/15/pointer.png" alt="pointer" style="width: 400px; height: 180px;"/>
+
+
+
+```Java
+
+public ListNode swapPairs(ListNode head) {
+        ListNode p = new ListNode(0);
+        p.next = head;
+        head = p;
+        while (true) {
+            if (p.next == null)
+                break;
+            if (p.next.next == null)
+                break;
+
+            ListNode q1 = p.next;
+            ListNode q2 = q1.next;
+            q1.next = q2.next;
+            q2.next = q1;
+            p.next = q2;
+            p = q1;
+
+        }
+
+        return head.next;
+    }
+
+```
