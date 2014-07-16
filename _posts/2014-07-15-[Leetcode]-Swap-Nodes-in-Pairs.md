@@ -16,3 +16,5 @@ tags:
 This is a pointer problem, if you have a clear picture in mind it will be very easy to implement. See below the code and illustration picture that I draw.
 
 ![pointer](/assets/images/2014/07/15/pointer.png)
+
+
