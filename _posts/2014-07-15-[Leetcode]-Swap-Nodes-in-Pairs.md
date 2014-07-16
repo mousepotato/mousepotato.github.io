@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: [Leetcode] Swap Nodes in Pairs
+title: \[Leetcode\] Swap Nodes in Pairs
 description: "Swap Nodes in Pairs"
 category: Technique
 tags: 
