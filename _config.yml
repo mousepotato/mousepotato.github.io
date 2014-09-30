@@ -1,4 +1,3 @@
-markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 url: http://anotherbug.com
 author: Shuangjiang Li
