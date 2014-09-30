@@ -1,4 +1,6 @@
-markdown: kramdown
+#markdown: kramdown
+markdown: redcarpet
+    extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
 permalink: /blog/:year/:month/:day/:title/
 url: http://anotherbug.com
 author: Shuangjiang Li
