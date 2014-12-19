@@ -32,44 +32,41 @@ tags:
 ## 3. 代码 Code 
 
 
-````
-	var request = require("request");
-	var cheerio = require("cheerio");
-	var iconv = require('iconv-lite');
-	var wget = require('wget');
-	
-	// loop through all 67 html pages
-	for(var i = 1; i < 67; i++){
-	
-	  (function(i){request({
-	      uri: "http://photo.fhl.net/main/holy/"+i+"index.html",
-	    encoding:null
-	  }, function(error, response, body) {
-	    var str = iconv.decode(new Buffer(body), "big5");
-	      var $ = cheerio.load(str);
-	     
-	      $('table a').each(function() {
-	          var link = $(this);
-	          var text = link.text();
-	          var href = link.attr("href");
-	          // href = "holy2351.html"
-	          // http://photo.fhl.net/img/holy/2351.jpg
-	          // console.log(text + "http://photo.fhl.net/img/holy/" + href.substr(4,4) + ".jpg");
-	
-	      var src = "http://photo.fhl.net/img/holy/" + href.substr(4,4) + ".jpg";
-	      // var output ="/Users/shuangjiang/playpen/holypic/"+text.replace(/\s+/g,"");
-	      var output ="/Users/shuangjiang/playpen/holypic/"+text+".jpg";
-	      var download = wget.download(src,output);
-	      download.on('end', function(output) {
-	        console.log("download all the pics");
-	      });
-	    });
-	  });})(i); // closure
-	
-	}
+```Javascript
+var request = require("request");
+var cheerio = require("cheerio");
+var iconv = require('iconv-lite');
+var wget = require('wget');
+
+// loop through all 67 html pages
+for(var i = 1; i < 67; i++){
+
+  (function(i){request({
+      uri: "http://photo.fhl.net/main/holy/"+i+"index.html",
+    encoding:null
+  }, function(error, response, body) {
+    var str = iconv.decode(new Buffer(body), "big5");
+      var $ = cheerio.load(str);
+     
+      $('table a').each(function() {
+          var link = $(this);
+          var text = link.text();
+          var href = link.attr("href");
+          // href = "holy2351.html"
+          // http://photo.fhl.net/img/holy/2351.jpg
+          // console.log(text + "http://photo.fhl.net/img/holy/" + href.substr(4,4) + ".jpg");
+
+      var src = "http://photo.fhl.net/img/holy/" + href.substr(4,4) + ".jpg";
+      // var output ="/Users/shuangjiang/playpen/holypic/"+text.replace(/\s+/g,"");
+      var output ="/Users/shuangjiang/playpen/holypic/"+text+".jpg";
+      var download = wget.download(src,output);
+      download.on('end', function(output) {
+        console.log("download all the pics");
+      });
+    });
+  });})(i); // closure
+}
 ```
-
-
 
 That's it!!
 
