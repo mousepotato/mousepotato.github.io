@@ -40,7 +40,7 @@ public int removeDuplicates(int [] A){
 
 ```
 
-这个版本有错误.
+这个版本有错误，原因是数组越界，虽然while循环判断数字长度，但是在if判断里面使用了j++，这个其实没事，但是后面的A[++i] = A[j]，要访问A[j]，此时可能导导致IndexOutOfBound。无经验造成的。
 
 
 版本二：

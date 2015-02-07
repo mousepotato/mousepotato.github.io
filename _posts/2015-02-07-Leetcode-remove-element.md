@@ -48,47 +48,27 @@ public int removeElement(int[] A, int elem) {
 版本二：
 
 ```Java
-public int removeDuplicates(int [] A){
- 		if (A == null || A.length == 0) {
-			return 0;
-		}
-		int size = 0;
-		int i = 0;
-		while (i < A.length){
-			if (A[size] != A[i]) {
-				A[++size] = A[i];
-			}
-			i++;
-		}
-	
-	    return size + 1;		
-}
-
-```
-版本二通过测试，也使用了有意义的变量size作为输出。但是这个代码还是反应不出作者的思想和对题目的理解。
-
-版本三：
-
-```Java
-	public int removeDuplicates(int[] A) {
-		if (A == null || A.length == 0) {
+  public int removeElement(int[] A, int elem) {
+        if (A == null || A.length == 0) {
 			return 0;
 		}
 
 		int walker = 0;
 		int runner = 0;
 		while (runner < A.length) {
-			if (A[runner] != A[walker]) {
-				A[++walker] = A[runner];
+			if (A[runner] == elem) {
+			    runner++;
+				continue;
 			}
-			runner++;
+			A[walker++] = A[runner++];
 		}
-		return walker + 1;
-	}
-```
-版本三，变量使用了runner和walker，一看就明白是写代码者理解题目的快慢指针的思想。堪称完美。
 
-此乃刷题者三种境界，共勉！
+		return walker;
+    }
+
+```
+
+版本二的if判读用的是==。因为毕竟要remove的element要少，if (A[runner] != elem) 次数要多，所以if (A[i] == elem) 从效率上更好。问二个问题。里面的if判断是否可以写成 if (A[runner++] == elem)?【不可以，后面重复A[runner++]导致加了2次】。另外，A[walker++] = A[runner++]可以这么写不会导致数组越界。
 
 
 
