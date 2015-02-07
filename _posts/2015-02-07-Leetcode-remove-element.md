@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Leetcode刷题有感"
-description: "Leetcode Remove duplicates from sorted Array"
+title: "Leetcode Remove element"
+description: "Leetcode刷题有感 Leetcode Remove element"
 category: "Technique"
 tags:
 - Algorithm
@@ -11,36 +11,38 @@ tags:
 
 
 
-> Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
+> Given an array and a value, remove all instances of that value in place and return the new length.
 
-> Do not allocate extra space for another array, you must do this in place with constant memory.
-
-
-> For example, Given input array A = [1,1,2], Your function should return length = 2, and A is now [1,2]
+> The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
 
 
-写了几次，每一次都有不同的感受。
+同样的快慢指针思路：
 
 版本一：
 
 ```Java
-public int removeDuplicates(int [] A){
-	   if (A == null || A.length == 0) {
-		return 0;
-	   }		      
-        int i = 0, j = 0;
-        while (j < A.length) {
-           if (A[i] != A[j++]) {
-               A[++i] = A[j];
-           }
-       }
-       return i + 1;
-}
+public int removeElement(int[] A, int elem) {
+		if (A == null || A.length == 0) {
+			return 0;
+		}
+
+		int walker = 0;
+		int runner = 0;
+		while (runner < A.length) { 
+			if (A[runner] != elem) {
+				A[walker++] = A[runner];
+			}
+			runner++;
+		}
+
+		return walker;
+	}
 
 ```
 
-这个版本有错误，原因是数组越界，虽然while循环判断数字长度，但是在if判断里面残忍的使用了j++，导致IndexOutOfBound。无经验造成的。
+需要注意的是，与[remove duplicates in sorted array](http://anotherbug.com/blog/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/) 相比不一样的地方是 A[walker++]而非A[++walker]，为什么？【你需要好好思考下，walker和runner初始位置，以及第一次比较后它们值的变化。】
+这个版本可以通过leetcode测试，也很完美，可以再优化了吗？
 
 
 版本二：

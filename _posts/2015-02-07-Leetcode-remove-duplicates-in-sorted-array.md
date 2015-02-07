@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Leetcode刷题有感"
-description: "Leetcode Remove duplicates from sorted Array"
+title: "Leetcode Remove duplicates from sorted Array"
+description: "Leetcode刷题有感 Leetcode Remove duplicates from sorted Array"
 category: "Technique"
 tags:
 - Algorithm
@@ -40,7 +40,7 @@ public int removeDuplicates(int [] A){
 
 ```
 
-这个版本有错误，原因是数组越界，虽然while循环判断数字长度，但是在if判断里面残忍的使用了j++，导致IndexOutOfBound。无经验造成的。
+这个版本有错误.
 
 
 版本二：
