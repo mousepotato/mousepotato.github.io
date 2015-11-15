@@ -28,11 +28,12 @@ const crypto = require('crypto'), fs = require("fs"),http = require("http");va
 ```
 
 其中生成privatekey.pem 和 certificate.pem 的方法是:
-> openssl genrsa -out privatekey.pem 1024
-> 
-> openssl req -new -key privatekey.pem -out certrequest.csr
-> 
-> openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
+
+	openssl genrsa -out privatekey.pem 1024
+ 
+	openssl req -new -key privatekey.pem -out certrequest.csr
+ 
+	openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
  
 
 
