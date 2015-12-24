@@ -61,366 +61,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-how-to-install-awesome-vim-on-64bit-windows-7" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/07/24/how-to-install-awesome-vim-on-64bit-windows-7/" class="article-date">
-  <time datetime="2013-07-24T07:00:00.000Z" itemprop="datePublished">2013-07-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>layout: post<br>title: How to install Awesome Vim on 64bit Windows 7<br>description: “本文介绍如何在64位的Windows 7 操作系统上安装vim并且通过github配置各种vim插件。”<br>category: Technique<br>tags: </p>
-<ul>
-<li>Vim</li>
-<li>Windows</li>
-</ul>
-<hr>
-<hr>
-<h1 id="How_to_install_vim_for_windows"><a href="#How_to_install_vim_for_windows" class="headerlink" title="How to install vim for windows"></a>How to install vim for windows</h1><ol>
-<li><p>Download <del><a href="https://code.google.com/p/vim-win3264/wiki/Win64Binaries" target="_blank" rel="external">gVIM_X64</a></del> <a href="ftp://ftp.vim.org/pub/vim/pc/gvim74.exe" target="_blank" rel="external">gvim Self-installing executable</a>, <a href="https://code.google.com/p/msysgit/downloads/list" target="_blank" rel="external">msysgit</a>, and the <a href="https://github.com/humiaozuzu/dot-vimrc" target="_blank" rel="external">dot_vim</a>, make sure install gvim in <code>C:\vim\vim74</code> folder.</p>
-</li>
-<li><p>Download ctags and other utilities at this <a href="http://s.yunio.com/viCkke" target="_blank" rel="external">link</a> and put it in <code>C:\vim\vim74</code>.</p>
-</li>
-<li><p>Download Monaco font at this <a href="http://s.yunio.com/GBKtUh" target="_blank" rel="external">link</a>.</p>
-</li>
-<li><p>Edit the the environment variable add <code>PATH=C:\vim\vim74;C:\Program Files\Git\cmd</code>. </p>
-</li>
-<li><p>Enter command line and execute:</p>
-<blockquote>
-<p>git clone git://github.com/humiaozuzu/dot-vimrc.git C:\vim\vim74  </p>
-</blockquote>
-</li>
-<li><p>change <code>vimrc</code> to <code>_vimrc</code>.</p>
-</li>
-<li><p>change the first line to <code>source C:\vim73\bundles.vim</code>.</p>
-</li>
-<li><p><code>git clone https://github.com/gmarik/vundle.git C:\vim\vim74</code>.</p>
-</li>
-<li><p>In gVIM, run <code>:BundleInstall</code>.</p>
-</li>
-<li><p>Last important step，in the folder <code>C:\Users\sli</code> create file<code>_vimrc</code> and add the following:</p>
-<pre><code>set runtimepath+=C:\vim\vim74
-
-source C:\vim\_vimrc
-</code></pre></li>
-</ol>
-<p>That’s it!!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/07/24/how-to-install-awesome-vim-on-64bit-windows-7/" data-id="ciijshyhk000so8sddsb0qott" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Mac-OS-X-Apache-Server" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/06/26/Mac-OS-X-Apache-Server/" class="article-date">
-  <time datetime="2013-06-26T07:00:00.000Z" itemprop="datePublished">2013-06-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/06/26/Mac-OS-X-Apache-Server/">Mac OS X 下开启apache web服务器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Mac OS X 下开启apache web服务器</p>
-<ul>
-<li><p>编辑配置文件.conf</p>
-<pre><code>vim /etc/apache2/users/shuangjiang.conf
-</code></pre></li>
-</ul>
-<ul>
-<li><p>添加配置文件 <code>shuangjiang.conf</code></p>
-<pre><code>&lt;Directory &quot;/Users/shuangjiang/Sites/&quot;&gt;
-    Options Indexes MultiViews FollowSymlinks
-    AllowOverride All
-    Order allow,deny
-    Allow from all
-&lt;/Directory&gt;
-</code></pre></li>
-<li><p>重启和关闭 apache 服务器</p>
-</li>
-</ul>
-<blockquote>
-<p>sudo apachectl start/stop<br>sudo apachectl restart</p>
-</blockquote>
-<ul>
-<li><p>访问页面</p>
-<pre><code>http://localhost/~shuangjiang
-</code></pre></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/26/Mac-OS-X-Apache-Server/" data-id="ciijshyhm000to8sdbkee4dsv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-revert-github-source-code-to-a-specific-commit" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/" class="article-date">
-  <time datetime="2013-06-20T07:00:00.000Z" itemprop="datePublished">2013-06-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>layout: post<br>title: “How to revert Github source code to a specific commit”<br>description: “如何将Github的代码回退到某一个指定的提交版本”<br>category: Technique<br>tags: </p>
-<h2 id="Git"><a href="#Git" class="headerlink" title="- Git"></a>- Git</h2><hr>
-<p>如何将Github的代码回退到某一个指定的提交版本  </p>
-<p>How to revert Github source code to a specific commit</p>
-<pre><code>git reset --hard &quot;old-commit-id&quot;
-git push -f
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/" data-id="ciijshyho000wo8sds65f217l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-How-to-read-memory-info-under-Linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/06/14/How-to-read-memory-info-under-Linux/" class="article-date">
-  <time datetime="2013-06-14T07:00:00.000Z" itemprop="datePublished">2013-06-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/06/14/How-to-read-memory-info-under-Linux/">Linux 下的查看系统内存信息</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Linux查看系统内存信息可以有如下方法：</p>
-<ul>
-<li><code>free</code>  </li>
-<li><code>free -m</code>  </li>
-<li><code>cat /proc/meminfo</code></li>
-</ul>
-<p>如果要查询详细到RAM规格，DDR2，DDR3可以使用：</p>
-<ul>
-<li><code>sudo lshw</code></li>
-</ul>
-<p><img src="/assets/images/2013/06/14/meminfo.png" alt="meminfo"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/14/How-to-read-memory-info-under-Linux/" data-id="ciijshyhq000xo8sdf9mjd7r2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux-dev-files" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/06/13/Linux-dev-files/" class="article-date">
-  <time datetime="2013-06-13T07:00:00.000Z" itemprop="datePublished">2013-06-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/06/13/Linux-dev-files/">Linux 下的几个文件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Linux 下的几个文件</p>
-<p>Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是:</p>
-<h2 id="1_3A_/dev/null"><a href="#1_3A_/dev/null" class="headerlink" title="1: /dev/null"></a>1: /dev/null</h2><p>这个/dev下放的是系统和用户的设备文件. null是个文件名. 被称为 the null device, <code>/dev/null</code> 这个童鞋脾气有点大,听不见别人任何话,所以呢任何话传到他耳朵里都被当成耳旁风了.当然更可恨的是他竟然还假惺惺的点头说听到了.当然他是很诚实地说的.  </p>
-<blockquote>
-<p> /dev/null or the null device is a special file that discards all data written to it, but reports that the write operation succeed.   </p>
-</blockquote>
-<p>所以呢,你心情不好的时候,或者你有个秘密憋的慌想说但是又怕周围人有个big mouth的时候来,可以和这个娃说说. 用程序员的黑话(jargon)说他是个’黑洞’(black hole)或者’位筒’(bit bucket).</p>
-<p><img src="/assets/images/2013/06/13/dev_null.jpg" alt="devnull"></p>
-<p>知道了这个,下面几个隔行如隔山的话也就好理解了.</p>
-<ol>
-<li>Please send complaints to <code>/dev/null</code></li>
-<li>my mail got archived in <code>/dev/null</code></li>
-</ol>
-<p>几个扩展:</p>
-<ol>
-<li><code>cat /dev/null &gt; /var/log/db_log</code> (清空日志文件的内容)</li>
-<li><code>&gt;/dev/null 2&gt;&amp;1</code> 的理解  </li>
-</ol>
-<ul>
-<li><code>&gt;</code> 代表重定向到哪里，比方：<code>echo &quot;123&quot; &gt; /home/123.txt</code>  </li>
-<li><code>&gt;</code> 输出给这个不听话的娃, <code>/dev/null</code>  </li>
-<li><code>2&gt;</code> 表示stderr标准错误   </li>
-<li><code>&amp;</code> 表示等同于的意思，<code>2&gt;&amp;1</code>，表示2的输出重定向等同于1  </li>
-<li><code>1</code> 表示stdout标准输出，系统默认值是1，所以<code>&gt;/dev/null</code>等同于 <code>1&gt;/dev/null</code></li>
-</ul>
-<p>因此，<code>&gt;/dev/null 2&gt;&amp;1</code>也可以写成<code>1&gt; /dev/null 2&gt;&amp;1</code>  </p>
-<p><code>1&gt;/dev/null</code>：首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。  </p>
-<p><code>2&gt;&amp;1</code>：接着，标准错误输出重定向 到 标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。  </p>
-<p>最常见的写法: <code>command &gt; file 2&gt;file</code> 与 <code>command &gt; file 2&gt;&amp;1</code>(这个效率更高点,可以从打开文件的次数角度去分析.)</p>
-<h2 id="2-_/dev/full"><a href="#2-_/dev/full" class="headerlink" title="2. /dev/full"></a>2. /dev/full</h2><p>这个娃天生胃小,整天处于吃饱状态.送啥吃的来都不接受.那你说把这个家伙放在unix里面干嘛.This device is usually used when testing the behaviour of a program when it encounters a disk full error.测试某些程序在磁盘吃饱状态下的错误.</p>
-<p><img src="/assets/images/2013/06/13/dev_full.jpg" alt="devfull"> </p>
-<h2 id="3-_/dev/zero"><a href="#3-_/dev/zero" class="headerlink" title="3. /dev/zero"></a>3. /dev/zero</h2><p>这哥们有很的0,MS是很有钱.他实际上产生连续不断的null的流（二进制的零流),写入他的东东会丢失不见,然后呢会给你一串的null值,这个一般不好发觉./dev/zero主要的用处是用来创建一个指定长度用于初始化的空文件，就像临时交换文件.</p>
-<p><img src="/assets/images/2013/06/13/dev_zero.jpg" alt="devzero"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/13/Linux-dev-files/" data-id="ciijshyht0013o8sdbm7snhzf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-make-presentation-using-markdown" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/06/12/how-to-make-presentation-using-markdown/" class="article-date">
-  <time datetime="2013-06-12T07:00:00.000Z" itemprop="datePublished">2013-06-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Research/">Research</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/06/12/how-to-make-presentation-using-markdown/">How to make presentation using markdown</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>How to make presentation using markdown<br>如何使用markdown做报告</p>
-<h3 id="1-__u5B89_u88C5_Markdown_Presenter"><a href="#1-__u5B89_u88C5_Markdown_Presenter" class="headerlink" title="1. 安装 Markdown Presenter"></a>1. 安装 Markdown Presenter</h3><p><a href="https://github.com/jsakamoto/MarkdownPresenter" target="_blank" rel="external">Markdown Presenter 地址</a></p>
-<blockquote>
-<p>git clone <a href="https://github.com/jsakamoto/MarkdownPresenter.git" target="_blank" rel="external">https://github.com/jsakamoto/MarkdownPresenter.git</a>  </p>
-</blockquote>
-<h3 id="2-__u5B89_u88C5Ubuntu_u4E0B_u7684WebServer-webfs"><a href="#2-__u5B89_u88C5Ubuntu_u4E0B_u7684WebServer-webfs" class="headerlink" title="2. 安装Ubuntu下的WebServer-webfs"></a>2. 安装Ubuntu下的WebServer-webfs</h3><blockquote>
-<p>sudo apt-get install webfs  </p>
-</blockquote>
-<p>或者使用python自带的web server</p>
-<blockquote>
-<p>python -m SimpleHTTPServer </p>
-</blockquote>
-<h3 id="3-__u65B0_u5EFA_u6216_u8005_u7F16_u8F91-md_u6587_u4EF6_presentation-md"><a href="#3-__u65B0_u5EFA_u6216_u8005_u7F16_u8F91-md_u6587_u4EF6_presentation-md" class="headerlink" title="3. 新建或者编辑.md文件 presentation.md"></a>3. 新建或者编辑.md文件 presentation.md</h3><pre><code>This is a slide  
-Blah blah blah  
-!  
-This is another slide  
-Yada yada yada  
-</code></pre><h3 id="4-__u5C06_u5199_u597D_u7684_u6587_u4EF6_u653E_u5230MarkdownPresenter_u76EE_u5F55_u4E0B_uFF0C_u7136_u540E_u8FD0_u884C"><a href="#4-__u5C06_u5199_u597D_u7684_u6587_u4EF6_u653E_u5230MarkdownPresenter_u76EE_u5F55_u4E0B_uFF0C_u7136_u540E_u8FD0_u884C" class="headerlink" title="4. 将写好的文件放到MarkdownPresenter目录下，然后运行"></a>4. 将写好的文件放到<code>MarkdownPresenter</code>目录下，然后运行</h3><blockquote>
-<p> python -m SimpleHTTPServer  </p>
-</blockquote>
-<p>或者运行</p>
-<blockquote>
-<p>webfsd -F -p 8888 -r ~/scripts/MarkdownPresenter/ -f Presenter.html</p>
-</blockquote>
-<h3 id="5-__u6CE8_u610F_u4E8B_u9879"><a href="#5-__u6CE8_u610F_u4E8B_u9879" class="headerlink" title="5. 注意事项"></a>5. 注意事项</h3><p><font color="red">The <code>Presenter.html</code> fetches the <code>presentation.md</code> from the server via Ajax, uses <code>Showdown.js</code> to transform it into HTML.</font><br>所以.md文件必须命名为 <code>presentation.md</code>，然后 webserver必须打开<code>Presenter.html</code>.</p>
-<p>That’s it!!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/12/how-to-make-presentation-using-markdown/" data-id="ciijshyhv0017o8sdxueg3pqv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-how-to-install-CyanogenMod-on-Galaxy-S3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/" class="article-date">
@@ -457,12 +97,12 @@ Yada yada yada
 <li>stable  （稳定版本）  </li>
 </ul>
 <p>可以根据自己喜好选择。</p>
-<h3 id="2-__u5B89_u88C5_CyanogenMod"><a href="#2-__u5B89_u88C5_CyanogenMod" class="headerlink" title="2. 安装 CyanogenMod"></a>2. 安装 CyanogenMod</h3><p>将下载好的.zip文件放到S3手机上。有两种方法：    </p>
+<h3 id="2-__u5B89_u88C5_CyanogenMod"><a href="#2-__u5B89_u88C5_CyanogenMod" class="headerlink" title="2. 安装 CyanogenMod"></a>2. 安装 CyanogenMod</h3><p>将下载好的.zip文件放到S3手机上。有两种方法:</p>
 <ul>
-<li>直接将手机连接电脑上传    </li>
-<li>将手机连接电脑通过adb上传  <blockquote>
+<li><p>直接将手机连接电脑上传</p>
+</li>
+<li><p>将手机连接电脑通过adb上传</p>
 <p>./adb push ~/Downloads/cm-10.1-20130610-NIGHTLY-i9300.zip /sdcard/0/cmupdater</p>
-</blockquote>
 </li>
 </ul>
 <h3 id="3-__u5C06S3_u91CD_u542F_u8FDB_u5165recovery__u6A21_u5F0F_u8FDB_u884C_u5B89_u88C5"><a href="#3-__u5C06S3_u91CD_u542F_u8FDB_u5165recovery__u6A21_u5F0F_u8FDB_u884C_u5B89_u88C5" class="headerlink" title="3. 将S3重启进入recovery 模式进行安装"></a>3. 将S3重启进入recovery 模式进行安装</h3><ul>
@@ -491,7 +131,7 @@ Yada yada yada
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/" data-id="ciijshyhx001do8sdhhuyps8d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/" data-id="ciijt7g6h0019visdidnd5jrt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
@@ -530,7 +170,6 @@ Yada yada yada
     <div class="article-entry" itemprop="articleBody">
       
         <p>GTD 下一步行动计划</p>
-<p>What to do next for your GTD plan</p>
 <p>A simple pictures shows your GTD plan for next step：</p>
 <p><img src="/assets/images/2013/05/27/wtd.png" alt="GTD Next"> </p>
 <p>That’s it!!</p>
@@ -538,7 +177,7 @@ Yada yada yada
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/05/27/what-to-do-next-for-your-GTD-plan/" data-id="ciijshyi0001ho8sd0rdwykeg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2013/05/27/what-to-do-next-for-your-GTD-plan/" data-id="ciijt7g6k001dvisdxha5t4pu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GTD/">GTD</a></li></ul>
@@ -584,7 +223,7 @@ Yada yada yada
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/" data-id="ciijshyi2001mo8sd0fy0tcvg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/" data-id="ciijt7g6m001ivisd9olluf19" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
@@ -633,7 +272,7 @@ Yada yada yada
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/05/18/how-to-install-third-party-beamer-theme/" data-id="ciijshyi4001qo8sdqn7a5m1x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2013/05/18/how-to-install-third-party-beamer-theme/" data-id="ciijt7g6p001mvisdykapy9ac" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Latex/">Latex</a></li></ul>
@@ -645,9 +284,417 @@ Yada yada yada
 
 
   
+    <article id="post-how-to-delete-^M-in-Vim" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/03/how-to-delete-^M-in-Vim/" class="article-date">
+  <time datetime="2013-05-03T07:00:00.000Z" itemprop="datePublished">2013-05-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/05/03/how-to-delete-^M-in-Vim/">How to delete ^M in vim</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>如何删除Vm中的多余<code>^M</code></p>
+<h2 id="5EM_u7684_u7531_u6765"><a href="#5EM_u7684_u7531_u6765" class="headerlink" title="^M的由来"></a>^M的由来</h2><ol>
+<li>Vim 支持三种文件格式（dos,mac,unix）,不同的文件格式将以不同的ending characters (line terminators)结尾。 </li>
+<li>三种文件格式的ending characters分别为：<pre><code>- dos: CRLF (each line ends with an LF character)
+- mac: CR only    (each line ends with two characters, CR then LF)
+- unix: LF only (each line ends with a CR character)
+</code></pre></li>
+</ol>
+<p><code>LF</code> 是 <code>Line Feed</code>的缩写，意为换行，表示将光标移到下一行 (<strong>move cursor down</strong>)。注意<code>是将光标移到当前字符的下一行，并没有移到最左侧</code>。对应符号为，<code>Ctrl-J</code>或者hex的<code>0A</code>。</p>
+<p><code>CR</code> 是 <code>Carriage Return</code>的缩写，意为回车键，表示将光标移到最左边（<strong>return cursor to left margin</strong>）,注意<code>还是在当前行，没有开始新的一行</code>。 对应符号为，<code>Ctrl-M</code>，<code>^M</code>或者hex的<code>OD</code>。</p>
+<ol>
+<li>当你在Mac下编辑的文件文件格式为unix格式时，结尾就会显示 <code>^M</code>。</li>
+</ol>
+<h2 id="Vim_u4E2D_u5982_u4F55_u67E5_u770B_u6587_u4EF6_u683C_u5F0F_u76F8_u5173_u547D_u4EE4"><a href="#Vim_u4E2D_u5982_u4F55_u67E5_u770B_u6587_u4EF6_u683C_u5F0F_u76F8_u5173_u547D_u4EE4" class="headerlink" title="Vim中如何查看文件格式相关命令"></a>Vim中如何查看文件格式相关命令</h2><ol>
+<li>查看隐藏的结尾字符：<code>:set list</code>，取消显示对应的是：<code>:set nolist</code></li>
+<li>查看文件格式：<code>:set ff</code> </li>
+<li>强制以某一种文件格式打开文件:<code>:e ++ff=unix</code>，或者 <code>:e ++ff=dos</code></li>
+<li>Vim中文件格式帮助命令：<code>:h ffs</code></li>
+</ol>
+<h2 id="u5982_u4F55_u5220_u9664"><a href="#u5982_u4F55_u5220_u9664" class="headerlink" title="如何删除"></a>如何删除</h2><ol>
+<li><p>去掉所有多余的^M: <code>:%s/^M$//g</code><br>注意：命令中的^M 是通过键入<code>CTRL-V CTRL-M</code>生成的！该命令的意思是 “去掉所有行末的^M”</p>
+</li>
+<li><p>处理仅有^M而没有carrage回车键的情况:<code>:%s/^M/ /g</code></p>
+</li>
+</ol>
+<p>注意：命令中的^M 是通过键入<code>CTRL-V CTRL-M</code>生成的！该命令的意思是 “将仅有^M而没有换行符的地方替换成换行符”。</p>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/05/03/how-to-delete-^M-in-Vim/" data-id="ciijt7g6r001qvisdf904ktw9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vim/">Vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-create-schulte-grid-using-excel" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/29/how-to-create-schulte-grid-using-excel/" class="article-date">
+  <time datetime="2013-04-29T07:00:00.000Z" itemprop="datePublished">2013-04-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Personal/">Personal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/29/how-to-create-schulte-grid-using-excel/">How to create Schulte Grid using Excel</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>如何用Excel做舒尔特方格</p>
+<h2 id="u4EC0_u4E48_u662F_u8212_u5C14_u7279_u65B9_u683C"><a href="#u4EC0_u4E48_u662F_u8212_u5C14_u7279_u65B9_u683C" class="headerlink" title="什么是舒尔特方格"></a>什么是舒尔特方格</h2><p>舒尔特方格 (Schulte Grid) 是在一张方形卡片上画上 1cm × 1cm 的 25 个方格，格子内任意填写上阿拉伯数字 1 ~ 25 等共 25 个数字。训练时，要求被测者用手指按 1 ~ 25 的顺序依次指出其位置，同时诵读出声，施测者一旁记录所用时间。数完 25 个数字所用时间越短，注意力水平越高。</p>
+<h2 id="u5982_u4F55_u7528Excel_u505A_u8212_u5C14_u7279_u65B9_u683C"><a href="#u5982_u4F55_u7528Excel_u505A_u8212_u5C14_u7279_u65B9_u683C" class="headerlink" title="如何用Excel做舒尔特方格"></a>如何用Excel做舒尔特方格</h2><ol>
+<li><p>新建一个Excel文件；在sheet2 的A1到A25单元格中输入1-25各数;B1到B25单元格中输入随机数公式：    <code>=Rand()</code></p>
+<p> <img src="/assets/images/2013/04/29/shulte-grid_1.jpg" alt="Schulte Grid"></p>
+</li>
+</ol>
+<ol>
+<li><p>在sheet1的A1到E5单元格中分别用等号引用sheet2 A列中的25个单元格数据；Excel中从一个sheet引用另外一个sheet单元格的方式如下：</p>
+<p> <code>=Sheet2!A1</code></p>
+<p> <img src="/assets/images/2013/04/29/shulte-grid_2.jpg" alt="Schulte Grid"></p>
+</li>
+</ol>
+<ol>
+<li><p>在sheet2 中对数据进行排序操作，排序依据为B列，这样在sheet1 中就得到了随机排列的1-25各数。</p>
+<p> <img src="/assets/images/2013/04/29/shulte-grid_3.jpg" alt="Schulte Grid"></p>
+</li>
+</ol>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/04/29/how-to-create-schulte-grid-using-excel/" data-id="ciijt7g6v001uvisdxjaqdxfk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-crack-master-lock" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/29/how-to-crack-master-lock/" class="article-date">
+  <time datetime="2013-04-29T07:00:00.000Z" itemprop="datePublished">2013-04-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Personal/">Personal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/29/how-to-crack-master-lock/">How to crack the master lock</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何破解master lock的密码</p>
+<h2 id="u539F_u59D4"><a href="#u539F_u59D4" class="headerlink" title="原委"></a>原委</h2><p>最近游泳不小心把爱锁丢失，无奈看到地上有一个废弃的master lock，捡了回来，死马当活马医吧。</p>
+<p><img src="/assets/images/2013/04/29/master_lock.png" alt="master lock"></p>
+<h2 id="u7834_u89E3_u51C6_u5907_u77E5_u8BC6"><a href="#u7834_u89E3_u51C6_u5907_u77E5_u8BC6" class="headerlink" title="破解准备知识"></a>破解准备知识</h2><ol>
+<li>Master lock 密码转盘有40个数字 (0-39)，3个密码，采取暴力的手段是无法破解的。</li>
+<li>密码转盘有40个数字 (0-39)可以分为4组 （0-10，11-20，21-30，31-0），明白分组的概念有助于加速破解</li>
+<li>了解master lock如何开锁。（已经知道密码的情况下）参看 <a href="http://www.ehow.com/how_4810869_open-master-combination-lock.html" target="_blank" rel="external">eHow</a>。具体方法是：</li>
+</ol>
+<p><code>1. 将master lock正面朝向你，不要放反了</code></p>
+<p><code>2. 将密码转盘顺时针转3整圈，注意，在第三圈未转完的时候将密码的第一位数字对准锁正上方的红点。</code></p>
+<p><code>3. 现在开始逆时针转动转盘，要让密码的第一位数字通过正上方的红点一次，然后让密码的第二位数字停留在红点下方</code></p>
+<p><code>4. 现在开始顺时针旋转密码，直接转到密码的第三位数字，将其放在红点下方。</code></p>
+<p><code>5. 拉动锁杆，可以开锁了，如何不行的话，在知道正确密码的情况下，重复1-4步骤。</code></p>
+<h2 id="u7834_u89E3_u7B2C_u4E09_u4F4D_u6570_u5B57"><a href="#u7834_u89E3_u7B2C_u4E09_u4F4D_u6570_u5B57" class="headerlink" title="破解第三位数字"></a>破解第三位数字</h2><ol>
+<li><p>初始化master lock</p>
+<p> <code>顺时针转到密码转盘4-5圈，使锁复位</code></p>
+</li>
+<li>将锁盘的数字0正对锁上方的红色小点</li>
+<li><p>用手用力拉锁杆，顺时针从0开始转动转盘。</p>
+<p> <code>在0-10的数字之间，你能找到在3个数字出，转盘会被卡住，转动很困难，记下这三个数字，如果转盘卡在某两个数字之间，比如6和7之间，就记下6.5</code></p>
+</li>
+<li><p>重复第三个步骤，依次在11-20，21-30，31-0之间各找到三个数字。</p>
+</li>
+<li><p>记下这12个数字，这十二个数字有规律的：</p>
+<p> <code>（1）当中会有5个数字是整数，7个小数</code></p>
+<p> <code>（2）5个整数中会有4个整数结尾数字相同</code></p>
+<p> <code>（3）找出那个结尾不同的数字，它就是你的密码中的第三位数字！！！</code></p>
+</li>
+</ol>
+<h2 id="u7834_u89E3_u7B2C_u4E00_u4F4D_u6570_u5B57"><a href="#u7834_u89E3_u7B2C_u4E00_u4F4D_u6570_u5B57" class="headerlink" title="破解第一位数字"></a>破解第一位数字</h2><ol>
+<li>找到密码的第三位数字后，将它除以4取余数，结果会是0，1，2，和3中的一个。比如我的第三位数字是35，那么除以4后余数是3。</li>
+<li>这样从余数开始，依次加上4，得到一组数字（比如我的余数是3，那么我得到的一组数字就是：3，7，11，15，19，23，27，31，35，39）注意密码数字的最大只到39.</li>
+<li>好的，你已经得到了密码第1位数字的所有可能性了。</li>
+</ol>
+<h2 id="u7834_u89E3_u7B2C_u4E8C_u4F4D_u6570_u5B57"><a href="#u7834_u89E3_u7B2C_u4E8C_u4F4D_u6570_u5B57" class="headerlink" title="破解第二位数字"></a>破解第二位数字</h2><ol>
+<li><p>还记得刚才的那个余数吗？比如我的是3，现在需要将这个余数做一个简单的数学映射。</p>
+<p> <code>0--&gt;2</code></p>
+<p> <code>1--&gt;3</code></p>
+<p> <code>2--&gt;0</code></p>
+<p> <code>3--&gt;1</code>    </p>
+</li>
+<li>比如我的余数是3，那么现在映射后的余数就是1了。</li>
+<li>同样的，用这个新的余数1，依次加上4，得到一组数字共有10个 （1，5，9，13，17，21，25，29，33，37）</li>
+<li>这10个数字就是你密码的第二位数字的所有可能性了。</li>
+</ol>
+<h2 id="u5C1D_u8BD5_u627E_u51FA_u5BC6_u7801"><a href="#u5C1D_u8BD5_u627E_u51FA_u5BC6_u7801" class="headerlink" title="尝试找出密码"></a>尝试找出密码</h2><ol>
+<li>写下上面步骤的3位密码的所有可能性，一一尝试，因为密码的第一位和第二位各有10个数字，第三位已经确定，所以尝试的可能有100种组合。</li>
+<li>一般情况下你要拿着顺序记下一一组合。但是运用工程和心理学原理，以及算法中的二分查找原理，可以从密码第一位数字所有可能性数字的中间开始和第二位密码的所有可能一一组合搜素。</li>
+<li>如果不对，再从第一位密码的所有可能性的前半段中间开始，或者后半段的中间开始。</li>
+<li>不管按照什么顺序，一定要注意记录，方式混乱或者遗落任何一个密码组合。下图是我的查找示意图（我首先尝试的是23，然后是19，然后是11，最后是7，所以在进行了40多次的尝试后找到了正确的密码）。对应的密码是 <strong>7-25-35</strong>，哈哈，有锁可以用了！！</li>
+</ol>
+<p><img src="/assets/images/2013/04/29/master_lock_crack.png" alt="master lock crack"></p>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/04/29/how-to-crack-master-lock/" data-id="ciijt7g6x001yvisdsuielkei" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacks/">Hacks</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-to-download-whole-website-using-wget-with-chinese-character-support" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/" class="article-date">
+  <time datetime="2013-04-28T07:00:00.000Z" itemprop="datePublished">2013-04-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/">How to download a whole website using wget with chinese character support</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如何使用wget下载整个网站同时支持中文命名</p>
+<h2 id="wget__u4E0B_u8F7D_u6574_u4E2A_u7F51_u7AD9"><a href="#wget__u4E0B_u8F7D_u6574_u4E2A_u7F51_u7AD9" class="headerlink" title="wget 下载整个网站"></a>wget 下载整个网站</h2><p>使用命令：</p>
+<pre><code>wget -r -p -E -k -nH -np --cut-dirs=1 -P /path/to/save/  Website URL
+</code></pre><h2 id="u652F_u6301_u4E2D_u6587"><a href="#u652F_u6301_u4E2D_u6587" class="headerlink" title="支持中文"></a>支持中文</h2><pre><code>vi ~/.wgetrc
+</code></pre><p>添加如下内容：</p>
+<pre><code>--restrict-file-names=nocontrol
+--trust-server-names=on
+--content-disposition=on
+</code></pre><p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/" data-id="ciijt7g6z0022visdewkeesrb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Shutdown-specific-port-in-windows" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/01/Shutdown-specific-port-in-windows/" class="article-date">
+  <time datetime="2012-10-01T07:00:00.000Z" itemprop="datePublished">2012-10-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/01/Shutdown-specific-port-in-windows/">Windows 下如何关闭特定端口</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p><code>netstat -aon|findstr &quot;9050&quot;</code></p>
+<p>  TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016</p>
+<p>  tasklist|findstr “2016”</p>
+</li>
+<li><p><code>tor.exe 2016 Console 0 16,064</code></p>
+</li>
+</ul>
+<ul>
+<li><code>ctrl+alt+delete</code> 打开任务管理器，找到tor.exe右键end process。</li>
+</ul>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/01/Shutdown-specific-port-in-windows/" data-id="ciijt7g710026visdehaaz1qd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" class="article-date">
+  <time datetime="2012-06-05T07:00:00.000Z" itemprop="datePublished">2012-06-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/">Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</p>
+<h3 id="1-_Setup_virtual_machines__283_for_exmaple_29"><a href="#1-_Setup_virtual_machines__283_for_exmaple_29" class="headerlink" title="1. Setup virtual machines (3 for exmaple)"></a>1. Setup virtual machines (3 for exmaple)</h3><ul>
+<li><p>You should first setup one machine using virtualbox, <a href="http://anotherbug.com/blog/2011/10/ubuntu-11-04_install_java/" target="_blank" rel="external">setup JAVA environment</a>, download the <a href="http://www.apache.org/dyn/closer.cgi?path=/cassandra/1.1.1/apache-cassandra-1.1.1-bin.tar.gz" target="_blank" rel="external">Cassandra source code</a> </p>
+</li>
+<li><p>Use Virtualbox’s virtualmanager function to <a href="http://anotherbug.com/blog/2012/05/virtualbox-%E4%BF%AE%E6%94%B9uuid%E5%AE%9E%E7%8E%B0%E7%A1%AC%E7%9B%98%E5%A4%8D%E5%88%B6/" target="_blank" rel="external">copy another two ubuntu machines</a>. Make sure to <a href="http://anotherbug.com/blog/2012/04/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9ubuntu%E7%9A%84hostname/" target="_blank" rel="external">modify the hostname</a>.</p>
+</li>
+<li><p>Modify the    <code>/etc/hosts</code> file. </p>
+</li>
+<li>Machine summary      <ul>
+<li>192.168.56.101 sjhadoop0</li>
+<li>192.168.56.103 sjhadoop1<ul>
+<li>192.168.56.104 sjhadoop2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-_Config_Cassandra"><a href="#2-_Config_Cassandra" class="headerlink" title="2. Config Cassandra"></a>2. Config Cassandra</h3><ul>
+<li><p>Modify <code>/conf/cassandra-env.sh</code>file.</p>
+<pre><code>MAX_HEAP_SIZE=&amp;quot;512M&amp;quot;
+HEAP_NEWSIZE=&amp;quot;128M&amp;quot;
+</code></pre></li>
+<li><p>Modify <code>/conf/cassandra.yaml</code> file. For each virtual machine, change <code>listen_address</code> and <code>rpc_address</code>accordingly.</p>
+<pre><code>listen_address: 192.168.1.1
+rpc_address: 192.168.1.1
+</code></pre></li>
+<li><p>Choose one first machine as seed. Then change <code>seeds</code> to its ip address, make the rest VM pointing to the same seed.</p>
+<pre><code>seeds: - 192.168.1.1
+</code></pre></li>
+<li><p>Assign initial_token, using the <a href="http://anotherbug.com/blog/nodeToken.py" target="_blank" rel="external">this python code</a> to generate initial token and modify the <code>initial_token</code> in .yaml file.</p>
+</li>
+</ul>
+<h3 id="3-_Start_Cassandra"><a href="#3-_Start_Cassandra" class="headerlink" title="3. Start Cassandra"></a>3. Start Cassandra</h3><pre><code>sudo ./bin/cassandra -f
+</code></pre><p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" data-id="ciijt7g74002avisd1j8wuxdn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </section>
@@ -658,7 +705,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">31</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">15</span></li></ul>
     </div>
   </div>
 
@@ -667,7 +714,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Movie/">Movie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sparse-Representation/">Sparse Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -676,7 +723,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 11.43px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 11.43px;">Android</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 10px;">GTD</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 14.29px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 12.86px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 11.43px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15.71px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/tags/Mac/" style="font-size: 18.57px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Movie/" style="font-size: 10px;">Movie</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 11.43px;">Programming</a> <a href="/tags/Ruby/" style="font-size: 11.43px;">Ruby</a> <a href="/tags/Sparse-Representation/" style="font-size: 10px;">Sparse Representation</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 11.43px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iTunes/" style="font-size: 10px;">iTunes</a>
+      <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 13.33px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 13.33px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
     </div>
   </div>
 
@@ -685,7 +732,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -697,23 +744,23 @@ Yada yada yada
       <ul>
         
           <li>
-            <a href="/2015/11/15/Box-content-APIs-example/">Box Content APIs example</a>
+            <a href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a>
           </li>
         
           <li>
-            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode Remove element</a>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
           </li>
         
           <li>
-            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode Remove duplicates from sorted Array</a>
+            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
           </li>
         
           <li>
-            <a href="/2014/07/11/Jerusalem/">(no title)</a>
+            <a href="/2013/11/28/Download-web-pictures-using-Nodejs/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2014/06/21/Workout-stuff/">(no title)</a>
+            <a href="/2013/11/25/linux-screen-in-5-commands/">Screen 使用之无废话5行命令</a>
           </li>
         
       </ul>

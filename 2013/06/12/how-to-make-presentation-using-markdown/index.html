@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2013/06/12/how-to-make-presentation-using-markdown/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="本文介绍如何使用Markdown编写报告。">
-<meta property="og:updated_time" content="2015-12-24T05:08:08.000Z">
+<meta property="og:updated_time" content="2015-12-24T05:49:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to make presentation using markdown">
 <meta name="twitter:description" content="本文介绍如何使用Markdown编写报告。">
@@ -86,37 +86,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>How to make presentation using markdown<br>如何使用markdown做报告</p>
+        <p>How to make presentation using markdow<br>如何使用markdown做报告</p>
 <h3 id="1-__u5B89_u88C5_Markdown_Presenter"><a href="#1-__u5B89_u88C5_Markdown_Presenter" class="headerlink" title="1. 安装 Markdown Presenter"></a>1. 安装 Markdown Presenter</h3><p><a href="https://github.com/jsakamoto/MarkdownPresenter" target="_blank" rel="external">Markdown Presenter 地址</a></p>
-<blockquote>
-<p>git clone <a href="https://github.com/jsakamoto/MarkdownPresenter.git" target="_blank" rel="external">https://github.com/jsakamoto/MarkdownPresenter.git</a>  </p>
-</blockquote>
-<h3 id="2-__u5B89_u88C5Ubuntu_u4E0B_u7684WebServer-webfs"><a href="#2-__u5B89_u88C5Ubuntu_u4E0B_u7684WebServer-webfs" class="headerlink" title="2. 安装Ubuntu下的WebServer-webfs"></a>2. 安装Ubuntu下的WebServer-webfs</h3><blockquote>
-<p>sudo apt-get install webfs  </p>
-</blockquote>
-<p>或者使用python自带的web server</p>
-<blockquote>
-<p>python -m SimpleHTTPServer </p>
-</blockquote>
-<h3 id="3-__u65B0_u5EFA_u6216_u8005_u7F16_u8F91-md_u6587_u4EF6_presentation-md"><a href="#3-__u65B0_u5EFA_u6216_u8005_u7F16_u8F91-md_u6587_u4EF6_presentation-md" class="headerlink" title="3. 新建或者编辑.md文件 presentation.md"></a>3. 新建或者编辑.md文件 presentation.md</h3><pre><code>This is a slide  
+<pre><code>git clone https://github.com/jsakamoto/MarkdownPresenter.git  
+</code></pre><h3 id="2-__u5B89_u88C5Ubuntu_u4E0B_u7684WebServer-webfs"><a href="#2-__u5B89_u88C5Ubuntu_u4E0B_u7684WebServer-webfs" class="headerlink" title="2. 安装Ubuntu下的WebServer-webfs"></a>2. 安装Ubuntu下的WebServer-webfs</h3><pre><code>sudo apt-get install webfs  
+</code></pre><p>或者使用python自带的web server</p>
+<pre><code>python -m SimpleHTTPServer 
+</code></pre><h3 id="3-__u65B0_u5EFA_u6216_u8005_u7F16_u8F91-md_u6587_u4EF6_presentation-md"><a href="#3-__u65B0_u5EFA_u6216_u8005_u7F16_u8F91-md_u6587_u4EF6_presentation-md" class="headerlink" title="3. 新建或者编辑.md文件 presentation.md"></a>3. 新建或者编辑.md文件 presentation.md</h3><pre><code>This is a slide  
 Blah blah blah  
 !  
 This is another slide  
 Yada yada yada  
-</code></pre><h3 id="4-__u5C06_u5199_u597D_u7684_u6587_u4EF6_u653E_u5230MarkdownPresenter_u76EE_u5F55_u4E0B_uFF0C_u7136_u540E_u8FD0_u884C"><a href="#4-__u5C06_u5199_u597D_u7684_u6587_u4EF6_u653E_u5230MarkdownPresenter_u76EE_u5F55_u4E0B_uFF0C_u7136_u540E_u8FD0_u884C" class="headerlink" title="4. 将写好的文件放到MarkdownPresenter目录下，然后运行"></a>4. 将写好的文件放到<code>MarkdownPresenter</code>目录下，然后运行</h3><blockquote>
-<p> python -m SimpleHTTPServer  </p>
-</blockquote>
-<p>或者运行</p>
-<blockquote>
-<p>webfsd -F -p 8888 -r ~/scripts/MarkdownPresenter/ -f Presenter.html</p>
-</blockquote>
-<h3 id="5-__u6CE8_u610F_u4E8B_u9879"><a href="#5-__u6CE8_u610F_u4E8B_u9879" class="headerlink" title="5. 注意事项"></a>5. 注意事项</h3><p><font color="red">The <code>Presenter.html</code> fetches the <code>presentation.md</code> from the server via Ajax, uses <code>Showdown.js</code> to transform it into HTML.</font><br>所以.md文件必须命名为 <code>presentation.md</code>，然后 webserver必须打开<code>Presenter.html</code>.</p>
+</code></pre><h3 id="4-__u5C06_u5199_u597D_u7684_u6587_u4EF6_u653E_u5230MarkdownPresenter_u76EE_u5F55_u4E0B_uFF0C_u7136_u540E_u8FD0_u884C"><a href="#4-__u5C06_u5199_u597D_u7684_u6587_u4EF6_u653E_u5230MarkdownPresenter_u76EE_u5F55_u4E0B_uFF0C_u7136_u540E_u8FD0_u884C" class="headerlink" title="4. 将写好的文件放到MarkdownPresenter目录下，然后运行"></a>4. 将写好的文件放到<code>MarkdownPresenter</code>目录下，然后运行</h3><pre><code>python -m SimpleHTTPServer  
+</code></pre><p>或者运行</p>
+<pre><code>webfsd -F -p 8888 -r ~/scripts/MarkdownPresenter/ -f Presenter.html
+</code></pre><h3 id="5-__u6CE8_u610F_u4E8B_u9879"><a href="#5-__u6CE8_u610F_u4E8B_u9879" class="headerlink" title="5. 注意事项"></a>5. 注意事项</h3><p><font color="red">The <code>Presenter.html</code> fetches the <code>presentation.md</code> from the server via Ajax, uses <code>Showdown.js</code> to transform it into HTML.</font><br>所以.md文件必须命名为 <code>presentation.md</code>，然后 webserver必须打开<code>Presenter.html</code>.</p>
 <p>That’s it!!</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2013/06/12/how-to-make-presentation-using-markdown/" data-id="ciijshyhv0017o8sdxueg3pqv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2013/06/12/how-to-make-presentation-using-markdown/" data-id="ciijt7g6e0013visdoomshbz4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
@@ -155,7 +145,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">31</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">15</span></li></ul>
     </div>
   </div>
 
@@ -164,7 +154,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Movie/">Movie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sparse-Representation/">Sparse Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -173,7 +163,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 11.43px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 11.43px;">Android</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 10px;">GTD</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 14.29px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 12.86px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 11.43px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15.71px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/tags/Mac/" style="font-size: 18.57px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Movie/" style="font-size: 10px;">Movie</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 11.43px;">Programming</a> <a href="/tags/Ruby/" style="font-size: 11.43px;">Ruby</a> <a href="/tags/Sparse-Representation/" style="font-size: 10px;">Sparse Representation</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 11.43px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iTunes/" style="font-size: 10px;">iTunes</a>
+      <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 13.33px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 13.33px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Programming/" style="font-size: 10px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
     </div>
   </div>
 
@@ -182,7 +172,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -194,23 +184,23 @@ Yada yada yada
       <ul>
         
           <li>
-            <a href="/2015/11/15/Box-content-APIs-example/">Box Content APIs example</a>
+            <a href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a>
           </li>
         
           <li>
-            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode Remove element</a>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
           </li>
         
           <li>
-            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode Remove duplicates from sorted Array</a>
+            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
           </li>
         
           <li>
-            <a href="/2014/07/11/Jerusalem/">(no title)</a>
+            <a href="/2013/11/28/Download-web-pictures-using-Nodejs/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2014/06/21/Workout-stuff/">(no title)</a>
+            <a href="/2013/11/25/linux-screen-in-5-commands/">Screen 使用之无废话5行命令</a>
           </li>
         
       </ul>
