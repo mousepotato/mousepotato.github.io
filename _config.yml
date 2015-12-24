@@ -1,9 +1,0 @@
-permalink: /blog/:year/:month/:day/:title/
-url: http://anotherbug.com
-author: Shuangjiang Li
-pygments: true
-safe: true
-paginate: 16
-auto: true
-kramdown:
-  input: GFM

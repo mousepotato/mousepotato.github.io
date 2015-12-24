@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>How to delete ^M in vim | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="如何删除Vim打开的文件中多余的^M符号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to delete ^M in vim">
+<meta property="og:url" content="http://yoursite.com/2013/05/03/how-to-delete-^M-in-Vim/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如何删除Vim打开的文件中多余的^M符号">
+<meta property="og:updated_time" content="2015-12-24T05:08:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to delete ^M in vim">
+<meta name="twitter:description" content="如何删除Vim打开的文件中多余的^M符号">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-how-to-delete-^M-in-Vim" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/03/how-to-delete-^M-in-Vim/" class="article-date">
+  <time datetime="2013-05-03T07:00:00.000Z" itemprop="datePublished">2013-05-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to delete ^M in vim
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>如何删除Vm中的多余<code>^M</code></p>
+<h2 id="5EM_u7684_u7531_u6765"><a href="#5EM_u7684_u7531_u6765" class="headerlink" title="^M的由来"></a>^M的由来</h2><ol>
+<li>Vim 支持三种文件格式（dos,mac,unix）,不同的文件格式将以不同的ending characters (line terminators)结尾。 </li>
+<li>三种文件格式的ending characters分别为：<pre><code>- dos: CRLF (each line ends with an LF character)
+- mac: CR only    (each line ends with two characters, CR then LF)
+- unix: LF only (each line ends with a CR character)
+</code></pre></li>
+</ol>
+<p><code>LF</code> 是 <code>Line Feed</code>的缩写，意为换行，表示将光标移到下一行 (<strong>move cursor down</strong>)。注意<code>是将光标移到当前字符的下一行，并没有移到最左侧</code>。对应符号为，<code>Ctrl-J</code>或者hex的<code>0A</code>。</p>
+<p><code>CR</code> 是 <code>Carriage Return</code>的缩写，意为回车键，表示将光标移到最左边（<strong>return cursor to left margin</strong>）,注意<code>还是在当前行，没有开始新的一行</code>。 对应符号为，<code>Ctrl-M</code>，<code>^M</code>或者hex的<code>OD</code>。</p>
+<ol>
+<li>当你在Mac下编辑的文件文件格式为unix格式时，结尾就会显示 <code>^M</code>。</li>
+</ol>
+<h2 id="Vim_u4E2D_u5982_u4F55_u67E5_u770B_u6587_u4EF6_u683C_u5F0F_u76F8_u5173_u547D_u4EE4"><a href="#Vim_u4E2D_u5982_u4F55_u67E5_u770B_u6587_u4EF6_u683C_u5F0F_u76F8_u5173_u547D_u4EE4" class="headerlink" title="Vim中如何查看文件格式相关命令"></a>Vim中如何查看文件格式相关命令</h2><ol>
+<li>查看隐藏的结尾字符：<code>:set list</code>，取消显示对应的是：<code>:set nolist</code></li>
+<li>查看文件格式：<code>:set ff</code> </li>
+<li>强制以某一种文件格式打开文件:<code>:e ++ff=unix</code>，或者 <code>:e ++ff=dos</code></li>
+<li>Vim中文件格式帮助命令：<code>:h ffs</code></li>
+</ol>
+<h2 id="u5982_u4F55_u5220_u9664"><a href="#u5982_u4F55_u5220_u9664" class="headerlink" title="如何删除"></a>如何删除</h2><ol>
+<li><p>去掉所有多余的^M: <code>:%s/^M$//g</code><br>注意：命令中的^M 是通过键入<code>CTRL-V CTRL-M</code>生成的！该命令的意思是 “去掉所有行末的^M”</p>
+</li>
+<li><p>处理仅有^M而没有carrage回车键的情况:<code>:%s/^M/ /g</code></p>
+</li>
+</ol>
+<p>注意：命令中的^M 是通过键入<code>CTRL-V CTRL-M</code>生成的！该命令的意思是 “将仅有^M而没有换行符的地方替换成换行符”。</p>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/05/03/how-to-delete-^M-in-Vim/" data-id="ciijshyi8001xo8sdkslj0qk5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vim/">Vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/05/15/how-to-download-android-studio/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          How to download Android Studio
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/04/29/how-to-create-schulte-grid-using-excel/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to Create Schulte Grid Using Excel</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">31</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Movie/">Movie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sparse-Representation/">Sparse Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 11.43px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 11.43px;">Android</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 10px;">GTD</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 14.29px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 12.86px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 11.43px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15.71px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/tags/Mac/" style="font-size: 18.57px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Movie/" style="font-size: 10px;">Movie</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 11.43px;">Programming</a> <a href="/tags/Ruby/" style="font-size: 11.43px;">Ruby</a> <a href="/tags/Sparse-Representation/" style="font-size: 10px;">Sparse Representation</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 11.43px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iTunes/" style="font-size: 10px;">iTunes</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/11/15/Box-content-APIs-example/">Box Content APIs example</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode Remove element</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode Remove duplicates from sorted Array</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/11/Jerusalem/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/21/Workout-stuff/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

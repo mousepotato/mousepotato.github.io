@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" class="article-date">
+  <time datetime="2012-06-05T07:00:00.000Z" itemprop="datePublished">2012-06-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/">Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</p>
+<h3 id="1-_Setup_virtual_machines__283_for_exmaple_29"><a href="#1-_Setup_virtual_machines__283_for_exmaple_29" class="headerlink" title="1. Setup virtual machines (3 for exmaple)"></a>1. Setup virtual machines (3 for exmaple)</h3><ul>
+<li><p>You should first setup one machine using virtualbox, <a href="http://anotherbug.com/blog/2011/10/ubuntu-11-04_install_java/" target="_blank" rel="external">setup JAVA environment</a>, download the <a href="http://www.apache.org/dyn/closer.cgi?path=/cassandra/1.1.1/apache-cassandra-1.1.1-bin.tar.gz" target="_blank" rel="external">Cassandra source code</a> </p>
+</li>
+<li><p>Use Virtualbox’s virtualmanager function to <a href="http://anotherbug.com/blog/2012/05/virtualbox-%E4%BF%AE%E6%94%B9uuid%E5%AE%9E%E7%8E%B0%E7%A1%AC%E7%9B%98%E5%A4%8D%E5%88%B6/" target="_blank" rel="external">copy another two ubuntu machines</a>. Make sure to <a href="http://anotherbug.com/blog/2012/04/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9ubuntu%E7%9A%84hostname/" target="_blank" rel="external">modify the hostname</a>.</p>
+</li>
+<li><p>Modify the    <code>/etc/hosts</code> file. </p>
+</li>
+<li>Machine summary      <ul>
+<li>192.168.56.101 sjhadoop0</li>
+<li>192.168.56.103 sjhadoop1<ul>
+<li>192.168.56.104 sjhadoop2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-_Config_Cassandra"><a href="#2-_Config_Cassandra" class="headerlink" title="2. Config Cassandra"></a>2. Config Cassandra</h3><ul>
+<li><p>Modify <code>/conf/cassandra-env.sh</code>file.</p>
+<pre><code>MAX_HEAP_SIZE=&amp;quot;512M&amp;quot;
+HEAP_NEWSIZE=&amp;quot;128M&amp;quot;
+</code></pre></li>
+<li><p>Modify <code>/conf/cassandra.yaml</code> file. For each virtual machine, change <code>listen_address</code> and <code>rpc_address</code>accordingly.</p>
+<pre><code>listen_address: 192.168.1.1
+rpc_address: 192.168.1.1
+</code></pre></li>
+<li><p>Choose one first machine as seed. Then change <code>seeds</code> to its ip address, make the rest VM pointing to the same seed.</p>
+<pre><code>seeds: - 192.168.1.1
+</code></pre></li>
+<li><p>Assign initial_token, using the <a href="http://anotherbug.com/blog/nodeToken.py" target="_blank" rel="external">this python code</a> to generate initial token and modify the <code>initial_token</code> in .yaml file.</p>
+</li>
+</ul>
+<h3 id="3-_Start_Cassandra"><a href="#3-_Start_Cassandra" class="headerlink" title="3. Start Cassandra"></a>3. Start Cassandra</h3><pre><code>sudo ./bin/cassandra -f
+</code></pre><p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" data-id="ciijshyiw002xo8sddcdr601k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ruby-string-examples" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/05/29/ruby-string-examples/" class="article-date">
+  <time datetime="2012-05-29T07:00:00.000Z" itemprop="datePublished">2012-05-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/05/29/ruby-string-examples/">Ruby String 二则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Ruby确实好用，方便灵活。String操作功能很好很强大。实例二则。</p>
+<h3 id="u4F8B1_uFF1A_u5224_u65AD_u4E00_u53E5_u8BDD_u662F_u5426_u662F_u56DE_u6587_u3002_uFF08_u6C57_uFF0C_u4E0D_u662F_u56DE_u65CF_u6587_u5B57_uFF09"><a href="#u4F8B1_uFF1A_u5224_u65AD_u4E00_u53E5_u8BDD_u662F_u5426_u662F_u56DE_u6587_u3002_uFF08_u6C57_uFF0C_u4E0D_u662F_u56DE_u65CF_u6587_u5B57_uFF09" class="headerlink" title="例1：判断一句话是否是回文。（汗，不是回族文字）"></a>例1：判断一句话是否是回文。（汗，不是回族文字）</h3><pre><code># check if a sentense is palindrome,case insensitives 
+def palindrome?(string)
+str = string.downcase.gsub(/\W/, &quot;&quot;) 
+str1 = str.reverse 
+str == str1
+end
+# palindrome?(&quot;A man, a plan, a canal -- Panama&quot;) 
+# palindrome?(&quot;Madam, I&apos;m Adam!&quot;) 
+# palindrome?(&quot;Abracadabra&quot;)
+</code></pre><h3 id="u4F8B2_uFF1A_u7EDF_u8BA1_u4E00_u53E5_u8BDD_u4E2D_u5355_u8BCD_u51FA_u73B0_u8BCD_u9891"><a href="#u4F8B2_uFF1A_u7EDF_u8BA1_u4E00_u53E5_u8BDD_u4E2D_u5355_u8BCD_u51FA_u73B0_u8BCD_u9891" class="headerlink" title="例2：统计一句话中单词出现词频"></a>例2：统计一句话中单词出现词频</h3><pre><code># count the number of word occurance, case insensitives 
+def countwords(string) 
+  res={} 
+  string.downcase.gsub(/[^a-z\s]/,&apos;&apos;).gsub(/\s\s/,&apos; &apos;).split(/\b\s/).map{|a| res[a] = res[a]? res[a]+1:1} 
+  res 
+end
+countwords(&quot;A man, a plan, a canal -- Panama&quot;) 
+count_words(&quot;Doo bee doo bee doo&quot;)
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/05/29/ruby-string-examples/" data-id="ciijshyiy0036o8sd6sljhxgh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/">Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/">Ruby</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linksys-E1550-DD-DWR-how-to" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/04/30/Linksys-E1550-DD-DWR-how-to/" class="article-date">
+  <time datetime="2012-04-30T07:00:00.000Z" itemprop="datePublished">2012-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/04/30/Linksys-E1550-DD-DWR-how-to/">Linksys E1550 刷DD-WRT教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>Linksys E1550 刷DD-WRT教程</p>
+<ol>
+<li><p>将路由器恢复出厂设置并且硬复位 （30/30/30复位）目的是清除nvran里面的记忆</p>
+</li>
+<li><p>下载对应E1550的DD-WRTbin文件。注意虽然E1550拥有64M RAM和16M Flash，但是还是先刷mini再刷big。</p>
+</li>
+<li><p>刷完就好了。</p>
+</li>
+</ol>
+<p><img src="/assets/images/2012/04/ddwrt_admin.png" alt="ddwrt1"></p>
+<p><img src="/assets/images/2012/04/ddwrt_console.png" alt="ddwrt2"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/04/30/Linksys-E1550-DD-DWR-how-to/" data-id="ciijshyj5003ao8sd00bqnrp1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dd-wrt/">dd-wrt</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hadoop-Installation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/04/26/Hadoop-Installation/" class="article-date">
+  <time datetime="2012-04-26T07:00:00.000Z" itemprop="datePublished">2012-04-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/04/26/Hadoop-Installation/">Ubuntu下安装Hadoop</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Ubuntu下安装Hadoop</p>
+<h3 id="1-_Hadoop_u4E0B_u8F7D"><a href="#1-_Hadoop_u4E0B_u8F7D" class="headerlink" title="1. Hadoop下载"></a>1. Hadoop下载</h3><pre><code>wget http://mirrors.axint.net/apache//hadoop/core/hadoop-0.20.2/hadoop-0.20.2.tar.gz
+</code></pre><h3 id="2-__u89E3_u538B"><a href="#2-__u89E3_u538B" class="headerlink" title="2. 解压"></a>2. 解压</h3><pre><code>tar –zvxf hadoop-0.20.2.tar.gz
+</code></pre><h3 id="3-__u628AHadoop__u7684_u5B89_u88C5_u8DEF_u5F84_u6DFB_u52A0_u5230/etc/profile__u4E2D"><a href="#3-__u628AHadoop__u7684_u5B89_u88C5_u8DEF_u5F84_u6DFB_u52A0_u5230/etc/profile__u4E2D" class="headerlink" title="3. 把Hadoop 的安装路径添加到/etc/profile 中"></a>3. 把Hadoop 的安装路径添加到<code>/etc/profile</code> 中</h3><pre><code>export HADOOP_HOME=/home/sj/hadoop-0.20.2
+export PATH=$HADOOP_HOME/bin:$PATH
+</code></pre><h3 id="3-__u914D_u7F6EHadoop"><a href="#3-__u914D_u7F6EHadoop" class="headerlink" title="3. 配置Hadoop"></a>3. 配置Hadoop</h3><p>see this blog: <a href="http://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" target="_blank" rel="external">Setup a multinode Cassandra using Ubuntu and Virtualbox</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/04/26/Hadoop-Installation/" data-id="ciijshyjv003eo8sdpt4xc8w5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Fix-Hadoop-startup-errors" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/04/16/Fix-Hadoop-startup-errors/" class="article-date">
+  <time datetime="2012-04-16T07:00:00.000Z" itemprop="datePublished">2012-04-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/04/16/Fix-Hadoop-startup-errors/">Hadoop 启动出错解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h3 id="u201CHadoop_issue_3A_jobtracker-info_could_only_be_replicated_to_0_nodes_2C_instead_of_1_u201D"><a href="#u201CHadoop_issue_3A_jobtracker-info_could_only_be_replicated_to_0_nodes_2C_instead_of_1_u201D" class="headerlink" title="“Hadoop issue: jobtracker.info could only be replicated to 0 nodes, instead of 1”"></a>“Hadoop issue: jobtracker.info could only be replicated to 0 nodes, instead of 1”</h3></blockquote>
+<ol>
+<li><p>首先在格式化namenode之前 (<code>hadoop namenode –format</code>)，注意先 <code>stop-all.sh</code> </p>
+</li>
+<li><p>Instead of using <code>hadoop/bin/start-all.sh</code>, run each of the commands separately:   </p>
+<pre><code>./bin/hadoop-daemon.sh start namenode    
+./bin/hadoop-daemon.sh start jobtracker    
+./bin/hadoop-daemon.sh start tasktracker  
+./bin/hadoop-daemon.sh start datanode
+</code></pre></li>
+</ol>
+<p>There still may be some intermediate issue with dfs dir. Try deleting the dfs dir and cleanup everything of the form <code>/tmp/hadoop*</code></p>
+<p>Then do a <code>hadoop namenode -format</code>.</p>
+<font color="#ff0000">The reason is that datanode is loaded very slowly. </font>  
+
+<p>If start map-red before datanode loaded, everything goes wrong and jobtracker gives </p>
+<blockquote>
+<p>“jobtracker.info could only be replicated to 0 nodes, instead of” error.    </p>
+</blockquote>
+<p>So we should wait for datanode loading.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/04/16/Fix-Hadoop-startup-errors/" data-id="ciijshyjy003io8sdanw2qwtz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Install-Git-on-Bluehost" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/10/30/Install-Git-on-Bluehost/" class="article-date">
+  <time datetime="2011-10-30T07:00:00.000Z" itemprop="datePublished">2011-10-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/10/30/Install-Git-on-Bluehost/">Bluehost上如何安装Git</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>最新版本的Git可以在<a href="http://code.google.com/p/git-core/" target="_blank" rel="external">这里下载</a></p>
+<h3 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h3><pre><code>mkdir src &amp;&amp; cd src
+wget http://git-core.googlecode.com/files/git-1.7.7.1.tar.gz
+tar -zxvf git-1.7.7.1.tar.gz
+cd git-1.7.7.1
+make  &amp;&amp; mak install
+</code></pre><p>通过命令：</p>
+<blockquote>
+<p>git –version</p>
+</blockquote>
+<p>测试安装是否成功。</p>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2011/10/30/Install-Git-on-Bluehost/" data-id="ciijshyk0003lo8sdb9t9ttez" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Ctex-Usage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/10/26/Ctex-Usage/" class="article-date">
+  <time datetime="2011-10-26T07:00:00.000Z" itemprop="datePublished">2011-10-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/10/26/Ctex-Usage/">CTex使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近有折腾了下CTex以及Beamer，遇到不少问题，因为使用了最新版本，网上教程比较少，总结下：</p>
+<h2 id="u4E00_u3001CTex_u5B89_u88C5"><a href="#u4E00_u3001CTex_u5B89_u88C5" class="headerlink" title="一、CTex安装"></a>一、CTex安装</h2><p>去 <a href="http://www.ctex.org/CTeXDownload" target="_blank" rel="external">cTex官网</a>下载最新版本的CTex，<a href="ftp://ftp.ctex.org/pub/tex/systems/ctex/2.9/CTeX_2.9.0.152_Full.exe" target="_blank" rel="external">v2.9.0.152 Full(1.08G)</a>  包含完整版 <a href="http://www.ctex.org/MiKTeX" target="_blank" rel="external">MiKTeX</a>。<br>建议使用ftp下载，<a href="ftp://ftp.ctex.org/pub/tex/systems/ctex/2.9/CTeX_2.9.0.152_Full.exe" target="_blank" rel="external">ftp地址</a></p>
+<p><img src="/assets/images/2011/10/ctex1.jpg" alt="cTex1"><br><img src="/assets/images/2011/10/ctex2.jpg" alt="cTex2">  </p>
+<p>安装完CTeX后，记得安装CTeX FontSetup，因为CTex可以默认支持中文。</p>
+<p><img src="/assets/images/2011/10/ctex3.jpg" alt="cTex3"></p>
+<h2 id="u4E8C_u3001_u5982_u4F55_u5B89_u88C5_u65B0_u7684Beamer_Theme"><a href="#u4E8C_u3001_u5982_u4F55_u5B89_u88C5_u65B0_u7684Beamer_Theme" class="headerlink" title="二、如何安装新的Beamer Theme"></a>二、如何安装新的Beamer Theme</h2><p>默认的Theme路径是：</p>
+<blockquote>
+<p>C:\Program Files (x86)\CTEX\MiKTeX\tex\latex\beamer\base\themes\theme  </p>
+</blockquote>
+<p>当你添加一个新的theme到这个路径下时，需要Refresh FNDB，这样在编译.tex文件时才不会报错。<br><img src="/assets/images/2011/10/mikoption.png" alt="cTex4"></p>
+<h2 id="u4E09_u3001_u5E38_u89C1_u9519_u8BEF"><a href="#u4E09_u3001_u5E38_u89C1_u9519_u8BEF" class="headerlink" title="三、常见错误"></a>三、常见错误</h2><p>1、首次运行.tex文件若出现如下错误</p>
+<pre><code>! Undefined control sequence.
+\trans@languagepath -&amp;gt;\languagename
+,English
+l.54 \end{frame}
+</code></pre><p>的解决方案是：<font color="#ff0000">CTeX—&gt;MiKTeX—&gt;Maintenance (Admin)—&gt;Update (Admin) 更新MiKTeX</font></p>
+<p><img src="/assets/images/2011/10/update_mik.png" alt="cTex5">  </p>
+<p>2、gbk2uni.exe文件无法找到</p>
+<p>自行修改WinEdt6的配置文件。</p>
+<blockquote>
+<font color="#ff0000">C:\Program Files (x86)\CTEX\WinEdt\Exec\ExeCompiler.edt </font>
+
+</blockquote>
+<p>在END前加入:  </p>
+<pre><code>// add by SJ   10/26/2011  
+ IfStr(&quot;%!9&quot;,&quot;LaTeX&quot;,    &quot;=&quot;,!&quot;JMP(!&apos;gbk2uni&apos;);&quot;);
+ IfStr(&quot;%!9&quot;,&quot;PDFLaTeX&quot;, &quot;=&quot;,!&quot;JMP(!&apos;gbk2uni&apos;);&quot;);
+ IfStr(&quot;%!9&quot;,&quot;TeXify&quot;,   &quot;=&quot;,!&quot;JMP(!&apos;gbk2uni&apos;);&quot;);
+ IfStr(&quot;%!9&quot;,&quot;PDFTeXify&quot;,&quot;=&quot;,!&quot;JMP(!&apos;gbk2uni&apos;);&quot;);
+ JMP(!&apos;gbk2uni-Done&apos;);
+
+:gbk2uni:: ================================================
+
+ IfFileExists(&quot;%!6\%N.out&quot;,&quot;&quot;,!&quot;JMP(!&apos;gbk2uni-Done&apos;);&quot;);
+ IfStr(&quot;%$(&apos;%!9-WinEdt_Console&apos;);&quot;,&apos;1&apos;,&apos;=&apos;,&amp;gt;
+   !|RunConsole(&apos;gbk2uni.exe &quot;%N&quot;&apos;,&apos;%!6&apos;,&apos;%!9 ...&apos;,1,1);|,&amp;gt;
+   !|WinExe(&apos;&apos;,&apos;gbk2uni.exe &quot;%N&quot;&apos;,&apos;%!6&apos;,&apos;%!9 ...&apos;, %!0, %!2,&amp;gt;
+            &apos;&apos;, &apos;%b\_Out.log&apos;, &apos;%b\_Err.log&apos;,%!1);|);
+
+:gbk2uni-Done:: ================================================ 
+</code></pre><p>或者直接到<a href="http://www.hooklee.com/tex/gbk2uni.zip" target="_blank" rel="external">这里</a> 下载一个gbk2uni文件解压后放到 <font color="#ff0000">C:\Program Files (x86)\CTEX\MiKTeX\miktex\bin </font><font color="#333333">下就OK了。</font></p>
+<p>3、WinEdt 6破解</p>
+<blockquote>
+<p>咳咳，下次再说。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2011/10/26/Ctex-Usage/" data-id="ciijshyk6003po8sd2uka0gx6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Latex/">Latex</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Latex-special-charaters" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/10/11/Latex-special-charaters/" class="article-date">
+  <time datetime="2011-10-11T07:00:00.000Z" itemprop="datePublished">2011-10-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Research/">Research</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/10/11/Latex-special-charaters/">LaTex 几个特殊字符</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1_u3001LaTex_u4E2D_u8F93_u5165_u5404_u79CD_u5355_u53CC_u5F15_u53F7"><a href="#1_u3001LaTex_u4E2D_u8F93_u5165_u5404_u79CD_u5355_u53CC_u5F15_u53F7" class="headerlink" title="1、LaTex中输入各种单双引号"></a>1、LaTex中输入各种单双引号</h2><p><img src="/assets/images/2011/10/latex_special_characters.jpg" alt="sign">  </p>
+<h2 id="2_u3001LaTex__u4E2D_u8F93_u5165_u8FDE_u5B57_u7B26"><a href="#2_u3001LaTex__u4E2D_u8F93_u5165_u8FDE_u5B57_u7B26" class="headerlink" title="2、LaTex 中输入连字符"></a>2、LaTex 中输入连字符</h2><ul>
+<li>连字符, 用 <code>-</code> , 如<code>X-ray</code>;</li>
+<li>连数符, 用 <code>--</code> , 如<code>1--2</code>;</li>
+<li>破折号, 用 <code>---</code> ;</li>
+</ul>
+<p>这三者分别从短到长. 这些符号前后一般都无空格。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2011/10/11/Latex-special-charaters/" data-id="ciijshyk8003so8sdiia1epwh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Latex/">Latex</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hadoop_environment_export" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/10/07/hadoop_environment_export/" class="article-date">
+  <time datetime="2011-10-07T07:00:00.000Z" itemprop="datePublished">2011-10-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/10/07/hadoop_environment_export/">Hadoop安装过程中环境变量的配置即Ubuntu 中export命令的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hadoop安装时需要指定HADOOP_HOME位置。可以使用如下三种export方法:</p>
+<h2 id="1-__u76F4_u63A5_u4F7F_u7528export_u547D_u4EE4"><a href="#1-__u76F4_u63A5_u4F7F_u7528export_u547D_u4EE4" class="headerlink" title="1. 直接使用export命令"></a>1. 直接使用export命令</h2><pre><code>export HADOOP_HOME=/home/sj/hadoop-0.20.2
+export PATH=$HADOOP_HOME/bin:$PATH  
+</code></pre><p>看是否已经设好，可用命令export查看 </p>
+<pre><code>export  
+</code></pre><p><img src="/assets/images/2011/10/declare.png" alt="Hadoop"></p>
+<p><strong>注意：</strong> 直接用export命令只会对当前shell窗口起作用，重启或者重新打开shell窗口时，环境变量就会丢失。</p>
+<h2 id="2-__u4FEE_u6539_u5168_u5C40profile_u6587_u4EF6"><a href="#2-__u4FEE_u6539_u5168_u5C40profile_u6587_u4EF6" class="headerlink" title="2. 修改全局profile文件"></a>2. 修改全局profile文件</h2><p><code>/etc/profile</code> 是一个global config file，会影响系统全局用户，如果你只想对single user生效的话，可以修改 <code>~/.bash_profile</code></p>
+<pre><code>sudo vi /etc/profile
+</code></pre><p>添加：</p>
+<pre><code>export HADOOP_HOME=/home/sj/hadoop-0.20.2 
+export PATH=$PATH:$HADOOP_HOME/bin
+</code></pre><p>可以通过 </p>
+<pre><code>echo $HADOOP_HOME
+</code></pre><p>检查设置是否成功。</p>
+<p><img src="/assets/images/2011/10/echohome.png" alt="Hadoop2">    </p>
+<p><strong>注意：</strong> 直接修改<code>/etc/profile</code>文件需要注销系统才能够生效。且永久有效。</p>
+<h2 id="3-__u4FEE_u6539-bashrc_u6587_u4EF6"><a href="#3-__u4FEE_u6539-bashrc_u6587_u4EF6" class="headerlink" title="3.  修改.bashrc文件"></a>3.  修改<code>.bashrc</code>文件</h2><pre><code>sudo vi ~/.bashrc
+</code></pre><p>在里面加入：</p>
+<pre><code>export HADOOP_HOME=/home/sj/hadoop-0.20.2 
+export PATH=$PATH:$HADOOP_HOME/bin
+</code></pre><p><strong>注意：</strong> 修改后必须使用 source ~/.bashrc 命令使其生效。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2011/10/07/hadoop_environment_export/" data-id="ciijshyka003vo8sdn5itb14w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hadoop/">Hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Differences-between-bashrc-and-bash-profile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/10/07/Differences-between-bashrc-and-bash-profile/" class="article-date">
+  <time datetime="2011-10-07T07:00:00.000Z" itemprop="datePublished">2011-10-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2011/10/07/Differences-between-bashrc-and-bash-profile/">~/.bashrc 与 ~/.bash_profile的区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在使用Linux，Unix或者是Mac OS是，当碰到环境变量设置时，大家多数会接触到<code>~/.bashrc</code>与 <code>~/.bash_profile</code>两个文件。那么他们的区别到底在哪，各自用处是什么，如何使用呢？</p>
+<h2 id="1_-bash_profile__u4E0E_-bashrc_u7684_u533A_u522B"><a href="#1_-bash_profile__u4E0E_-bashrc_u7684_u533A_u522B" class="headerlink" title="1 .bash_profile 与 .bashrc的区别"></a>1 .bash_profile 与 .bashrc的区别</h2><blockquote>
+<p><code>.bash_profile</code> is executed for login shells, while <code>.bashrc</code> is executed for interactive non-login shells.</p>
+</blockquote>
+<h2 id="2-__u4EC0_u4E48_u662F_login__u548C_non-login_shell_uFF1F"><a href="#2-__u4EC0_u4E48_u662F_login__u548C_non-login_shell_uFF1F" class="headerlink" title="2. 什么是 login 和 non-login shell？"></a>2. 什么是 login 和 non-login shell？</h2><p>当你使用ssh或者直接在机器内login输入用户名和密码时，<code>.bash_profile</code>就会被调用来初始化shell环境。  </p>
+<p>但是，当你已经登陆系统，打开一个GNome或者KDE的控制台窗口的时候 <code>.bashrc</code>会被调用，并且每次在新开一个窗口时<code>.bashrc</code>还会再次被调用。</p>
+<h2 id="3-__u4E3A_u4EC0_u4E48_u4F1A_u6709_u8FD9_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F"><a href="#3-__u4E3A_u4EC0_u4E48_u4F1A_u6709_u8FD9_u4E24_u4E2A_u4E0D_u540C_u7684_u6587_u4EF6_uFF1F" class="headerlink" title="3. 为什么会有这两个不同的文件？"></a>3. 为什么会有这两个不同的文件？</h2><p>正是因为这两个文件的调用情况不同，才会同时出现。比如当你每次启动机器的时候想查看一些冗长的控制台信息的时候 （例如，负载信息，内存使用信息，当前用户等等）。因为你只想在登录的时候查看，而不是每次打开shell窗口的时候都显示。所以合理的做法是把这些调用命令放入<code>.bash_profile</code>文件。但是</p><p style="color: #ff0000;">注意，在Mac OS X中Terminal.app每打开一个新窗口时将会调用<code>.bash_profile</code>而不是<code>.bashrc</code>。这与其他linux和Unix恰恰相反。</p><p></p>
+<h2 id="4-__u5982_u4F55_u4F7F_u7528_u8FD9_u4E24_u4E2A_u6587_u4EF6_u5462_uFF1F"><a href="#4-__u5982_u4F55_u4F7F_u7528_u8FD9_u4E24_u4E2A_u6587_u4EF6_u5462_uFF1F" class="headerlink" title="4. 如何使用这两个文件呢？"></a>4. 如何使用这两个文件呢？</h2><p>大多时候你并不想单独分开管理这两个文件。当你每次设置一个环境变量的时候，你希望他能够自动的应用到这两个文件中。这可以通过source命令实现。</p>
+<p>每次只编辑和修改<code>.bashrc</code> 文件。这里新开的shell窗口就会应用生效。然后只需在<code>.bash_profile</code>中加入下列代码：</p>
+<pre><code>if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
+</code></pre><p>这样每次登陆控制台的时候<code>.bashrc</code>文件也会自动被调用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2011/10/07/Differences-between-bashrc-and-bash-profile/" data-id="ciijshykd0040o8sdtxf33h2v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">31</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Movie/">Movie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sparse-Representation/">Sparse Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 11.43px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 11.43px;">Android</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 10px;">GTD</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 14.29px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 12.86px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 11.43px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15.71px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/tags/Mac/" style="font-size: 18.57px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Movie/" style="font-size: 10px;">Movie</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 11.43px;">Programming</a> <a href="/tags/Ruby/" style="font-size: 11.43px;">Ruby</a> <a href="/tags/Sparse-Representation/" style="font-size: 10px;">Sparse Representation</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 11.43px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iTunes/" style="font-size: 10px;">iTunes</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/11/15/Box-content-APIs-example/">Box Content APIs example</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode Remove element</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode Remove duplicates from sorted Array</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/11/Jerusalem/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/21/Workout-stuff/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

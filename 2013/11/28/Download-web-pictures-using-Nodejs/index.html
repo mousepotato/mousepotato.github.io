@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="layout: posttitle: 使用Node Js批量下载网站的图片description: “介绍如何使用Node Js 批量下载网站上的图片，使用的技术包括Node Js插件的使用，编码转换，HTML DOM处理，Javascript 闭包等等。”category: Techniquetags: 
+
+Nodejs
+Programming
+
+
+1. 起因最近看到 网站 fhl.net 上有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2013/11/28/Download-web-pictures-using-Nodejs/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="layout: posttitle: 使用Node Js批量下载网站的图片description: “介绍如何使用Node Js 批量下载网站上的图片，使用的技术包括Node Js插件的使用，编码转换，HTML DOM处理，Javascript 闭包等等。”category: Techniquetags: 
+
+Nodejs
+Programming
+
+
+1. 起因最近看到 网站 fhl.net 上有">
+<meta property="og:updated_time" content="2015-12-24T05:08:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="layout: posttitle: 使用Node Js批量下载网站的图片description: “介绍如何使用Node Js 批量下载网站上的图片，使用的技术包括Node Js插件的使用，编码转换，HTML DOM处理，Javascript 闭包等等。”category: Techniquetags: 
+
+Nodejs
+Programming
+
+
+1. 起因最近看到 网站 fhl.net 上有">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Download-web-pictures-using-Nodejs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/11/28/Download-web-pictures-using-Nodejs/" class="article-date">
+  <time datetime="2013-11-28T08:00:00.000Z" itemprop="datePublished">2013-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>layout: post<br>title: 使用Node Js批量下载网站的图片<br>description: “介绍如何使用Node Js 批量下载网站上的图片，使用的技术包括Node Js插件的使用，编码转换，HTML DOM处理，Javascript 闭包等等。”<br>category: Technique<br>tags: </p>
+<ul>
+<li>Nodejs</li>
+<li>Programming</li>
+</ul>
+<hr>
+<h2 id="1-__u8D77_u56E0"><a href="#1-__u8D77_u56E0" class="headerlink" title="1. 起因"></a>1. 起因</h2><p>最近看到 <a href="http://photo.fhl.net/main/holy/index.html" target="_blank" rel="external">网站 fhl.net</a> 上有一系列《圣地旅游》的照片，个人很喜欢，想把它下载下来保存。问题是该网站上有67页，每页有35张照片，也就是总共有2345张照片，同时我还想讲网页上照片的介绍作为照片的名称保存，这样方便以后查看。所以，问题是如何做呢？</p>
+<h2 id="2-__u6240_u9700_tools"><a href="#2-__u6240_u9700_tools" class="headerlink" title="2. 所需 tools"></a>2. 所需 tools</h2><p>鉴于最近爱上了 <a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a> 这一神奇的工具。打算用它试试。</p>
+<p>2.1 用到的插件有</p>
+<ul>
+<li>request <code>npm install request</code>  处理http request</li>
+<li>cheerio <code>npm install cheerio</code>  Html DOM 处理</li>
+<li>iconv-lite <code>npm install iconv-lite</code>  处理中文字符转码</li>
+<li>wget <code>npm install wget</code>  图片下载工具</li>
+</ul>
+<h2 id="3-__u4EE3_u7801_Code"><a href="#3-__u4EE3_u7801_Code" class="headerlink" title="3. 代码 Code"></a>3. 代码 Code</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">"request"</span>);</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">"cheerio"</span>);</span><br><span class="line"><span class="keyword">var</span> iconv = <span class="built_in">require</span>(<span class="string">'iconv-lite'</span>);</span><br><span class="line"><span class="keyword">var</span> wget = <span class="built_in">require</span>(<span class="string">'wget'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// loop through all 67 html pages</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="number">67</span>; i++)&#123;</span><br><span class="line"></span><br><span class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;request(&#123;</span><br><span class="line">      uri: <span class="string">"http://photo.fhl.net/main/holy/"</span>+i+<span class="string">"index.html"</span>,</span><br><span class="line">    encoding:<span class="literal">null</span></span><br><span class="line">  &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error, response, body</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> str = iconv.decode(<span class="keyword">new</span> Buffer(body), <span class="string">"big5"</span>);</span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.load(str);</span><br><span class="line">     </span><br><span class="line">      $(<span class="string">'table a'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">          <span class="keyword">var</span> link = $(<span class="keyword">this</span>);</span><br><span class="line">          <span class="keyword">var</span> text = link.text();</span><br><span class="line">          <span class="keyword">var</span> href = link.attr(<span class="string">"href"</span>);</span><br><span class="line">          <span class="comment">// href = "holy2351.html"</span></span><br><span class="line">          <span class="comment">// http://photo.fhl.net/img/holy/2351.jpg</span></span><br><span class="line">          <span class="comment">// console.log(text + "http://photo.fhl.net/img/holy/" + href.substr(4,4) + ".jpg");</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> src = <span class="string">"http://photo.fhl.net/img/holy/"</span> + href.substr(<span class="number">4</span>,<span class="number">4</span>) + <span class="string">".jpg"</span>;</span><br><span class="line">      <span class="comment">// var output ="/Users/shuangjiang/playpen/holypic/"+text.replace(/\s+/g,"");</span></span><br><span class="line">      <span class="keyword">var</span> output =<span class="string">"/Users/shuangjiang/playpen/holypic/"</span>+text+<span class="string">".jpg"</span>;</span><br><span class="line">      <span class="keyword">var</span> download = wget.download(src,output);</span><br><span class="line">      download.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">output</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"download all the pics"</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);&#125;)(i); <span class="comment">// closure</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>That’s it!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/11/28/Download-web-pictures-using-Nodejs/" data-id="ciijshyhd000oo8sdu7y2o53l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/12/18/Activity-tracking-apps-and-gadgets/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/11/25/linux-screen-in-5-commands/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">31</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/">Chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Movie/">Movie</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenCV/">OpenCV</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ruby/">Ruby</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sparse-Representation/">Sparse Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iPhone/">iPhone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTunes/">iTunes</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 11.43px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 11.43px;">Android</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 10px;">GTD</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 14.29px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 12.86px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 11.43px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15.71px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.14px;">Linux</a> <a href="/tags/Mac/" style="font-size: 18.57px;">Mac</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Movie/" style="font-size: 10px;">Movie</a> <a href="/tags/OpenCV/" style="font-size: 10px;">OpenCV</a> <a href="/tags/Programming/" style="font-size: 11.43px;">Programming</a> <a href="/tags/Ruby/" style="font-size: 11.43px;">Ruby</a> <a href="/tags/Sparse-Representation/" style="font-size: 10px;">Sparse Representation</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 11.43px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iPhone/" style="font-size: 10px;">iPhone</a> <a href="/tags/iTunes/" style="font-size: 10px;">iTunes</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/05/">May 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/04/">April 2011</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/11/">November 2009</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/11/15/Box-content-APIs-example/">Box Content APIs example</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode Remove element</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode Remove duplicates from sorted Array</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/11/Jerusalem/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/21/Workout-stuff/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
