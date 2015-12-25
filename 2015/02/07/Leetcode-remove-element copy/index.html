@@ -8,7 +8,7 @@
   <meta name="description" content="Leetcode 刷题有感 Leetcode remove element">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode remove element">
-<meta property="og:url" content="http://yoursite.com/2015/02/07/Leetcode-remove-element copy/index.html">
+<meta property="og:url" content="https://anotherbug.com/2015/02/07/Leetcode-remove-element copy/index.html">
 <meta property="og:site_name" content="鼠标土豆">
 <meta property="og:description" content="Leetcode 刷题有感 Leetcode remove element">
 <meta property="og:updated_time" content="2015-12-24T05:34:05.000Z">
@@ -25,7 +25,13 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
 
+  <script type="text/javascript">
+    var host = "anotherbug.com";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+                window.location.protocol = "https";
+  </script>
 </head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -54,7 +60,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://anotherbug.com"></form>
       </div>
     </div>
   </div>
@@ -91,7 +97,7 @@
 <p>同样的快慢指针思路：</p>
 <p>版本一：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> walker = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> runner = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (runner &lt; A.length) &#123; </span><br><span class="line">			<span class="keyword">if</span> (A[runner] != elem) &#123;</span><br><span class="line">				A[walker++] = A[runner];</span><br><span class="line">			&#125;</span><br><span class="line">			runner++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> walker;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>需要注意的是，与<a href="http://anotherbug.com/blog/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/" target="_blank" rel="external">remove duplicates in sorted array</a> 相比不一样的地方是 A[walker++]而非A[++walker]，为什么？【你需要好好思考下，walker和runner初始位置，以及第一次比较后它们值的变化。】<br>这个版本可以通过leetcode测试，也很完美，可以再优化了吗？</p>
+<p>需要注意的是，与<a href="http://anotherbug.com/blog/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">remove duplicates in sorted array</a> 相比不一样的地方是 A[walker++]而非A[++walker]，为什么？【你需要好好思考下，walker和runner初始位置，以及第一次比较后它们值的变化。】<br>这个版本可以通过leetcode测试，也很完美，可以再优化了吗？</p>
 <p>版本二：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> walker = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> runner = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (runner &lt; A.length) &#123;</span><br><span class="line">	<span class="keyword">if</span> (A[runner] == elem) &#123;</span><br><span class="line">	    runner++;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	A[walker++] = A[runner++];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> walker;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <p>版本二的if判读用的是==。因为毕竟要remove的element要少，if (A[runner] != elem) 次数要多，所以if (A[i] == elem) 从效率上更好。问二个问题。里面的if判断是否可以写成 if (A[runner++] == elem)?【不可以，后面重复A[runner++]导致加了2次】。另外，A[walker++] = A[runner++]可以这么写不会导致数组越界。</p>
@@ -99,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/07/Leetcode-remove-element copy/" data-id="ciijt7g5j0009visdp09262rn" class="article-share-link">Share</a>
+      <a data-url="https://anotherbug.com/2015/02/07/Leetcode-remove-element copy/" data-id="ciijt7g5j0009visdp09262rn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
