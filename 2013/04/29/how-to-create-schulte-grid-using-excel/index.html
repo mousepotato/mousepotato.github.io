@@ -38,9 +38,10 @@
   
 
   <script type="text/javascript">
-    var host = "anotherbug.com";
+    var host = "localhost";
         if ((host == window.location.host) && (window.location.protocol != "https:"))
-                window.location.protocol = "https";
+            alert(window.location.protocol);
+            window.location.protocol = "https";
   </script>
 </head>
 
