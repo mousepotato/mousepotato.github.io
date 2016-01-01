@@ -67,6 +67,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Fitbit-HR-data-monitoring" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/31/Fitbit-HR-data-monitoring/" class="article-date">
+  <time datetime="2015-12-31T08:00:00.000Z" itemprop="datePublished">2015-12-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Personal/">Personal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-_Fitbit_HR"><a href="#1-_Fitbit_HR" class="headerlink" title="1. Fitbit HR"></a>1. Fitbit HR</h2><p>Fitbit HR 提供了全天候的心率 (heart rate) 数据。HR数据可以反应很多的指标（健康，活动量），甚至是什么时候洗澡或者…。除了HR数据，还有HRV (Heart Rate Variablity)也很常用。这部分好像Fitbit HR还不支持。需要精确度更好的设备。比如 Garmin HR Run.</p>
+<p>一般通过fitbit app不能够得到每天的HR数据。估计需要付费成为会员才可以看到这部分。好在fitbit提供了API，可以自己获取。</p>
+<h2 id="2-__u83B7_u53D6_Fitbit_HR__u6570_u636E"><a href="#2-__u83B7_u53D6_Fitbit_HR__u6570_u636E" class="headerlink" title="2. 获取 Fitbit HR 数据"></a>2. 获取 Fitbit HR 数据</h2><p>首先去 <a href="https://dev.fitbit.com/apps" target="_blank" rel="external">Fitbit Dev</a> 注册一个app,注意如果你想获取到精确到秒级别心率数据，选择app的类型是 personal, fitbit对这个好像有限制。如前面所说，HR数据能反应太多。。。</p>
+<p>注册以后拿到<code>ClientID</code>, <code>Client_Secret</code>然后就是标准的<code>OAuth 2</code> 的应用验证。推荐 node js开源的包 <a href="https://github.com/peebles/fitbit-oauth2" target="_blank" rel="external">fitbit-oauth2</a></p>
+<p>验证通过获取每天精确到秒级别的心率数据的uri是</p>
+<blockquote>
+<p><a href="https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec.json" target="_blank" rel="external">https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec.json</a></p>
+</blockquote>
+<h2 id="3-__u663E_u793A_Fitbit_HR__u6570_u636E"><a href="#3-__u663E_u793A_Fitbit_HR__u6570_u636E" class="headerlink" title="3. 显示 Fitbit HR 数据"></a>3. 显示 Fitbit HR 数据</h2><p>获得了数据以后，怎么用呢？最简单的办法是plot，可以直观的看。这里推荐 <a href="https://plot.ly/" target="_blank" rel="external">Plotly</a> 应用。免费使用，不过作出的图需要公开。注册，获取一个<code>API_KEY</code>。<br>然后在使用 node js 的 plotly库 <a href="https://github.com/plotly/plotly-nodejs" target="_blank" rel="external">plotly-nodej</a>。 Then you are good to go…</p>
+<p>简单的画图 nodejs 实现:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/plot/:bday'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  bday = req.params.bday;</span><br><span class="line">  fs.readFile(<span class="string">'./bpm/bpm-'</span> + bday + <span class="string">'.json'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">throw</span> err; <span class="comment">// we'll not consider error handling for now</span></span><br><span class="line">    <span class="keyword">var</span> profile = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">    res.send(<span class="string">'&lt;pre&gt;'</span> + <span class="built_in">JSON</span>.stringify(profile[</span><br><span class="line">      <span class="string">'activities-heart-intraday'</span>], <span class="literal">null</span>, <span class="number">2</span>) + <span class="string">'&lt;/pre&gt;'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// plot here</span></span><br><span class="line">    <span class="keyword">var</span> x = [];</span><br><span class="line">    <span class="keyword">var</span> y = [];</span><br><span class="line">    <span class="keyword">var</span> plotly = <span class="built_in">require</span>(<span class="string">'plotly'</span>)(<span class="string">'mouse_potato'</span>, <span class="string">'rmoeisc3m8'</span>);</span><br><span class="line">    <span class="keyword">var</span> graphOptions = &#123;</span><br><span class="line">      fileopt: <span class="string">"overwrite"</span>,</span><br><span class="line">      filename: <span class="string">"bpm-"</span> + bday</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> intradaydata = profile[<span class="string">'activities-heart-intraday'</span>];</span><br><span class="line">    <span class="keyword">var</span> dataset = intradaydata[<span class="string">'dataset'</span>];</span><br><span class="line">    <span class="comment">//console.log(dataset.length);</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; dataset.length; i++) &#123;</span><br><span class="line">      x.push(dataset[i][<span class="string">'time'</span>]);</span><br><span class="line">      y.push(dataset[i][<span class="string">'value'</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> data = [x, y];</span><br><span class="line">    plotly.plot(data, graphOptions, <span class="function"><span class="keyword">function</span>(<span class="params">err, msg</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(msg);</span><br><span class="line">     &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>怎么样，想看看我圣诞节那天的心率么？-:) <a href="https://plot.ly/~mouse_potato/24" target="_blank" rel="external">bpm-2015-12-24</a></p>
+<h2 id="4-_One_more_thing_u2026"><a href="#4-_One_more_thing_u2026" class="headerlink" title="4. One more thing…"></a>4. One more thing…</h2><p>怎么偷懒，实现了一个每天夜里2:30AM 把前天的心率数据读取出来，作好图然后发一封链接邮件到我邮箱。<br>使用 <a href="https://github.com/nodemailer/nodemailer" target="_blank" rel="external">nodemailer</a> 吧。记得如果使用gmail，需要打开 <code>gmail allow less secure apps</code><br><a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank" rel="external">Allow less secure apps</a></p>
+<p>代码是这样，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">'nodemailer'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// create reusable transporter object using the default SMTP transport</span></span><br><span class="line"><span class="comment">// Put your email username and password here</span></span><br><span class="line"><span class="keyword">var</span> transporter = nodemailer.createTransport(</span><br><span class="line">  <span class="string">'smtps://MYEMAILUSERNAME%40gmail.com:MYPASSWORD@smtp.gmail.com'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// setup e-mail data with unicode symbols</span></span><br><span class="line"><span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">  from: <span class="string">"HR Monitoring &lt;xxx@gmail.com&gt;"</span>,</span><br><span class="line">  to: <span class="string">"myusername@gmail.com"</span>,</span><br><span class="line">  subject: <span class="string">"Your yesterday's HR is ready"</span>,</span><br><span class="line">  text: msg.url,</span><br><span class="line">  html: <span class="string">"Please click &lt;a href="</span> + msg.url + <span class="string">"&gt;plot&lt;/a&gt; for the data."</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// send mail with defined transport object</span></span><br><span class="line">transporter.sendMail(mailOptions, <span class="function"><span class="keyword">function</span>(<span class="params">error, info</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (error) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Message sent: '</span> + info.response);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>然后建立一个 cron job, 去执行一个 shell 脚本</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash&#10;TODAY=`date +%F`&#10;YESTERDAY=$(date --date yesterday &#34;+%F&#34;)&#10;&#10;ACCESS_TOKEN=$(cat fb-token.json |jq &#34;.access_token&#34;)&#10;echo $ACCESS_TOKEN&#10;&#10;sleep 3&#10;curl -H &#34;Authorization: Bearer $ACCESS_TOKEN&#34; http://yourdomain.com/getbpm/$YESTERDAY&#10;sleep 7&#10;curl --ipv4  &#34;http://yourdomain/plot/$YESTERDAY&#34; -v</span><br></pre></td></tr></table></figure>
+<p>That’s it!!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://anotherbug.com/2015/12/31/Fitbit-HR-data-monitoring/" data-id="ciiv1i4qg0000busdfw90dahb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacks/">Hacks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Happy-Holidays" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/12/24/Happy-Holidays/" class="article-date">
@@ -170,6 +230,57 @@ openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.p
 
 
   
+    <article id="post-Leetcode-remove-element copy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/07/Leetcode-remove-element copy/" class="article-date">
+  <time datetime="2015-02-07T08:00:00.000Z" itemprop="datePublished">2015-02-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
+<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
+<p>同样的快慢指针思路：</p>
+<p>版本一：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> walker = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> runner = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (runner &lt; A.length) &#123; </span><br><span class="line">			<span class="keyword">if</span> (A[runner] != elem) &#123;</span><br><span class="line">				A[walker++] = A[runner];</span><br><span class="line">			&#125;</span><br><span class="line">			runner++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> walker;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，与<a href="http://anotherbug.com/blog/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">remove duplicates in sorted array</a> 相比不一样的地方是 A[walker++]而非A[++walker]，为什么？【你需要好好思考下，walker和runner初始位置，以及第一次比较后它们值的变化。】<br>这个版本可以通过leetcode测试，也很完美，可以再优化了吗？</p>
+<p>版本二：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> walker = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> runner = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (runner &lt; A.length) &#123;</span><br><span class="line">	<span class="keyword">if</span> (A[runner] == elem) &#123;</span><br><span class="line">	    runner++;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	A[walker++] = A[runner++];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> walker;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>版本二的if判读用的是==。因为毕竟要remove的element要少，if (A[runner] != elem) 次数要多，所以if (A[i] == elem) 从效率上更好。问二个问题。里面的if判断是否可以写成 if (A[runner++] == elem)?【不可以，后面重复A[runner++]导致加了2次】。另外，A[walker++] = A[runner++]可以这么写不会导致数组越界。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://anotherbug.com/2015/02/07/Leetcode-remove-element copy/" data-id="ciil9ckvc000afgsdpoguqfh5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Leetcode-remove-duplicates-in-sorted-array" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/" class="article-date">
@@ -215,57 +326,6 @@ openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.p
     </div>
     <footer class="article-footer">
       <a data-url="https://anotherbug.com/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/" data-id="ciil9ckve000gfgsdj6lg0ung" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Leetcode-remove-element copy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/02/07/Leetcode-remove-element copy/" class="article-date">
-  <time datetime="2015-02-07T08:00:00.000Z" itemprop="datePublished">2015-02-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Given an array and a value, remove all instances of that value in place and return the new length.</p>
-<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
-<p>同样的快慢指针思路：</p>
-<p>版本一：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">int</span> walker = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> runner = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (runner &lt; A.length) &#123; </span><br><span class="line">			<span class="keyword">if</span> (A[runner] != elem) &#123;</span><br><span class="line">				A[walker++] = A[runner];</span><br><span class="line">			&#125;</span><br><span class="line">			runner++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> walker;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p>需要注意的是，与<a href="http://anotherbug.com/blog/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">remove duplicates in sorted array</a> 相比不一样的地方是 A[walker++]而非A[++walker]，为什么？【你需要好好思考下，walker和runner初始位置，以及第一次比较后它们值的变化。】<br>这个版本可以通过leetcode测试，也很完美，可以再优化了吗？</p>
-<p>版本二：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (A == <span class="keyword">null</span> || A.length == <span class="number">0</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> walker = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> runner = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (runner &lt; A.length) &#123;</span><br><span class="line">	<span class="keyword">if</span> (A[runner] == elem) &#123;</span><br><span class="line">	    runner++;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	A[walker++] = A[runner++];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> walker;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>版本二的if判读用的是==。因为毕竟要remove的element要少，if (A[runner] != elem) 次数要多，所以if (A[i] == elem) 从效率上更好。问二个问题。里面的if判断是否可以写成 if (A[runner++] == elem)?【不可以，后面重复A[runner++]导致加了2次】。另外，A[walker++] = A[runner++]可以这么写不会导致数组越界。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://anotherbug.com/2015/02/07/Leetcode-remove-element copy/" data-id="ciil9ckvc000afgsdpoguqfh5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Leetcode/">Leetcode</a></li></ul>
@@ -532,79 +592,6 @@ git push -f
 
 
   
-    <article id="post-Linux-dev-files" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/06/13/Linux-dev-files/" class="article-date">
-  <time datetime="2013-06-13T07:00:00.000Z" itemprop="datePublished">2013-06-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/06/13/Linux-dev-files/">Linux 下的几个文件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Linux 下的几个文件</p>
-<p>Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是:</p>
-<h2 id="1_3A_/dev/null"><a href="#1_3A_/dev/null" class="headerlink" title="1: /dev/null"></a>1: /dev/null</h2><p>这个/dev下放的是系统和用户的设备文件. null是个文件名. 被称为 the null device, <code>/dev/null</code> 这个童鞋脾气有点大,听不见别人任何话,所以呢任何话传到他耳朵里都被当成耳旁风了.当然更可恨的是他竟然还假惺惺的点头说听到了.当然他是很诚实地说的.  </p>
-<p>/dev/null or the null device is a special file that discards all data written to it, but reports that the write operation succeed.   </p>
-<p>所以呢,你心情不好的时候,或者你有个秘密憋的慌想说但是又怕周围人有个big mouth的时候来,可以和这个娃说说. 用程序员的黑话(jargon)说他是个’黑洞’(black hole)或者’位筒’(bit bucket).</p>
-<p><img src="/assets/images/2013/06/13/dev_null.jpg" alt="devnull"></p>
-<p>知道了这个,下面几个隔行如隔山的话也就好理解了.</p>
-<ol>
-<li>Please send complaints to <code>/dev/null</code></li>
-<li>my mail got archived in <code>/dev/null</code></li>
-</ol>
-<p>几个扩展:</p>
-<ol>
-<li><code>cat /dev/null &gt; /var/log/db_log</code> (清空日志文件的内容)</li>
-<li><code>&gt;/dev/null 2&gt;&amp;1</code> 的理解  </li>
-</ol>
-<ul>
-<li><code>&gt;</code> 代表重定向到哪里，比方：<code>echo &quot;123&quot; &gt; /home/123.txt</code>  </li>
-<li><code>&gt;</code> 输出给这个不听话的娃, <code>/dev/null</code>  </li>
-<li><code>2&gt;</code> 表示stderr标准错误   </li>
-<li><code>&amp;</code> 表示等同于的意思，<code>2&gt;&amp;1</code>，表示2的输出重定向等同于1  </li>
-<li><code>1</code> 表示stdout标准输出，系统默认值是1，所以<code>&gt;/dev/null</code>等同于 <code>1&gt;/dev/null</code></li>
-</ul>
-<p>因此，<code>&gt;/dev/null 2&gt;&amp;1</code>也可以写成<code>1&gt; /dev/null 2&gt;&amp;1</code>  </p>
-<p><code>1&gt;/dev/null</code>：首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。  </p>
-<p><code>2&gt;&amp;1</code>：接着，标准错误输出重定向 到 标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。  </p>
-<p>最常见的写法: <code>command &gt; file 2&gt;file</code> 与 <code>command &gt; file 2&gt;&amp;1</code>(这个效率更高点,可以从打开文件的次数角度去分析.)</p>
-<h2 id="2-_/dev/full"><a href="#2-_/dev/full" class="headerlink" title="2. /dev/full"></a>2. /dev/full</h2><p>这个娃天生胃小,整天处于吃饱状态.送啥吃的来都不接受.那你说把这个家伙放在unix里面干嘛.This device is usually used when testing the behaviour of a program when it encounters a disk full error.测试某些程序在磁盘吃饱状态下的错误.</p>
-<p><img src="/assets/images/2013/06/13/dev_full.jpg" alt="devfull"> </p>
-<h2 id="3-_/dev/zero"><a href="#3-_/dev/zero" class="headerlink" title="3. /dev/zero"></a>3. /dev/zero</h2><p>这哥们有很的0,MS是很有钱.他实际上产生连续不断的null的流（二进制的零流),写入他的东东会丢失不见,然后呢会给你一串的null值,这个一般不好发觉./dev/zero主要的用处是用来创建一个指定长度用于初始化的空文件，就像临时交换文件.</p>
-<p><img src="/assets/images/2013/06/13/dev_zero.jpg" alt="devzero"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://anotherbug.com/2013/06/13/Linux-dev-files/" data-id="ciil9ckvw0019fgsd47juqkgb" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -618,7 +605,7 @@ git push -f
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">16</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">16</span></li></ul>
     </div>
   </div>
 
@@ -627,7 +614,7 @@ git push -f
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -636,7 +623,7 @@ git push -f
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 13.33px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 13.33px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 13.33px;">Life</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 13.33px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
+      <a href="/tags/Algorithm/" style="font-size: 12.5px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 12.5px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 12.5px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 12.5px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Nodejs/" style="font-size: 12.5px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 12.5px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
     </div>
   </div>
 
@@ -645,7 +632,7 @@ git push -f
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -657,6 +644,10 @@ git push -f
       <ul>
         
           <li>
+            <a href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a>
+          </li>
+        
+          <li>
             <a href="/2015/12/24/Happy-Holidays/">Happy Holidays</a>
           </li>
         
@@ -665,15 +656,11 @@ git push -f
           </li>
         
           <li>
-            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
-          </li>
-        
-          <li>
             <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
           </li>
         
           <li>
-            <a href="/2013/11/28/Download-web-pictures-using-Nodejs/">使用 Node JS 批量下载网站的图片</a>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
           </li>
         
       </ul>

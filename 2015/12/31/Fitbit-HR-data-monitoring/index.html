@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Fitbit HR heart rate data monitoring | 鼠标土豆</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Fitbit HR heart rate data monitoring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fitbit HR heart rate data monitoring">
+<meta property="og:url" content="https://anotherbug.com/2015/12/31/Fitbit-HR-data-monitoring/index.html">
+<meta property="og:site_name" content="鼠标土豆">
+<meta property="og:description" content="Fitbit HR heart rate data monitoring">
+<meta property="og:updated_time" content="2016-01-01T02:06:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fitbit HR heart rate data monitoring">
+<meta name="twitter:description" content="Fitbit HR heart rate data monitoring">
+  
+    <link rel="alternative" href="/atom.xml" title="鼠标土豆" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+  <script type="text/javascript">
+    var host = "anotherbug.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+         window.location.protocol = "https";
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">鼠标土豆</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://anotherbug.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Fitbit-HR-data-monitoring" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/12/31/Fitbit-HR-data-monitoring/" class="article-date">
+  <time datetime="2015-12-31T08:00:00.000Z" itemprop="datePublished">2015-12-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Personal/">Personal</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Fitbit HR heart rate data monitoring
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-_Fitbit_HR"><a href="#1-_Fitbit_HR" class="headerlink" title="1. Fitbit HR"></a>1. Fitbit HR</h2><p>Fitbit HR 提供了全天候的心率 (heart rate) 数据。HR数据可以反应很多的指标（健康，活动量），甚至是什么时候洗澡或者…。除了HR数据，还有HRV (Heart Rate Variablity)也很常用。这部分好像Fitbit HR还不支持。需要精确度更好的设备。比如 Garmin HR Run.</p>
+<p>一般通过fitbit app不能够得到每天的HR数据。估计需要付费成为会员才可以看到这部分。好在fitbit提供了API，可以自己获取。</p>
+<h2 id="2-__u83B7_u53D6_Fitbit_HR__u6570_u636E"><a href="#2-__u83B7_u53D6_Fitbit_HR__u6570_u636E" class="headerlink" title="2. 获取 Fitbit HR 数据"></a>2. 获取 Fitbit HR 数据</h2><p>首先去 <a href="https://dev.fitbit.com/apps" target="_blank" rel="external">Fitbit Dev</a> 注册一个app,注意如果你想获取到精确到秒级别心率数据，选择app的类型是 personal, fitbit对这个好像有限制。如前面所说，HR数据能反应太多。。。</p>
+<p>注册以后拿到<code>ClientID</code>, <code>Client_Secret</code>然后就是标准的<code>OAuth 2</code> 的应用验证。推荐 node js开源的包 <a href="https://github.com/peebles/fitbit-oauth2" target="_blank" rel="external">fitbit-oauth2</a></p>
+<p>验证通过获取每天精确到秒级别的心率数据的uri是</p>
+<blockquote>
+<p><a href="https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec.json" target="_blank" rel="external">https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec.json</a></p>
+</blockquote>
+<h2 id="3-__u663E_u793A_Fitbit_HR__u6570_u636E"><a href="#3-__u663E_u793A_Fitbit_HR__u6570_u636E" class="headerlink" title="3. 显示 Fitbit HR 数据"></a>3. 显示 Fitbit HR 数据</h2><p>获得了数据以后，怎么用呢？最简单的办法是plot，可以直观的看。这里推荐 <a href="https://plot.ly/" target="_blank" rel="external">Plotly</a> 应用。免费使用，不过作出的图需要公开。注册，获取一个<code>API_KEY</code>。<br>然后在使用 node js 的 plotly库 <a href="https://github.com/plotly/plotly-nodejs" target="_blank" rel="external">plotly-nodej</a>。 Then you are good to go…</p>
+<p>简单的画图 nodejs 实现:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/plot/:bday'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  bday = req.params.bday;</span><br><span class="line">  fs.readFile(<span class="string">'./bpm/bpm-'</span> + bday + <span class="string">'.json'</span>, <span class="string">'utf8'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">throw</span> err; <span class="comment">// we'll not consider error handling for now</span></span><br><span class="line">    <span class="keyword">var</span> profile = <span class="built_in">JSON</span>.parse(data);</span><br><span class="line">    res.send(<span class="string">'&lt;pre&gt;'</span> + <span class="built_in">JSON</span>.stringify(profile[</span><br><span class="line">      <span class="string">'activities-heart-intraday'</span>], <span class="literal">null</span>, <span class="number">2</span>) + <span class="string">'&lt;/pre&gt;'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// plot here</span></span><br><span class="line">    <span class="keyword">var</span> x = [];</span><br><span class="line">    <span class="keyword">var</span> y = [];</span><br><span class="line">    <span class="keyword">var</span> plotly = <span class="built_in">require</span>(<span class="string">'plotly'</span>)(<span class="string">'mouse_potato'</span>, <span class="string">'rmoeisc3m8'</span>);</span><br><span class="line">    <span class="keyword">var</span> graphOptions = &#123;</span><br><span class="line">      fileopt: <span class="string">"overwrite"</span>,</span><br><span class="line">      filename: <span class="string">"bpm-"</span> + bday</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> intradaydata = profile[<span class="string">'activities-heart-intraday'</span>];</span><br><span class="line">    <span class="keyword">var</span> dataset = intradaydata[<span class="string">'dataset'</span>];</span><br><span class="line">    <span class="comment">//console.log(dataset.length);</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; dataset.length; i++) &#123;</span><br><span class="line">      x.push(dataset[i][<span class="string">'time'</span>]);</span><br><span class="line">      y.push(dataset[i][<span class="string">'value'</span>]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> data = [x, y];</span><br><span class="line">    plotly.plot(data, graphOptions, <span class="function"><span class="keyword">function</span>(<span class="params">err, msg</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(msg);</span><br><span class="line">     &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>怎么样，想看看我圣诞节那天的心率么？-:) <a href="https://plot.ly/~mouse_potato/24" target="_blank" rel="external">bpm-2015-12-24</a></p>
+<h2 id="4-_One_more_thing_u2026"><a href="#4-_One_more_thing_u2026" class="headerlink" title="4. One more thing…"></a>4. One more thing…</h2><p>怎么偷懒，实现了一个每天夜里2:30AM 把前天的心率数据读取出来，作好图然后发一封链接邮件到我邮箱。<br>使用 <a href="https://github.com/nodemailer/nodemailer" target="_blank" rel="external">nodemailer</a> 吧。记得如果使用gmail，需要打开 <code>gmail allow less secure apps</code><br><a href="https://support.google.com/accounts/answer/6010255?hl=en" target="_blank" rel="external">Allow less secure apps</a></p>
+<p>代码是这样，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">'nodemailer'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// create reusable transporter object using the default SMTP transport</span></span><br><span class="line"><span class="comment">// Put your email username and password here</span></span><br><span class="line"><span class="keyword">var</span> transporter = nodemailer.createTransport(</span><br><span class="line">  <span class="string">'smtps://MYEMAILUSERNAME%40gmail.com:MYPASSWORD@smtp.gmail.com'</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// setup e-mail data with unicode symbols</span></span><br><span class="line"><span class="keyword">var</span> mailOptions = &#123;</span><br><span class="line">  from: <span class="string">"HR Monitoring &lt;xxx@gmail.com&gt;"</span>,</span><br><span class="line">  to: <span class="string">"myusername@gmail.com"</span>,</span><br><span class="line">  subject: <span class="string">"Your yesterday's HR is ready"</span>,</span><br><span class="line">  text: msg.url,</span><br><span class="line">  html: <span class="string">"Please click &lt;a href="</span> + msg.url + <span class="string">"&gt;plot&lt;/a&gt; for the data."</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// send mail with defined transport object</span></span><br><span class="line">transporter.sendMail(mailOptions, <span class="function"><span class="keyword">function</span>(<span class="params">error, info</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (error) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Message sent: '</span> + info.response);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>然后建立一个 cron job, 去执行一个 shell 脚本</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash&#10;TODAY=`date +%F`&#10;YESTERDAY=$(date --date yesterday &#34;+%F&#34;)&#10;&#10;ACCESS_TOKEN=$(cat fb-token.json |jq &#34;.access_token&#34;)&#10;echo $ACCESS_TOKEN&#10;&#10;sleep 3&#10;curl -H &#34;Authorization: Bearer $ACCESS_TOKEN&#34; http://yourdomain.com/getbpm/$YESTERDAY&#10;sleep 7&#10;curl --ipv4  &#34;http://yourdomain/plot/$YESTERDAY&#34; -v</span><br></pre></td></tr></table></figure>
+<p>That’s it!!!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://anotherbug.com/2015/12/31/Fitbit-HR-data-monitoring/" data-id="ciiv1i4qg0000busdfw90dahb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacks/">Hacks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/24/Happy-Holidays/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Happy Holidays</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">16</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algorithm/" style="font-size: 12.5px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 12.5px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 12.5px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 12.5px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Nodejs/" style="font-size: 12.5px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 12.5px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a>
+          </li>
+        
+          <li>
+            <a href="/2015/12/24/Happy-Holidays/">Happy Holidays</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 mousepotato<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

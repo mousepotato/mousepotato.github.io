@@ -67,6 +67,79 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux-dev-files" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/13/Linux-dev-files/" class="article-date">
+  <time datetime="2013-06-13T07:00:00.000Z" itemprop="datePublished">2013-06-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/13/Linux-dev-files/">Linux 下的几个文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Linux 下的几个文件</p>
+<p>Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是:</p>
+<h2 id="1_3A_/dev/null"><a href="#1_3A_/dev/null" class="headerlink" title="1: /dev/null"></a>1: /dev/null</h2><p>这个/dev下放的是系统和用户的设备文件. null是个文件名. 被称为 the null device, <code>/dev/null</code> 这个童鞋脾气有点大,听不见别人任何话,所以呢任何话传到他耳朵里都被当成耳旁风了.当然更可恨的是他竟然还假惺惺的点头说听到了.当然他是很诚实地说的.  </p>
+<p>/dev/null or the null device is a special file that discards all data written to it, but reports that the write operation succeed.   </p>
+<p>所以呢,你心情不好的时候,或者你有个秘密憋的慌想说但是又怕周围人有个big mouth的时候来,可以和这个娃说说. 用程序员的黑话(jargon)说他是个’黑洞’(black hole)或者’位筒’(bit bucket).</p>
+<p><img src="/assets/images/2013/06/13/dev_null.jpg" alt="devnull"></p>
+<p>知道了这个,下面几个隔行如隔山的话也就好理解了.</p>
+<ol>
+<li>Please send complaints to <code>/dev/null</code></li>
+<li>my mail got archived in <code>/dev/null</code></li>
+</ol>
+<p>几个扩展:</p>
+<ol>
+<li><code>cat /dev/null &gt; /var/log/db_log</code> (清空日志文件的内容)</li>
+<li><code>&gt;/dev/null 2&gt;&amp;1</code> 的理解  </li>
+</ol>
+<ul>
+<li><code>&gt;</code> 代表重定向到哪里，比方：<code>echo &quot;123&quot; &gt; /home/123.txt</code>  </li>
+<li><code>&gt;</code> 输出给这个不听话的娃, <code>/dev/null</code>  </li>
+<li><code>2&gt;</code> 表示stderr标准错误   </li>
+<li><code>&amp;</code> 表示等同于的意思，<code>2&gt;&amp;1</code>，表示2的输出重定向等同于1  </li>
+<li><code>1</code> 表示stdout标准输出，系统默认值是1，所以<code>&gt;/dev/null</code>等同于 <code>1&gt;/dev/null</code></li>
+</ul>
+<p>因此，<code>&gt;/dev/null 2&gt;&amp;1</code>也可以写成<code>1&gt; /dev/null 2&gt;&amp;1</code>  </p>
+<p><code>1&gt;/dev/null</code>：首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。  </p>
+<p><code>2&gt;&amp;1</code>：接着，标准错误输出重定向 到 标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。  </p>
+<p>最常见的写法: <code>command &gt; file 2&gt;file</code> 与 <code>command &gt; file 2&gt;&amp;1</code>(这个效率更高点,可以从打开文件的次数角度去分析.)</p>
+<h2 id="2-_/dev/full"><a href="#2-_/dev/full" class="headerlink" title="2. /dev/full"></a>2. /dev/full</h2><p>这个娃天生胃小,整天处于吃饱状态.送啥吃的来都不接受.那你说把这个家伙放在unix里面干嘛.This device is usually used when testing the behaviour of a program when it encounters a disk full error.测试某些程序在磁盘吃饱状态下的错误.</p>
+<p><img src="/assets/images/2013/06/13/dev_full.jpg" alt="devfull"> </p>
+<h2 id="3-_/dev/zero"><a href="#3-_/dev/zero" class="headerlink" title="3. /dev/zero"></a>3. /dev/zero</h2><p>这哥们有很的0,MS是很有钱.他实际上产生连续不断的null的流（二进制的零流),写入他的东东会丢失不见,然后呢会给你一串的null值,这个一般不好发觉./dev/zero主要的用处是用来创建一个指定长度用于初始化的空文件，就像临时交换文件.</p>
+<p><img src="/assets/images/2013/06/13/dev_zero.jpg" alt="devzero"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://anotherbug.com/2013/06/13/Linux-dev-files/" data-id="ciil9ckvw0019fgsd47juqkgb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-how-to-make-presentation-using-markdown" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2013/06/12/how-to-make-presentation-using-markdown/" class="article-date">
@@ -626,60 +699,6 @@ Yada yada yada
 
 
   
-    <article id="post-Shutdown-specific-port-in-windows" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2012/10/01/Shutdown-specific-port-in-windows/" class="article-date">
-  <time datetime="2012-10-01T07:00:00.000Z" itemprop="datePublished">2012-10-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Technique/">Technique</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/10/01/Shutdown-specific-port-in-windows/">Windows 下如何关闭特定端口</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p><code>netstat -aon|findstr &quot;9050&quot;</code></p>
-<p>  TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016</p>
-<p>  tasklist|findstr “2016”</p>
-</li>
-<li><p><code>tor.exe 2016 Console 0 16,064</code></p>
-</li>
-</ul>
-<ul>
-<li><code>ctrl+alt+delete</code> 打开任务管理器，找到tor.exe右键end process。</li>
-</ul>
-<p>That’s it!!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://anotherbug.com/2012/10/01/Shutdown-specific-port-in-windows/" data-id="ciil9ckwp002dfgsd2avccsbh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -693,7 +712,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">16</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">16</span></li></ul>
     </div>
   </div>
 
@@ -702,7 +721,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -711,7 +730,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 13.33px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 10px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 13.33px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 13.33px;">Life</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Nodejs/" style="font-size: 10px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 13.33px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
+      <a href="/tags/Algorithm/" style="font-size: 12.5px;">Algorithm</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Cloud-Computing/" style="font-size: 10px;">Cloud Computing</a> <a href="/tags/GTD/" style="font-size: 12.5px;">GTD</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hacks/" style="font-size: 12.5px;">Hacks</a> <a href="/tags/Hadoop/" style="font-size: 10px;">Hadoop</a> <a href="/tags/Latex/" style="font-size: 10px;">Latex</a> <a href="/tags/Leetcode/" style="font-size: 12.5px;">Leetcode</a> <a href="/tags/Life/" style="font-size: 15px;">Life</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Nodejs/" style="font-size: 12.5px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 12.5px;">Programming</a> <a href="/tags/Random-Thoughts/" style="font-size: 10px;">Random Thoughts</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/VirtualBox/" style="font-size: 10px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/dd-wrt/" style="font-size: 10px;">dd-wrt</a>
     </div>
   </div>
 
@@ -720,7 +739,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -732,6 +751,10 @@ Yada yada yada
       <ul>
         
           <li>
+            <a href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a>
+          </li>
+        
+          <li>
             <a href="/2015/12/24/Happy-Holidays/">Happy Holidays</a>
           </li>
         
@@ -740,15 +763,11 @@ Yada yada yada
           </li>
         
           <li>
-            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
-          </li>
-        
-          <li>
             <a href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a>
           </li>
         
           <li>
-            <a href="/2013/11/28/Download-web-pictures-using-Nodejs/">使用 Node JS 批量下载网站的图片</a>
+            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
           </li>
         
       </ul>
