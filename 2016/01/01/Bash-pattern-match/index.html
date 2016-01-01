@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Linux | 鼠标土豆</title>
+  <title>Bash pattern match | 鼠标土豆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="mousepotato&apos;s personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鼠标土豆">
-<meta property="og:url" content="https://anotherbug.com/tags/Linux/index.html">
+  <meta name="description" content="Bash pattern match">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bash pattern match">
+<meta property="og:url" content="https://anotherbug.com/2016/01/01/Bash-pattern-match/index.html">
 <meta property="og:site_name" content="鼠标土豆">
-<meta property="og:description" content="mousepotato&apos;s personal blog">
+<meta property="og:description" content="Bash pattern match">
+<meta property="og:updated_time" content="2016-01-01T08:23:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鼠标土豆">
-<meta name="twitter:description" content="mousepotato&apos;s personal blog">
+<meta name="twitter:title" content="Bash pattern match">
+<meta name="twitter:description" content="Bash pattern match">
   
     <link rel="alternative" href="/atom.xml" title="鼠标土豆" type="application/atom+xml">
   
@@ -65,144 +66,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/01/01/Bash-pattern-match/" class="archive-article-date">
-  <time datetime="2016-01-01T08:00:00.000Z" itemprop="datePublished">Jan 1</time>
+        <section id="main"><article id="post-Bash-pattern-match" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/01/Bash-pattern-match/" class="article-date">
+  <time datetime="2016-01-01T08:00:00.000Z" itemprop="datePublished">2016-01-01</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/01/Bash-pattern-match/">Bash pattern match</a>
+    <h1 class="article-title" itemprop="name">
+      Bash pattern match
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/11/25/linux-screen-in-5-commands/" class="archive-article-date">
-  <time datetime="2013-11-25T08:00:00.000Z" itemprop="datePublished">Nov 25</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/11/25/linux-screen-in-5-commands/">Screen 使用之无废话5行命令</a>
-    </h1>
-  
+        <h2 id="1-__u8D77_u56E0_uFF1AShell__u83B7_u53D6_u6587_u4EF6_u540D_u548C_u540E_u7F00_u540D"><a href="#1-__u8D77_u56E0_uFF1AShell__u83B7_u53D6_u6587_u4EF6_u540D_u548C_u540E_u7F00_u540D" class="headerlink" title="1. 起因：Shell 获取文件名和后缀名"></a>1. 起因：Shell 获取文件名和后缀名</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[_posts] ==&#62;&#62; file=&#34;A-Tale-Of-Two-Cities.pdf&#34;&#10;[_posts] ==&#62;&#62; echo &#34;$&#123;file%.*&#125;&#34;&#10;A-Tale-Of-Two-Cities&#10;[_posts] ==&#62;&#62; echo &#34;$&#123;file##*.&#125;&#34;&#10;pdf</span><br></pre></td></tr></table></figure>
+<h2 id="2-__u57FA_u4E8E_Pattern_Matching__u7684_u5B50_u4E32_u66FF_u6362"><a href="#2-__u57FA_u4E8E_Pattern_Matching__u7684_u5B50_u4E32_u66FF_u6362" class="headerlink" title="2. 基于 Pattern Matching 的子串替换"></a>2. 基于 Pattern Matching 的子串替换</h2><p><code>${str/$old/$new}</code>  替换第一个。<br><code>${str//$old/$new}</code> 替换所有。</p>
+<p>注意：不能使用正则表达式，只能使用 ?<em> 的Shell扩展。只能用shell通配符如 `</em>?  [list] [!list] [a-z]`。</p>
+<p><code>${str/#$old/$new}</code> 替换开头。如果str以old串开头，则替换。<br><code>${str/%$old/$new}</code> 替换结尾。如果str以old串结尾，则替换。</p>
+<p><strong>[note]</strong> <code>#</code>和<code>%</code>一个是替换开头，一个是替换结尾。可以这么记忆。键盘上<code>#</code>在<code>%</code>前面。所以<code>#</code>是替换开头，<code>%</code>是替换结尾。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[_posts] ==&#62;&#62; str=&#34;Hello World&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;str/o/O&#125;&#10;HellO World&#10;[_posts] ==&#62;&#62; echo $&#123;str//o/O&#125;&#10;HellO WOrld&#10;&#10;[_posts] ==&#62;&#62; str=&#34;Hello World&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;str/#He/he&#125;&#10;Hello World&#10;[_posts] ==&#62;&#62; echo $&#123;str/#o/he&#125;&#10;Hello World&#10;&#10;[_posts] ==&#62;&#62; str=&#34;Hello World&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;str/%He/he&#125;&#10;Hello World&#10;[_posts] ==&#62;&#62; echo $&#123;str/%ld/lD&#125;&#10;Hello WorlD</span><br></pre></td></tr></table></figure>
+<p>一个例子: 将环境变量PATH的各个目录分开，每行显示一个。就是讲<code>:</code>转换成<code>\n</code>就可以实现。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[_posts] ==&#62;&#62; echo -e $&#123;PATH//:/&#34;\n&#34;&#125;&#10;/Library/Frameworks/Python.framework/Versions/3.5/bin&#10;/Library/Frameworks/Python.framework/Versions/2.7/bin&#10;/usr/local/bin&#10;/usr/sbin&#10;...</span><br></pre></td></tr></table></figure>
+<h2 id="3-__u57FA_u4E8E_Pattern_Matching__u7684_u5B50_u4E32_u5220_u9664"><a href="#3-__u57FA_u4E8E_Pattern_Matching__u7684_u5B50_u4E32_u5220_u9664" class="headerlink" title="3. 基于 Pattern Matching 的子串删除"></a>3. 基于 Pattern Matching 的子串删除</h2><p>子串删除是一种特殊的替换</p>
+<p><code>${str/$sub}</code>     将str中第一个sub子串删除<br><code>${str//$sub}</code>    将str中所有sub子串删除<br><code>${str#$prefix}</code>  去头，从开头去除最短匹配前缀<br><code>${str##$prefix}</code> 去头，从开头去除最长匹配前缀<br><code>${str%$suffix}</code>  去尾，从结尾去除最短匹配后缀<br><code>${str%%$suffix}</code> 去尾，从结尾去除最长匹配后缀</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[_posts] ==&#62;&#62; str=&#34;Hello World&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;str#He&#125;&#10;llo World&#10;[_posts] ==&#62;&#62; echo $&#123;str#He*o&#125;&#10;World&#10;[_posts] ==&#62;&#62; echo $&#123;str##He*o&#125;&#10;rld&#10;&#10;[_posts] ==&#62;&#62; prefix=&#34;*o&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;str#$prefix&#125;&#10;World&#10;[_posts] ==&#62;&#62; echo $&#123;str##$prefix&#125;&#10;rld&#10;&#10;[_posts] ==&#62;&#62; suffix=&#34;o*&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;str%$suffix&#125;&#10;Hello W&#10;[_posts] ==&#62;&#62; echo $&#123;str%%$suffix&#125;&#10;Hell</span><br></pre></td></tr></table></figure>
+<p>一个例子：获取文件扩展名,如最前面的介绍。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[_posts] ==&#62;&#62; filename=&#34;A-cat.jpg&#34;&#10;[_posts] ==&#62;&#62; echo $&#123;filename##*.&#125;&#10;jpg</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/06/14/How-to-read-memory-info-under-Linux/" class="archive-article-date">
-  <time datetime="2013-06-14T07:00:00.000Z" itemprop="datePublished">Jun 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/06/14/How-to-read-memory-info-under-Linux/">Linux 下的查看系统内存信息</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/06/13/Linux-dev-files/" class="archive-article-date">
-  <time datetime="2013-06-13T07:00:00.000Z" itemprop="datePublished">Jun 13</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://anotherbug.com/2016/01/01/Bash-pattern-match/" data-id="ciiveyeqg0000hwsdyhgv0cw8" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/06/13/Linux-dev-files/">Linux 下的几个文件</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/" class="archive-article-date">
-  <time datetime="2013-05-20T07:00:00.000Z" itemprop="datePublished">May 20</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/">How to use wget to donwload the whole web folder</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/" class="archive-article-date">
-  <time datetime="2013-04-28T07:00:00.000Z" itemprop="datePublished">Apr 28</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/">How to download a whole website using wget with chinese character support</a>
-    </h1>
   
+    <a href="/2015/12/31/Fitbit-HR-data-monitoring/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Fitbit HR heart rate data monitoring</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
