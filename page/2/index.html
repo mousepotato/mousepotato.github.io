@@ -67,6 +67,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-how-to-revert-github-source-code-to-a-specific-commit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/" class="article-date">
+  <time datetime="2013-06-20T07:00:00.000Z" itemprop="datePublished">2013-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Technique/">Technique</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/">How to revert github source code to a specific commit</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>如何将Github的代码回退到某一个指定的提交版本  </p>
+<p>How to revert Github source code to a specific commit</p>
+<pre><code>git reset --hard &quot;old-commit-id&quot;
+git push -f
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://anotherbug.com/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/" data-id="ciil9ckvr0011fgsdbhbcho1l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-How-to-read-memory-info-under-Linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2013/06/14/How-to-read-memory-info-under-Linux/" class="article-date">
@@ -606,101 +653,6 @@ Yada yada yada
 
 
   
-    <article id="post-how-to-crack-master-lock" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/04/29/how-to-crack-master-lock/" class="article-date">
-  <time datetime="2013-04-29T07:00:00.000Z" itemprop="datePublished">2013-04-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Personal/">Personal</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/29/how-to-crack-master-lock/">How to crack the master lock</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如何破解master lock的密码</p>
-<h2 id="u539F_u59D4"><a href="#u539F_u59D4" class="headerlink" title="原委"></a>原委</h2><p>最近游泳不小心把爱锁丢失，无奈看到地上有一个废弃的master lock，捡了回来，死马当活马医吧。</p>
-<p><img src="/assets/images/2013/04/29/master_lock.png" alt="master lock"></p>
-<h2 id="u7834_u89E3_u51C6_u5907_u77E5_u8BC6"><a href="#u7834_u89E3_u51C6_u5907_u77E5_u8BC6" class="headerlink" title="破解准备知识"></a>破解准备知识</h2><ol>
-<li>Master lock 密码转盘有40个数字 (0-39)，3个密码，采取暴力的手段是无法破解的。</li>
-<li>密码转盘有40个数字 (0-39)可以分为4组 （0-10，11-20，21-30，31-0），明白分组的概念有助于加速破解</li>
-<li>了解master lock如何开锁。（已经知道密码的情况下）参看 <a href="http://www.ehow.com/how_4810869_open-master-combination-lock.html" target="_blank" rel="external">eHow</a>。具体方法是：</li>
-</ol>
-<p><code>1. 将master lock正面朝向你，不要放反了</code></p>
-<p><code>2. 将密码转盘顺时针转3整圈，注意，在第三圈未转完的时候将密码的第一位数字对准锁正上方的红点。</code></p>
-<p><code>3. 现在开始逆时针转动转盘，要让密码的第一位数字通过正上方的红点一次，然后让密码的第二位数字停留在红点下方</code></p>
-<p><code>4. 现在开始顺时针旋转密码，直接转到密码的第三位数字，将其放在红点下方。</code></p>
-<p><code>5. 拉动锁杆，可以开锁了，如何不行的话，在知道正确密码的情况下，重复1-4步骤。</code></p>
-<h2 id="u7834_u89E3_u7B2C_u4E09_u4F4D_u6570_u5B57"><a href="#u7834_u89E3_u7B2C_u4E09_u4F4D_u6570_u5B57" class="headerlink" title="破解第三位数字"></a>破解第三位数字</h2><ol>
-<li><p>初始化master lock</p>
-<p> <code>顺时针转到密码转盘4-5圈，使锁复位</code></p>
-</li>
-<li>将锁盘的数字0正对锁上方的红色小点</li>
-<li><p>用手用力拉锁杆，顺时针从0开始转动转盘。</p>
-<p> <code>在0-10的数字之间，你能找到在3个数字出，转盘会被卡住，转动很困难，记下这三个数字，如果转盘卡在某两个数字之间，比如6和7之间，就记下6.5</code></p>
-</li>
-<li><p>重复第三个步骤，依次在11-20，21-30，31-0之间各找到三个数字。</p>
-</li>
-<li><p>记下这12个数字，这十二个数字有规律的：</p>
-<p> <code>（1）当中会有5个数字是整数，7个小数</code></p>
-<p> <code>（2）5个整数中会有4个整数结尾数字相同</code></p>
-<p> <code>（3）找出那个结尾不同的数字，它就是你的密码中的第三位数字！！！</code></p>
-</li>
-</ol>
-<h2 id="u7834_u89E3_u7B2C_u4E00_u4F4D_u6570_u5B57"><a href="#u7834_u89E3_u7B2C_u4E00_u4F4D_u6570_u5B57" class="headerlink" title="破解第一位数字"></a>破解第一位数字</h2><ol>
-<li>找到密码的第三位数字后，将它除以4取余数，结果会是0，1，2，和3中的一个。比如我的第三位数字是35，那么除以4后余数是3。</li>
-<li>这样从余数开始，依次加上4，得到一组数字（比如我的余数是3，那么我得到的一组数字就是：3，7，11，15，19，23，27，31，35，39）注意密码数字的最大只到39.</li>
-<li>好的，你已经得到了密码第1位数字的所有可能性了。</li>
-</ol>
-<h2 id="u7834_u89E3_u7B2C_u4E8C_u4F4D_u6570_u5B57"><a href="#u7834_u89E3_u7B2C_u4E8C_u4F4D_u6570_u5B57" class="headerlink" title="破解第二位数字"></a>破解第二位数字</h2><ol>
-<li><p>还记得刚才的那个余数吗？比如我的是3，现在需要将这个余数做一个简单的数学映射。</p>
-<p> <code>0--&gt;2</code></p>
-<p> <code>1--&gt;3</code></p>
-<p> <code>2--&gt;0</code></p>
-<p> <code>3--&gt;1</code>    </p>
-</li>
-<li>比如我的余数是3，那么现在映射后的余数就是1了。</li>
-<li>同样的，用这个新的余数1，依次加上4，得到一组数字共有10个 （1，5，9，13，17，21，25，29，33，37）</li>
-<li>这10个数字就是你密码的第二位数字的所有可能性了。</li>
-</ol>
-<h2 id="u5C1D_u8BD5_u627E_u51FA_u5BC6_u7801"><a href="#u5C1D_u8BD5_u627E_u51FA_u5BC6_u7801" class="headerlink" title="尝试找出密码"></a>尝试找出密码</h2><ol>
-<li>写下上面步骤的3位密码的所有可能性，一一尝试，因为密码的第一位和第二位各有10个数字，第三位已经确定，所以尝试的可能有100种组合。</li>
-<li>一般情况下你要拿着顺序记下一一组合。但是运用工程和心理学原理，以及算法中的二分查找原理，可以从密码第一位数字所有可能性数字的中间开始和第二位密码的所有可能一一组合搜素。</li>
-<li>如果不对，再从第一位密码的所有可能性的前半段中间开始，或者后半段的中间开始。</li>
-<li>不管按照什么顺序，一定要注意记录，方式混乱或者遗落任何一个密码组合。下图是我的查找示意图（我首先尝试的是23，然后是19，然后是11，最后是7，所以在进行了40多次的尝试后找到了正确的密码）。对应的密码是 <strong>7-25-35</strong>，哈哈，有锁可以用了！！</li>
-</ol>
-<p><img src="/assets/images/2013/04/29/master_lock_crack.png" alt="master lock crack"></p>
-<p>That’s it!!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://anotherbug.com/2013/04/29/how-to-crack-master-lock/" data-id="ciil9ckwl0025fgsdrjpywzxa" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hacks/">Hacks</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -714,7 +666,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">17</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a><span class="category-list-count">18</span></li></ul>
     </div>
   </div>
 
@@ -723,7 +675,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/">Algorithm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud-Computing/">Cloud Computing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GTD/">GTD</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacks/">Hacks</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/">Hadoop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leetcode/">Leetcode</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nodejs/">Nodejs</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Programming/">Programming</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Random-Thoughts/">Random Thoughts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VirtualBox/">VirtualBox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dd-wrt/">dd-wrt</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -741,7 +693,7 @@ Yada yada yada
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -751,6 +703,10 @@ Yada yada yada
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/02/01/screen-scrollback/">Screen scrollback</a>
+          </li>
         
           <li>
             <a href="/2016/01/01/Bash-pattern-match/">Bash pattern match</a>
@@ -766,10 +722,6 @@ Yada yada yada
         
           <li>
             <a href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a>
-          </li>
-        
-          <li>
-            <a href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a>
           </li>
         
       </ul>
