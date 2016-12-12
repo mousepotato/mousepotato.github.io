@@ -1,54 +1,51 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="mousepotato's personal blog"><title>How to install CyanogenMod on Galaxy S3 | 鼠标土豆</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">How to install CyanogenMod on Galaxy S3</h1><a id="logo" href="/.">鼠标土豆</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">How to install CyanogenMod on Galaxy S3</h1><div class="post-meta">Jun 11, 2013<span> | </span><span class="category"><a href="/categories/Technique/">Technique</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><a data-disqus-identifier="2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/" href="/2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/#disqus_thread" class="disqus-comment-count"></a><div class="post-content"><hr>
-<p>Galaxy S3 安装CyanogenMod</p>
-<p>CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。玩转Andorid ROM必备。下面介绍如何在Galaxy S3上安装CyanogenMod。</p>
-<h3 id="1-__u4E0B_u8F7D_CyanogenMod"><a href="#1-__u4E0B_u8F7D_CyanogenMod" class="headerlink" title="1. 下载 CyanogenMod"></a>1. 下载 CyanogenMod</h3><p>通过这个<a href="http://get.cm/?device=i9300" target="_blank" rel="external">链接 http://get.cm/?device=i9300</a>下载，分为三个版本：    </p>
-<ul>
-<li>nightly (最新版，小白鼠专用)  </li>
-<li>test  （测试版本，较稳定）  </li>
-<li>stable  （稳定版本）  </li>
-</ul>
-<p>可以根据自己喜好选择。</p>
-<h3 id="2-__u5B89_u88C5_CyanogenMod"><a href="#2-__u5B89_u88C5_CyanogenMod" class="headerlink" title="2. 安装 CyanogenMod"></a>2. 安装 CyanogenMod</h3><p>将下载好的.zip文件放到S3手机上。有两种方法:</p>
-<ul>
-<li><p>直接将手机连接电脑上传</p>
-</li>
-<li><p>将手机连接电脑通过adb上传</p>
-<p>./adb push ~/Downloads/cm-10.1-20130610-NIGHTLY-i9300.zip /sdcard/0/cmupdater</p>
-</li>
-</ul>
-<h3 id="3-__u5C06S3_u91CD_u542F_u8FDB_u5165recovery__u6A21_u5F0F_u8FDB_u884C_u5B89_u88C5"><a href="#3-__u5C06S3_u91CD_u542F_u8FDB_u5165recovery__u6A21_u5F0F_u8FDB_u884C_u5B89_u88C5" class="headerlink" title="3. 将S3重启进入recovery 模式进行安装"></a>3. 将S3重启进入recovery 模式进行安装</h3><ul>
-<li>同时按住 <code>VolumnUp + Home + Power</code>进入恢复模式  </li>
-<li><p>首先必须清除 <code>cache partition</code>和 <code>wipe data/factory reset</code>  </p>
-<p><img src="/assets/images/2013/06/11/recv_1.png" alt="rev1"></p>
-</li>
-<li><p>之后选择 <code>install zip from sdcard</code>  选择 <code>cm-10.1-20130610-NIGHTLY-i9300.zip</code></p>
-<p><img src="/assets/images/2013/06/11/recv_2.png" alt="rev2"></p>
-</li>
-<li><p>最后选择 <code>Advanced-&gt; fix permissions</code>，然后重启。</p>
-</li>
-</ul>
-<p><img src="/assets/images/2013/06/11/recv_3.png" alt="rev_3"></p>
-<h3 id="4-__u5B89_u88C5google_play_u7B49_u8F6F_u4EF6"><a href="#4-__u5B89_u88C5google_play_u7B49_u8F6F_u4EF6" class="headerlink" title="4. 安装google play等软件"></a>4. 安装google play等软件</h3><p>默认由于版权问题CyanogenMod不自带google play等软件。通过这个连接<a href="http://goo.im/gapps" target="_blank" rel="external">下载 http://goo.im/gapps</a> 你对应版本的google 软件。将其上传到S3，然后再通过重启到恢复模式选择zip安装。  </p>
-<h3 id="5-__u5982_u4F55_u6253_u5F00_u5F00_u53D1_u8005_u8BBE_u7F6E_28__7B_7Ddevelop_options_29"><a href="#5-__u5982_u4F55_u6253_u5F00_u5F00_u53D1_u8005_u8BBE_u7F6E_28__7B_7Ddevelop_options_29" class="headerlink" title="5. 如何打开开发者设置( {}develop options)"></a>5. 如何打开开发者设置( {}develop options)</h3><ul>
-<li>打开<code>Settings -&gt; About phone-&gt;Build number</code></li>
-</ul>
-<p><img src="/assets/images/2013/06/11/dev_1.png" alt="dev_1"></p>
-<ul>
-<li>狂点<code>build number</code> 几次以后系统提示 <code>develop settings</code>已经开启。</li>
-</ul>
-<p><img src="/assets/images/2013/06/11/dev_2.png" alt="dev_2"></p>
-<p>That’s it!!</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://anotherbug.com/2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/" data-id="ciil9ckw8001jfgsdj7df0udt" class="article-share-link">分享到</a><div class="tags"><a href="/tags/Android/">Android</a></div><div class="post-nav"><a href="/2013/06/12/how-to-make-presentation-using-markdown/" class="pre">How to make presentation using markdown</a><a href="/2013/05/27/what-to-do-next-for-your-GTD-plan/" class="next">What to do next for your GTD plan</a></div><div id="disqus_thread"><script>var disqus_shortname = 'anotherbug';
-var disqus_identifier = '2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/';
-var disqus_title = 'How to install CyanogenMod on Galaxy S3';
-var disqus_url = 'https://anotherbug.com/2013/06/11/how-to-install-CyanogenMod-on-Galaxy-S3/';
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();</script><script id="dsq-count-scr" src="//anotherbug.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://anotherbug.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique-Personal/">Technique, Personal</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Life/" style="font-size: 15px;">Life</a> <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Leetcode/" style="font-size: 15px;">Leetcode</a> <a href="/tags/Nodejs/" style="font-size: 15px;">Nodejs</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Random-Thoughts/" style="font-size: 15px;">Random Thoughts</a> <a href="/tags/GTD/" style="font-size: 15px;">GTD</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/Programming/" style="font-size: 15px;">Programming</a> <a href="/tags/Latex/" style="font-size: 15px;">Latex</a> <a href="/tags/Vim/" style="font-size: 15px;">Vim</a> <a href="/tags/Hacks/" style="font-size: 15px;">Hacks</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Cloud-Computing/" style="font-size: 15px;">Cloud Computing</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/VirtualBox/" style="font-size: 15px;">VirtualBox</a> <a href="/tags/dd-wrt/" style="font-size: 15px;">dd-wrt</a> <a href="/tags/awk/" style="font-size: 15px;">awk</a> <a href="/tags/shell/" style="font-size: 15px;">shell</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/half-ironman-candidate-statistics/">Half Ironman santa cruz 70.3 candidates statistics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/screen-scrollback/">Screen scrollback</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/Bash-pattern-match/">Bash pattern match</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/24/Happy-Holidays/">Happy Holidays</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/07/Leetcode-remove-element copy/">Leetcode remove element</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/11/28/Download-web-pictures-using-Nodejs/">使用 Node JS 批量下载网站的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/11/25/linux-screen-in-5-commands/">Screen 使用之无废话5行命令</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//anotherbug.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">鼠标土豆.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create','UA-21760035-5','auto');ga('send','pageview');
-</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+extends base
+
+block title
+  title= page.title + ' | ' + config.title
+
+block content
+  .post
+    h1.post-title= page.title
+    .post-meta= page.date.format('ll')
+      if page.categories.length > 0
+        span= ' | '
+        span.category
+          for category in page.categories.toArray()
+            a(href=url_for(category.path))= category.name
+      if theme.busuanzi == true
+        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
+        span#busuanzi_container_page_pv= ' | '
+          span#busuanzi_value_page_pv
+          span= ' ' + __('Hits')
+    if theme.duoshuo
+      a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
+    if theme.disqus
+      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
+    if page.toc
+      div(class='clear')
+        div(id='toc' class='toc-article')
+          div(class='toc-title')= __('contents')
+          != toc(page.content)
+    .post-content
+      != page.content
+    if theme.shareto == true
+      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
+      a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}')= __('shareto')
+    include _partial/tag
+    include _partial/post_nav
+    if theme.duoshuo
+      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
+         .ds-share-inline
+            ul.ds-share-icons-16
+              li(data-toggle='ds-share-icons-more')
+                a(class='ds-more' href='javascript:void(0);') 分享到：
+              li
+                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
+              li
+                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
+              li
+                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
+              li
+                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
+            .ds-share-icons-more
+    include _partial/comments
