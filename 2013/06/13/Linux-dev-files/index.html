@@ -1,51 +1,32 @@
-extends base
-
-block title
-  title= page.title + ' | ' + config.title
-
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format('ll')
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-    if theme.duoshuo
-      a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
-    if theme.disqus
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content)
-    .post-content
-      != page.content
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}')= __('shareto')
-    include _partial/tag
-    include _partial/post_nav
-    if theme.duoshuo
-      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
-         .ds-share-inline
-            ul.ds-share-icons-16
-              li(data-toggle='ds-share-icons-more')
-                a(class='ds-more' href='javascript:void(0);') 分享到：
-              li
-                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
-              li
-                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
-              li
-                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
-              li
-                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
-            .ds-share-icons-more
-    include _partial/comments
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="mousepotato's personal blog"><title>Linux 下的几个文件 | 鼠标土豆</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Linux 下的几个文件</h1><a id="logo" href="/.">鼠标土豆</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Linux 下的几个文件</h1><div class="post-meta">Jun 13, 2013<span> | </span><span class="category"><a href="/categories/Technique/">Technique</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>Linux 下的几个文件</p>
+<p>Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是:</p>
+<h2 id="1-dev-null"><a href="#1-dev-null" class="headerlink" title="1: /dev/null"></a>1: /dev/null</h2><p>这个/dev下放的是系统和用户的设备文件. null是个文件名. 被称为 the null device, <code>/dev/null</code> 这个童鞋脾气有点大,听不见别人任何话,所以呢任何话传到他耳朵里都被当成耳旁风了.当然更可恨的是他竟然还假惺惺的点头说听到了.当然他是很诚实地说的.  </p>
+<p>/dev/null or the null device is a special file that discards all data written to it, but reports that the write operation succeed.   </p>
+<p>所以呢,你心情不好的时候,或者你有个秘密憋的慌想说但是又怕周围人有个big mouth的时候来,可以和这个娃说说. 用程序员的黑话(jargon)说他是个’黑洞’(black hole)或者’位筒’(bit bucket).</p>
+<p><img src="/assets/images/2013/06/13/dev_null.jpg" alt="devnull"></p>
+<p>知道了这个,下面几个隔行如隔山的话也就好理解了.</p>
+<ol>
+<li>Please send complaints to <code>/dev/null</code></li>
+<li>my mail got archived in <code>/dev/null</code></li>
+</ol>
+<p>几个扩展:</p>
+<ol>
+<li><code>cat /dev/null &gt; /var/log/db_log</code> (清空日志文件的内容)</li>
+<li><code>&gt;/dev/null 2&gt;&amp;1</code> 的理解  </li>
+</ol>
+<ul>
+<li><code>&gt;</code> 代表重定向到哪里，比方：<code>echo &quot;123&quot; &gt; /home/123.txt</code>  </li>
+<li><code>&gt;</code> 输出给这个不听话的娃, <code>/dev/null</code>  </li>
+<li><code>2&gt;</code> 表示stderr标准错误   </li>
+<li><code>&amp;</code> 表示等同于的意思，<code>2&gt;&amp;1</code>，表示2的输出重定向等同于1  </li>
+<li><code>1</code> 表示stdout标准输出，系统默认值是1，所以<code>&gt;/dev/null</code>等同于 <code>1&gt;/dev/null</code></li>
+</ul>
+<p>因此，<code>&gt;/dev/null 2&gt;&amp;1</code>也可以写成<code>1&gt; /dev/null 2&gt;&amp;1</code>  </p>
+<p><code>1&gt;/dev/null</code>：首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。  </p>
+<p><code>2&gt;&amp;1</code>：接着，标准错误输出重定向 到 标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。  </p>
+<p>最常见的写法: <code>command &gt; file 2&gt;file</code> 与 <code>command &gt; file 2&gt;&amp;1</code>(这个效率更高点,可以从打开文件的次数角度去分析.)</p>
+<h2 id="2-dev-full"><a href="#2-dev-full" class="headerlink" title="2. /dev/full"></a>2. /dev/full</h2><p>这个娃天生胃小,整天处于吃饱状态.送啥吃的来都不接受.那你说把这个家伙放在unix里面干嘛.This device is usually used when testing the behaviour of a program when it encounters a disk full error.测试某些程序在磁盘吃饱状态下的错误.</p>
+<p><img src="/assets/images/2013/06/13/dev_full.jpg" alt="devfull"> </p>
+<h2 id="3-dev-zero"><a href="#3-dev-zero" class="headerlink" title="3. /dev/zero"></a>3. /dev/zero</h2><p>这哥们有很的0,MS是很有钱.他实际上产生连续不断的null的流（二进制的零流),写入他的东东会丢失不见,然后呢会给你一串的null值,这个一般不好发觉./dev/zero主要的用处是用来创建一个指定长度用于初始化的空文件，就像临时交换文件.</p>
+<p><img src="/assets/images/2013/06/13/dev_zero.jpg" alt="devzero"></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://anotherbug.com/2013/06/13/Linux-dev-files/" data-id="ciwmsvqrp000sw9se594zg43y" class="article-share-link">分享到</a><div class="tags"><a href="/tags/Ubuntu/">Ubuntu</a><a href="/tags/Linux/">Linux</a></div><div class="post-nav"><a href="/2013/06/14/How-to-read-memory-info-under-Linux/" class="pre">Linux 下的查看系统内存信息</a><a href="/2013/06/12/how-to-make-presentation-using-markdown/" class="next">How to make presentation using markdown</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://anotherbug.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/dd-wrt/" style="font-size: 15px;">dd-wrt</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/VirtualBox/" style="font-size: 15px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Hacks/" style="font-size: 15px;">Hacks</a> <a href="/tags/Life/" style="font-size: 15px;">Life</a> <a href="/tags/Latex/" style="font-size: 15px;">Latex</a> <a href="/tags/GTD/" style="font-size: 15px;">GTD</a> <a href="/tags/Cloud-Computing/" style="font-size: 15px;">Cloud Computing</a> <a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Random-Thoughts/" style="font-size: 15px;">Random Thoughts</a> <a href="/tags/Nodejs/" style="font-size: 15px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 15px;">Programming</a> <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Leetcode/" style="font-size: 15px;">Leetcode</a> <a href="/tags/awk/" style="font-size: 15px;">awk</a> <a href="/tags/shell/" style="font-size: 15px;">shell</a> <a href="/tags/test/" style="font-size: 15px;">test</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/hexo-blog/">hexo-blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/half-ironman-candidate-statistics/">Half Ironman santa cruz 70.3 candidates statistics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/screen-scrollback/">Screen scrollback</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/Bash-pattern-match/">Bash pattern match</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/11/28/Download-web-pictures-using-Nodejs/">使用 Node JS 批量下载网站的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/11/25/linux-screen-in-5-commands/">Screen 使用之无废话5行命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/10/20/how-to-be-efficient/">How to be efficient</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">鼠标土豆.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
