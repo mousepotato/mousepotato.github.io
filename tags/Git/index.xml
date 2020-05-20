@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on 鼠标土豆</title>
+    <link>https://anotherbug.org/tags/git/</link>
+    <description>Recent content in Git on 鼠标土豆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anotherbug.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>how to setup multiple github ssh keys</title>
+      <link>https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/</link>
+      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/</guid>
+      <description>1. create multiple ssh key ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot;  for example, 2 keys create at:
+~/.ssh/id_rsa ~/.ssh/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~/.ssh/id_rsa ssh-add ~/.ssh/id_rsa_sli_racingwithhorse check your saved keys using:
+ssh-add -l  3. modify the ssh config cd ~/.ssh/ touch config $==&amp;gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~/.</description>
+    </item>
+    
+    <item>
+      <title>How to revert github source code to a specific commit</title>
+      <link>https://anotherbug.org/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</link>
+      <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</guid>
+      <description>如何将Github的代码回退到某一个指定的提交版本 How to revert Github source code to a specific commit git reset --hard &amp;quot;old-commit-id&amp;quot; git push -f</description>
+    </item>
+    
+  </channel>
+</rss>

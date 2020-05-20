@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technique on 鼠标土豆</title>
+    <link>https://anotherbug.org/categories/technique/</link>
+    <description>Recent content in Technique on 鼠标土豆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anotherbug.org/categories/technique/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>how to setup multiple github ssh keys</title>
+      <link>https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/</link>
+      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/</guid>
+      <description>1. create multiple ssh key ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot;  for example, 2 keys create at:
+~/.ssh/id_rsa ~/.ssh/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~/.ssh/id_rsa ssh-add ~/.ssh/id_rsa_sli_racingwithhorse check your saved keys using:
+ssh-add -l  3. modify the ssh config cd ~/.ssh/ touch config $==&amp;gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~/.</description>
+    </item>
+    
+    <item>
+      <title>hexo-blog</title>
+      <link>https://anotherbug.org/2016/12/12/hexo-blog/</link>
+      <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2016/12/12/hexo-blog/</guid>
+      <description>Test hexo blog This is a test</description>
+    </item>
+    
+    <item>
+      <title>Half Ironman santa cruz 70.3 candidates statistics</title>
+      <link>https://anotherbug.org/2016/05/18/half-ironman-candidate-statistics/</link>
+      <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2016/05/18/half-ironman-candidate-statistics/</guid>
+      <description>Since I will be attending Half Ironman santa cruz 70.3 race, I would love to know something about our atheletes. The online website provides the registered candidates information. So just with a bit hack, you will know something.
+#!/usr/bin/awk -f # # awk -f vis.awk output/clean.csv # BEGIN { FS=&amp;#34;,&amp;#34; F_Count=0 F_60_Plus=0 F_50_to_60=0 F_40_to_50=0 F_30_to_40=0 F_30_Minus=0 M_Count=0 M_60_Plus=0 M_50_to_60=0 M_40_to_50=0 M_30_to_40=0 M_30_Minus=0 Less_than_me=0 Less_than_me_M=0 Less_than_me_F=0 } { if($3 ~ /F/){ # print $0 F_Count++ if ( $4 &amp;gt;= 60){ F_60_Plus++ } else if ($4 &amp;gt;= 50) { F_50_to_60++ } else if ($4 &amp;gt;= 40) { F_40_to_50++ } else if ($4 &amp;gt;= 30) { F_30_to_40++ } else if ($4 &amp;lt; 30) { F_30_Minus++ } } else { M_Count++ if ( $4 &amp;gt;= 60){ M_60_Plus++ } else if ($4 &amp;gt;= 50) { M_50_to_60++ } else if ($4 &amp;gt;= 40) { M_40_to_50++ } else if ($4 &amp;gt;= 30) { M_30_to_40++ } else if ($4 &amp;lt; 30) { M_30_Minus++ } } if ($4 &amp;lt;28) { Less_than_me++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /F/) { Less_than_me_F++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /M/) { #print $0 Less_than_me_M++ } } END { print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Female counts: &amp;#34; F_Count print &amp;#34;Female age &amp;gt;=60: &amp;#34; F_60_Plus print &amp;#34;Female age between 50 to 60: &amp;#34; F_50_to_60 print &amp;#34;Female age between 40 to 50: &amp;#34; F_40_to_50 print &amp;#34;Female age between 30 to 40: &amp;#34; F_30_to_40 print &amp;#34;Female age under 30: &amp;#34; F_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Male counts: &amp;#34; M_Count print &amp;#34;Male age &amp;gt;=60: &amp;#34; M_60_Plus print &amp;#34;Male age between 50 to 60: &amp;#34; M_50_to_60 print &amp;#34;Male age between 40 to 50: &amp;#34; M_40_to_50 print &amp;#34;Male age between 30 to 40: &amp;#34; M_30_to_40 print &amp;#34;Male age under 30: &amp;#34; M_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Less than me: &amp;#34; Less_than_me print &amp;#34;Less than me female: &amp;#34; Less_than_me_F print &amp;#34;Less than me male: &amp;#34; Less_than_me_M } The result is&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Screen scrollback</title>
+      <link>https://anotherbug.org/2016/02/01/screen-scrollback/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2016/02/01/screen-scrollback/</guid>
+      <description>设置screen支持长scrollback In ~/.screenrc add or set defscrollback 50000 use 50000 or any number you want In your screen, checking by ctrl + a + i, it will show your current scrollback settings To enter scrollback/copy mode, using ctrl + a + [ Use ctrl + u, ctrl + d, ctrl</description>
+    </item>
+    
+    <item>
+      <title>Bash pattern match</title>
+      <link>https://anotherbug.org/2016/01/01/bash-pattern-match/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2016/01/01/bash-pattern-match/</guid>
+      <description>1. 起因：Shell 获取文件名和后缀名 [_posts] ==&amp;gt;&amp;gt; file=&amp;#34;A-Tale-Of-Two-Cities.pdf&amp;#34; [_posts] ==&amp;gt;&amp;gt; echo &amp;#34;${file%.*}&amp;#34; A-Tale-Of-Two-Cities [_posts] ==&amp;gt;&amp;gt; echo &amp;#34;${file##*.}&amp;#34; pdf 2. 基于 Pattern Matching 的子串替换 ${str/$old/$new} 替换第一个。 ${str//$old/$new} 替换所有。 注意：不能使用正则表达式，只能使</description>
+    </item>
+    
+    <item>
+      <title>Box content APIs example</title>
+      <link>https://anotherbug.org/2015/11/15/box-content-apis-example/</link>
+      <pubDate>Sun, 15 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2015/11/15/box-content-apis-example/</guid>
+      <description>今天实现了新建一个box app并通过Box API读取用户box里面文件的程序。记录如下。 准备 使用nodejs环境搭建回调服务器 好像没用了。。</description>
+    </item>
+    
+    <item>
+      <title>Leetcode remove duplicates from sorted array</title>
+      <link>https://anotherbug.org/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</link>
+      <pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</guid>
+      <description>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length. Do not allocate extra space for another array, you must do this in place with constant memory. For example, Given input array A = [1,1,2], Your function should return length = 2, and A is now [1,2] 写了几次，每一次都有不同</description>
+    </item>
+    
+    <item>
+      <title>使用 Node JS 批量下载网站的图片</title>
+      <link>https://anotherbug.org/2013/11/28/download-web-pictures-using-nodejs/</link>
+      <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/11/28/download-web-pictures-using-nodejs/</guid>
+      <description>1. 起因 最近看到 网站 fhl.net 上有一系列《圣地旅游》的照片，个人很喜欢，想把它下载下来保存。问题是该网站上有67页，每页有35张照片，也就是总共有23</description>
+    </item>
+    
+    <item>
+      <title>Screen 使用之无废话5行命令</title>
+      <link>https://anotherbug.org/2013/11/25/linux-screen-in-5-commands/</link>
+      <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/11/25/linux-screen-in-5-commands/</guid>
+      <description>Linux screen in 5 command lines 1. 建立一个 screen shell 窗口 screen 2. 退出刚建立的窗口 ctrl+ a d 3. 查看已有 screen 窗口 screen -ls 4. 重新进入已有 screen 窗口 screen -r sessionid sessionid can be found by looking screen -ls 5. 退出已有 screen 窗口 exit 6. 退</description>
+    </item>
+    
+    <item>
+      <title>How to revert github source code to a specific commit</title>
+      <link>https://anotherbug.org/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</link>
+      <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</guid>
+      <description>如何将Github的代码回退到某一个指定的提交版本 How to revert Github source code to a specific commit git reset --hard &amp;quot;old-commit-id&amp;quot; git push -f</description>
+    </item>
+    
+    <item>
+      <title>Linux 下的查看系统内存信息</title>
+      <link>https://anotherbug.org/2013/06/14/how-to-read-memory-info-under-linux/</link>
+      <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/06/14/how-to-read-memory-info-under-linux/</guid>
+      <description>Linux查看系统内存信息可以有如下方法： free free -m cat /proc/meminfo 如果要查询详细到RAM规格，DDR2，DDR3可以使用： sudo lshw</description>
+    </item>
+    
+    <item>
+      <title>Linux 下的几个文件</title>
+      <link>https://anotherbug.org/2013/06/13/linux-dev-files/</link>
+      <pubDate>Thu, 13 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/06/13/linux-dev-files/</guid>
+      <description>Linux 下的几个文件 Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是: 1: /dev/null 这个/dev下放的是系统和用户的设备文件. null是个文</description>
+    </item>
+    
+    <item>
+      <title>How to install CyanogenMod on Galaxy S3</title>
+      <link>https://anotherbug.org/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</guid>
+      <description>Galaxy S3 安装CyanogenMod CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。玩转Andorid ROM必备。</description>
+    </item>
+    
+    <item>
+      <title>How to use wget to donwload the whole web folder</title>
+      <link>https://anotherbug.org/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</link>
+      <pubDate>Mon, 20 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</guid>
+      <description>如何使用wget下载整个网站的文件夹 How to use wget to donwload the whole web folder 使用如下命令： wget -r -p -E -k -nH -np --cut-dirs=1 -P ~/Downloads/ http://99.198.110.38/Chinese/MP3s/13%E6%97%A7%E7%BA%A6%E8%AE%B2%E9%81%93/ That&amp;rsquo;s it!!</description>
+    </item>
+    
+    <item>
+      <title>How to install third party beamer theme</title>
+      <link>https://anotherbug.org/2013/05/18/how-to-install-third-party-beamer-theme/</link>
+      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/05/18/how-to-install-third-party-beamer-theme/</guid>
+      <description>如何安装第三方的Beamer theme How to install third party beamer theme 为了安装Beamer theme 文件不破坏原有的TDS (Tex Directory Structure) ，可以将需要的第三方theme安装到如下目录：</description>
+    </item>
+    
+    <item>
+      <title>How to download a whole website using wget with chinese character support</title>
+      <link>https://anotherbug.org/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</guid>
+      <description>如何使用wget下载整个网站同时支持中文命名 wget 下载整个网站 使用命令： wget -r -p -E -k -nH -np --cut-dirs=1 -P /path/to/save/ Website URL 支持中文 vi ~/.wgetrc 添加如下内容： --restrict-file-names=nocontrol --trust-server-names=on --content-disposition=on That&amp;rsquo;s it!!</description>
+    </item>
+    
+    <item>
+      <title>Windows 下如何关闭特定端口</title>
+      <link>https://anotherbug.org/2012/10/01/shutdown-specific-port-in-windows/</link>
+      <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2012/10/01/shutdown-specific-port-in-windows/</guid>
+      <description>netstat -aon|findstr &amp;quot;9050&amp;quot; TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016 tasklist|findstr &amp;ldquo;2016&amp;rdquo; tor.exe 2016 Console 0 16,064 ctrl+alt+delete 打开任务管理器，找到tor.exe右键end process。 That&amp;rsquo;s it!!</description>
+    </item>
+    
+    <item>
+      <title>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</title>
+      <link>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</link>
+      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</guid>
+      <description>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox 1. Setup virtual machines (3 for exmaple) You should first setup one machine using virtualbox, setup JAVA environment, download the Cassandra source code Use Virtualbox&amp;rsquo;s virtualmanager function to copy another two ubuntu machines. Make sure to modify the hostname. Modify the /etc/hosts file. Machine summary 192.168.56.101 sjhadoop0 192.168.56.103 sjhadoop1 192.168.56.104 sjhadoop2 2. Config Cassandra Modify /conf/cassandra-env.shfile. MAX_HEAP_SIZE=&amp;amp;quot;512M&amp;amp;quot; HEAP_NEWSIZE=&amp;amp;quot;128M&amp;amp;quot; Modify /conf/cassandra.yaml file.</description>
+    </item>
+    
+    <item>
+      <title>Linksys E1550 刷DD-WRT教程</title>
+      <link>https://anotherbug.org/2012/04/30/linksys-e1550-dd-dwr-how-to/</link>
+      <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/2012/04/30/linksys-e1550-dd-dwr-how-to/</guid>
+      <description>Linksys E1550 刷DD-WRT教程 将路由器恢复出厂设置并且硬复位 （30/30/30复位）目的是清除nvran里面的记忆 下载对应E1550的DD-WRTb</description>
+    </item>
+    
+  </channel>
+</rss>

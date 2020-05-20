@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 鼠标土豆</title>
+    <link>https://anotherbug.org/categories/</link>
+    <description>Recent content in Categories on 鼠标土豆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anotherbug.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Technique</title>
+      <link>https://anotherbug.org/categories/technique/</link>
+      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/categories/technique/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>https://anotherbug.org/categories/personal/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/categories/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://anotherbug.org/categories/research/</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.org/categories/research/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
