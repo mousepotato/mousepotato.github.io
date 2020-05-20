@@ -9,9 +9,9 @@
     <meta name="description" content="mousepotato 的个人博客">
     <meta name="keywords" content="blog, Networking, Hugo, GNU/Linux, Linux, Ubuntu, Programming">
     
-    <link rel="prev" href="https://anotherbug.org/2016/12/12/hexo-blog/" />
-    <link rel="next" href="https://anotherbug.org/2020/05/18/test-post-using-hugo/" />
-    <link rel="canonical" href="https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/" />
+    <link rel="prev" href="https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/" />
+    
+    <link rel="canonical" href="https://anotherbug.org/2020/05/18/test-post-using-hugo/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            how to setup multiple github ssh keys | 鼠标土豆
+            Test post using Hugo | 鼠标土豆
         
     </title>
-    <meta name="title" content="how to setup multiple github ssh keys | 鼠标土豆">
+    <meta name="title" content="Test post using Hugo | 鼠标土豆">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -43,21 +43,21 @@
          "@id": "https:\/\/anotherbug.org"
     },
     "articleSection" : "posts",
-    "name" : "how to setup multiple github ssh keys",
-    "headline" : "how to setup multiple github ssh keys",
-    "description" : "1. create multiple ssh key ssh-keygen -t rsa -C \x26quot;your_email@youremail.com\x26quot;  for example, 2 keys create at:\n~\/.ssh\/id_rsa ~\/.ssh\/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~\/.ssh\/id_rsa ssh-add ~\/.ssh\/id_rsa_sli_racingwithhorse check your saved keys using:\nssh-add -l  3. modify the ssh config cd ~\/.ssh\/ touch config $==\x26gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~\/.ssh\/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~\/.",
+    "name" : "Test post using Hugo",
+    "headline" : "Test post using Hugo",
+    "description" : "This is a test post generated using Hugo. 打算把博客从 Hexo 迁移到 Hugo。原因是因为看到 Hugo 的 Theme 比较好看。又折腾了一下，虽然不长写博客，但是还是保留想写博客的时候有个好看",
     "inLanguage" : "zh-cn",
     "author" : "mousepotato",
     "creator" : "mousepotato",
     "publisher": "mousepotato",
     "accountablePerson" : "mousepotato",
     "copyrightHolder" : "mousepotato",
-    "copyrightYear" : "2016",
-    "datePublished": "2016-12-13 00:00:00 \x2b0000 UTC",
-    "dateModified" : "2016-12-13 00:00:00 \x2b0000 UTC",
-    "url" : "https:\/\/anotherbug.org\/2016\/12\/13\/how-to-setup-multiple-github-ssh-key\/",
-    "wordCount" : "104",
-    "keywords" : [ "Git", "鼠标土豆"]
+    "copyrightYear" : "2020",
+    "datePublished": "2020-05-18 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-05-18 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/anotherbug.org\/2020\/05\/18\/test-post-using-hugo\/",
+    "wordCount" : "187",
+    "keywords" : [ "test", "鼠标土豆"]
 }
 </script>
 
@@ -160,11 +160,11 @@
                     
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">how to setup multiple github ssh keys</h1>
+        <h1 class="post-title" itemprop="name headline">Test post using Hugo</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://anotherbug.org" rel="author">mousepotato</a> with ♥
                 <span class="post-time">
-                on <time datetime=2016-12-13 itemprop="datePublished">December 13, 2016</time>
+                on <time datetime=2020-05-18 itemprop="datePublished">May 18, 2020</time>
                 </span>
                 in
                 
@@ -177,7 +177,7 @@
                         
                         
                 </span>
-                <span class="post-word-count">104 words</span>
+                <span class="post-word-count">187 words</span>
         </div>
     </header>
 
@@ -197,44 +197,20 @@
         
         
 
-        <h2 id="1-create-multiple-ssh-key">1. create multiple ssh key</h2>
-<pre><code>ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
-</code></pre>
-<p>for example, 2 keys create at:</p>
-<pre><code>~/.ssh/id_rsa
-~/.ssh/id_rsa_sli_racingwithhorse
-</code></pre><h2 id="2-then-add-these-two-keys-as-following">2. then, add these two keys as following</h2>
-<pre><code>ssh-add ~/.ssh/id_rsa
-ssh-add ~/.ssh/id_rsa_sli_racingwithhorse
-</code></pre><p>check your saved keys using:</p>
-<pre><code>ssh-add -l
-</code></pre>
-<h2 id="3-modify-the-ssh-config">3. modify the ssh config</h2>
-<pre><code>cd ~/.ssh/
-touch config
-
-$==&gt; cat config
-#gmail.com account
-Host github.com
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_rsa
-
-#racingwithhorse account
-Host github.com-racingwithhorse
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_rsa_sli_racingwithhorse
-</code></pre><h2 id="4-clone-you-repo-and-modify-your-git-config">4. clone you repo and modify your git config</h2>
-<pre><code>git config user.name &quot;racingwithhorse&quot;
-git config user.email &quot;xxx@xxx.xxx&quot;
-
-</code></pre><p>then inside the cloned git repository</p>
-<pre><code>cat .git/config
-[remote &quot;origin&quot;]
-	url = git@github.com-racingwithhorse:racingwithhorse/racingwithhorse.github.io.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
-</code></pre><p>That&rsquo;s it!</p>
+        <ul>
+<li>
+<p>This is a test post generated using Hugo.</p>
+</li>
+<li>
+<p>打算把博客从 Hexo 迁移到 Hugo。原因是因为看到 Hugo 的 Theme 比较好看。又折腾了一下，虽然不长写博客，但是还是保留想写博客的时候有个好看的博客可以写的权利。</p>
+</li>
+<li>
+<p>记录一点：我的每个博文格式都是 「yyyy-MM-dd-xxx.md」 的形式，Hugo 的 archetypes 模板里面需要调整一些 title，去掉日期。具体做法： <code>title: &quot;{{ substr (replace .TranslationBaseName &quot;-&quot; &quot; &quot;) 11 | title }}&quot;</code></p>
+</li>
+<li>
+<p>另外新版博客新增了 <a href="https://anotherbug.com/tools/">好物</a>，记录一下自己败家的经历吧。</p>
+</li>
+</ul>
 
     </div>
 
@@ -249,7 +225,7 @@ git config user.email &quot;xxx@xxx.xxx&quot;
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/>https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/</span>
+                    <a href=https://anotherbug.org/2020/05/18/test-post-using-hugo/>https://anotherbug.org/2020/05/18/test-post-using-hugo/</span>
             </p>
             
             
@@ -265,8 +241,8 @@ git config user.email &quot;xxx@xxx.xxx&quot;
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://anotherbug.org/tags/git/">
-                    #Git</a></span>
+            <span class="tag"><a href="https://anotherbug.org/tags/test/">
+                    #test</a></span>
             
             </section>
         
@@ -278,10 +254,8 @@ git config user.email &quot;xxx@xxx.xxx&quot;
 
     <div class="post-nav">
         
-        <a href="https://anotherbug.org/2016/12/12/hexo-blog/" class="prev" rel="prev" title="hexo-blog"><i class="iconfont icon-left"></i>&nbsp;hexo-blog</a>
+        <a href="https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/" class="prev" rel="prev" title="how to setup multiple github ssh keys"><i class="iconfont icon-left"></i>&nbsp;how to setup multiple github ssh keys</a>
         
-        
-        <a href="https://anotherbug.org/2020/05/18/test-post-using-hugo/" class="next" rel="next" title="Test post using Hugo">Test post using Hugo&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
