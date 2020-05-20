@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on 鼠标土豆</title>
-    <link>https://anotherbug.org/tags/ubuntu/</link>
+    <link>https://anotherbug.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anotherbug.org/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anotherbug.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Screen scrollback</title>
-      <link>https://anotherbug.org/2016/02/01/screen-scrollback/</link>
+      <link>https://anotherbug.com/2016/02/01/screen-scrollback/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2016/02/01/screen-scrollback/</guid>
+      <guid>https://anotherbug.com/2016/02/01/screen-scrollback/</guid>
       <description>设置screen支持长scrollback In ~/.screenrc add or set defscrollback 50000 use 50000 or any number you want In your screen, checking by ctrl + a + i, it will show your current scrollback settings To enter scrollback/copy mode, using ctrl + a + [ Use ctrl + u, ctrl + d, ctrl</description>
     </item>
     
     <item>
       <title>Bash pattern match</title>
-      <link>https://anotherbug.org/2016/01/01/bash-pattern-match/</link>
+      <link>https://anotherbug.com/2016/01/01/bash-pattern-match/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2016/01/01/bash-pattern-match/</guid>
+      <guid>https://anotherbug.com/2016/01/01/bash-pattern-match/</guid>
       <description>1. 起因：Shell 获取文件名和后缀名 [_posts] ==&amp;gt;&amp;gt; file=&amp;#34;A-Tale-Of-Two-Cities.pdf&amp;#34; [_posts] ==&amp;gt;&amp;gt; echo &amp;#34;${file%.*}&amp;#34; A-Tale-Of-Two-Cities [_posts] ==&amp;gt;&amp;gt; echo &amp;#34;${file##*.}&amp;#34; pdf 2. 基于 Pattern Matching 的子串替换 ${str/$old/$new} 替换第一个。 ${str//$old/$new} 替换所有。 注意：不能使用正则表达式，只能使</description>
     </item>
     
     <item>
       <title>Screen 使用之无废话5行命令</title>
-      <link>https://anotherbug.org/2013/11/25/linux-screen-in-5-commands/</link>
+      <link>https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/</link>
       <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/11/25/linux-screen-in-5-commands/</guid>
+      <guid>https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/</guid>
       <description>Linux screen in 5 command lines 1. 建立一个 screen shell 窗口 screen 2. 退出刚建立的窗口 ctrl+ a d 3. 查看已有 screen 窗口 screen -ls 4. 重新进入已有 screen 窗口 screen -r sessionid sessionid can be found by looking screen -ls 5. 退出已有 screen 窗口 exit 6. 退</description>
     </item>
     
     <item>
       <title>Linux 下的查看系统内存信息</title>
-      <link>https://anotherbug.org/2013/06/14/how-to-read-memory-info-under-linux/</link>
+      <link>https://anotherbug.com/2013/06/14/how-to-read-memory-info-under-linux/</link>
       <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/06/14/how-to-read-memory-info-under-linux/</guid>
+      <guid>https://anotherbug.com/2013/06/14/how-to-read-memory-info-under-linux/</guid>
       <description>Linux查看系统内存信息可以有如下方法： free free -m cat /proc/meminfo 如果要查询详细到RAM规格，DDR2，DDR3可以使用： sudo lshw</description>
     </item>
     
     <item>
       <title>Linux 下的几个文件</title>
-      <link>https://anotherbug.org/2013/06/13/linux-dev-files/</link>
+      <link>https://anotherbug.com/2013/06/13/linux-dev-files/</link>
       <pubDate>Thu, 13 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/06/13/linux-dev-files/</guid>
+      <guid>https://anotherbug.com/2013/06/13/linux-dev-files/</guid>
       <description>Linux 下的几个文件 Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是: 1: /dev/null 这个/dev下放的是系统和用户的设备文件. null是个文</description>
     </item>
     
     <item>
       <title>How to make presentation using markdown</title>
-      <link>https://anotherbug.org/2013/06/12/how-to-make-presentation-using-markdown/</link>
+      <link>https://anotherbug.com/2013/06/12/how-to-make-presentation-using-markdown/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/06/12/how-to-make-presentation-using-markdown/</guid>
+      <guid>https://anotherbug.com/2013/06/12/how-to-make-presentation-using-markdown/</guid>
       <description>How to make presentation using markdow 如何使用markdown做报告 1. 安装 Markdown Presenter Markdown Presenter 地址 git clone https://github.com/jsakamoto/MarkdownPresenter.git 2. 安装Ubuntu下的WebServer-webfs sudo apt-get install webfs 或者使用pyt</description>
     </item>
     
     <item>
       <title>How to use wget to donwload the whole web folder</title>
-      <link>https://anotherbug.org/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</link>
+      <link>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</link>
       <pubDate>Mon, 20 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</guid>
+      <guid>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</guid>
       <description>如何使用wget下载整个网站的文件夹 How to use wget to donwload the whole web folder 使用如下命令： wget -r -p -E -k -nH -np --cut-dirs=1 -P ~/Downloads/ http://99.198.110.38/Chinese/MP3s/13%E6%97%A7%E7%BA%A6%E8%AE%B2%E9%81%93/ That&amp;rsquo;s it!!</description>
     </item>
     
     <item>
       <title>How to download a whole website using wget with chinese character support</title>
-      <link>https://anotherbug.org/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</link>
+      <link>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</guid>
+      <guid>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</guid>
       <description>如何使用wget下载整个网站同时支持中文命名 wget 下载整个网站 使用命令： wget -r -p -E -k -nH -np --cut-dirs=1 -P /path/to/save/ Website URL 支持中文 vi ~/.wgetrc 添加如下内容： --restrict-file-names=nocontrol --trust-server-names=on --content-disposition=on That&amp;rsquo;s it!!</description>
     </item>
     
     <item>
       <title>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</title>
-      <link>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</link>
+      <link>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</guid>
+      <guid>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</guid>
       <description>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox 1. Setup virtual machines (3 for exmaple) You should first setup one machine using virtualbox, setup JAVA environment, download the Cassandra source code Use Virtualbox&amp;rsquo;s virtualmanager function to copy another two ubuntu machines. Make sure to modify the hostname. Modify the /etc/hosts file. Machine summary 192.168.56.101 sjhadoop0 192.168.56.103 sjhadoop1 192.168.56.104 sjhadoop2 2. Config Cassandra Modify /conf/cassandra-env.shfile. MAX_HEAP_SIZE=&amp;amp;quot;512M&amp;amp;quot; HEAP_NEWSIZE=&amp;amp;quot;128M&amp;amp;quot; Modify /conf/cassandra.yaml file.</description>
     </item>
     

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hacks on 鼠标土豆</title>
-    <link>https://anotherbug.org/tags/hacks/</link>
+    <link>https://anotherbug.com/tags/hacks/</link>
     <description>Recent content in Hacks on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 31 Dec 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anotherbug.org/tags/hacks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anotherbug.com/tags/hacks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Fitbit HR heart rate data monitoring</title>
-      <link>https://anotherbug.org/2015/12/31/fitbit-hr-data-monitoring/</link>
+      <link>https://anotherbug.com/2015/12/31/fitbit-hr-data-monitoring/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2015/12/31/fitbit-hr-data-monitoring/</guid>
+      <guid>https://anotherbug.com/2015/12/31/fitbit-hr-data-monitoring/</guid>
       <description>1. Fitbit HR Fitbit HR 提供了全天候的心率 (heart rate) 数据。HR数据可以反应很多的指标（健康，活动量），甚至是什么时候洗澡或者&amp;hellip;。除了HR数据，还有</description>
     </item>
     
     <item>
       <title>How to crack the master lock</title>
-      <link>https://anotherbug.org/2013/04/29/how-to-crack-master-lock/</link>
+      <link>https://anotherbug.com/2013/04/29/how-to-crack-master-lock/</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2013/04/29/how-to-crack-master-lock/</guid>
+      <guid>https://anotherbug.com/2013/04/29/how-to-crack-master-lock/</guid>
       <description>如何破解master lock的密码 原委 最近游泳不小心把爱锁丢失，无奈看到地上有一个废弃的master lock，捡了回来，死马当活马医吧。 破解</description>
     </item>
     

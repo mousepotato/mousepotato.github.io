@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VirtualBox on 鼠标土豆</title>
-    <link>https://anotherbug.org/tags/virtualbox/</link>
+    <link>https://anotherbug.com/tags/virtualbox/</link>
     <description>Recent content in VirtualBox on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 05 Jun 2012 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anotherbug.org/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anotherbug.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</title>
-      <link>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</link>
+      <link>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</guid>
+      <guid>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</guid>
       <description>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox 1. Setup virtual machines (3 for exmaple) You should first setup one machine using virtualbox, setup JAVA environment, download the Cassandra source code Use Virtualbox&amp;rsquo;s virtualmanager function to copy another two ubuntu machines. Make sure to modify the hostname. Modify the /etc/hosts file. Machine summary 192.168.56.101 sjhadoop0 192.168.56.103 sjhadoop1 192.168.56.104 sjhadoop2 2. Config Cassandra Modify /conf/cassandra-env.shfile. MAX_HEAP_SIZE=&amp;amp;quot;512M&amp;amp;quot; HEAP_NEWSIZE=&amp;amp;quot;128M&amp;amp;quot; Modify /conf/cassandra.yaml file.</description>
     </item>
     

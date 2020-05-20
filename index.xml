@@ -1,19 +1,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>鼠标土豆</title>
-    <link>https://anotherbug.org/</link>
+    <link>https://anotherbug.com/</link>
     <description>Recent content on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://anotherbug.org/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://anotherbug.com/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>https://anotherbug.org/about/</link>
+      <link>https://anotherbug.com/about/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/about/</guid>
+      <guid>https://anotherbug.com/about/</guid>
       <description>&lt;h3 id=&#34;关于我&#34;&gt;关于我&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;INTJ 性格&lt;/li&gt;
@@ -39,28 +39,28 @@
     
     <item>
       <title>Posts</title>
-      <link>https://anotherbug.org/posts/</link>
+      <link>https://anotherbug.com/posts/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/posts/</guid>
+      <guid>https://anotherbug.com/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://anotherbug.org/archives/</link>
+      <link>https://anotherbug.com/archives/</link>
       <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/archives/</guid>
+      <guid>https://anotherbug.com/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://anotherbug.org/tools/</link>
+      <link>https://anotherbug.com/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/tools/</guid>
+      <guid>https://anotherbug.com/tools/</guid>
       <description>&lt;p&gt;记录我所使用过的好物。本着如下几个原则：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;「Less is more」&lt;/li&gt;

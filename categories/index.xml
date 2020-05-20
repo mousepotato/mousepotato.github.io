@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 鼠标土豆</title>
-    <link>https://anotherbug.org/categories/</link>
+    <link>https://anotherbug.com/categories/</link>
     <description>Recent content in Categories on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 18 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anotherbug.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anotherbug.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Technique</title>
-      <link>https://anotherbug.org/categories/technique/</link>
+      <link>https://anotherbug.com/categories/technique/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/categories/technique/</guid>
+      <guid>https://anotherbug.com/categories/technique/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Personal</title>
-      <link>https://anotherbug.org/categories/personal/</link>
+      <link>https://anotherbug.com/categories/personal/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/categories/personal/</guid>
+      <guid>https://anotherbug.com/categories/personal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Research</title>
-      <link>https://anotherbug.org/categories/research/</link>
+      <link>https://anotherbug.com/categories/research/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/categories/research/</guid>
+      <guid>https://anotherbug.com/categories/research/</guid>
       <description></description>
     </item>
     

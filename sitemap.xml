@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://anotherbug.org/</loc>
+      <loc>https://anotherbug.com/</loc>
       
       <lastmod>2020-05-18T00:00:00+00:00</lastmod>
       
@@ -12,7 +12,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/about/</loc>
+      <loc>https://anotherbug.com/about/</loc>
       
       <lastmod>2020-05-18T00:00:00+00:00</lastmod>
       
@@ -22,7 +22,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/categories/</loc>
+      <loc>https://anotherbug.com/categories/</loc>
       
       <lastmod>2020-05-18T11:24:40-07:00</lastmod>
       
@@ -32,7 +32,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/posts/</loc>
+      <loc>https://anotherbug.com/posts/</loc>
       
       <lastmod>2020-05-18T11:24:40-07:00</lastmod>
       
@@ -42,7 +42,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/</loc>
+      <loc>https://anotherbug.com/tags/</loc>
       
       <lastmod>2020-05-18T11:24:40-07:00</lastmod>
       
@@ -52,7 +52,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/categories/technique/</loc>
+      <loc>https://anotherbug.com/categories/technique/</loc>
       
       <lastmod>2020-05-18T11:24:40-07:00</lastmod>
       
@@ -62,7 +62,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/test/</loc>
+      <loc>https://anotherbug.com/tags/test/</loc>
       
       <lastmod>2020-05-18T11:24:40-07:00</lastmod>
       
@@ -72,7 +72,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2020/05/18/test-post-using-hugo/</loc>
+      <loc>https://anotherbug.com/2020/05/18/test-post-using-hugo/</loc>
       
       <lastmod>2020-05-18T11:24:40-07:00</lastmod>
       
@@ -82,7 +82,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/archives/</loc>
+      <loc>https://anotherbug.com/archives/</loc>
       
       <lastmod>2019-05-28T00:00:00+00:00</lastmod>
       
@@ -92,7 +92,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/git/</loc>
+      <loc>https://anotherbug.com/tags/git/</loc>
       
       <lastmod>2016-12-13T15:25:43+00:00</lastmod>
       
@@ -102,7 +102,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2016/12/13/how-to-setup-multiple-github-ssh-key/</loc>
+      <loc>https://anotherbug.com/2016/12/13/how-to-setup-multiple-github-ssh-key/</loc>
       
       <lastmod>2016-12-13T15:25:43+00:00</lastmod>
       
@@ -112,7 +112,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2016/12/12/hexo-blog/</loc>
+      <loc>https://anotherbug.com/2016/12/12/hexo-blog/</loc>
       
       <lastmod>2016-12-12T16:24:01+00:00</lastmod>
       
@@ -122,7 +122,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/awk/</loc>
+      <loc>https://anotherbug.com/tags/awk/</loc>
       
       
       
@@ -130,7 +130,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2016/05/18/half-ironman-candidate-statistics/</loc>
+      <loc>https://anotherbug.com/2016/05/18/half-ironman-candidate-statistics/</loc>
       
       
       
@@ -138,7 +138,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/shell/</loc>
+      <loc>https://anotherbug.com/tags/shell/</loc>
       
       
       
@@ -146,7 +146,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/linux/</loc>
+      <loc>https://anotherbug.com/tags/linux/</loc>
       
       
       
@@ -154,7 +154,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2016/02/01/screen-scrollback/</loc>
+      <loc>https://anotherbug.com/2016/02/01/screen-scrollback/</loc>
       
       
       
@@ -162,7 +162,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/ubuntu/</loc>
+      <loc>https://anotherbug.com/tags/ubuntu/</loc>
       
       
       
@@ -170,7 +170,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2016/01/01/bash-pattern-match/</loc>
+      <loc>https://anotherbug.com/2016/01/01/bash-pattern-match/</loc>
       
       
       
@@ -178,7 +178,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2015/12/31/fitbit-hr-data-monitoring/</loc>
+      <loc>https://anotherbug.com/2015/12/31/fitbit-hr-data-monitoring/</loc>
       
       
       
@@ -186,7 +186,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/hacks/</loc>
+      <loc>https://anotherbug.com/tags/hacks/</loc>
       
       
       
@@ -194,7 +194,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/life/</loc>
+      <loc>https://anotherbug.com/tags/life/</loc>
       
       
       
@@ -202,7 +202,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/nodejs/</loc>
+      <loc>https://anotherbug.com/tags/nodejs/</loc>
       
       
       
@@ -210,7 +210,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/categories/personal/</loc>
+      <loc>https://anotherbug.com/categories/personal/</loc>
       
       
       
@@ -218,7 +218,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2015/11/15/box-content-apis-example/</loc>
+      <loc>https://anotherbug.com/2015/11/15/box-content-apis-example/</loc>
       
       
       
@@ -226,7 +226,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/programming/</loc>
+      <loc>https://anotherbug.com/tags/programming/</loc>
       
       
       
@@ -234,7 +234,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/algorithm/</loc>
+      <loc>https://anotherbug.com/tags/algorithm/</loc>
       
       
       
@@ -242,7 +242,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/leetcode/</loc>
+      <loc>https://anotherbug.com/tags/leetcode/</loc>
       
       
       
@@ -250,7 +250,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</loc>
+      <loc>https://anotherbug.com/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</loc>
       
       
       
@@ -258,7 +258,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/11/28/download-web-pictures-using-nodejs/</loc>
+      <loc>https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/</loc>
       
       
       
@@ -266,7 +266,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/11/25/linux-screen-in-5-commands/</loc>
+      <loc>https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/</loc>
       
       
       
@@ -274,7 +274,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/gtd/</loc>
+      <loc>https://anotherbug.com/tags/gtd/</loc>
       
       
       
@@ -282,7 +282,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/10/20/how-to-be-efficient/</loc>
+      <loc>https://anotherbug.com/2013/10/20/how-to-be-efficient/</loc>
       
       
       
@@ -290,7 +290,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/random-thoughts/</loc>
+      <loc>https://anotherbug.com/tags/random-thoughts/</loc>
       
       
       
@@ -298,7 +298,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</loc>
+      <loc>https://anotherbug.com/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</loc>
       
       
       
@@ -306,7 +306,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/06/14/how-to-read-memory-info-under-linux/</loc>
+      <loc>https://anotherbug.com/2013/06/14/how-to-read-memory-info-under-linux/</loc>
       
       
       
@@ -314,7 +314,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/06/13/linux-dev-files/</loc>
+      <loc>https://anotherbug.com/2013/06/13/linux-dev-files/</loc>
       
       
       
@@ -322,7 +322,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/06/12/how-to-make-presentation-using-markdown/</loc>
+      <loc>https://anotherbug.com/2013/06/12/how-to-make-presentation-using-markdown/</loc>
       
       
       
@@ -330,7 +330,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/markdown/</loc>
+      <loc>https://anotherbug.com/tags/markdown/</loc>
       
       
       
@@ -338,7 +338,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/categories/research/</loc>
+      <loc>https://anotherbug.com/categories/research/</loc>
       
       
       
@@ -346,7 +346,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/android/</loc>
+      <loc>https://anotherbug.com/tags/android/</loc>
       
       
       
@@ -354,7 +354,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</loc>
+      <loc>https://anotherbug.com/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</loc>
       
       
       
@@ -362,7 +362,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/05/27/what-to-do-next-for-your-gtd-plan/</loc>
+      <loc>https://anotherbug.com/2013/05/27/what-to-do-next-for-your-gtd-plan/</loc>
       
       
       
@@ -370,7 +370,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</loc>
+      <loc>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</loc>
       
       
       
@@ -378,7 +378,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/05/18/how-to-install-third-party-beamer-theme/</loc>
+      <loc>https://anotherbug.com/2013/05/18/how-to-install-third-party-beamer-theme/</loc>
       
       
       
@@ -386,7 +386,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/latex/</loc>
+      <loc>https://anotherbug.com/tags/latex/</loc>
       
       
       
@@ -394,7 +394,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/04/29/how-to-crack-master-lock/</loc>
+      <loc>https://anotherbug.com/2013/04/29/how-to-crack-master-lock/</loc>
       
       
       
@@ -402,7 +402,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/04/29/how-to-create-schulte-grid-using-excel/</loc>
+      <loc>https://anotherbug.com/2013/04/29/how-to-create-schulte-grid-using-excel/</loc>
       
       
       
@@ -410,7 +410,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</loc>
+      <loc>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</loc>
       
       
       
@@ -418,7 +418,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/windows/</loc>
+      <loc>https://anotherbug.com/tags/windows/</loc>
       
       
       
@@ -426,7 +426,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2012/10/01/shutdown-specific-port-in-windows/</loc>
+      <loc>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</loc>
       
       
       
@@ -434,7 +434,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/cloud-computing/</loc>
+      <loc>https://anotherbug.com/tags/cloud-computing/</loc>
       
       
       
@@ -442,7 +442,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/hadoop/</loc>
+      <loc>https://anotherbug.com/tags/hadoop/</loc>
       
       
       
@@ -450,7 +450,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</loc>
+      <loc>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</loc>
       
       
       
@@ -458,7 +458,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/virtualbox/</loc>
+      <loc>https://anotherbug.com/tags/virtualbox/</loc>
       
       
       
@@ -466,7 +466,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tags/dd-wrt/</loc>
+      <loc>https://anotherbug.com/tags/dd-wrt/</loc>
       
       
       
@@ -474,7 +474,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/2012/04/30/linksys-e1550-dd-dwr-how-to/</loc>
+      <loc>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</loc>
       
       
       
@@ -482,7 +482,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.org/tools/</loc>
+      <loc>https://anotherbug.com/tools/</loc>
       
       
       

@@ -63,4 +63,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://anotherbug.org/sitemap.xml
+Sitemap: https://anotherbug.com/sitemap.xml

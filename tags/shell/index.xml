@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on 鼠标土豆</title>
-    <link>https://anotherbug.org/tags/shell/</link>
+    <link>https://anotherbug.com/tags/shell/</link>
     <description>Recent content in shell on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 18 May 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://anotherbug.org/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://anotherbug.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Half Ironman santa cruz 70.3 candidates statistics</title>
-      <link>https://anotherbug.org/2016/05/18/half-ironman-candidate-statistics/</link>
+      <link>https://anotherbug.com/2016/05/18/half-ironman-candidate-statistics/</link>
       <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.org/2016/05/18/half-ironman-candidate-statistics/</guid>
+      <guid>https://anotherbug.com/2016/05/18/half-ironman-candidate-statistics/</guid>
       <description>Since I will be attending Half Ironman santa cruz 70.3 race, I would love to know something about our atheletes. The online website provides the registered candidates information. So just with a bit hack, you will know something.
 #!/usr/bin/awk -f # # awk -f vis.awk output/clean.csv # BEGIN { FS=&amp;#34;,&amp;#34; F_Count=0 F_60_Plus=0 F_50_to_60=0 F_40_to_50=0 F_30_to_40=0 F_30_Minus=0 M_Count=0 M_60_Plus=0 M_50_to_60=0 M_40_to_50=0 M_30_to_40=0 M_30_Minus=0 Less_than_me=0 Less_than_me_M=0 Less_than_me_F=0 } { if($3 ~ /F/){ # print $0 F_Count++ if ( $4 &amp;gt;= 60){ F_60_Plus++ } else if ($4 &amp;gt;= 50) { F_50_to_60++ } else if ($4 &amp;gt;= 40) { F_40_to_50++ } else if ($4 &amp;gt;= 30) { F_30_to_40++ } else if ($4 &amp;lt; 30) { F_30_Minus++ } } else { M_Count++ if ( $4 &amp;gt;= 60){ M_60_Plus++ } else if ($4 &amp;gt;= 50) { M_50_to_60++ } else if ($4 &amp;gt;= 40) { M_40_to_50++ } else if ($4 &amp;gt;= 30) { M_30_to_40++ } else if ($4 &amp;lt; 30) { M_30_Minus++ } } if ($4 &amp;lt;28) { Less_than_me++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /F/) { Less_than_me_F++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /M/) { #print $0 Less_than_me_M++ } } END { print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Female counts: &amp;#34; F_Count print &amp;#34;Female age &amp;gt;=60: &amp;#34; F_60_Plus print &amp;#34;Female age between 50 to 60: &amp;#34; F_50_to_60 print &amp;#34;Female age between 40 to 50: &amp;#34; F_40_to_50 print &amp;#34;Female age between 30 to 40: &amp;#34; F_30_to_40 print &amp;#34;Female age under 30: &amp;#34; F_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Male counts: &amp;#34; M_Count print &amp;#34;Male age &amp;gt;=60: &amp;#34; M_60_Plus print &amp;#34;Male age between 50 to 60: &amp;#34; M_50_to_60 print &amp;#34;Male age between 40 to 50: &amp;#34; M_40_to_50 print &amp;#34;Male age between 30 to 40: &amp;#34; M_30_to_40 print &amp;#34;Male age under 30: &amp;#34; M_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Less than me: &amp;#34; Less_than_me print &amp;#34;Less than me female: &amp;#34; Less_than_me_F print &amp;#34;Less than me male: &amp;#34; Less_than_me_M } The result is&amp;hellip;</description>
     </item>
