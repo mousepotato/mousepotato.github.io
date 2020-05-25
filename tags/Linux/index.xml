@@ -48,6 +48,15 @@
     </item>
     
     <item>
+      <title>Linux 下的几个文件</title>
+      <link>https://anotherbug.com/2013/06/13/linux-dev-files/</link>
+      <pubDate>Thu, 13 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2013/06/13/linux-dev-files/</guid>
+      <description>Linux 下的几个文件 Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是: 1: /dev/null 这个/dev下放的是系统和用户的设备文件. null是个文</description>
+    </item>
+    
+    <item>
       <title>How to use wget to donwload the whole web folder</title>
       <link>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</link>
       <pubDate>Mon, 20 May 2013 00:00:00 +0000</pubDate>

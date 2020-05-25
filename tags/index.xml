@@ -138,15 +138,6 @@
     </item>
     
     <item>
-      <title>lLinux</title>
-      <link>https://anotherbug.com/tags/llinux/</link>
-      <pubDate>Thu, 13 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://anotherbug.com/tags/llinux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>markdown</title>
       <link>https://anotherbug.com/tags/markdown/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
@@ -201,7 +192,7 @@
     </item>
     
     <item>
-      <title>virtualBox</title>
+      <title>virtualbox</title>
       <link>https://anotherbug.com/tags/virtualbox/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
