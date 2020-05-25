@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noodp"/>
+    <meta name="author" content="mousepotato">
+    <meta name="description" content="mousepotato 的个人博客">
+    <meta name="keywords" content="blog, Networking, Hugo, GNU/Linux, Linux, Ubuntu, Programming">
+    
+    <link rel="prev" href="https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" />
+    <link rel="next" href="https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/" />
+    <link rel="canonical" href="https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+        
+        
+            Windows 下如何关闭特定端口 | 鼠标土豆
+        
+    </title>
+    <meta name="title" content="Windows 下如何关闭特定端口 | 鼠标土豆">
+    
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+    
+    
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/anotherbug.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Windows 下如何关闭特定端口",
+    "headline" : "Windows 下如何关闭特定端口",
+    "description" : "netstat -aon|findstr \x26quot;9050\x26quot; TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016 tasklist|findstr \x26ldquo;2016\x26rdquo; tor.exe 2016 Console 0 16,064 ctrl\x2balt\x2bdelete 打开任务管理器，找到tor.exe右键end process。 That\x26rsquo;s it!!",
+    "inLanguage" : "zh-cn",
+    "author" : "mousepotato",
+    "creator" : "mousepotato",
+    "publisher": "mousepotato",
+    "accountablePerson" : "mousepotato",
+    "copyrightHolder" : "mousepotato",
+    "copyrightYear" : "2012",
+    "datePublished": "2012-10-01 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2012-10-01 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/anotherbug.com\/2012\/10\/01\/shutdown-specific-port-in-windows\/",
+    "wordCount" : "48",
+    "keywords" : [ "windows", "鼠标土豆"]
+}
+</script>
+
+  </head>
+    <body class="">
+        <div class="wrapper">
+            <nav class="navbar">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+    <div class="container">
+        
+            <div class="navbar-header header-back2home-logo">
+                <span class="logo_mark" >>$</span>
+                <a href="https://anotherbug.com">
+                    <span class="logo_text" >cd /home/</span>
+                    <span class="logo_cursor" ></span>
+                </a>
+            </div>
+        
+        <div class="navbar-right">
+                
+                <span class="menu">
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/tools/" title="">好物</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我</a>
+                
+                <a class="menu-item" href="/main/" title="">学校主页</a>
+                
+                <a class="menu-item" href="/tools/" title=""></a>
+                
+                <span class="divide"></span>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                </span>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+     <div class="container">
+        <div class="navbar">
+            <div class="navbar-header header-logo">
+                    <a href="https://anotherbug.com">鼠标土豆</a>
+            </div>
+            <div class="navbar-right">
+                <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a></div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                <nav class="mb-md">
+                    
+                    
+                        <a class="menu-item" href="/posts/" title="">
+                            <h3>Blog</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/categories/" title="">
+                            <h3>Categories</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tags/" title="">
+                            <h3>Tags</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tools/" title="">
+                            <h3>好物</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/about/" title="">
+                            <h3>关于我</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/main/" title="">
+                            <h3>学校主页</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tools/" title="">
+                            <h3></h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                </nav>
+        </div>
+    </div>
+</nav>
+            <main class="main">
+                <div class="container">
+                    
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Windows 下如何关闭特定端口</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://anotherbug.com" rel="author">mousepotato</a> with ♥
+                <span class="post-time">
+                on <time datetime=2012-10-01 itemprop="datePublished">October 1, 2012</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                        
+                        
+                          <a href="https://anotherbug.com/categories/technique/"> technique, </a>
+                        
+                        
+                </span>
+                <span class="post-word-count">48 words</span>
+        </div>
+    </header>
+
+    <div class="post-content">
+        
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        
+        
+        
+
+        <ul>
+<li>
+<p><code>netstat -aon|findstr &quot;9050&quot;</code></p>
+<p>TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016</p>
+<p>tasklist|findstr &ldquo;2016&rdquo;</p>
+</li>
+<li>
+<p><code>tor.exe 2016 Console 0 16,064</code></p>
+</li>
+<li>
+<p><code>ctrl+alt+delete</code> 打开任务管理器，找到tor.exe右键end process。</p>
+</li>
+</ul>
+<p>That&rsquo;s it!!</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>mousepotato </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/windows/">
+                    #windows</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://anotherbug.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" class="prev" rel="prev" title="Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox"><i class="iconfont icon-left"></i>&nbsp;Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</a>
+        
+        
+        <a href="https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/" class="next" rel="next" title="How to download a whole website using wget with chinese character support">How to download a whole website using wget with chinese character support&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+        
+            
+                <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.css">
+<script src="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+
+        clientID: '01ff2c6440c4aec6e5e8',
+        clientSecret: '0020705c94d1912ed583b820f88a7cd8c149c7f9',
+        repo: 'mousepotato.github.io',
+        owner: 'mousepotato',
+        admin: ['mousepotato'],
+        id: location.pathname, 
+        distractionFreeMode: false 
+    });
+    (function () {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+            return;
+        }
+        gitalk.render('gitalk-container');
+    })();
+</script>
+
+            
+        
+    </div>
+</article>
+                </div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2009 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i>
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://anotherbug.com">mousepotato</a> | </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/Mogeko/Mogege" target="_blank" rel="external nofollow">Mogege</a></span>
+    </div>
+</footer>
+
+
+
+
+
+>
+<script defer src="/js/vendor_main.min.js"></script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script> pangu.spacingPage();</script>
+
+
+
+
+
+        </div>
+    </body>
+</html>

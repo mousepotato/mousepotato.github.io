@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dd-wrt on 鼠标土豆</title>
+    <link>https://anotherbug.com/tags/dd-wrt/</link>
+    <description>Recent content in dd-wrt on 鼠标土豆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 30 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anotherbug.com/tags/dd-wrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linksys E1550 刷DD-WRT教程</title>
+      <link>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</link>
+      <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</guid>
+      <description>Linksys E1550 刷DD-WRT教程 将路由器恢复出厂设置并且硬复位 （30/30/30复位）目的是清除nvran里面的记忆 下载对应E1550的DD-WRTb</description>
+    </item>
+    
+  </channel>
+</rss>

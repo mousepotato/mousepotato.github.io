@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>latex on 鼠标土豆</title>
+    <link>https://anotherbug.com/tags/latex/</link>
+    <description>Recent content in latex on 鼠标土豆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 18 May 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anotherbug.com/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install third party beamer theme</title>
+      <link>https://anotherbug.com/2013/05/18/how-to-install-third-party-beamer-theme/</link>
+      <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2013/05/18/how-to-install-third-party-beamer-theme/</guid>
+      <description>如何安装第三方的Beamer theme How to install third party beamer theme 为了安装Beamer theme 文件不破坏原有的TDS (Tex Directory Structure) ，可以将需要的第三方theme安装到如下目录：</description>
+    </item>
+    
+  </channel>
+</rss>

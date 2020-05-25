@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on 鼠标土豆</title>
+    <link>https://anotherbug.com/tags/windows/</link>
+    <description>Recent content in windows on 鼠标土豆</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 01 Oct 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://anotherbug.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows 下如何关闭特定端口</title>
+      <link>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</link>
+      <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</guid>
+      <description>netstat -aon|findstr &amp;quot;9050&amp;quot; TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016 tasklist|findstr &amp;ldquo;2016&amp;rdquo; tor.exe 2016 Console 0 16,064 ctrl+alt+delete 打开任务管理器，找到tor.exe右键end process。 That&amp;rsquo;s it!!</description>
+    </item>
+    
+  </channel>
+</rss>
