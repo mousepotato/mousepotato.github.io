@@ -297,6 +297,30 @@ git push -f
     <div class="post-comment">
         
             
+                <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.css">
+<script src="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+
+        clientID: '01ff2c6440c4aec6e5e8',
+        clientSecret: '0020705c94d1912ed583b820f88a7cd8c149c7f9',
+        repo: 'mousepotato.github.io',
+        owner: 'mousepotato',
+        admin: ['mousepotato'],
+        id: location.pathname, 
+        distractionFreeMode: false 
+    });
+    (function () {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+            return;
+        }
+        gitalk.render('gitalk-container');
+    })();
+</script>
+
+            
         
     </div>
 </article>
