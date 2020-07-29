@@ -12,20 +12,11 @@
     
     
     <item>
-      <title>hacks</title>
-      <link>https://anotherbug.com/tags/hacks/</link>
+      <title>random-thoughts</title>
+      <link>https://anotherbug.com/tags/random-thoughts/</link>
       <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://anotherbug.com/tags/hacks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://anotherbug.com/tags/life/</link>
-      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://anotherbug.com/tags/life/</guid>
+      <guid>https://anotherbug.com/tags/random-thoughts/</guid>
       <description></description>
     </item>
     
@@ -35,6 +26,24 @@
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://anotherbug.com/tags/gtd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hacks</title>
+      <link>https://anotherbug.com/tags/hacks/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/tags/hacks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://anotherbug.com/tags/life/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/tags/life/</guid>
       <description></description>
     </item>
     
@@ -125,15 +134,6 @@
       <pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://anotherbug.com/tags/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>random-thoughts</title>
-      <link>https://anotherbug.com/tags/random-thoughts/</link>
-      <pubDate>Sun, 20 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://anotherbug.com/tags/random-thoughts/</guid>
       <description></description>
     </item>
     
