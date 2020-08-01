@@ -6,15 +6,24 @@
     <description>Recent content in Tags on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://anotherbug.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>android</title>
+      <link>https://anotherbug.com/tags/android/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>random-thoughts</title>
       <link>https://anotherbug.com/tags/random-thoughts/</link>
-      <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://anotherbug.com/tags/random-thoughts/</guid>
       <description></description>
@@ -143,15 +152,6 @@
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://anotherbug.com/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>android</title>
-      <link>https://anotherbug.com/tags/android/</link>
-      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://anotherbug.com/tags/android/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Samsung S6 Edge install Lineage OS 17.1</title>
+      <link>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</guid>
+      <description>又开始折腾 Android ROM 了。上次是 7 年前在 Galaxy S3 上基于 CyanogenMod 进行的。这次主要是 Samsung S6 Edge 自带的 Android 7.0 版本太老了。 基本信息 Samsung S6 Edge 的 Model 是 SM-G925F开头，想刷版本</description>
+    </item>
     
     <item>
       <title>SanDisk iXpand Flash Drive</title>
