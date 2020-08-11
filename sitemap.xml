@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://anotherbug.com/tags/android/</loc>
+      <loc>https://anotherbug.com/categories/</loc>
       
-      <lastmod>2020-07-31T00:23:26-07:00</lastmod>
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
       
       
       
@@ -12,9 +12,29 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.com/categories/</loc>
+      <loc>https://anotherbug.com/tags/life/</loc>
       
-      <lastmod>2020-07-31T00:23:26-07:00</lastmod>
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/music/</loc>
+      
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/categories/personal/</loc>
+      
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
       
       
       
@@ -23,6 +43,36 @@
   
     <url>
       <loc>https://anotherbug.com/posts/</loc>
+      
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/</loc>
+      
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/2020/08/10/tomorrow-will-be-better/</loc>
+      
+      <lastmod>2020-08-10T23:17:02-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/android/</loc>
       
       <lastmod>2020-07-31T00:23:26-07:00</lastmod>
       
@@ -43,16 +93,6 @@
   
     <url>
       <loc>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</loc>
-      
-      <lastmod>2020-07-31T00:23:26-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/tags/</loc>
       
       <lastmod>2020-07-31T00:23:26-07:00</lastmod>
       
@@ -105,26 +145,6 @@
       <loc>https://anotherbug.com/tags/hacks/</loc>
       
       <lastmod>2020-05-31T00:07:43-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/tags/life/</loc>
-      
-      <lastmod>2020-05-31T00:07:43-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/categories/personal/</loc>
-      
-      <lastmod>2020-05-31T22:42:15-07:00</lastmod>
       
       
       
