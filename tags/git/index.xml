@@ -6,11 +6,7 @@
     <description>Recent content in git on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://anotherbug.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>how to setup multiple github ssh keys</title>
       <link>https://anotherbug.com/2016/12/13/how-to-setup-multiple-github-ssh-key/</link>

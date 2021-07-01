@@ -6,11 +6,7 @@
     <description>Recent content in dd-wrt on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Apr 2012 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://anotherbug.com/tags/dd-wrt/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 30 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/tags/dd-wrt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linksys E1550 刷DD-WRT教程</title>
       <link>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</link>
