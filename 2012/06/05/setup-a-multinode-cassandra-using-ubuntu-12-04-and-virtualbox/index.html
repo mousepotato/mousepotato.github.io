@@ -1,35 +1,426 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="mousepotato's personal blog"><title>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox | 鼠标土豆</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</h1><a id="logo" href="/.">鼠标土豆</a><p class="description"></p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</h1><div class="post-meta">Jun 5, 2012<span> | </span><span class="category"><a href="/categories/Technique/">Technique</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</p>
-<h3 id="1-Setup-virtual-machines-3-for-exmaple"><a href="#1-Setup-virtual-machines-3-for-exmaple" class="headerlink" title="1. Setup virtual machines (3 for exmaple)"></a>1. Setup virtual machines (3 for exmaple)</h3><ul>
-<li><p>You should first setup one machine using virtualbox, <a href="http://anotherbug.com/blog/2011/10/ubuntu-11-04_install_java/">setup JAVA environment</a>, download the <a href="http://www.apache.org/dyn/closer.cgi?path=/cassandra/1.1.1/apache-cassandra-1.1.1-bin.tar.gz" target="_blank" rel="noopener">Cassandra source code</a> </p>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noodp"/>
+    <meta name="author" content="mousepotato">
+    <meta name="description" content="mousepotato 的个人博客">
+    <meta name="keywords" content="blog, Networking, Hugo, GNU/Linux, Linux, Ubuntu, Programming">
+    
+    <link rel="prev" href="https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/" />
+    <link rel="next" href="https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/" />
+    <link rel="canonical" href="https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+        
+        
+            Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox | 鼠标土豆
+        
+    </title>
+    <meta name="title" content="Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox | 鼠标土豆">
+    
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+    
+    
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/anotherbug.com"
+    },
+    "articleSection" : "posts",
+    "name" : "Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox",
+    "headline" : "Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox",
+    "description" : "本文介绍如何使用Virtualbox搭建具有多个节点的hadoop实例。",
+    "inLanguage" : "zh-cn",
+    "author" : "mousepotato",
+    "creator" : "mousepotato",
+    "publisher": "mousepotato",
+    "accountablePerson" : "mousepotato",
+    "copyrightHolder" : "mousepotato",
+    "copyrightYear" : "2012",
+    "datePublished": "2012-06-05 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2012-06-05 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/anotherbug.com\/2012\/06\/05\/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox\/",
+    "wordCount" : "132",
+    "keywords" : [ "cloud-computing","hadoop","ubuntu","virtualbox", "鼠标土豆"]
+}
+</script>
+
+  </head>
+    <body class="">
+        <div class="wrapper">
+            <nav class="navbar">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+    <div class="container">
+        
+            <div class="navbar-header header-back2home-logo">
+                <span class="logo_mark" >>$</span>
+                <a href="https://anotherbug.com">
+                    <span class="logo_text" >cd /home/</span>
+                    <span class="logo_cursor" ></span>
+                </a>
+            </div>
+        
+        <div class="navbar-right">
+                
+                <span class="menu">
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/til/" title="">TIL</a>
+                
+                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                
+                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                
+                <a class="menu-item" href="/til/" title=""></a>
+                
+                <span class="divide"></span>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                </span>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+     <div class="container">
+        <div class="navbar">
+            <div class="navbar-header header-logo">
+                    <a href="https://anotherbug.com">鼠标土豆</a>
+            </div>
+            <div class="navbar-right">
+                <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a></div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                <nav class="mb-md">
+                    
+                    
+                        <a class="menu-item" href="/posts/" title="">
+                            <h3>Blog</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/categories/" title="">
+                            <h3>Categories</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tags/" title="">
+                            <h3>Tags</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/til/" title="">
+                            <h3>TIL</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tools/" title="">
+                            <h3>好物 (Uses)</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/about/" title="">
+                            <h3>关于我 (About me)</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/main/" title="">
+                            <h3>学校主页 (Academics)</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/til/" title="">
+                            <h3></h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                </nav>
+        </div>
+    </div>
+</nav>
+            <main class="main">
+                <div class="container">
+                    
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://anotherbug.com" rel="author">mousepotato</a> with ♥
+                <span class="post-time">
+                on <time datetime=2012-06-05 itemprop="datePublished">June 5, 2012</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                        
+                        
+                          <a href="https://anotherbug.com/categories/technique/"> technique, </a>
+                        
+                        
+                </span>
+                <span class="post-word-count">132 words</span>
+        </div>
+    </header>
+
+    <div class="post-content">
+        
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        
+        
+        
+
+        <p>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</p>
+<h3 id="1-setup-virtual-machines-3-for-exmaple">1. Setup virtual machines (3 for exmaple)</h3>
+<ul>
+<li>
+<p>You should first setup one machine using virtualbox, <!-- raw HTML omitted -->setup JAVA environment<!-- raw HTML omitted -->, download the <!-- raw HTML omitted -->Cassandra source code<!-- raw HTML omitted --></p>
 </li>
-<li><p>Use Virtualbox’s virtualmanager function to <a href="http://anotherbug.com/blog/2012/05/virtualbox-%E4%BF%AE%E6%94%B9uuid%E5%AE%9E%E7%8E%B0%E7%A1%AC%E7%9B%98%E5%A4%8D%E5%88%B6/">copy another two ubuntu machines</a>. Make sure to <a href="http://anotherbug.com/blog/2012/04/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9ubuntu%E7%9A%84hostname/">modify the hostname</a>.</p>
+<li>
+<p>Use Virtualbox&rsquo;s virtualmanager function to <!-- raw HTML omitted -->copy another two ubuntu machines<!-- raw HTML omitted -->. Make sure to <!-- raw HTML omitted -->modify the hostname<!-- raw HTML omitted -->.</p>
 </li>
-<li><p>Modify the    <code>/etc/hosts</code> file. </p>
+<li>
+<p>Modify the	<code>/etc/hosts</code> file.</p>
 </li>
-<li>Machine summary      <ul>
+<li>
+<p>Machine summary</p>
+<ul>
 <li>192.168.56.101 sjhadoop0</li>
-<li>192.168.56.103 sjhadoop1<ul>
+<li>192.168.56.103 sjhadoop1</li>
 <li>192.168.56.104 sjhadoop2</li>
 </ul>
 </li>
 </ul>
+<h3 id="2-config-cassandra">2. Config Cassandra</h3>
+<ul>
+<li>
+<p>Modify <code>/conf/cassandra-env.sh</code>file.</p>
+<pre><code>  MAX_HEAP_SIZE=&amp;quot;512M&amp;quot;
+  HEAP_NEWSIZE=&amp;quot;128M&amp;quot;
+</code></pre>
+</li>
+<li>
+<p>Modify <code>/conf/cassandra.yaml</code> file. For each virtual machine, change <code>listen_address</code> and <code>rpc_address</code>accordingly.</p>
+<pre><code>  listen_address: 192.168.1.1
+  rpc_address: 192.168.1.1
+</code></pre>
+</li>
+<li>
+<p>Choose one first machine as seed. Then change <code>seeds</code> to its ip address, make the rest VM pointing to the same seed.</p>
+<pre><code>  seeds: - 192.168.1.1
+</code></pre>
+</li>
+<li>
+<p>Assign initial_token, using the <!-- raw HTML omitted -->this python code<!-- raw HTML omitted --> to generate initial token and modify the <code>initial_token</code> in .yaml file.</p>
 </li>
 </ul>
-<h3 id="2-Config-Cassandra"><a href="#2-Config-Cassandra" class="headerlink" title="2. Config Cassandra"></a>2. Config Cassandra</h3><ul>
-<li><p>Modify <code>/conf/cassandra-env.sh</code>file.</p>
-<pre><code>MAX_HEAP_SIZE=&amp;quot;512M&amp;quot;
-HEAP_NEWSIZE=&amp;quot;128M&amp;quot;
-</code></pre></li>
-<li><p>Modify <code>/conf/cassandra.yaml</code> file. For each virtual machine, change <code>listen_address</code> and <code>rpc_address</code>accordingly.</p>
-<pre><code>listen_address: 192.168.1.1
-rpc_address: 192.168.1.1
-</code></pre></li>
-<li><p>Choose one first machine as seed. Then change <code>seeds</code> to its ip address, make the rest VM pointing to the same seed.</p>
-<pre><code>seeds: - 192.168.1.1
-</code></pre></li>
-<li><p>Assign initial_token, using the <a href="http://anotherbug.com/blog/nodeToken.py">this python code</a> to generate initial token and modify the <code>initial_token</code> in .yaml file.</p>
-</li>
-</ul>
-<h3 id="3-Start-Cassandra"><a href="#3-Start-Cassandra" class="headerlink" title="3. Start Cassandra"></a>3. Start Cassandra</h3><pre><code>sudo ./bin/cassandra -f
-</code></pre><p>That’s it!!</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/" data-id="cjrqxdcxe00024l1ywktd6s0j" class="article-share-link">分享到</a><div class="tags"><a href="/tags/Cloud-Computing/">Cloud Computing</a><a href="/tags/Hadoop/">Hadoop</a><a href="/tags/Ubuntu/">Ubuntu</a><a href="/tags/VirtualBox/">VirtualBox</a></div><div class="post-nav"><a href="/2012/10/01/Shutdown-specific-port-in-windows/" class="pre">Windows 下如何关闭特定端口</a><a href="/2012/04/30/Linksys-E1550-DD-DWR-how-to/" class="next">Linksys E1550 刷DD-WRT教程</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://anotherbug.com"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Personal/">Personal</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technique/">Technique</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/dd-wrt/" style="font-size: 15px;">dd-wrt</a> <a href="/tags/Hadoop/" style="font-size: 15px;">Hadoop</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/VirtualBox/" style="font-size: 15px;">VirtualBox</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Latex/" style="font-size: 15px;">Latex</a> <a href="/tags/Life/" style="font-size: 15px;">Life</a> <a href="/tags/Hacks/" style="font-size: 15px;">Hacks</a> <a href="/tags/GTD/" style="font-size: 15px;">GTD</a> <a href="/tags/Cloud-Computing/" style="font-size: 15px;">Cloud Computing</a> <a href="/tags/Random-Thoughts/" style="font-size: 15px;">Random Thoughts</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Nodejs/" style="font-size: 15px;">Nodejs</a> <a href="/tags/Programming/" style="font-size: 15px;">Programming</a> <a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Leetcode/" style="font-size: 15px;">Leetcode</a> <a href="/tags/awk/" style="font-size: 15px;">awk</a> <a href="/tags/shell/" style="font-size: 15px;">shell</a> <a href="/tags/test/" style="font-size: 15px;">test</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/13/how-to-setup-multiple-github-ssh-key/">how to setup multiple github ssh keys</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/hexo-blog/">hexo-blog</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/18/half-ironman-candidate-statistics/">Half Ironman santa cruz 70.3 candidates statistics</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/01/screen-scrollback/">Screen scrollback</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/01/Bash-pattern-match/">Bash pattern match</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/31/Fitbit-HR-data-monitoring/">Fitbit HR heart rate data monitoring</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/15/Box-content-APIs-example/">Box content APIs example</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/02/07/Leetcode-remove-duplicates-in-sorted-array/">Leetcode remove duplicates from sorted array</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/11/28/Download-web-pictures-using-Nodejs/">使用 Node JS 批量下载网站的图片</a></li><li class="post-list-item"><a class="post-list-link" href="/2013/11/25/linux-screen-in-5-commands/">Screen 使用之无废话5行命令</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://blog.racingwithhorse.org/" title="与马赛跑" target="_blank">与马赛跑</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">鼠标土豆.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<h3 id="3-start-cassandra">3. Start Cassandra</h3>
+<pre><code>    sudo ./bin/cassandra -f
+</code></pre>
+<p>That&rsquo;s it!!</p>
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>mousepotato </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/cloud-computing/">
+                    #cloud-computing</a></span>
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/hadoop/">
+                    #hadoop</a></span>
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/ubuntu/">
+                    #ubuntu</a></span>
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/virtualbox/">
+                    #virtualbox</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://anotherbug.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/" class="prev" rel="prev" title="Linksys E1550 刷DD-WRT教程"><i class="iconfont icon-left"></i>&nbsp;Linksys E1550 刷DD-WRT教程</a>
+        
+        
+        <a href="https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/" class="next" rel="next" title="Windows 下如何关闭特定端口">Windows 下如何关闭特定端口&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+        
+            
+                <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.css">
+<script src="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+
+        clientID: '01ff2c6440c4aec6e5e8',
+        clientSecret: '0020705c94d1912ed583b820f88a7cd8c149c7f9',
+        repo: 'mousepotato.github.io',
+        owner: 'mousepotato',
+        admin: ['mousepotato'],
+        id: location.pathname, 
+        distractionFreeMode: false 
+    });
+    (function () {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+            return;
+        }
+        gitalk.render('gitalk-container');
+    })();
+</script>
+
+            
+        
+    </div>
+</article>
+                </div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2009 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i>
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://anotherbug.com">mousepotato</a> | </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/Mogeko/Mogege" target="_blank" rel="external nofollow">Mogege</a></span>
+    </div>
+</footer>
+
+
+
+
+
+>
+<script defer src="/js/vendor_main.min.js"></script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script> pangu.spacingPage();</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11501178-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-11501178-2');
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+        </div>
+    </body>
+</html>
