@@ -4,7 +4,7 @@
     <url>
       <loc>https://anotherbug.com/</loc>
       
-      <lastmod>2021-06-30T04:53:52-07:00</lastmod>
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
       
       
       
@@ -14,7 +14,57 @@
     <url>
       <loc>https://anotherbug.com/categories/</loc>
       
-      <lastmod>2021-06-30T04:53:52-07:00</lastmod>
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/posts/</loc>
+      
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/</loc>
+      
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/categories/technique/</loc>
+      
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/windows/</loc>
+      
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/2021/08/07/windows-dev-environment/</loc>
+      
+      <lastmod>2021-08-07T19:03:52-07:00</lastmod>
       
       
       
@@ -42,27 +92,7 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.com/posts/</loc>
-      
-      <lastmod>2021-06-30T04:53:52-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://anotherbug.com/categories/product/</loc>
-      
-      <lastmod>2021-06-30T04:53:52-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/tags/</loc>
       
       <lastmod>2021-06-30T04:53:52-07:00</lastmod>
       
@@ -153,16 +183,6 @@
   
     <url>
       <loc>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</loc>
-      
-      <lastmod>2020-07-31T00:23:26-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/categories/technique/</loc>
       
       <lastmod>2020-07-31T00:23:26-07:00</lastmod>
       
@@ -523,14 +543,6 @@
   
     <url>
       <loc>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</loc>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/tags/windows/</loc>
       
       
       

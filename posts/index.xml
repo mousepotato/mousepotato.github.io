@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Dev Environment</title>
+      <link>https://anotherbug.com/2021/08/07/windows-dev-environment/</link>
+      <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2021/08/07/windows-dev-environment/</guid>
+      <description>我已经有十年 （2010-2020）没有用 Windows 了，这十年来 Windows 也越来越像 Linux 了。所以我打算再次用一下。记录一下 Windows 下的开发环境 常用工具 Chocolate Package Manager 和 Scoop : 包管</description>
+    </item>
+    
     <item>
       <title>How to import Microsoft To Do Notes to Flomo</title>
       <link>https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/</link>

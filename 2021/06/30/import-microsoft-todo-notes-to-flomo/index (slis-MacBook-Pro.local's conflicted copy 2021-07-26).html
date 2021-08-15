@@ -9,9 +9,9 @@
     <meta name="description" content="mousepotato 的个人博客">
     <meta name="keywords" content="blog, Networking, Hugo, GNU/Linux, Linux, Ubuntu, Programming">
     
-    <link rel="prev" href="https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/" />
-    <link rel="next" href="https://anotherbug.com/2015/02/07/leetcode-remove-duplicates-in-sorted-array/" />
-    <link rel="canonical" href="https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/" />
+    <link rel="prev" href="https://anotherbug.com/2021/04/27/rtx-3090-tuning/" />
+    
+    <link rel="canonical" href="https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            使用 Node JS 批量下载网站的图片 | 鼠标土豆
+            How to import Microsoft To Do Notes to Flomo | 鼠标土豆
         
     </title>
-    <meta name="title" content="使用 Node JS 批量下载网站的图片 | 鼠标土豆">
+    <meta name="title" content="How to import Microsoft To Do Notes to Flomo | 鼠标土豆">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -43,21 +43,21 @@
          "@id": "https:\/\/anotherbug.com"
     },
     "articleSection" : "posts",
-    "name" : "使用 Node JS 批量下载网站的图片",
-    "headline" : "使用 Node JS 批量下载网站的图片",
-    "description" : "介绍如何使用Node Js 批量下载网站上的图片，使用的技术包括Node Js插件的使用，编码转换，HTML DOM处理，Javascript 闭包等等。",
+    "name" : "How to import Microsoft To Do Notes to Flomo",
+    "headline" : "How to import Microsoft To Do Notes to Flomo",
+    "description" : "一直使用 Microsoft To Do 来做一些随手记的东西。不知不觉已经攒了 1200 多条. 用的最多的是基于 Tag （标签）的方式来管理。一直在找替代的东西，因为 To Do 的 Tag 不是很好",
     "inLanguage" : "zh-cn",
     "author" : "mousepotato",
     "creator" : "mousepotato",
     "publisher": "mousepotato",
     "accountablePerson" : "mousepotato",
     "copyrightHolder" : "mousepotato",
-    "copyrightYear" : "2013",
-    "datePublished": "2013-11-28 00:00:00 \u002b0000 UTC",
-    "dateModified" : "2013-11-28 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/anotherbug.com\/2013\/11\/28\/download-web-pictures-using-nodejs\/",
-    "wordCount" : "312",
-    "keywords" : [ "nodejs","programming", "鼠标土豆"]
+    "copyrightYear" : "2021",
+    "datePublished": "2021-06-30 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2021-06-30 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/anotherbug.com\/2021\/06\/30\/import-microsoft-todo-notes-to-flomo\/",
+    "wordCount" : "506",
+    "keywords" : [ "hacks", "鼠标土豆"]
 }
 </script>
 
@@ -174,11 +174,11 @@
                     
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">使用 Node JS 批量下载网站的图片</h1>
+        <h1 class="post-title" itemprop="name headline">How to import Microsoft To Do Notes to Flomo</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://anotherbug.com" rel="author">mousepotato</a> with ♥
                 <span class="post-time">
-                on <time datetime=2013-11-28 itemprop="datePublished">November 28, 2013</time>
+                on <time datetime=2021-06-30 itemprop="datePublished">June 30, 2021</time>
                 </span>
                 in
                 
@@ -187,11 +187,11 @@
                         
                         
                         
-                          <a href="https://anotherbug.com/categories/technique/"> technique, </a>
+                          <a href="https://anotherbug.com/categories/product/"> Product, </a>
                         
                         
                 </span>
-                <span class="post-word-count">312 words</span>
+                <span class="post-word-count">506 words</span>
         </div>
     </header>
 
@@ -211,53 +211,80 @@
         
         
 
-        <h2 id="1-起因">1. 起因</h2>
-<p>最近看到 <a href="http://photo.fhl.net/main/holy/index.html">网站 fhl.net</a> 上有一系列《圣地旅游》的照片，个人很喜欢，想把它下载下来保存。问题是该网站上有67页，每页有35张照片，也就是总共有2345张照片，同时我还想讲网页上照片的介绍作为照片的名称保存，这样方便以后查看。所以，问题是如何做呢？</p>
-<h2 id="2-所需-tools">2. 所需 tools</h2>
-<p>鉴于最近爱上了 <a href="http://nodejs.org/">Node.js</a> 这一神奇的工具。打算用它试试。</p>
-<p>2.1 用到的插件有</p>
+        <ul>
+<li>
+<p>一直使用 Microsoft To Do 来做一些随手记的东西。不知不觉已经攒了 1200 多条. 用的最多的是基于 Tag （标签）的方式来管理。一直在找替代的东西，因为 To Do 的 Tag 不是很好用。（它的整体产品设计就不是基于这个考虑的）</p>
+</li>
+<li>
+<p>最近看到 Flomoapp（浮墨）笔记，设计思想和我想要的很一致：</p>
 <ul>
-<li>request <code>npm install request</code>  处理http request</li>
-<li>cheerio <code>npm install cheerio</code>  Html DOM 处理</li>
-<li>iconv-lite <code>npm install iconv-lite</code>  处理中文字符转码</li>
-<li>wget <code>npm install wget</code>  图片下载工具</li>
+<li>基于 Tag</li>
+<li>可以回顾</li>
+<li>产品设计简单简洁（定位不是一个长篇大论的笔记 app，更不是另外一款 read it later 工具，因为 read it later &ndash;&gt; read it never)</li>
 </ul>
-<h2 id="3-代码-code">3. 代码 Code</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">request</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;request&#34;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cheerio</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;cheerio&#34;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">iconv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;iconv-lite&#39;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">wget</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;wget&#39;</span>);
+</li>
+<li>
+<p>当然缺点也是有的，现阶段主要是日志的导出能力和格式以及开放兼容性。已经有开源版本 <a href="https://github.com/Mran/neno">neno</a> 是基于 svelte + tailwindcss 构建的 PWA 应用，数据自主可控（可以写到 Github)。</p>
+</li>
+<li>
+<p>考虑付费使用，并且把现有的 To Do 记录的东西转过来。自己写个程序通过 API 方式倒腾一下吧。</p>
+<ul>
+<li>去 <a href="https://developer.microsoft.com/en-us/graph/graph-explorer">Microsoft Graph Explorer</a> 拿到你的 access token</li>
+<li>浮墨 提供了简单的 POST API （不过每天 100 条限制，不过他们的 rate limiter 好像不是实时的，一次性有几百条记录的话测试是可以导入的）</li>
+</ul>
+</li>
+<li>
+<p>代码基于 node + axios，没有做任何优化，使用时候记得替换里面的 token 和 flomoUrl：</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">axios</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;axios&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;EwCAA=======&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">config</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">Authorization</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`Bearer </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">token</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span> }
+};
 
-<span style="color:#75715e">// loop through all 67 html pages
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">67</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
 
-  (<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">i</span>){<span style="color:#a6e22e">request</span>({
-      <span style="color:#a6e22e">uri</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://photo.fhl.net/main/holy/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;index.html&#34;</span>,
-    <span style="color:#a6e22e">encoding</span><span style="color:#f92672">:</span><span style="color:#66d9ef">null</span>
-  }, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">response</span>, <span style="color:#a6e22e">body</span>) {
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">iconv</span>.<span style="color:#a6e22e">decode</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Buffer</span>(<span style="color:#a6e22e">body</span>), <span style="color:#e6db74">&#34;big5&#34;</span>);
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">$</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cheerio</span>.<span style="color:#a6e22e">load</span>(<span style="color:#a6e22e">str</span>);
-     
-      <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;table a&#39;</span>).<span style="color:#a6e22e">each</span>(<span style="color:#66d9ef">function</span>() {
-          <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">link</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>);
-          <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">link</span>.<span style="color:#a6e22e">text</span>();
-          <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">link</span>.<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>);
-          <span style="color:#75715e">// href = &#34;holy2351.html&#34;
-</span><span style="color:#75715e"></span>          <span style="color:#75715e">// http://photo.fhl.net/img/holy/2351.jpg
-</span><span style="color:#75715e"></span>          <span style="color:#75715e">// console.log(text + &#34;http://photo.fhl.net/img/holy/&#34; + href.substr(4,4) + &#34;.jpg&#34;);
-</span><span style="color:#75715e"></span>
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://photo.fhl.net/img/holy/&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">href</span>.<span style="color:#a6e22e">substr</span>(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">4</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;.jpg&#34;</span>;
-      <span style="color:#75715e">// var output =&#34;/Users/shuangjiang/playpen/holypic/&#34;+text.replace(/\s+/g,&#34;&#34;);
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/Users/shuangjiang/playpen/holypic/&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">text</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;.jpg&#34;</span>;
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">wget</span>.<span style="color:#a6e22e">download</span>(<span style="color:#a6e22e">src</span>,<span style="color:#a6e22e">output</span>);
-      <span style="color:#a6e22e">download</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;end&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">output</span>) {
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;download all the pics&#34;</span>);
-      });
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskId</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;AQMkA=======&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseURL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://graph.microsoft.com/beta/me/todo/lists/&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">taskId</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/tasks&#39;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">flomoUrl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://flomoapp.com/iwh/MTE2/=======&#39;</span>
+
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getTasks</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">url</span>) =&gt; {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(
+      <span style="color:#a6e22e">url</span>,
+      <span style="color:#a6e22e">config</span>
+    )
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>)
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getAllTasks</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> () =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ret</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getTasks</span>(<span style="color:#a6e22e">baseURL</span>);
+  <span style="color:#a6e22e">ret</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">entry</span>) =&gt; {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">title</span>);
+    <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">flomoUrl</span>, {
+      <span style="color:#e6db74">&#39;content&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">title</span>
+    })
+  });
+
+  <span style="color:#a6e22e">nextUrl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ret</span>.<span style="color:#a6e22e">data</span>[<span style="color:#e6db74">&#39;@odata.nextLink&#39;</span>]
+  <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">nextUrl</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">undefined</span>) {
+    <span style="color:#a6e22e">res</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getTasks</span>(<span style="color:#a6e22e">nextUrl</span>)
+    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">forEach</span>((<span style="color:#a6e22e">entry</span>) =&gt; {
+      <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">flomoUrl</span>, {
+        <span style="color:#e6db74">&#39;content&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">title</span>
+      })
     });
-  });})(<span style="color:#a6e22e">i</span>); <span style="color:#75715e">// closure
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>That&rsquo;s it!!</p>
 
+    <span style="color:#a6e22e">nextUrl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">data</span>[<span style="color:#e6db74">&#39;@odata.nextLink&#39;</span>]
+  }
+}
+
+<span style="color:#a6e22e">getAllTasks</span>()
+
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -271,7 +298,7 @@
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/>https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/</span>
+                    <a href=https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/>https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/</span>
             </p>
             
             
@@ -287,11 +314,8 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://anotherbug.com/tags/nodejs/">
-                    #nodejs</a></span>
-            
-            <span class="tag"><a href="https://anotherbug.com/tags/programming/">
-                    #programming</a></span>
+            <span class="tag"><a href="https://anotherbug.com/tags/hacks/">
+                    #hacks</a></span>
             
             </section>
         
@@ -303,10 +327,8 @@
 
     <div class="post-nav">
         
-        <a href="https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/" class="prev" rel="prev" title="Screen 使用之无废话5行命令"><i class="iconfont icon-left"></i>&nbsp;Screen 使用之无废话5行命令</a>
+        <a href="https://anotherbug.com/2021/04/27/rtx-3090-tuning/" class="prev" rel="prev" title="RTX 3090 Tunning"><i class="iconfont icon-left"></i>&nbsp;RTX 3090 Tunning</a>
         
-        
-        <a href="https://anotherbug.com/2015/02/07/leetcode-remove-duplicates-in-sorted-array/" class="next" rel="next" title="Leetcode remove duplicates from sorted array">Leetcode remove duplicates from sorted array&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
