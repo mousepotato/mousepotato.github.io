@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noodp"/>
+    <meta name="author" content="mousepotato">
+    <meta name="description" content="mousepotato 的个人博客">
+    <meta name="keywords" content="blog, Networking, Hugo, GNU/Linux, Linux, Ubuntu, Programming">
+    
+    <link rel="prev" href="https://anotherbug.com/2021/05/23/octopus-garden-weekly-vol-12/" />
+    <link rel="next" href="https://anotherbug.com/2021/06/06/octopus-garden-weekly-vol-14/" />
+    <link rel="canonical" href="https://anotherbug.com/2021/05/30/octopus-garden-weekly-vol-13/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>
+        
+        
+            章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》 | 鼠标土豆
+        
+    </title>
+    <meta name="title" content="章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》 | 鼠标土豆">
+    
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+    
+    
+ 
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/anotherbug.com"
+    },
+    "articleSection" : "posts",
+    "name" : "章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》",
+    "headline" : "章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》",
+    "description" : "章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》 科技 Java 并发相关的源码讲解系列视频 #Videos 人文 The Untold Story Behind the Song \u0026ldquo;Don\u0026rsquo;t Cry For Me Argentina\u0026rdquo; #Music 《家园》－《闯关",
+    "inLanguage" : "zh-cn",
+    "author" : "mousepotato",
+    "creator" : "mousepotato",
+    "publisher": "mousepotato",
+    "accountablePerson" : "mousepotato",
+    "copyrightHolder" : "mousepotato",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-05-30 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2021-05-30 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/anotherbug.com\/2021\/05\/30\/octopus-garden-weekly-vol-13\/",
+    "wordCount" : "1044",
+    "keywords" : [ "章鱼花园期刊", "鼠标土豆"]
+}
+</script>
+
+  </head>
+    <body class="">
+        <div class="wrapper">
+            <nav class="navbar">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+    <div class="container">
+        
+            <div class="navbar-header header-back2home-logo">
+                <span class="logo_mark" >>$</span>
+                <a href="https://anotherbug.com">
+                    <span class="logo_text" >cd /home/</span>
+                    <span class="logo_cursor" ></span>
+                </a>
+            </div>
+        
+        <div class="navbar-right">
+                
+                <span class="menu">
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/til/" title="">TIL</a>
+                
+                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                
+                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                
+                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                
+                <a class="menu-item" href="/til/" title=""></a>
+                
+                <span class="divide"></span>
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
+                </span>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
+    
+     <div class="container">
+        <div class="navbar">
+            <div class="navbar-header header-logo">
+                    <a href="https://anotherbug.com">鼠标土豆</a>
+            </div>
+            <div class="navbar-right">
+                <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a></div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                <nav class="mb-md">
+                    
+                    
+                        <a class="menu-item" href="/posts/" title="">
+                            <h3>Blog</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/categories/" title="">
+                            <h3>Categories</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tags/" title="">
+                            <h3>Tags</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/til/" title="">
+                            <h3>TIL</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/tools/" title="">
+                            <h3>好物 (Uses)</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/about/" title="">
+                            <h3>关于我 (About me)</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/main/" title="">
+                            <h3>学校主页 (Academics)</h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                        <a class="menu-item" href="/til/" title="">
+                            <h3></h3>
+                            <div class="menu-active"></div>
+                        </a>
+                    
+                </nav>
+        </div>
+    </div>
+</nav>
+            <main class="main">
+                <div class="container">
+                    
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://anotherbug.com" rel="author">mousepotato</a> with ♥
+                <span class="post-time">
+                on <time datetime=2021-05-30 itemprop="datePublished">May 30, 2021</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                        
+                        
+                          <a href="https://anotherbug.com/categories/technique/"> Technique, </a>
+                        
+                        
+                </span>
+                <span class="post-word-count">1044 words</span>
+        </div>
+    </header>
+
+    <div class="post-content">
+        
+
+        
+        
+            
+        
+
+        
+        
+        
+        
+        
+
+        
+        
+        
+
+        <h3 id="章鱼花园-vol-13-当你无法安静的时候听一听the-ludlows">章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》</h3>
+<h4 id="科技">科技</h4>
+<ul>
+<li><a href="https://v2ex.com/t/777374">Java 并发相关的源码讲解系列视频</a> #Videos</li>
+</ul>
+<h4 id="人文">人文</h4>
+<ul>
+<li>
+<p><a href="https://theculturetrip.com/south-america/argentina/articles/the-untold-story-behind-the-song-dont-cry-for-me-argentina/">The Untold Story Behind the Song &ldquo;Don&rsquo;t Cry For Me Argentina&rdquo;</a> #Music</p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=znI5e1HQyfY">《家园》－《闯关东》片尾曲</a></p>
+<ul>
+<li>刘欢的说唱配合宋祖英，绝对经典。 <strong>漂泊者的家到底在哪一边，回首故乡遥远抬头前路依旧茫然</strong> #Music</li>
+</ul>
+</li>
+</ul>
+<h4 id="随想">随想</h4>
+<ul>
+<li>
+<p>看完《闯关东》，对传武和鲜儿的命运贡献了很多眼泪。在大时代里面的「家」、「命」有了更深的认识。两个努力顺命也挣扎着顺心的人，最后终究还是没能在一起。</p>
+</li>
+<li>
+<p>有人说，演到最后老朱家必须要s一个人，因为大的环境实在太惨烈，太多人牺牲了。不s说不过去，不s有违伦常。可是要谁去s呢？最让人唏嘘的就是传武了。</p>
+</li>
+<li>
+<p>这是一部谱写普通又不普通的一家人的酸甜苦辣，在特定的历史背景下，这些人用面对命运的生存挣扎和面对家仇国恨的民族大义，谱写了一曲壮丽的历史长歌。</p>
+</li>
+<li>
+<p>喜欢片尾曲《家园》，第一次看《闯关东》的人大抵会被人物的经历所吸引，其实冷静下来，每个人都在为家园所奔波，有家园也就可以生存。所以朱开山独闯老金沟也是为了 “置几垧地，建一个家”，在哈尔滨与潘家斗智斗勇也为了维护这个家，甚至离家出走的传武和鲜儿，历尽艰险，最终想要的，不过是在野马湾建一个自己的家。结尾与日本人种种纠葛，乃至以命相搏，为的更是是国家这个大的家园。</p>
+</li>
+<li>
+<p>鲜儿是对家渴望最热切的人，她的颠沛和命运却一直残忍地拒绝。她总是和传武说：“姐什么时候才能有个自己的家？听罢泣落。</p>
+</li>
+<li>
+<p>要说国内与之类似的恐怕要数 1994 年的那部《 燃情岁月 <strong>Legends of the Fall</strong>》电影了。讲述了一战之前到 1920 年代美国禁酒期间，蒙大拿州的拉德洛（Ludlow）一家三兄弟的故事。主角也是老二  Tristan Ludlow，也是一个悲剧式人物。</p>
+</li>
+</ul>
+<blockquote>
+<p>「我们极度渴望成为这样的人，但我们还要变现出对他的敌对，以向外界证明我们的价值观是没有问题的，对于这样的人物，有时我们也充满矛盾，可能在我们内心的深深深处，深到我们自己都觉察不到的地方，我们极度渴望成为这样的人。但我们还要表现出对他的敌对，以向外界证明我们的价值观是没有问题的。我们崇拜或讨厌这样的人物，是因为我们没法活成他们这样：生命中的险恶没有什么恐怖，生命中的寂寥没有什么悲愤，生命中的放纵没有什么缺憾，生命中的痛苦与埋没无关，关键是，即使在始终无人注目的暗夜中，你可曾动情地燃烧，像那颗不肯安歇的灵魂一样，为了答谢这一段短暂的岁月，或许在这样的电影里，能为依然在乏味的地方苟活的我们，来带些许的慰藉，像是一片阿司匹林一样」</p>
+</blockquote>
+<ul>
+<li>当你无法安静的时候，听一听《The Ludlows》。 #Music</li>
+</ul>
+<h3 id="订阅章鱼花园">订阅章鱼花园</h3>
+<ul>
+<li>
+<p>微信公众号：追寻与归回</p>
+<p><img src="/assets/images/2021/qrcode_for_gh_e9a17734e09c_258.jpg" alt="qrcode_for_gh_e9a17734e09c_258.jpg" loading="lazy" ></p>
+</li>
+<li>
+<p>Notion: <a href="https://www.notion.so/9012ebf6c9f94d699484e087752f54e4">章鱼花园期刊</a></p>
+</li>
+<li>
+<p>Substack: <a href="https://octg.substack.com/">https://octg.substack.com</a></p>
+</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>mousepotato </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://anotherbug.com/2021/05/30/octopus-garden-weekly-vol-13/>https://anotherbug.com/2021/05/30/octopus-garden-weekly-vol-13/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/%E7%AB%A0%E9%B1%BC%E8%8A%B1%E5%9B%AD%E6%9C%9F%E5%88%8A/">
+                    #章鱼花园期刊</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://anotherbug.com">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://anotherbug.com/2021/05/23/octopus-garden-weekly-vol-12/" class="prev" rel="prev" title="章鱼花园 Vol. 12: 人类越野史上最黑暗的一夜"><i class="iconfont icon-left"></i>&nbsp;章鱼花园 Vol. 12: 人类越野史上最黑暗的一夜</a>
+        
+        
+        <a href="https://anotherbug.com/2021/06/06/octopus-garden-weekly-vol-14/" class="next" rel="next" title="章鱼花园 Vol. 14: 把自己交给繁忙，得到的是踏实，却不是真实">章鱼花园 Vol. 14: 把自己交给繁忙，得到的是踏实，却不是真实&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+        
+            
+                <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.css">
+<script src="https://cdn.bootcss.com/gitalk/1.5.2/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+
+        clientID: '01ff2c6440c4aec6e5e8',
+        clientSecret: '0020705c94d1912ed583b820f88a7cd8c149c7f9',
+        repo: 'mousepotato.github.io',
+        owner: 'mousepotato',
+        admin: ['mousepotato'],
+        id: location.pathname, 
+        distractionFreeMode: false 
+    });
+    (function () {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+            return;
+        }
+        gitalk.render('gitalk-container');
+    })();
+</script>
+
+            
+        
+    </div>
+</article>
+                </div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2009 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i>
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://anotherbug.com">mousepotato</a> | </span>
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/Mogeko/Mogege" target="_blank" rel="external nofollow">Mogege</a></span>
+    </div>
+</footer>
+
+
+
+
+
+>
+<script defer src="/js/vendor_main.min.js"></script>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script> pangu.spacingPage();</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11501178-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-11501178-2');
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+        </div>
+    </body>
+</html>
