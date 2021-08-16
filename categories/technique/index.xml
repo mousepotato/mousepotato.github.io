@@ -6,16 +6,7 @@
     <description>Recent content in technique on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Aug 2021 22:19:17 -0700</lastBuildDate><atom:link href="https://anotherbug.com/categories/technique/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://anotherbug.com/2021/08/15/</link>
-      <pubDate>Sun, 15 Aug 2021 22:19:17 -0700</pubDate>
-      
-      <guid>https://anotherbug.com/2021/08/15/</guid>
-      <description>章鱼花园 Vol. 0： The Times They Are a-Changin&#39; 亲爱的叉子们， 欢迎来到「章鱼花园」第 0 期。这是一份争取每周更新的文档，记录我每周的所见和思考，主要分为 「科技」、「人</description>
-    </item>
-    
+    <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/categories/technique/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows Dev Environment</title>
       <link>https://anotherbug.com/2021/08/07/windows-dev-environment/</link>
@@ -23,6 +14,15 @@
       
       <guid>https://anotherbug.com/2021/08/07/windows-dev-environment/</guid>
       <description>我已经有十年 （2010-2020）没有用 Windows 了，这十年来 Windows 也越来越像 Linux 了。所以我打算再次用一下。记录一下 Windows 下的开发环境 常用工具 Chocolate Package Manager 和 Scoop : 包管</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://anotherbug.com/2021/02/28/octopus-garden-weekly-vol-0/</link>
+      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2021/02/28/octopus-garden-weekly-vol-0/</guid>
+      <description>章鱼花园 Vol. 0： The Times They Are a-Changin&#39; 亲爱的叉子们， 欢迎来到「章鱼花园」第 0 期。这是一份争取每周更新的文档，记录我每周的所见和思考，主要分为 「科技」、「人</description>
     </item>
     
     <item>
