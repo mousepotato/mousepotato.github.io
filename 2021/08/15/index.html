@@ -9,9 +9,9 @@
     <meta name="description" content="mousepotato 的个人博客">
     <meta name="keywords" content="blog, Networking, Hugo, GNU/Linux, Linux, Ubuntu, Programming">
     
-    <link rel="prev" href="https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/" />
-    <link rel="next" href="https://anotherbug.com/2021/08/15/" />
-    <link rel="canonical" href="https://anotherbug.com/2021/08/07/windows-dev-environment/" />
+    <link rel="prev" href="https://anotherbug.com/2021/08/07/windows-dev-environment/" />
+    
+    <link rel="canonical" href="https://anotherbug.com/2021/08/15/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            Windows Dev Environment | 鼠标土豆
+             | 鼠标土豆
         
     </title>
-    <meta name="title" content="Windows Dev Environment | 鼠标土豆">
+    <meta name="title" content=" | 鼠标土豆">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -43,9 +43,9 @@
          "@id": "https:\/\/anotherbug.com"
     },
     "articleSection" : "posts",
-    "name" : "Windows Dev Environment",
-    "headline" : "Windows Dev Environment",
-    "description" : "我已经有十年 （2010-2020）没有用 Windows 了，这十年来 Windows 也越来越像 Linux 了。所以我打算再次用一下。记录一下 Windows 下的开发环境 常用工具 Chocolate Package Manager 和 Scoop : 包管",
+    "name" : "",
+    "headline" : "",
+    "description" : "章鱼花园 Vol. 0： The Times They Are a-Changin\u0027 亲爱的叉子们， 欢迎来到「章鱼花园」第 0 期。这是一份争取每周更新的文档，记录我每周的所见和思考，主要分为 「科技」、「人",
     "inLanguage" : "zh-cn",
     "author" : "mousepotato",
     "creator" : "mousepotato",
@@ -53,11 +53,11 @@
     "accountablePerson" : "mousepotato",
     "copyrightHolder" : "mousepotato",
     "copyrightYear" : "2021",
-    "datePublished": "2021-08-07 00:00:00 \u002b0000 UTC",
-    "dateModified" : "2021-08-07 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/anotherbug.com\/2021\/08\/07\/windows-dev-environment\/",
-    "wordCount" : "257",
-    "keywords" : [ "windows", "鼠标土豆"]
+    "datePublished": "2021-08-15 22:19:17 -0700 PDT",
+    "dateModified" : "2021-08-15 22:19:17 -0700 PDT",
+    "url" : "https:\/\/anotherbug.com\/2021\/08\/15\/",
+    "wordCount" : "2347",
+    "keywords" : [ "章鱼花园期刊","Octopus\u0027s Garden Weekly", "鼠标土豆"]
 }
 </script>
 
@@ -174,11 +174,11 @@
                     
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Windows Dev Environment</h1>
+        <h1 class="post-title" itemprop="name headline"></h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://anotherbug.com" rel="author">mousepotato</a> with ♥
                 <span class="post-time">
-                on <time datetime=2021-08-07 itemprop="datePublished">August 7, 2021</time>
+                on <time datetime=2021-08-15 itemprop="datePublished">August 15, 2021</time>
                 </span>
                 in
                 
@@ -191,7 +191,7 @@
                         
                         
                 </span>
-                <span class="post-word-count">257 words</span>
+                <span class="post-word-count">2347 words</span>
         </div>
     </header>
 
@@ -200,51 +200,155 @@
 
         
         
-
-        
-        
-        
-        
+            
         
 
         
         
         
+        
+        
 
-        <ul>
-<li>我已经有十年 （2010-2020）没有用 Windows 了，这十年来 Windows 也越来越像 Linux 了。所以我打算再次用一下。记录一下 Windows 下的开发环境</li>
-</ul>
-<h3 id="常用工具">常用工具</h3>
+        
+        
+        
+
+        <h3 id="章鱼花园-vol-0-the-times-they-are-a-changin">章鱼花园 Vol. 0： The Times They Are a-Changin'</h3>
+<p><strong>亲爱的叉子们，</strong></p>
+<p>欢迎来到「章鱼花园」第 0 期。这是一份争取每周更新的文档，记录我每周的所见和思考，<del>主要分为 「科技」、「人文」和「随想」三个部分。</del> (Vol. 23 开始改成 「Sense」理性 和 「Sensibility」感性两个部分。)</p>
 <ul>
 <li>
-<p>Chocolate Package Manager 和 <a href="https://scoop.sh/">Scoop</a> : 包管理器 (类似 Mac 下的 brew，Linux 下的 yum/apt 等)</p>
+<p>关于名字： 「章鱼花园」 ，取自 披头士乐队（The Beatles）专辑 《Abbey Road》里面的一首歌 Octopus&rsquo;s Garden。这是一首美丽的歌，也描绘了一个快乐无忧无虑的地方。作者  Ringo Starr 描述有人曾告诉他，章鱼会在海滩上收集一些闪闪发光的东西，它们把这些东西有序地置放在自己的巢穴里。于是巢穴变得炫彩斑斓，就像美丽的花园一样。于是有了灵感，创作了这首歌曲。</p>
+<pre><code>Oh what joy  
+For every girl and boy  
+Knowing they're happy  
+And they're safe
+
+-- Octopus’s Garden
+</code></pre><pre><code>
+</code></pre></li>
+<li>
+<p>关于称呼：取自英文的翻译 Dear forks, 这是我曾经的犯的一个错误，有一次写邮件把 Dear folks，误写成了 Dear forks，把「亲爱的朋友们」写成了 「亲爱的叉子们」。想来也挺有趣，就经常这么叫了。</p>
 </li>
 <li>
-<p>Windows terminal: <code>choco install microsoft-windows-terminal</code></p>
-</li>
-<li>
-<p>VS Code （remote） + WSL (Windows Subsystem for Linux) 的使用：其实就是借鉴前后端分离的思想，把 Windows 作为 Linux 的 UI，Windows 只充当编辑器的角色。  所以才有一种戏称：<strong>Windows 是最好用的 Linux 发行版</strong>。</p>
-</li>
-<li>
-<p>Listary 和  Wox : 文件搜索和快速启动工具（类似 Mac OS 下的 Alfred） + Everything</p>
-</li>
-<li>
-<p>小狼豪输入法 + 小鹤双拼，参考： <a href="https://jdhao.github.io/2019/02/18/rime_configuration_intro/">https://jdhao.github.io/2019/02/18/rime_configuration_intro/</a></p>
+<p>关于初衷： 如同 Ringo 的创作这首歌所受的启发一样，或许我们每个人的内心也都像章鱼一样，喜欢收集生活中的美好和快乐，珍藏于自己的心灵深处，细细地品味，静静地遐思。这也是我开启这样分享的初衷。</p>
 </li>
 </ul>
-<h3 id="多环境同步">多环境同步</h3>
+<p>希望亲爱的叉子们能够常来 「章鱼花园」，来摄取你们所看到的「闪闪发光的东西」。一件事情最难做的算是对它的命名了（以后会继续分享）。我们把它做好，这是第一步，也以此作为<strong>发刊词</strong>介绍吧。</p>
+<p>以下是正文：</p>
+<h4 id="科技">科技</h4>
 <ul>
 <li>
-<p>icloud 同步 Obsidan 笔记</p>
+<p>「 在未来，每个人都能成名 15 分钟，每个人都能在 15 分钟内出名。」 ── 安迪·沃霍尔。 #Quotes  #Technology</p>
+<ul>
+<li>这段话很好的诠释了今天这样的信息时代的机会。网络一定程度上让所有人有了一定的平等。 &ldquo;平等&quot;的获取信息、发出声音以及被听见和看见的机会。CNBC的主持人 David Faber 今天 (2.24) 和 Jim Cramer 做节的时候也一度感慨，在 25年前他是在无法想象像今天这样可以自由方便的看到大机构的操作。当时 Jim Caramer 手里正拿着木头姐 (Cathie Wood) 的最新的交易记录。</li>
+<li>影响的媒介：
+<ul>
+<li>文字： 大 V （VIP）</li>
+<li>视频，网红 （Influencer） 今天影响这一大批人的衣食住行。</li>
+<li>最近很火的 clubhouse，又将在音频领域带出一批 KOL (Key Opinion Leaders)。</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<p>多 Dropbox 共享各个文件夹</p>
+<p>在知识变现的大环境里，有一群人自诩自己是 「Infovores 食知动物」 ，他们以记录和获取各种知识为生。很多人误以为存储了知识就是学习到了。这里面的困境在于如何把知识活化，用起来，串起来。 #Tools  #PKM</p>
+<ul>
+<li>道的层面：
+<ul>
+<li>PARA</li>
+<li>「Zettelkasten」卡片笔记法，也叫 Slip Box</li>
+<li>OKR</li>
+</ul>
+</li>
+<li>器的层面：我使用这么几款软件：
+<ul>
+<li>Notion</li>
+<li>Obsidian</li>
+<li>Roam Research</li>
+<li>Microsoft Todo</li>
+<li>Joplin</li>
+<li>Evernote</li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
-<p>Notion/Flomo</p>
+<p>「The AAAAAAAAAAAAAAAAAAAAAA end of it all」</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/b0Mw8uKLYuXHJ5Bj3t2Dwg">一针重复2万亿段代码，我「逆向工程」了辉瑞疫苗！</a></li>
+<li>mRNA 可以重复使用很多次，但在这个过程中，它也会在末端失去一些 A。一旦 A 耗尽，mRNA 就不再起作用而被丢弃。 所以 COVID19 mRNA 疫苗的是一种以「AAAAAAAAAAAAAAAAAAAAAA」的奇特方式结尾。 似乎就连mRNA似乎也受够了这个糟糕的 2020 年！ 这样，「多聚腺苷酸尾（Poly-A Tail）」就可以防止其退化。 #Technology</li>
+</ul>
+</li>
+</ul>
+<h4 id="人文">人文</h4>
+<ul>
+<li>
+<p>电影 「United 93」： 2001年911当天，93号班机在宾夕法尼亚州的乡村坠毁，这是唯一一架没有撞到目的的飞机。据推测这架飞机原本是要撞白宫或国会大厦的。电影以类似纪录片的形式还原了当时的情形。现实中一名乘客在最后冲锋时喊出的 「Let&rsquo;s roll」的口号被电话记录了下来，迅速成为全国性标语，并被印在了攻打阿富汗的飞机上。 #Movies</p>
 </li>
 <li>
-<p>还有 Steam !</p>
+<p>电影 「我很在乎 I Care A Lot」：当你老了，有一天突然有个陌生人敲开你家的门，然后把你请到老年中心，变卖你的房子，车子和私人财产，并且开始接管了你的人生，你的所有决定。这不是绑架，这是所谓的 <strong>legal guardian （合法监护人）</strong>。电影里面描述的一个<strong>被滥用</strong>的合法监护制度。刚开始看的时候觉得年老太可怕，压抑和无力。可越到后面越觉得电影要表达的远不只这些。这可能是我近一年来看过最好的电影之一。 有人说它是美国梦的暗流，也有人说它拨开了资本主义的皮，只是借用 legal guadian 这个「关怀 Care」场景管窥一豹。女主说「我从来不会输 I never lose」，可是我们 「在乎的 Care 」是什么，又带来了什么？不好说，你得细品。 #Movies</p>
+</li>
+</ul>
+<h4 id="随想">随想</h4>
+<ul>
+<li>
+<p>「蜕变时代 The Times They Are a-Changin' 」 是鲍勃·迪伦发行在 1964 年的一首歌。动荡的 60 年代，出现了所谓的反主流文化，“垮掉的一代”和“嬉皮士”。这也是一个激情与黑暗，青春与疯狂并行的年代。难能可贵的是 迪伦 在当时就留下了这么有时代印记的文字和声音，因为大多数的我们是 <strong>善于遗忘</strong> 并对<strong>所处的时代浑浑然而不自知的</strong>。 #Music</p>
+</li>
+<li>
+<p>我们真在经历一场前所未有的流行性疫情，一面又是左右之争， YOLO （You Only Live Once） 和 FIRE （Financial Independence/Retire Early） 之争。币圈又创新高，凭空产生了 ~1.4 万亿的总市值。财富总量看似在急剧的增加，统计上却有一半的年轻人的经济状况比他们父母同时期要差 <a href="https://www.profgalloway.com/the-algebra-of-wealth">(The Algebra of Wealth</a>)。谁在为这个时代发声，谁又在为你我忧心忡忡？ #Money</p>
+</li>
+</ul>
+<pre><code>The Times They Are a-Changin' By Bob Dylan
+
+Come gather around people, wherever you roam  
+And admit that the waters around you have grown  
+And accept it that soon you'll be drenched to the bone  
+If your time to you is worth savin'  
+Then you better start swimmin' or you'll sink like a stone  
+For the times they are a-changin'
+
+Come writers and critics who prophesize with your pen  
+And keep your eyes wide, the chance won't come again  
+And don't speak too soon, for the wheel's still in spin  
+And there's no tellin' who that it's namin'  
+For the loser now will be later to win  
+For the times they are a-changin'
+
+Come senators, congressmen, please heed the call  
+Don't stand in the doorway, don't block up the hall  
+For he that gets hurt will be he who has stalled  
+The battle outside ragin'  
+Will soon shake your windows and rattle your walls  
+For the times they are a-changin'
+
+Come mothers and fathers throughout the land  
+And don't criticize what you can't understand  
+Your sons and your daughters are beyond your command  
+Your old road is rapidly aging  
+Please get out of the new one if you can't lend your hand  
+For the times they are a-changin'
+
+The line it is drawn, the curse it is cast  
+The slow one now will later be fast  
+As the present now will later be past  
+The order is rapidly fadin'  
+And the first one now will later be last  
+For the times they are a-changin'
+</code></pre><ul>
+<li>什么是财富？贝版的2020年终总结说，财富本质上就是一个骗局。忽悠的话叫「共识」。价格与价值，关键还在于那个「共识」。只不过是大家相互吹泡泡而已。所以所罗门说：「虚空的虚空，虚空的虚空，凡事都是虚空」。 #Money</li>
+</ul>
+<h3 id="订阅章鱼花园">订阅章鱼花园</h3>
+<ul>
+<li>
+<p>微信公众号：追寻与归回</p>
+<p><img src="/assets/images/2021/qrcode_for_gh_e9a17734e09c_258.jpg" alt="qrcode_for_gh_e9a17734e09c_258.jpg" loading="lazy" ></p>
+</li>
+<li>
+<p>Notion: <a href="https://www.notion.so/9012ebf6c9f94d699484e087752f54e4">章鱼花园期刊</a></p>
+</li>
+<li>
+<p>Substack: <a href="https://octg.substack.com/">https://octg.substack.com</a></p>
 </li>
 </ul>
 
@@ -261,7 +365,7 @@
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://anotherbug.com/2021/08/07/windows-dev-environment/>https://anotherbug.com/2021/08/07/windows-dev-environment/</span>
+                    <a href=https://anotherbug.com/2021/08/15/>https://anotherbug.com/2021/08/15/</span>
             </p>
             
             
@@ -277,8 +381,11 @@
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://anotherbug.com/tags/windows/">
-                    #windows</a></span>
+            <span class="tag"><a href="https://anotherbug.com/tags/%E7%AB%A0%E9%B1%BC%E8%8A%B1%E5%9B%AD%E6%9C%9F%E5%88%8A/">
+                    #章鱼花园期刊</a></span>
+            
+            <span class="tag"><a href="https://anotherbug.com/tags/octopuss-garden-weekly/">
+                    #Octopus&#39;s Garden Weekly</a></span>
             
             </section>
         
@@ -290,10 +397,8 @@
 
     <div class="post-nav">
         
-        <a href="https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/" class="prev" rel="prev" title="How to import Microsoft To Do Notes to Flomo"><i class="iconfont icon-left"></i>&nbsp;How to import Microsoft To Do Notes to Flomo</a>
+        <a href="https://anotherbug.com/2021/08/07/windows-dev-environment/" class="prev" rel="prev" title="Windows Dev Environment"><i class="iconfont icon-left"></i>&nbsp;Windows Dev Environment</a>
         
-        
-        <a href="https://anotherbug.com/2021/08/15/" class="next" rel="next" title="">&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
