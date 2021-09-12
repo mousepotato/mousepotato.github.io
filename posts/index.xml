@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Export Flomo</title>
+      <link>https://anotherbug.com/2021/09/12/export-flomo/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/2021/09/12/export-flomo/</guid>
+      <description>Flomo 是一个好的应用，我曾写文章介绍怎么从 Todo 里面把内容导入到 Flomo， 但是 Flomo 的隐私政策 (Privacy Policy)让我无法接受，我决定不再使用它。 另外由于</description>
+    </item>
+    
     <item>
       <title>章鱼花园 Vol. 24: 生当似鹏起，终当如鲸落</title>
       <link>https://anotherbug.com/2021/08/15/octopus-garden-weekly-vol-24/</link>
