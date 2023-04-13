@@ -88,15 +88,15 @@
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
-                <a class="menu-item" href="/til/" title="">TIL</a>
+                <a class="menu-item" href="/thoughts/" title="">Thoughts</a>
                 
-                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                <a class="menu-item" href="/tools/" title="">Uses</a>
                 
-                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
-                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                <a class="menu-item" href="/main/" title="">Academics</a>
                 
-                <a class="menu-item" href="/til/" title=""></a>
+                <a class="menu-item" href="/tools/" title=""></a>
                 
                 <span class="divide"></span>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
@@ -140,27 +140,27 @@
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
-                            <h3>TIL</h3>
+                        <a class="menu-item" href="/thoughts/" title="">
+                            <h3>Thoughts</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/tools/" title="">
-                            <h3>好物 (Uses)</h3>
+                            <h3>Uses</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/about/" title="">
-                            <h3>关于我 (About me)</h3>
+                            <h3>About</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/main/" title="">
-                            <h3>学校主页 (Academics)</h3>
+                            <h3>Academics</h3>
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
+                        <a class="menu-item" href="/tools/" title="">
                             <h3></h3>
                             <div class="menu-active"></div>
                         </a>
@@ -216,55 +216,53 @@
 <p>For example, Given input array A = [1,1,2], Your function should return length = 2, and A is now [1,2]</p>
 <p>写了几次，每一次都有不同的感受。</p>
 <p>版本一：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">removeDuplicates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> A<span style="color:#f92672">){</span>
-	   <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
-	   <span style="color:#f92672">}</span>		      
-        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-           <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> A<span style="color:#f92672">[</span>j<span style="color:#f92672">++])</span> <span style="color:#f92672">{</span>
-               A<span style="color:#f92672">[++</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
-           <span style="color:#f92672">}</span>
-       <span style="color:#f92672">}</span>
-       <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-
-</code></pre></div><p>这个版本有错误，原因是数组越界，虽然while循环判断数字长度，但是在if判断里面使用了j++，这个其实没事，但是后面的A[++i] = A[j]，要访问A[j]，此时可能导导致IndexOutOfBound。无经验造成的。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">removeDuplicates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> A<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>	   <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	   <span style="color:#f92672">}</span>		      
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>j <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> A<span style="color:#f92672">[</span>j<span style="color:#f92672">++])</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>               A<span style="color:#f92672">[++</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>这个版本有错误，原因是数组越界，虽然while循环判断数字长度，但是在if判断里面使用了j++，这个其实没事，但是后面的A[++i] = A[j]，要访问A[j]，此时可能导导致IndexOutOfBound。无经验造成的。</p>
 <p>版本二：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">removeDuplicates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> A<span style="color:#f92672">){</span>
- 		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">){</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> A<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-				A<span style="color:#f92672">[++</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
-			<span style="color:#f92672">}</span>
-			i<span style="color:#f92672">++;</span>
-		<span style="color:#f92672">}</span>
-	
-	    <span style="color:#66d9ef">return</span> size <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>		
-<span style="color:#f92672">}</span>
-
-</code></pre></div><p>版本二通过测试，也使用了有意义的变量size作为输出。但是这个代码还是反应不出作者的思想和对题目的理解。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">removeDuplicates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> A<span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span> 		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">){</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> A<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				A<span style="color:#f92672">[++</span>size<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			i<span style="color:#f92672">++;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	    <span style="color:#66d9ef">return</span> size <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>		
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>版本二通过测试，也使用了有意义的变量size作为输出。但是这个代码还是反应不出作者的思想和对题目的理解。</p>
 <p>版本三：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Java" data-lang="Java">	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">removeDuplicates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> A<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#f92672">}</span>
-
-		<span style="color:#66d9ef">int</span> walker <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">int</span> runner <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>runner <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>runner<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> A<span style="color:#f92672">[</span>walker<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-				A<span style="color:#f92672">[++</span>walker<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>runner<span style="color:#f92672">];</span>
-			<span style="color:#f92672">}</span>
-			runner<span style="color:#f92672">++;</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">return</span> walker <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-</code></pre></div><p>版本三，变量使用了runner和walker，一看就明白是写代码者理解题目的快慢指针的思想。堪称完美。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">removeDuplicates</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> A<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> walker <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> runner <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>runner <span style="color:#f92672">&lt;</span> A<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>A<span style="color:#f92672">[</span>runner<span style="color:#f92672">]</span> <span style="color:#f92672">!=</span> A<span style="color:#f92672">[</span>walker<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				A<span style="color:#f92672">[++</span>walker<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> A<span style="color:#f92672">[</span>runner<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>			runner<span style="color:#f92672">++;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> walker <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>版本三，变量使用了runner和walker，一看就明白是写代码者理解题目的快慢指针的思想。堪称完美。</p>
 <p>此乃刷题者三种境界，共勉！</p>
 
     </div>
@@ -355,7 +353,7 @@
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2009 - 2022</span>
+        <span itemprop="copyrightYear">2009 - 2023</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i>
@@ -373,7 +371,7 @@
 
 
 
->
+
 <script defer src="/js/vendor_main.min.js"></script>
 
 

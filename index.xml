@@ -18,6 +18,20 @@
     </item>
     
     <item>
+      <title></title>
+      <link>https://anotherbug.com/thoughts/</link>
+      <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/thoughts/</guid>
+      <description>&lt;h1 id=&#34;记录所想&#34;&gt;记录所想&lt;/h1&gt;
+&lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;As Shakespeare said thru a character, &amp;ldquo;Caesar, beware the ides of March.&amp;rdquo; 3/15/2023&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://anotherbug.com/about/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
@@ -57,16 +71,6 @@
     
     <item>
       <title></title>
-      <link>https://anotherbug.com/til/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://anotherbug.com/til/</guid>
-      <description>&lt;p&gt;TIL 是 「Today I Learned」的意思，在记录自己每天的所学所想。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://anotherbug.com/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -93,6 +97,9 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;电子产品&#34;&gt;电子产品&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Mac mini M1, 2020 16 GB/1TB SSD. 第一台 M1 mini，运行流畅，安静，买完就喜欢了。&lt;/p&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Macbook Pro （16-inch, 2019）&lt;/p&gt;
 &lt;/li&gt;

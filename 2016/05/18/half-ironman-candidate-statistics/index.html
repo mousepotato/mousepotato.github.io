@@ -88,15 +88,15 @@
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
-                <a class="menu-item" href="/til/" title="">TIL</a>
+                <a class="menu-item" href="/thoughts/" title="">Thoughts</a>
                 
-                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                <a class="menu-item" href="/tools/" title="">Uses</a>
                 
-                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
-                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                <a class="menu-item" href="/main/" title="">Academics</a>
                 
-                <a class="menu-item" href="/til/" title=""></a>
+                <a class="menu-item" href="/tools/" title=""></a>
                 
                 <span class="divide"></span>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
@@ -140,27 +140,27 @@
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
-                            <h3>TIL</h3>
+                        <a class="menu-item" href="/thoughts/" title="">
+                            <h3>Thoughts</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/tools/" title="">
-                            <h3>好物 (Uses)</h3>
+                            <h3>Uses</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/about/" title="">
-                            <h3>关于我 (About me)</h3>
+                            <h3>About</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/main/" title="">
-                            <h3>学校主页 (Academics)</h3>
+                            <h3>Academics</h3>
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
+                        <a class="menu-item" href="/tools/" title="">
                             <h3></h3>
                             <div class="menu-active"></div>
                         </a>
@@ -215,96 +215,96 @@
 
         <p>Since I will be attending Half Ironman santa cruz 70.3 race, I would love to know something about our atheletes.
 The online website provides the registered candidates information. So just with a bit hack, you will know something.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">#!/usr/bin/awk -f
-</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">#</span>
-<span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">awk</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">f</span> <span style="color:#a6e22e">vis</span>.<span style="color:#a6e22e">awk</span> <span style="color:#a6e22e">output</span><span style="color:#f92672">/</span><span style="color:#a6e22e">clean</span>.<span style="color:#a6e22e">csv</span>
-<span style="color:#960050;background-color:#1e0010">#</span>
-
-<span style="color:#a6e22e">BEGIN</span> {
-        <span style="color:#a6e22e">FS</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;,&#34;</span>
-        <span style="color:#a6e22e">F_Count</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">F_60_Plus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">F_50_to_60</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">F_40_to_50</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">F_30_to_40</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">F_30_Minus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-
-        <span style="color:#a6e22e">M_Count</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">M_60_Plus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">M_50_to_60</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">M_40_to_50</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">M_30_to_40</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">M_30_Minus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-
-        <span style="color:#a6e22e">Less_than_me</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">Less_than_me_M</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-        <span style="color:#a6e22e">Less_than_me_F</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
-}
-
-{
-    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">$3</span> <span style="color:#f92672">~</span> <span style="color:#e6db74">/F/</span>){
-       <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">print</span> <span style="color:#a6e22e">$0</span>
-        <span style="color:#a6e22e">F_Count</span><span style="color:#f92672">++</span>
-        <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>){
-            <span style="color:#a6e22e">F_60_Plus</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">50</span>) {
-            <span style="color:#a6e22e">F_50_to_60</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">40</span>) {
-            <span style="color:#a6e22e">F_40_to_50</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">30</span>) {
-            <span style="color:#a6e22e">F_30_to_40</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>) {
-            <span style="color:#a6e22e">F_30_Minus</span><span style="color:#f92672">++</span>
-        }
-    } <span style="color:#66d9ef">else</span> {
-        <span style="color:#a6e22e">M_Count</span><span style="color:#f92672">++</span>
-        <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>){
-            <span style="color:#a6e22e">M_60_Plus</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">50</span>) {
-            <span style="color:#a6e22e">M_50_to_60</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">40</span>) {
-            <span style="color:#a6e22e">M_40_to_50</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">30</span>) {
-            <span style="color:#a6e22e">M_30_to_40</span><span style="color:#f92672">++</span>
-        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>) {
-            <span style="color:#a6e22e">M_30_Minus</span><span style="color:#f92672">++</span>
-        }
-    }
-
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">28</span>) {
-        <span style="color:#a6e22e">Less_than_me</span><span style="color:#f92672">++</span>
-    }
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">28</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">$3</span> <span style="color:#f92672">~</span> <span style="color:#e6db74">/F/</span>) {
-        <span style="color:#a6e22e">Less_than_me_F</span><span style="color:#f92672">++</span>
-    }
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">28</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">$3</span> <span style="color:#f92672">~</span> <span style="color:#e6db74">/M/</span>) {
-        <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">print</span> <span style="color:#a6e22e">$0</span>
-        <span style="color:#a6e22e">Less_than_me_M</span><span style="color:#f92672">++</span>
-    }
-}
-
-<span style="color:#a6e22e">END</span> {
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;-------------------------------------&#34;</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female counts: &#34;</span> <span style="color:#a6e22e">F_Count</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age &gt;=60: &#34;</span> <span style="color:#a6e22e">F_60_Plus</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age between 50 to 60: &#34;</span> <span style="color:#a6e22e">F_50_to_60</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age between 40 to 50: &#34;</span> <span style="color:#a6e22e">F_40_to_50</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age between 30 to 40: &#34;</span> <span style="color:#a6e22e">F_30_to_40</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age under 30: &#34;</span> <span style="color:#a6e22e">F_30_Minus</span>
-
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;-------------------------------------&#34;</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male counts: &#34;</span> <span style="color:#a6e22e">M_Count</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age &gt;=60: &#34;</span> <span style="color:#a6e22e">M_60_Plus</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age between 50 to 60: &#34;</span> <span style="color:#a6e22e">M_50_to_60</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age between 40 to 50: &#34;</span> <span style="color:#a6e22e">M_40_to_50</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age between 30 to 40: &#34;</span> <span style="color:#a6e22e">M_30_to_40</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age under 30: &#34;</span> <span style="color:#a6e22e">M_30_Minus</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;-------------------------------------&#34;</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Less than me: &#34;</span> <span style="color:#a6e22e">Less_than_me</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Less than me female: &#34;</span> <span style="color:#a6e22e">Less_than_me_F</span>
-    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Less than me male: &#34;</span> <span style="color:#a6e22e">Less_than_me_M</span>
-}
-</code></pre></div><p>The result is&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/awk -f
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">awk</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">f</span> <span style="color:#a6e22e">vis</span>.<span style="color:#a6e22e">awk</span> <span style="color:#a6e22e">output</span><span style="color:#f92672">/</span><span style="color:#a6e22e">clean</span>.<span style="color:#a6e22e">csv</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">BEGIN</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">FS</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;,&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_Count</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_60_Plus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_50_to_60</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_40_to_50</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_30_to_40</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_30_Minus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_Count</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_60_Plus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_50_to_60</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_40_to_50</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_30_to_40</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_30_Minus</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Less_than_me</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Less_than_me_M</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Less_than_me_F</span><span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">$3</span> <span style="color:#f92672">~</span> <span style="color:#e6db74">/F/</span>){
+</span></span><span style="display:flex;"><span>       <span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">print</span> <span style="color:#a6e22e">$0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">F_Count</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">F_60_Plus</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">50</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">F_50_to_60</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">40</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">F_40_to_50</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">30</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">F_30_to_40</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">F_30_Minus</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">M_Count</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ( <span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">M_60_Plus</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">50</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">M_50_to_60</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">40</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">M_40_to_50</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">30</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">M_30_to_40</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">30</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">M_30_Minus</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span> <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">28</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Less_than_me</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">28</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">$3</span> <span style="color:#f92672">~</span> <span style="color:#e6db74">/F/</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Less_than_me_F</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$4</span><span style="color:#f92672">&lt;</span><span style="color:#ae81ff">28</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">$3</span> <span style="color:#f92672">~</span> <span style="color:#e6db74">/M/</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">print</span> <span style="color:#a6e22e">$0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Less_than_me_M</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">END</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;-------------------------------------&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female counts: &#34;</span> <span style="color:#a6e22e">F_Count</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age &gt;=60: &#34;</span> <span style="color:#a6e22e">F_60_Plus</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age between 50 to 60: &#34;</span> <span style="color:#a6e22e">F_50_to_60</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age between 40 to 50: &#34;</span> <span style="color:#a6e22e">F_40_to_50</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age between 30 to 40: &#34;</span> <span style="color:#a6e22e">F_30_to_40</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Female age under 30: &#34;</span> <span style="color:#a6e22e">F_30_Minus</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;-------------------------------------&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male counts: &#34;</span> <span style="color:#a6e22e">M_Count</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age &gt;=60: &#34;</span> <span style="color:#a6e22e">M_60_Plus</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age between 50 to 60: &#34;</span> <span style="color:#a6e22e">M_50_to_60</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age between 40 to 50: &#34;</span> <span style="color:#a6e22e">M_40_to_50</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age between 30 to 40: &#34;</span> <span style="color:#a6e22e">M_30_to_40</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Male age under 30: &#34;</span> <span style="color:#a6e22e">M_30_Minus</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;-------------------------------------&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Less than me: &#34;</span> <span style="color:#a6e22e">Less_than_me</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Less than me female: &#34;</span> <span style="color:#a6e22e">Less_than_me_F</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print</span> <span style="color:#e6db74">&#34;Less than me male: &#34;</span> <span style="color:#a6e22e">Less_than_me_M</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The result is&hellip;</p>
 <p><img src="/assets/images/2016/05/18/half-ironman-stats.png" alt="athelets-stat" loading="lazy" ></p>
 <p>Et voila!!</p>
 
@@ -396,7 +396,7 @@ The online website provides the registered candidates information. So just with 
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2009 - 2022</span>
+        <span itemprop="copyrightYear">2009 - 2023</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i>
@@ -414,7 +414,7 @@ The online website provides the registered candidates information. So just with 
 
 
 
->
+
 <script defer src="/js/vendor_main.min.js"></script>
 
 

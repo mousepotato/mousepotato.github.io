@@ -45,7 +45,7 @@
     "articleSection" : "posts",
     "name" : "how to setup multiple github ssh keys",
     "headline" : "how to setup multiple github ssh keys",
-    "description" : "1. create multiple ssh key ssh-keygen -t rsa -C \u0026quot;your_email@youremail.com\u0026quot;  for example, 2 keys create at:\n~\/.ssh\/id_rsa ~\/.ssh\/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~\/.ssh\/id_rsa ssh-add ~\/.ssh\/id_rsa_sli_racingwithhorse check your saved keys using:\nssh-add -l  3. modify the ssh config cd ~\/.ssh\/ touch config $==\u0026gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~\/.ssh\/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~\/.",
+    "description" : "1. create multiple ssh key ssh-keygen -t rsa -C \u0026quot;your_email@youremail.com\u0026quot; for example, 2 keys create at:\n~\/.ssh\/id_rsa ~\/.ssh\/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~\/.ssh\/id_rsa ssh-add ~\/.ssh\/id_rsa_sli_racingwithhorse check your saved keys using:\nssh-add -l 3. modify the ssh config cd ~\/.ssh\/ touch config $==\u0026gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~\/.ssh\/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~\/.ssh\/id_rsa_sli_racingwithhorse 4. clone you repo and modify your git config git config user.",
     "inLanguage" : "zh-cn",
     "author" : "mousepotato",
     "creator" : "mousepotato",
@@ -88,15 +88,15 @@
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
-                <a class="menu-item" href="/til/" title="">TIL</a>
+                <a class="menu-item" href="/thoughts/" title="">Thoughts</a>
                 
-                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                <a class="menu-item" href="/tools/" title="">Uses</a>
                 
-                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
-                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                <a class="menu-item" href="/main/" title="">Academics</a>
                 
-                <a class="menu-item" href="/til/" title=""></a>
+                <a class="menu-item" href="/tools/" title=""></a>
                 
                 <span class="divide"></span>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
@@ -140,27 +140,27 @@
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
-                            <h3>TIL</h3>
+                        <a class="menu-item" href="/thoughts/" title="">
+                            <h3>Thoughts</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/tools/" title="">
-                            <h3>好物 (Uses)</h3>
+                            <h3>Uses</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/about/" title="">
-                            <h3>关于我 (About me)</h3>
+                            <h3>About</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/main/" title="">
-                            <h3>学校主页 (Academics)</h3>
+                            <h3>Academics</h3>
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
+                        <a class="menu-item" href="/tools/" title="">
                             <h3></h3>
                             <div class="menu-active"></div>
                         </a>
@@ -215,16 +215,16 @@
 <pre><code>ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
 </code></pre>
 <p>for example, 2 keys create at:</p>
-<pre><code>~/.ssh/id_rsa
+<pre tabindex="0"><code>~/.ssh/id_rsa
 ~/.ssh/id_rsa_sli_racingwithhorse
 </code></pre><h2 id="2-then-add-these-two-keys-as-following">2. then, add these two keys as following</h2>
-<pre><code>ssh-add ~/.ssh/id_rsa
+<pre tabindex="0"><code>ssh-add ~/.ssh/id_rsa
 ssh-add ~/.ssh/id_rsa_sli_racingwithhorse
 </code></pre><p>check your saved keys using:</p>
 <pre><code>ssh-add -l
 </code></pre>
 <h2 id="3-modify-the-ssh-config">3. modify the ssh config</h2>
-<pre><code>cd ~/.ssh/
+<pre tabindex="0"><code>cd ~/.ssh/
 touch config
 
 $==&gt; cat config
@@ -240,12 +240,11 @@ Host github.com-racingwithhorse
     User git
     IdentityFile ~/.ssh/id_rsa_sli_racingwithhorse
 </code></pre><h2 id="4-clone-you-repo-and-modify-your-git-config">4. clone you repo and modify your git config</h2>
-<pre><code>git config user.name &quot;racingwithhorse&quot;
-git config user.email &quot;xxx@xxx.xxx&quot;
-
+<pre tabindex="0"><code>git config user.name &#34;racingwithhorse&#34;
+git config user.email &#34;xxx@xxx.xxx&#34;
 </code></pre><p>then inside the cloned git repository</p>
-<pre><code>cat .git/config
-[remote &quot;origin&quot;]
+<pre tabindex="0"><code>cat .git/config
+[remote &#34;origin&#34;]
 	url = git@github.com-racingwithhorse:racingwithhorse/racingwithhorse.github.io.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 </code></pre><p>That&rsquo;s it!</p>
@@ -335,7 +334,7 @@ git config user.email &quot;xxx@xxx.xxx&quot;
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2009 - 2022</span>
+        <span itemprop="copyrightYear">2009 - 2023</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i>
@@ -353,7 +352,7 @@ git config user.email &quot;xxx@xxx.xxx&quot;
 
 
 
->
+
 <script defer src="/js/vendor_main.min.js"></script>
 
 

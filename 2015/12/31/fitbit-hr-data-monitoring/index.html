@@ -88,15 +88,15 @@
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
-                <a class="menu-item" href="/til/" title="">TIL</a>
+                <a class="menu-item" href="/thoughts/" title="">Thoughts</a>
                 
-                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                <a class="menu-item" href="/tools/" title="">Uses</a>
                 
-                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
-                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                <a class="menu-item" href="/main/" title="">Academics</a>
                 
-                <a class="menu-item" href="/til/" title=""></a>
+                <a class="menu-item" href="/tools/" title=""></a>
                 
                 <span class="divide"></span>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
@@ -140,27 +140,27 @@
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
-                            <h3>TIL</h3>
+                        <a class="menu-item" href="/thoughts/" title="">
+                            <h3>Thoughts</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/tools/" title="">
-                            <h3>好物 (Uses)</h3>
+                            <h3>Uses</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/about/" title="">
-                            <h3>关于我 (About me)</h3>
+                            <h3>About</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/main/" title="">
-                            <h3>学校主页 (Academics)</h3>
+                            <h3>Academics</h3>
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
+                        <a class="menu-item" href="/tools/" title="">
                             <h3></h3>
                             <div class="menu-active"></div>
                         </a>
@@ -224,80 +224,80 @@
 <p>获得了数据以后，怎么用呢？最简单的办法是plot，可以直观的看。这里推荐 <a href="https://plot.ly/">Plotly</a> 应用。免费使用，不过作出的图需要公开。注册，获取一个<code>API_KEY</code>。
 然后在使用 node js 的 plotly库 <a href="https://github.com/plotly/plotly-nodejs">plotly-nodej</a>。 Then you are good to go&hellip;</p>
 <p>简单的画图 nodejs 实现:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/plot/:bday&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) {
-  <span style="color:#a6e22e">bday</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">bday</span>;
-  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;./bpm/bpm-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bday</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.json&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">data</span>) {
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>; <span style="color:#75715e">// we&#39;ll not consider error handling for now
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">profile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">data</span>);
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#39;&lt;pre&gt;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">profile</span>[
-      <span style="color:#e6db74">&#39;activities-heart-intraday&#39;</span>], <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&lt;/pre&gt;&#39;</span>);
-
-    <span style="color:#75715e">// plot here
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> [];
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> [];
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">plotly</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;plotly&#39;</span>)(<span style="color:#e6db74">&#39;mouse_potato&#39;</span>, <span style="color:#e6db74">&#39;rmoeisc3m8&#39;</span>);
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">graphOptions</span> <span style="color:#f92672">=</span> {
-      <span style="color:#a6e22e">fileopt</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;overwrite&#34;</span>,
-      <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;bpm-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bday</span>
-    };
-
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">intradaydata</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>[<span style="color:#e6db74">&#39;activities-heart-intraday&#39;</span>];
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dataset</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">intradaydata</span>[<span style="color:#e6db74">&#39;dataset&#39;</span>];
-    <span style="color:#75715e">//console.log(dataset.length);
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-      <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">dataset</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;time&#39;</span>]);
-      <span style="color:#a6e22e">y</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">dataset</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;value&#39;</span>]);
-    }
-
-    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>];
-    <span style="color:#a6e22e">plotly</span>.<span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">graphOptions</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">msg</span>) {
-      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
-     });
-  });
-});     
-</code></pre></div><p>怎么样，想看看我圣诞节那天的心率么？-:) <a href="https://plot.ly/~mouse_potato/24">bpm-2015-12-24</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/plot/:bday&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">bday</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">bday</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;./bpm/bpm-&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bday</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;.json&#39;</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">data</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">err</span>; <span style="color:#75715e">// we&#39;ll not consider error handling for now
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">profile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">send</span>(<span style="color:#e6db74">&#39;&lt;pre&gt;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">profile</span>[
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;activities-heart-intraday&#39;</span>], <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;&lt;/pre&gt;&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// plot here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">plotly</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;plotly&#39;</span>)(<span style="color:#e6db74">&#39;mouse_potato&#39;</span>, <span style="color:#e6db74">&#39;rmoeisc3m8&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">graphOptions</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fileopt</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;overwrite&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;bpm-&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bday</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">intradaydata</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">profile</span>[<span style="color:#e6db74">&#39;activities-heart-intraday&#39;</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dataset</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">intradaydata</span>[<span style="color:#e6db74">&#39;dataset&#39;</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//console.log(dataset.length);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">dataset</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;time&#39;</span>]);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">y</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">dataset</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;value&#39;</span>]);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">plotly</span>.<span style="color:#a6e22e">plot</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">graphOptions</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">msg</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">msg</span>);
+</span></span><span style="display:flex;"><span>     });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});     
+</span></span></code></pre></div><p>怎么样，想看看我圣诞节那天的心率么？-:) <a href="https://plot.ly/~mouse_potato/24">bpm-2015-12-24</a></p>
 <h2 id="4-one-more-thing">4. One more thing&hellip;</h2>
 <p>怎么偷懒，实现了一个每天夜里2:30AM 把前天的心率数据读取出来，作好图然后发一封链接邮件到我邮箱。
 使用 <a href="https://github.com/nodemailer/nodemailer">nodemailer</a> 吧。记得如果使用gmail，需要打开 <code>gmail allow less secure apps</code>
 <a href="https://support.google.com/accounts/answer/6010255?hl=en">Allow less secure apps</a></p>
 <p>代码是这样，</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nodemailer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;nodemailer&#39;</span>);
-
-      <span style="color:#75715e">// create reusable transporter object using the default SMTP transport
-</span><span style="color:#75715e"></span>      <span style="color:#75715e">// Put your email username and password here
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">transporter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nodemailer</span>.<span style="color:#a6e22e">createTransport</span>(
-        <span style="color:#e6db74">&#39;smtps://MYEMAILUSERNAME%40gmail.com:MYPASSWORD@smtp.gmail.com&#39;</span>
-      );
-
-      <span style="color:#75715e">// setup e-mail data with unicode symbols
-</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mailOptions</span> <span style="color:#f92672">=</span> {
-        <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;HR Monitoring &lt;xxx@gmail.com&gt;&#34;</span>,
-        <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;myusername@gmail.com&#34;</span>,
-        <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Your yesterday&#39;s HR is ready&#34;</span>,
-        <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">msg</span>.<span style="color:#a6e22e">url</span>,
-        <span style="color:#a6e22e">html</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Please click &lt;a href=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">msg</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&gt;plot&lt;/a&gt; for the data.&#34;</span>
-      };
-
-      <span style="color:#75715e">// send mail with defined transport object
-</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">transporter</span>.<span style="color:#a6e22e">sendMail</span>(<span style="color:#a6e22e">mailOptions</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">info</span>) {
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">error</span>) {
-          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
-        }
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Message sent: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">response</span>);
-      });
-</code></pre></div><p>然后建立一个 cron job, 去执行一个 shell 脚本</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Shell" data-lang="Shell"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>TODAY<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>date +%F<span style="color:#e6db74">`</span>
-YESTERDAY<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date --date yesterday <span style="color:#e6db74">&#34;+%F&#34;</span><span style="color:#66d9ef">)</span>
-
-ACCESS_TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat fb-token.json |jq <span style="color:#e6db74">&#34;.access_token&#34;</span><span style="color:#66d9ef">)</span>
-echo $ACCESS_TOKEN
-
-sleep <span style="color:#ae81ff">3</span>
-curl -H <span style="color:#e6db74">&#34;Authorization: Bearer </span>$ACCESS_TOKEN<span style="color:#e6db74">&#34;</span> http://yourdomain.com/getbpm/$YESTERDAY
-sleep <span style="color:#ae81ff">7</span>
-curl --ipv4  <span style="color:#e6db74">&#34;http://yourdomain/plot/</span>$YESTERDAY<span style="color:#e6db74">&#34;</span> -v
-</code></pre></div><p>That&rsquo;s it!!!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Javascript" data-lang="Javascript"><span style="display:flex;"><span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">nodemailer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;nodemailer&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// create reusable transporter object using the default SMTP transport
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">// Put your email username and password here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">transporter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">nodemailer</span>.<span style="color:#a6e22e">createTransport</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;smtps://MYEMAILUSERNAME%40gmail.com:MYPASSWORD@smtp.gmail.com&#39;</span>
+</span></span><span style="display:flex;"><span>      );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// setup e-mail data with unicode symbols
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mailOptions</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;HR Monitoring &lt;xxx@gmail.com&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">to</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;myusername@gmail.com&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">subject</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Your yesterday&#39;s HR is ready&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">msg</span>.<span style="color:#a6e22e">url</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">html</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Please click &lt;a href=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">msg</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&gt;plot&lt;/a&gt; for the data.&#34;</span>
+</span></span><span style="display:flex;"><span>      };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// send mail with defined transport object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">transporter</span>.<span style="color:#a6e22e">sendMail</span>(<span style="color:#a6e22e">mailOptions</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">info</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Message sent: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">info</span>.<span style="color:#a6e22e">response</span>);
+</span></span><span style="display:flex;"><span>      });
+</span></span></code></pre></div><p>然后建立一个 cron job, 去执行一个 shell 脚本</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Shell" data-lang="Shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>TODAY<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>date +%F<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>YESTERDAY<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date --date yesterday <span style="color:#e6db74">&#34;+%F&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ACCESS_TOKEN<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat fb-token.json |jq <span style="color:#e6db74">&#34;.access_token&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>echo $ACCESS_TOKEN
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sleep <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>curl -H <span style="color:#e6db74">&#34;Authorization: Bearer </span>$ACCESS_TOKEN<span style="color:#e6db74">&#34;</span> http://yourdomain.com/getbpm/$YESTERDAY
+</span></span><span style="display:flex;"><span>sleep <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>curl --ipv4  <span style="color:#e6db74">&#34;http://yourdomain/plot/</span>$YESTERDAY<span style="color:#e6db74">&#34;</span> -v
+</span></span></code></pre></div><p>That&rsquo;s it!!!</p>
 
     </div>
 
@@ -390,7 +390,7 @@ curl --ipv4  <span style="color:#e6db74">&#34;http://yourdomain/plot/</span>$YES
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2009 - 2022</span>
+        <span itemprop="copyrightYear">2009 - 2023</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i>
@@ -408,7 +408,7 @@ curl --ipv4  <span style="color:#e6db74">&#34;http://yourdomain/plot/</span>$YES
 
 
 
->
+
 <script defer src="/js/vendor_main.min.js"></script>
 
 

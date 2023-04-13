@@ -88,15 +88,15 @@
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
-                <a class="menu-item" href="/til/" title="">TIL</a>
+                <a class="menu-item" href="/thoughts/" title="">Thoughts</a>
                 
-                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                <a class="menu-item" href="/tools/" title="">Uses</a>
                 
-                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
-                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                <a class="menu-item" href="/main/" title="">Academics</a>
                 
-                <a class="menu-item" href="/til/" title=""></a>
+                <a class="menu-item" href="/tools/" title=""></a>
                 
                 <span class="divide"></span>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
@@ -140,27 +140,27 @@
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
-                            <h3>TIL</h3>
+                        <a class="menu-item" href="/thoughts/" title="">
+                            <h3>Thoughts</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/tools/" title="">
-                            <h3>好物 (Uses)</h3>
+                            <h3>Uses</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/about/" title="">
-                            <h3>关于我 (About me)</h3>
+                            <h3>About</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/main/" title="">
-                            <h3>学校主页 (Academics)</h3>
+                            <h3>Academics</h3>
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
+                        <a class="menu-item" href="/tools/" title="">
                             <h3></h3>
                             <div class="menu-active"></div>
                         </a>
@@ -240,71 +240,70 @@
 <p>代码基于 go，如下：</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;bufio&#34;</span>
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
-	<span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-	<span style="color:#e6db74">&#34;os&#34;</span>
-	<span style="color:#e6db74">&#34;regexp&#34;</span>
-	<span style="color:#e6db74">&#34;strings&#34;</span>
-
-	<span style="color:#e6db74">&#34;github.com/PuerkitoBio/goquery&#34;</span>
-	<span style="color:#e6db74">&#34;github.com/vinta/pangu&#34;</span>
-)
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">e</span>)
-	}
-}
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">parseFlomo</span>() {
-	<span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;202109.html&#34;</span>)
-	<span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">err</span>)
-
-	<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">NewDocumentFromReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(string(<span style="color:#a6e22e">content</span>)))
-	<span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">err</span>)
-
-	<span style="color:#75715e">// Find the memo items
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;09.md&#34;</span>)
-	<span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewWriter</span>(<span style="color:#a6e22e">f</span>)
-	<span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">err</span>)
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
-	<span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.memos .memo&#34;</span>).<span style="color:#a6e22e">Each</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">memo</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Selection</span>) {
-		<span style="color:#a6e22e">content</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">memo</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.content&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;p&#34;</span>).<span style="color:#a6e22e">Text</span>()
-		<span style="color:#a6e22e">space</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">`\s+`</span>)
-		<span style="color:#a6e22e">content</span> = <span style="color:#a6e22e">space</span>.<span style="color:#a6e22e">ReplaceAllString</span>(<span style="color:#a6e22e">content</span>, <span style="color:#e6db74">&#34; &#34;</span>)
-		<span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">memo</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.time&#34;</span>).<span style="color:#a6e22e">Text</span>()
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;- %s  [%s]\n&#34;</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">ts</span>)
-		<span style="color:#75715e">// 处理 Tag 1) 如果没有 Tag，增加 #Scribble-edit-later 标签 2) 如果已经有 Tag，在 # 前面加个空格，防止 Obsidian 识别不了。
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">formatedScribble</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;&#34;</span>
-		<span style="color:#a6e22e">idx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Index</span>(<span style="color:#a6e22e">content</span>, <span style="color:#e6db74">&#34;#&#34;</span>)
-		<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">idx</span> &gt; <span style="color:#ae81ff">0</span> {
-		<span style="color:#66d9ef">case</span> <span style="color:#66d9ef">true</span>:
-			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">formatedContent</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;&#34;</span>
-			<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">ch</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">content</span> {
-				<span style="color:#66d9ef">if</span> string(<span style="color:#a6e22e">ch</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;#&#34;</span> {
-					<span style="color:#a6e22e">formatedContent</span> = <span style="color:#a6e22e">content</span>[:<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">content</span>[<span style="color:#a6e22e">i</span>:]
-					<span style="color:#66d9ef">break</span>
-				}
-			}
-			<span style="color:#a6e22e">formatedScribble</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;- %s  [%s]\n&#34;</span>, <span style="color:#a6e22e">formatedContent</span>, <span style="color:#a6e22e">ts</span>)
-		<span style="color:#66d9ef">case</span> <span style="color:#66d9ef">false</span>:
-			<span style="color:#a6e22e">formatedScribble</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;- %s  #Scribble-edit-later  [%s]\n&#34;</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">ts</span>)
-		}
-		<span style="color:#75715e">// 恩，在增加 盘古之白
-</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#a6e22e">pangu</span>.<span style="color:#a6e22e">SpacingText</span>(<span style="color:#a6e22e">formatedScribble</span>))
-		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Flush</span>()
-	})
-
-}
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">parseFlomo</span>()
-}
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;bufio&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;io/ioutil&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;os&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;regexp&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;strings&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/PuerkitoBio/goquery&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/vinta/pangu&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">e</span> <span style="color:#66d9ef">error</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">e</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">e</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">parseFlomo</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">ReadFile</span>(<span style="color:#e6db74">&#34;202109.html&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">doc</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">NewDocumentFromReader</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(string(<span style="color:#a6e22e">content</span>)))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Find the memo items
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">f</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#e6db74">&#34;09.md&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">w</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">bufio</span>.<span style="color:#a6e22e">NewWriter</span>(<span style="color:#a6e22e">f</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">check</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">Close</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.memos .memo&#34;</span>).<span style="color:#a6e22e">Each</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">memo</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">goquery</span>.<span style="color:#a6e22e">Selection</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">content</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">memo</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.content&#34;</span>).<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;p&#34;</span>).<span style="color:#a6e22e">Text</span>()
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">space</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">`\s+`</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">content</span> = <span style="color:#a6e22e">space</span>.<span style="color:#a6e22e">ReplaceAllString</span>(<span style="color:#a6e22e">content</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">memo</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#e6db74">&#34;.time&#34;</span>).<span style="color:#a6e22e">Text</span>()
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;- %s  [%s]\n&#34;</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">ts</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 处理 Tag 1) 如果没有 Tag，增加 #Scribble-edit-later 标签 2) 如果已经有 Tag，在 # 前面加个空格，防止 Obsidian 识别不了。
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">formatedScribble</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">idx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">Index</span>(<span style="color:#a6e22e">content</span>, <span style="color:#e6db74">&#34;#&#34;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">idx</span> &gt; <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#66d9ef">true</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">formatedContent</span> <span style="color:#66d9ef">string</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">ch</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">content</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> string(<span style="color:#a6e22e">ch</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;#&#34;</span> {
+</span></span><span style="display:flex;"><span>					<span style="color:#a6e22e">formatedContent</span> = <span style="color:#a6e22e">content</span>[:<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">content</span>[<span style="color:#a6e22e">i</span>:]
+</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">formatedScribble</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;- %s  [%s]\n&#34;</span>, <span style="color:#a6e22e">formatedContent</span>, <span style="color:#a6e22e">ts</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#66d9ef">false</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">formatedScribble</span> = <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;- %s  #Scribble-edit-later  [%s]\n&#34;</span>, <span style="color:#a6e22e">content</span>, <span style="color:#a6e22e">ts</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 恩，在增加 盘古之白
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#a6e22e">pangu</span>.<span style="color:#a6e22e">SpacingText</span>(<span style="color:#a6e22e">formatedScribble</span>))
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Flush</span>()
+</span></span><span style="display:flex;"><span>	})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">parseFlomo</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -382,7 +381,7 @@
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2009 - 2022</span>
+        <span itemprop="copyrightYear">2009 - 2023</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i>
@@ -400,7 +399,7 @@
 
 
 
->
+
 <script defer src="/js/vendor_main.min.js"></script>
 
 

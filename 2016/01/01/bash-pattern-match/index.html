@@ -88,15 +88,15 @@
                 
                 <a class="menu-item" href="/tags/" title="">Tags</a>
                 
-                <a class="menu-item" href="/til/" title="">TIL</a>
+                <a class="menu-item" href="/thoughts/" title="">Thoughts</a>
                 
-                <a class="menu-item" href="/tools/" title="">好物 (Uses)</a>
+                <a class="menu-item" href="/tools/" title="">Uses</a>
                 
-                <a class="menu-item" href="/about/" title="">关于我 (About me)</a>
+                <a class="menu-item" href="/about/" title="">About</a>
                 
-                <a class="menu-item" href="/main/" title="">学校主页 (Academics)</a>
+                <a class="menu-item" href="/main/" title="">Academics</a>
                 
-                <a class="menu-item" href="/til/" title=""></a>
+                <a class="menu-item" href="/tools/" title=""></a>
                 
                 <span class="divide"></span>
                 <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-dark-mode"></i></a>
@@ -140,27 +140,27 @@
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
-                            <h3>TIL</h3>
+                        <a class="menu-item" href="/thoughts/" title="">
+                            <h3>Thoughts</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/tools/" title="">
-                            <h3>好物 (Uses)</h3>
+                            <h3>Uses</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/about/" title="">
-                            <h3>关于我 (About me)</h3>
+                            <h3>About</h3>
                             <div class="menu-active"></div>
                         </a>
                     
                         <a class="menu-item" href="/main/" title="">
-                            <h3>学校主页 (Academics)</h3>
+                            <h3>Academics</h3>
                             <div class="menu-active"></div>
                         </a>
                     
-                        <a class="menu-item" href="/til/" title="">
+                        <a class="menu-item" href="/tools/" title="">
                             <h3></h3>
                             <div class="menu-active"></div>
                         </a>
@@ -212,43 +212,43 @@
         
 
         <h2 id="1-起因shell-获取文件名和后缀名">1. 起因：Shell 获取文件名和后缀名</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A-Tale-Of-Two-Cities.pdf&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>file%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-A-Tale-Of-Two-Cities
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>file##*.<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
-pdf
-</code></pre></div><h2 id="2-基于-pattern-matching-的子串替换">2. 基于 Pattern Matching 的子串替换</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A-Tale-Of-Two-Cities.pdf&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>file%.*<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>A-Tale-Of-Two-Cities
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>file##*.<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>pdf
+</span></span></code></pre></div><h2 id="2-基于-pattern-matching-的子串替换">2. 基于 Pattern Matching 的子串替换</h2>
 <p><code>${str/$old/$new}</code>  替换第一个。
 <code>${str//$old/$new}</code> 替换所有。</p>
 <p>注意：不能使用正则表达式，只能使用 ?* 的Shell扩展。只能用shell通配符如 <code>*?  [list] [!list] [a-z]</code>。</p>
 <p><code>${str/#$old/$new}</code> 替换开头。如果str以old串开头，则替换。
 <code>${str/%$old/$new}</code> 替换结尾。如果str以old串结尾，则替换。</p>
 <p><strong>[note]</strong> <code>#</code>和<code>%</code>一个是替换开头，一个是替换结尾。可以这么记忆。键盘上<code>#</code>在<code>%</code>前面。所以<code>#</code>是替换开头，<code>%</code>是替换结尾。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/o/O<span style="color:#e6db74">}</span>
-HellO World
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str//o/O<span style="color:#e6db74">}</span>
-HellO WOrld
-
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/#He/he<span style="color:#e6db74">}</span>
-Hello World
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/#o/he<span style="color:#e6db74">}</span>
-Hello World
-
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/%He/he<span style="color:#e6db74">}</span>
-Hello World
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/%ld/lD<span style="color:#e6db74">}</span>
-Hello WorlD
-</code></pre></div><p>一个例子: 将环境变量PATH的各个目录分开，每行显示一个。就是讲<code>:</code>转换成<code>\n</code>就可以实现。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo -e <span style="color:#e6db74">${</span>PATH//:/<span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#e6db74">}</span>
-/Library/Frameworks/Python.framework/Versions/3.5/bin
-/Library/Frameworks/Python.framework/Versions/2.7/bin
-/usr/local/bin
-/usr/sbin
-...
-</code></pre></div><h2 id="3-基于-pattern-matching-的子串删除">3. 基于 Pattern Matching 的子串删除</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/o/O<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>HellO World
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str//o/O<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>HellO WOrld
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/#He/he<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>Hello World
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/#o/he<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>Hello World
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/%He/he<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>Hello World
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str/%ld/lD<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>Hello WorlD
+</span></span></code></pre></div><p>一个例子: 将环境变量PATH的各个目录分开，每行显示一个。就是讲<code>:</code>转换成<code>\n</code>就可以实现。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo -e <span style="color:#e6db74">${</span>PATH//:/<span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>/Library/Frameworks/Python.framework/Versions/3.5/bin
+</span></span><span style="display:flex;"><span>/Library/Frameworks/Python.framework/Versions/2.7/bin
+</span></span><span style="display:flex;"><span>/usr/local/bin
+</span></span><span style="display:flex;"><span>/usr/sbin
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h2 id="3-基于-pattern-matching-的子串删除">3. 基于 Pattern Matching 的子串删除</h2>
 <p>子串删除是一种特殊的替换</p>
 <p><code>${str/$sub}</code>     将str中第一个sub子串删除
 <code>${str//$sub}</code>    将str中所有sub子串删除
@@ -256,30 +256,30 @@ Hello WorlD
 <code>${str##$prefix}</code> 去头，从开头去除最长匹配前缀
 <code>${str%$suffix}</code>  去尾，从结尾去除最短匹配后缀
 <code>${str%%$suffix}</code> 去尾，从结尾去除最长匹配后缀</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str#He<span style="color:#e6db74">}</span>
-llo World
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str#He*o<span style="color:#e6db74">}</span>
-World
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str##He*o<span style="color:#e6db74">}</span>
-rld
-
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; prefix<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*o&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str#$prefix<span style="color:#e6db74">}</span>
-World
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str##$prefix<span style="color:#e6db74">}</span>
-rld
-
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; suffix<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;o*&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str%$suffix<span style="color:#e6db74">}</span>
-Hello W
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str%%$suffix<span style="color:#e6db74">}</span>
-Hell
-</code></pre></div><p>一个例子：获取文件扩展名,如最前面的介绍。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A-cat.jpg&#34;</span>
-<span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>filename##*.<span style="color:#e6db74">}</span>
-jpg
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; str<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str#He<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>llo World
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str#He*o<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>World
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str##He*o<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>rld
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; prefix<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*o&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str#$prefix<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>World
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str##$prefix<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>rld
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; suffix<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;o*&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str%$suffix<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>Hello W
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>str%%$suffix<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>Hell
+</span></span></code></pre></div><p>一个例子：获取文件扩展名,如最前面的介绍。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A-cat.jpg&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>_posts<span style="color:#f92672">]</span> <span style="color:#f92672">==</span>&gt;&gt; echo <span style="color:#e6db74">${</span>filename##*.<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>jpg
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -368,7 +368,7 @@ jpg
     <div class="copyright">
         &copy;
         
-        <span itemprop="copyrightYear">2009 - 2022</span>
+        <span itemprop="copyrightYear">2009 - 2023</span>
         
         <span class="with-love">
     	 <i class="iconfont icon-love"></i>
@@ -386,7 +386,7 @@ jpg
 
 
 
->
+
 <script defer src="/js/vendor_main.min.js"></script>
 
 
