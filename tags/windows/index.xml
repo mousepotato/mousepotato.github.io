@@ -6,24 +6,21 @@
     <description>Recent content in windows on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anotherbug.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows Dev Environment</title>
       <link>https://anotherbug.com/2021/08/07/windows-dev-environment/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/08/07/windows-dev-environment/</guid>
       <description>我已经有十年 （2010-2020）没有用 Windows 了，这十年来 Windows 也越来越像 Linux 了。所以我打算再次用一下。记录一下 Windows 下的开发环境 常用工具 Chocolate Package Manager 和 Scoop : 包管</description>
     </item>
-    
     <item>
       <title>Windows 下如何关闭特定端口</title>
       <link>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</guid>
       <description>netstat -aon|findstr &amp;quot;9050&amp;quot; TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016 tasklist|findstr &amp;ldquo;2016&amp;rdquo; tor.exe 2016 Console 0 16,064 ctrl+alt+delete 打开任务管理器，找到tor.exe右键end process。 That&amp;rsquo;s it!!</description>
     </item>
-    
   </channel>
 </rss>

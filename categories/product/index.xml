@@ -6,35 +6,28 @@
     <description>Recent content in product on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/categories/product/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anotherbug.com/categories/product/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to import Microsoft To Do Notes to Flomo</title>
       <link>https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/</link>
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/</guid>
       <description>一直使用 Microsoft To Do 来做一些随手记的东西。不知不觉已经攒了 1200 多条. 用的最多的是基于 Tag （标签）的方式来管理。一直在找替代的东西，因为 To Do 的 Tag 不是很好</description>
     </item>
-    
     <item>
       <title>RTX 3090 Tunning</title>
       <link>https://anotherbug.com/2021/04/27/rtx-3090-tuning/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/04/27/rtx-3090-tuning/</guid>
-      <description>RTX 3090 has a terrible VRAM temperature (104C) while mining ~100mh/s. Need to replace the heatsink paste and thermal pad.
-The heatsink I use is Thermalright TF8 Thermal Compound Paste 13.8 W/mK, Carbon Based High Performance, Heatsink Paste at Amazon: https://amzn.to/3aJpcGp
-The thermal pad I use is Thermalright Thermal Pad 12.8 W/mK, 85x45x2mm at Amazon: https://amzn.to/3u009pX</description>
+      <description>RTX 3090 has a terrible VRAM temperature (104C) while mining ~100mh/s. Need to replace the heatsink paste and thermal pad.&#xA;The heatsink I use is Thermalright TF8 Thermal Compound Paste 13.8 W/mK, Carbon Based High Performance, Heatsink Paste at Amazon: https://amzn.to/3aJpcGp&#xA;The thermal pad I use is Thermalright Thermal Pad 12.8 W/mK, 85x45x2mm at Amazon: https://amzn.to/3u009pX</description>
     </item>
-    
     <item>
       <title>SanDisk iXpand Flash Drive</title>
       <link>https://anotherbug.com/2020/07/28/sandisk-ixpand-drive/</link>
       <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/07/28/sandisk-ixpand-drive/</guid>
       <description>最近买了个 SanDisk iXpand Flash Drive，然后发现使用的时候比较反人类，应该是一个比较典型的企业做产品太作然后把自已作死的例子了。分享一下。 SanDisk 128GB iXpand Flash Drive 的优</description>
     </item>
-    
   </channel>
 </rss>

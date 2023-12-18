@@ -6,569 +6,448 @@
     <description>Recent content in Posts on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anotherbug.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CC</title>
+      <link>https://anotherbug.com/2023/12/17/cc/</link>
+      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://anotherbug.com/2023/12/17/cc/</guid>
+      <description>九十年代后期，我上小学的时候，学校资源匮乏，纸都不多。打印机，复印机不是那个年代的东西。 作业只有练习册，接触到的题目就那么多，想做题海战术都</description>
+    </item>
     <item>
       <title>什么是 INTJ 性格</title>
       <link>https://anotherbug.com/2022/06/19/what-is-intj/</link>
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2022/06/19/what-is-intj/</guid>
       <description>我是 INTJ 性格，为了尝试了解自己，看了些 MBTI (Myers-Briggs Personality Type Indicator) 性格分类法。说说我的理解： 研究对象：你自己（简称系统） MBTI 16 型性格，每个都是由四个字母构成的，其</description>
     </item>
-    
     <item>
       <title>Export Flomo</title>
       <link>https://anotherbug.com/2021/09/12/export-flomo/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/09/12/export-flomo/</guid>
       <description>Flomo 是一个好的应用，我曾写文章介绍怎么从 Todo 里面把内容导入到 Flomo， 但是 Flomo 的隐私政策 (Privacy Policy) 让我无法接受，我决定不再使用它。 另外由于 Flomo 里面的笔记</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 24: 生当似鹏起，终当如鲸落</title>
       <link>https://anotherbug.com/2021/08/15/octopus-garden-weekly-vol-24/</link>
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/08/15/octopus-garden-weekly-vol-24/</guid>
       <description>章鱼花园 Vol. 24: 生当似鹏起，终当如鲸落 The future is already here - it&amp;rsquo;s just not evenly distributed. William Gibson 未来已经来临，只是还没有平均分布。 威廉.吉布森，科幻小说作家 Sense SemVer 语义化版本 2.0.0 API 更</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 23: 以静心看世界，以欢喜的方式过生活</title>
       <link>https://anotherbug.com/2021/08/08/octopus-garden-weekly-vol-23/</link>
       <pubDate>Sun, 08 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/08/08/octopus-garden-weekly-vol-23/</guid>
       <description>章鱼花园 Vol. 23: 以静心看世界，以欢喜的方式过生活 Sense A Post About Nothing #Programming Why end-user programming? #Products #Programming end-user programming：什么叫终端用户编程，用时下流行的词讲就是 low-code/no cod</description>
     </item>
-    
     <item>
       <title>Windows Dev Environment</title>
       <link>https://anotherbug.com/2021/08/07/windows-dev-environment/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/08/07/windows-dev-environment/</guid>
       <description>我已经有十年 （2010-2020）没有用 Windows 了，这十年来 Windows 也越来越像 Linux 了。所以我打算再次用一下。记录一下 Windows 下的开发环境 常用工具 Chocolate Package Manager 和 Scoop : 包管</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 22: 0 Error(s), 0 Warning(s). ？！</title>
       <link>https://anotherbug.com/2021/08/01/octopus-garden-weekly-vol-22/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/08/01/octopus-garden-weekly-vol-22/</guid>
       <description>章鱼花园 Vol. 22: 0 Error(s), 0 Warning(s). ？！ 科技 List of Golang books Go 语言越来越火，未来语言我心中的排名大致是 JavaScript 第一， Go 语言第二。这里有一份书单，可以拿去看看。 #Programming The Greatest Developer Fallacy Or</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 21: Fi-Lo-Li (Fight, Love, Live)</title>
       <link>https://anotherbug.com/2021/07/25/octopus-garden-weekly-vol-21/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/07/25/octopus-garden-weekly-vol-21/</guid>
       <description>章鱼花园 Vol. 21: Fi-Lo-Li (Fight, Love, Live) Fi-Lo-Li: Fight for a just cause; Love your fellow man; Live a good life. - The creators of Filoli Garden. 科技 Have an Octotastic day! It comes from Github service. The logo of Github is an Octocat(at the picture), and the phrase might be the analogue to &amp;ldquo;Have a good day&amp;rdquo; or &amp;ldquo;have a productive day!&amp;rdquo; #Programming Mackup Keep</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 20: Dream big, the sky is NOT the limit</title>
       <link>https://anotherbug.com/2021/07/18/octopus-garden-weekly-vol-20/</link>
       <pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/07/18/octopus-garden-weekly-vol-20/</guid>
       <description>章鱼花园 Vol. 20: Dream big, the sky is NOT the limit 科技 The dawn of a new space age #Quotes #Thought-provoking I was once a child with a dream looking up to the stars. Now I&amp;rsquo;m an adult in a spaceship looking down to our beautiful Earth. To the next generation of dreamers: if we can do this, just imagine what you can do. - Twitter</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 19: Abracadabra 说有就有，命立就立</title>
       <link>https://anotherbug.com/2021/07/11/octopus-garden-weekly-vol-19/</link>
       <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/07/11/octopus-garden-weekly-vol-19/</guid>
       <description>章鱼花园 Vol. 19: Abracadabra 说有就有，命立就立 For He spoke, and it was done; He commanded, and it stood fast. Psalm 33:9 NASB. 因为他说有，就有，命立，就立。诗篇 33:9 科技 The Inter typeface family 好看的字体 for Google Docs #Programming A Mountain of Unknown 作</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 18: carpe diem, quam minimum credula postero</title>
       <link>https://anotherbug.com/2021/07/04/octopus-garden-weekly-vol-18/</link>
       <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/07/04/octopus-garden-weekly-vol-18/</guid>
       <description>章鱼花园 Vol. 18: carpe diem, quam minimum credula postero carpe diem, quam minimum credula postero, which is often translated as &amp;ldquo;Seize the day, put very little trust in tomorrow (the future)&amp;rdquo; - Horace 贺拉斯，古罗马著名诗人。 科技 Intercom 网站客服 Bot 解决方案，另外一个是 crisp #Products How I</description>
     </item>
-    
     <item>
       <title>How to import Microsoft To Do Notes to Flomo</title>
       <link>https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/</link>
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/06/30/import-microsoft-todo-notes-to-flomo/</guid>
       <description>一直使用 Microsoft To Do 来做一些随手记的东西。不知不觉已经攒了 1200 多条. 用的最多的是基于 Tag （标签）的方式来管理。一直在找替代的东西，因为 To Do 的 Tag 不是很好</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 17：那些听不见音乐的人，认为那些跳舞的人疯了</title>
       <link>https://anotherbug.com/2021/06/27/octopus-garden-weekly-vol-17/</link>
       <pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/06/27/octopus-garden-weekly-vol-17/</guid>
       <description>章鱼花园 Vol. 17：那些听不见音乐的人，认为那些跳舞的人疯了 科技 How I track my life with Integromat, Airtable, Shortcuts and Timing (et al) #Life 人文 Consume less, create more 这个世界的每个人都是消费者，但不是每个人</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 16: 我们仍未知道那天所看见的花的名字</title>
       <link>https://anotherbug.com/2021/06/20/octopus-garden-weekly-vol-16/</link>
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/06/20/octopus-garden-weekly-vol-16/</guid>
       <description>章鱼花园 Vol. 16: 我们仍未知道那天所看见的花的名字 科技 wipiWipi 是一个面向个人的开源的集成文章发表、页面创建、知识小册等功能的 CMS 系统。基于 MySQL + next.js + nest.js 开发 #Frontend</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 15: 希望，是这个时代像钻石一样珍贵的东西</title>
       <link>https://anotherbug.com/2021/06/13/octopus-garden-weekly-vol-15/</link>
       <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/06/13/octopus-garden-weekly-vol-15/</guid>
       <description>章鱼花园 Vol. 15: 希望，是这个时代像钻石一样珍贵的东西 「希望，是我们这个时代像钻石一样珍贵的东西！」 ——《流浪地球》 #Quotes 科技 Social Tokens: Year In Review #Crypto Redis 的彩蛋 LO</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 14: 把自己交给繁忙，得到的是踏实，却不是真实</title>
       <link>https://anotherbug.com/2021/06/06/octopus-garden-weekly-vol-14/</link>
       <pubDate>Sun, 06 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/06/06/octopus-garden-weekly-vol-14/</guid>
       <description>章鱼花园 Vol. 14: 把自己交给繁忙，得到的是踏实，却不是真实 科技 Stack Overflow Sold to Tech Giant Prosus for $1.8 Billion 程序员生产力工具 Stack Overflow 18亿美金卖给了 Prosus。 Prosus 是 Tence</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》</title>
       <link>https://anotherbug.com/2021/05/30/octopus-garden-weekly-vol-13/</link>
       <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/05/30/octopus-garden-weekly-vol-13/</guid>
       <description>章鱼花园 Vol. 13: 当你无法安静的时候，听一听《The Ludlows》 科技 Java 并发相关的源码讲解系列视频 #Videos 人文 The Untold Story Behind the Song &amp;ldquo;Don&amp;rsquo;t Cry For Me Argentina&amp;rdquo; #Music 《家园》－《闯关</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 12: 人类越野史上最黑暗的一夜</title>
       <link>https://anotherbug.com/2021/05/23/octopus-garden-weekly-vol-12/</link>
       <pubDate>Sun, 23 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/05/23/octopus-garden-weekly-vol-12/</guid>
       <description>章鱼花园 Vol. 12: 人类越野史上最黑暗的一夜 科技 《为什么闲鱼把网页版取消了？》 读罢怅然。 现代处理器结构 Sequel-Ace MacOS 上的 MySQL &amp;amp; MariaDB 客户端工具。基于 Sequel Pro，更新比</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 11: 毋意，毋必，毋固，毋我</title>
       <link>https://anotherbug.com/2021/05/16/octopus-garden-weekly-vol-11/</link>
       <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/05/16/octopus-garden-weekly-vol-11/</guid>
       <description>章鱼花园 Vol. 11: 毋意，毋必，毋固，毋我 科技 Jargon vs. lingo Jargon:行话, lingo: 术语。意思类似但是用途不同。Jargon is intentionally offputting, and lingo reminds us how connected we are. Jargon is a place to hide,</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 10: Happy Mother&#39;s Day</title>
       <link>https://anotherbug.com/2021/05/09/octopus-garden-weekly-vol-10/</link>
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/05/09/octopus-garden-weekly-vol-10/</guid>
       <description>章鱼花园 Vol. 10: Happy Mother&amp;rsquo;s Day 科技 LyricsX Spotify 歌词插件。 Table Editor 在线制作各种表格，包括 markdown table. #Tools 2021 Berkshire Hathaway Annual Shareholders Meeting Buffett 的演讲从 48:20 开始。老巴比较了当前全球市值最高的 20 家公司，以及</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 9: Love loves to love love</title>
       <link>https://anotherbug.com/2021/05/02/octopus-garden-weekly-vol-9/</link>
       <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/05/02/octopus-garden-weekly-vol-9/</guid>
       <description>章鱼花园 Vol. 9: Love loves to love love 科技 我家电视机正在监视所有连网设备 安全的几点推荐：使用 startpage 作为搜索引擎（搜索质量等同与 Google） 使用 AdGuard 防止追踪，大数</description>
     </item>
-    
     <item>
       <title>RTX 3090 Tunning</title>
       <link>https://anotherbug.com/2021/04/27/rtx-3090-tuning/</link>
       <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/04/27/rtx-3090-tuning/</guid>
-      <description>RTX 3090 has a terrible VRAM temperature (104C) while mining ~100mh/s. Need to replace the heatsink paste and thermal pad.
-The heatsink I use is Thermalright TF8 Thermal Compound Paste 13.8 W/mK, Carbon Based High Performance, Heatsink Paste at Amazon: https://amzn.to/3aJpcGp
-The thermal pad I use is Thermalright Thermal Pad 12.8 W/mK, 85x45x2mm at Amazon: https://amzn.to/3u009pX</description>
+      <description>RTX 3090 has a terrible VRAM temperature (104C) while mining ~100mh/s. Need to replace the heatsink paste and thermal pad.&#xA;The heatsink I use is Thermalright TF8 Thermal Compound Paste 13.8 W/mK, Carbon Based High Performance, Heatsink Paste at Amazon: https://amzn.to/3aJpcGp&#xA;The thermal pad I use is Thermalright Thermal Pad 12.8 W/mK, 85x45x2mm at Amazon: https://amzn.to/3u009pX</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 8:我们守护什么，我们就成为什么</title>
       <link>https://anotherbug.com/2021/04/25/octopus-garden-weekly-vol-8/</link>
       <pubDate>Sun, 25 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/04/25/octopus-garden-weekly-vol-8/</guid>
       <description>章鱼花园 Vol. 8:我们守护什么，我们就成为什么 瑞典作家弗雷德里克·巴克曼在《熊镇》写道：我们守护什么，我们就成为什么。 科技 笔记本电脑 RTX3060, RTX3070, RXT3080 挖矿的</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 7: If you can&#39;t beat them, join them.</title>
       <link>https://anotherbug.com/2021/04/18/octopus-garden-weekly-vol-7/</link>
       <pubDate>Sun, 18 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/04/18/octopus-garden-weekly-vol-7/</guid>
       <description>章鱼花园 Vol. 7: If you can&amp;rsquo;t beat them, join them. 科技 一个历史：在2013年5月，Node.js 包管理器 npm 的作者 Isaac Z. Schlueter，宣布 Node.js 已经废弃了Common</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 6: The Unwinding 下沉年代</title>
       <link>https://anotherbug.com/2021/04/11/octopus-garden-weekly-vol-6/</link>
       <pubDate>Sun, 11 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/04/11/octopus-garden-weekly-vol-6/</guid>
       <description>章鱼花园 Vol. 6: The Unwinding 下沉年代 科技 首个火星城市女娲 NÜWA CITY：30万美金的单程车票，提供建造在岩壁内的25-30平房子，提供食物和设施，但是</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 5: The Brown M&amp;M&#39;s Principle</title>
       <link>https://anotherbug.com/2021/04/04/octopus-garden-weekly-vol-5/</link>
       <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/04/04/octopus-garden-weekly-vol-5/</guid>
       <description>章鱼花园 Vol. 5: The Brown M&amp;amp;M&amp;rsquo;s Principle 科技 关于 IP 定位的一个万能公式： 「为 xxx 人群，提供 xxx 价格的 xxx 服务，解决 xxx 问题」。带着这种思考方式去定义你的目标。 #Products 加密货币的</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 4: 「我们这至暂至轻的苦楚，要为我们成就极重无比永远的荣耀」</title>
       <link>https://anotherbug.com/2021/03/28/octopus-garden-weekly-vol-4/</link>
       <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/03/28/octopus-garden-weekly-vol-4/</guid>
       <description>章鱼花园 Vol. 4: 「我们这至暂至轻的苦楚，要为我们成就极重无比永远的荣耀」 「我们这至暂至轻的苦楚，要为我们成就极重无比永远的荣耀。原来我们不是顾念</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 3: Some People Feel the Rain. Others Just Get Wet.</title>
       <link>https://anotherbug.com/2021/03/21/octopus-garden-weekly-vol-3/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/03/21/octopus-garden-weekly-vol-3/</guid>
       <description>章鱼花园 Vol. 3: Some People Feel the Rain. Others Just Get Wet. Principles 1/ Create alignment (thru empathy) 2/ Tell the truth (transparency) 3/ Don&amp;#39;t take ourselves too seriously (have fun) -- Earnest Capital 科技 战斗民族的新作发表在 preprint 上。：树莓派加上摄像头和激光，然后用图像</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 2: 芒鞋破钵无人识，踏过樱花第几桥!</title>
       <link>https://anotherbug.com/2021/03/14/octopus-garden-weekly-vol-2/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/03/14/octopus-garden-weekly-vol-2/</guid>
       <description>章鱼花园 Vol. 2: 芒鞋破钵无人识，踏过樱花第几桥! 科技 Individual Contributor Jon Moore 是 Comcast 公司的 Senior Fellow，最近从 Chief Architect 转到了 Individual Contributor (IC)，分享了他带领一个部门的心得，</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 1: What&#39;s remembered, lives</title>
       <link>https://anotherbug.com/2021/03/07/octopus-garden-weekly-vol-1/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/03/07/octopus-garden-weekly-vol-1/</guid>
       <description>章鱼花园 Vol. 1: What&amp;rsquo;s remembered, lives https://www.bilibili.com/video/BV13K4y1J71d/ https://www.youtube.com/watch?v=T-9dlHxMeng 科技 网上生活已经成为生命里面的一部分，密码的管理和安全是一个头疼的问题。我从 2014 年就开始使用 1Password 至今。这周开始换成 Bitwarden 了。原</description>
     </item>
-    
     <item>
       <title>章鱼花园 Vol. 0: The Times They Are a-Changin</title>
       <link>https://anotherbug.com/2021/02/28/octopus-garden-weekly-vol-0/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2021/02/28/octopus-garden-weekly-vol-0/</guid>
       <description>章鱼花园 Vol. 0： The Times They Are a-Changin&#39; 亲爱的叉子们， 欢迎来到「章鱼花园」第 0 期。这是一份争取每周更新的文档，记录我每周的所见和思考，主要分为 「科技」、「人</description>
     </item>
-    
     <item>
       <title>Programers&#39; Essentials</title>
       <link>https://anotherbug.com/2020/08/14/programers-essentials/</link>
       <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/08/14/programers-essentials/</guid>
       <description>要说程序员的必须品，大概也有三大件吧。鼠标、键盘、显示器。个人喜好选择不同，网上讨论和推荐也很多，说说我自己的选择和感受吧。 显示器： DELLL 鼠标：</description>
     </item>
-    
     <item>
       <title>Tomorrow Will Be Better</title>
       <link>https://anotherbug.com/2020/08/10/tomorrow-will-be-better/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/08/10/tomorrow-will-be-better/</guid>
       <description>一直很喜欢 We Are the World，它是由 Michael Jackson 和 Lionel Richie 创作的。是一首为 1985 年非洲埃塞俄比亚发生饥荒援助的公益歌曲。整个制作齐聚了45位当红歌星。若干年前</description>
     </item>
-    
     <item>
       <title>Samsung S6 Edge Install Lineage OS 17.1</title>
       <link>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</guid>
       <description>又开始折腾 Android ROM 了。上次是 7 年前在 Galaxy S3 上基于 CyanogenMod 进行的。这次主要是 Samsung S6 Edge 自带的 Android 7.0 版本太老了。 基本信息 Samsung S6 Edge 的 Model 是 SM-G925F开头，想刷版本</description>
     </item>
-    
     <item>
       <title>SanDisk iXpand Flash Drive</title>
       <link>https://anotherbug.com/2020/07/28/sandisk-ixpand-drive/</link>
       <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/07/28/sandisk-ixpand-drive/</guid>
       <description>最近买了个 SanDisk iXpand Flash Drive，然后发现使用的时候比较反人类，应该是一个比较典型的企业做产品太作然后把自已作死的例子了。分享一下。 SanDisk 128GB iXpand Flash Drive 的优</description>
     </item>
-    
     <item>
       <title>Rime 可定制的输入法</title>
       <link>https://anotherbug.com/2020/05/31/rime-customize-input-method/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/05/31/rime-customize-input-method/</guid>
       <description>最近又开始折腾输入法。在 Mac 下切回 Rime 。 一来是担心现有输入法的隐私问题。某个输入法每天提醒我输入了多少词汇，我是越看越慎的慌。 二来 Rime 的定制化能力</description>
     </item>
-    
     <item>
       <title>如何出色的完成老板交代的任务 How to finish assigned work perfectly</title>
       <link>https://anotherbug.com/2020/05/31/how-to-finish-assigned-work-perfectly/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/05/31/how-to-finish-assigned-work-perfectly/</guid>
       <description>如何出色的完成老板交代的任务</description>
     </item>
-    
     <item>
       <title>Test post using Hugo</title>
       <link>https://anotherbug.com/2020/05/18/test-post-using-hugo/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/05/18/test-post-using-hugo/</guid>
       <description>This is a test post generated using Hugo. 打算把博客从 Hexo 迁移到 Hugo。原因是因为看到 Hugo 的 Theme 比较好看。又折腾了一下，虽然不常写博客，但是还是保留想写博客的时候有个好看</description>
     </item>
-    
     <item>
       <title>how to setup multiple github ssh keys</title>
       <link>https://anotherbug.com/2016/12/13/how-to-setup-multiple-github-ssh-key/</link>
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2016/12/13/how-to-setup-multiple-github-ssh-key/</guid>
-      <description>1. create multiple ssh key ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot; for example, 2 keys create at:
-~/.ssh/id_rsa ~/.ssh/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~/.ssh/id_rsa ssh-add ~/.ssh/id_rsa_sli_racingwithhorse check your saved keys using:
-ssh-add -l 3. modify the ssh config cd ~/.ssh/ touch config $==&amp;gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~/.ssh/id_rsa_sli_racingwithhorse 4. clone you repo and modify your git config git config user.</description>
+      <description>1. create multiple ssh key ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot; for example, 2 keys create at:&#xA;~/.ssh/id_rsa ~/.ssh/id_rsa_sli_racingwithhorse 2. then, add these two keys as following ssh-add ~/.ssh/id_rsa ssh-add ~/.ssh/id_rsa_sli_racingwithhorse check your saved keys using:&#xA;ssh-add -l 3. modify the ssh config cd ~/.ssh/ touch config $==&amp;gt; cat config #gmail.com account Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa #racingwithhorse account Host github.com-racingwithhorse HostName github.com User git IdentityFile ~/.ssh/id_rsa_sli_racingwithhorse 4. clone you repo and modify your git config git config user.</description>
     </item>
-    
     <item>
       <title>hexo-blog</title>
       <link>https://anotherbug.com/2016/12/12/hexo-blog/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2016/12/12/hexo-blog/</guid>
       <description>Test hexo blog This is a test</description>
     </item>
-    
     <item>
       <title>Half Ironman santa cruz 70.3 candidates statistics</title>
       <link>https://anotherbug.com/2016/05/18/half-ironman-candidate-statistics/</link>
       <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2016/05/18/half-ironman-candidate-statistics/</guid>
-      <description>Since I will be attending Half Ironman santa cruz 70.3 race, I would love to know something about our atheletes. The online website provides the registered candidates information. So just with a bit hack, you will know something.
-#!/usr/bin/awk -f # # awk -f vis.awk output/clean.csv # BEGIN { FS=&amp;#34;,&amp;#34; F_Count=0 F_60_Plus=0 F_50_to_60=0 F_40_to_50=0 F_30_to_40=0 F_30_Minus=0 M_Count=0 M_60_Plus=0 M_50_to_60=0 M_40_to_50=0 M_30_to_40=0 M_30_Minus=0 Less_than_me=0 Less_than_me_M=0 Less_than_me_F=0 } { if($3 ~ /F/){ # print $0 F_Count++ if ( $4 &amp;gt;= 60){ F_60_Plus++ } else if ($4 &amp;gt;= 50) { F_50_to_60++ } else if ($4 &amp;gt;= 40) { F_40_to_50++ } else if ($4 &amp;gt;= 30) { F_30_to_40++ } else if ($4 &amp;lt; 30) { F_30_Minus++ } } else { M_Count++ if ( $4 &amp;gt;= 60){ M_60_Plus++ } else if ($4 &amp;gt;= 50) { M_50_to_60++ } else if ($4 &amp;gt;= 40) { M_40_to_50++ } else if ($4 &amp;gt;= 30) { M_30_to_40++ } else if ($4 &amp;lt; 30) { M_30_Minus++ } } if ($4 &amp;lt;28) { Less_than_me++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /F/) { Less_than_me_F++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /M/) { #print $0 Less_than_me_M++ } } END { print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Female counts: &amp;#34; F_Count print &amp;#34;Female age &amp;gt;=60: &amp;#34; F_60_Plus print &amp;#34;Female age between 50 to 60: &amp;#34; F_50_to_60 print &amp;#34;Female age between 40 to 50: &amp;#34; F_40_to_50 print &amp;#34;Female age between 30 to 40: &amp;#34; F_30_to_40 print &amp;#34;Female age under 30: &amp;#34; F_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Male counts: &amp;#34; M_Count print &amp;#34;Male age &amp;gt;=60: &amp;#34; M_60_Plus print &amp;#34;Male age between 50 to 60: &amp;#34; M_50_to_60 print &amp;#34;Male age between 40 to 50: &amp;#34; M_40_to_50 print &amp;#34;Male age between 30 to 40: &amp;#34; M_30_to_40 print &amp;#34;Male age under 30: &amp;#34; M_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Less than me: &amp;#34; Less_than_me print &amp;#34;Less than me female: &amp;#34; Less_than_me_F print &amp;#34;Less than me male: &amp;#34; Less_than_me_M } The result is&amp;hellip;</description>
+      <description>Since I will be attending Half Ironman santa cruz 70.3 race, I would love to know something about our atheletes. The online website provides the registered candidates information. So just with a bit hack, you will know something.&#xA;#!/usr/bin/awk -f # # awk -f vis.awk output/clean.csv # BEGIN { FS=&amp;#34;,&amp;#34; F_Count=0 F_60_Plus=0 F_50_to_60=0 F_40_to_50=0 F_30_to_40=0 F_30_Minus=0 M_Count=0 M_60_Plus=0 M_50_to_60=0 M_40_to_50=0 M_30_to_40=0 M_30_Minus=0 Less_than_me=0 Less_than_me_M=0 Less_than_me_F=0 } { if($3 ~ /F/){ # print $0 F_Count++ if ( $4 &amp;gt;= 60){ F_60_Plus++ } else if ($4 &amp;gt;= 50) { F_50_to_60++ } else if ($4 &amp;gt;= 40) { F_40_to_50++ } else if ($4 &amp;gt;= 30) { F_30_to_40++ } else if ($4 &amp;lt; 30) { F_30_Minus++ } } else { M_Count++ if ( $4 &amp;gt;= 60){ M_60_Plus++ } else if ($4 &amp;gt;= 50) { M_50_to_60++ } else if ($4 &amp;gt;= 40) { M_40_to_50++ } else if ($4 &amp;gt;= 30) { M_30_to_40++ } else if ($4 &amp;lt; 30) { M_30_Minus++ } } if ($4 &amp;lt;28) { Less_than_me++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /F/) { Less_than_me_F++ } if ($4&amp;lt;28 &amp;amp;&amp;amp; $3 ~ /M/) { #print $0 Less_than_me_M++ } } END { print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Female counts: &amp;#34; F_Count print &amp;#34;Female age &amp;gt;=60: &amp;#34; F_60_Plus print &amp;#34;Female age between 50 to 60: &amp;#34; F_50_to_60 print &amp;#34;Female age between 40 to 50: &amp;#34; F_40_to_50 print &amp;#34;Female age between 30 to 40: &amp;#34; F_30_to_40 print &amp;#34;Female age under 30: &amp;#34; F_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Male counts: &amp;#34; M_Count print &amp;#34;Male age &amp;gt;=60: &amp;#34; M_60_Plus print &amp;#34;Male age between 50 to 60: &amp;#34; M_50_to_60 print &amp;#34;Male age between 40 to 50: &amp;#34; M_40_to_50 print &amp;#34;Male age between 30 to 40: &amp;#34; M_30_to_40 print &amp;#34;Male age under 30: &amp;#34; M_30_Minus print &amp;#34;-------------------------------------&amp;#34; print &amp;#34;Less than me: &amp;#34; Less_than_me print &amp;#34;Less than me female: &amp;#34; Less_than_me_F print &amp;#34;Less than me male: &amp;#34; Less_than_me_M } The result is&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Screen scrollback</title>
       <link>https://anotherbug.com/2016/02/01/screen-scrollback/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2016/02/01/screen-scrollback/</guid>
       <description>设置screen支持长scrollback In ~/.screenrc add or set defscrollback 50000 use 50000 or any number you want In your screen, checking by ctrl + a + i, it will show your current scrollback settings To enter scrollback/copy mode, using ctrl + a + [ Use ctrl + u, ctrl + d, ctrl</description>
     </item>
-    
     <item>
       <title>Bash pattern match</title>
       <link>https://anotherbug.com/2016/01/01/bash-pattern-match/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2016/01/01/bash-pattern-match/</guid>
       <description>1. 起因：Shell 获取文件名和后缀名 [_posts] ==&amp;gt;&amp;gt; file=&amp;#34;A-Tale-Of-Two-Cities.pdf&amp;#34; [_posts] ==&amp;gt;&amp;gt; echo &amp;#34;${file%.*}&amp;#34; A-Tale-Of-Two-Cities [_posts] ==&amp;gt;&amp;gt; echo &amp;#34;${file##*.}&amp;#34; pdf 2. 基于 Pattern Matching 的子串替换 ${str/$old/$new} 替换第一个。 ${str//$old/$new} 替换所有。 注意：不能使用正则表达式，只能使</description>
     </item>
-    
     <item>
       <title>Fitbit HR heart rate data monitoring</title>
       <link>https://anotherbug.com/2015/12/31/fitbit-hr-data-monitoring/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2015/12/31/fitbit-hr-data-monitoring/</guid>
       <description>1. Fitbit HR Fitbit HR 提供了全天候的心率 (heart rate) 数据。HR数据可以反应很多的指标（健康，活动量），甚至是什么时候洗澡或者&amp;hellip;。除了HR数据，还有</description>
     </item>
-    
     <item>
       <title>Box content APIs example</title>
       <link>https://anotherbug.com/2015/11/15/box-content-apis-example/</link>
       <pubDate>Sun, 15 Nov 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2015/11/15/box-content-apis-example/</guid>
       <description>今天实现了新建一个box app并通过Box API读取用户box里面文件的程序。记录如下。 准备 使用nodejs环境搭建回调服务器 好像没用了。。</description>
     </item>
-    
     <item>
       <title>Leetcode remove duplicates from sorted array</title>
       <link>https://anotherbug.com/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</link>
       <pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</guid>
       <description>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length. Do not allocate extra space for another array, you must do this in place with constant memory. For example, Given input array A = [1,1,2], Your function should return length = 2, and A is now [1,2] 写了几次，每一次都有不同</description>
     </item>
-    
     <item>
       <title>使用 Node JS 批量下载网站的图片</title>
       <link>https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/</link>
       <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/</guid>
       <description>1. 起因 最近看到 网站 fhl.net 上有一系列《圣地旅游》的照片，个人很喜欢，想把它下载下来保存。问题是该网站上有67页，每页有35张照片，也就是总共有23</description>
     </item>
-    
     <item>
       <title>Screen 使用之无废话5行命令</title>
       <link>https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/</link>
       <pubDate>Mon, 25 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/</guid>
       <description>Linux screen in 5 command lines 1. 建立一个 screen shell 窗口 screen 2. 退出刚建立的窗口 ctrl+ a d 3. 查看已有 screen 窗口 screen -ls 4. 重新进入已有 screen 窗口 screen -r sessionid sessionid can be found by looking screen -ls 5. 退出已有 screen 窗口 exit 6. 退</description>
     </item>
-    
     <item>
       <title>How to be efficient</title>
       <link>https://anotherbug.com/2013/10/20/how-to-be-efficient/</link>
       <pubDate>Sun, 20 Oct 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/10/20/how-to-be-efficient/</guid>
       <description>1. Efficiency comes from familiarity and simplicity. 高效来源于熟练，俗语说：“熟能生巧”。同样的，高效来源于简单。简单不意味着更少。 简单是对完美的追求，达到某种圆满 (comple</description>
     </item>
-    
     <item>
       <title>How to revert github source code to a specific commit</title>
       <link>https://anotherbug.com/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</link>
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</guid>
       <description>如何将Github的代码回退到某一个指定的提交版本 How to revert Github source code to a specific commit git reset --hard &amp;quot;old-commit-id&amp;quot; git push -f</description>
     </item>
-    
     <item>
       <title>Linux 下的查看系统内存信息</title>
       <link>https://anotherbug.com/2013/06/14/how-to-read-memory-info-under-linux/</link>
       <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/06/14/how-to-read-memory-info-under-linux/</guid>
       <description>Linux查看系统内存信息可以有如下方法： free free -m cat /proc/meminfo 如果要查询详细到RAM规格，DDR2，DDR3可以使用： sudo lshw</description>
     </item>
-    
     <item>
       <title>Linux 下的几个文件</title>
       <link>https://anotherbug.com/2013/06/13/linux-dev-files/</link>
       <pubDate>Thu, 13 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/06/13/linux-dev-files/</guid>
       <description>Linux 下的几个文件 Unix或者类 Unix系统/dev下有几个很特殊的文件.他们就是: 1: /dev/null 这个/dev下放的是系统和用户的设备文件. null是个文</description>
     </item>
-    
     <item>
       <title>How to make presentation using markdown</title>
       <link>https://anotherbug.com/2013/06/12/how-to-make-presentation-using-markdown/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/06/12/how-to-make-presentation-using-markdown/</guid>
       <description>How to make presentation using markdow 如何使用markdown做报告 1. 安装 Markdown Presenter Markdown Presenter 地址 git clone https://github.com/jsakamoto/MarkdownPresenter.git 2. 安装Ubuntu下的WebServer-webfs sudo apt-get install webfs 或者使用pyt</description>
     </item>
-    
     <item>
       <title>How to install CyanogenMod on Galaxy S3</title>
       <link>https://anotherbug.com/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</link>
       <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</guid>
       <description>Galaxy S3 安装CyanogenMod CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。玩转Andorid ROM必备。</description>
     </item>
-    
     <item>
       <title>What to do next for your GTD plan</title>
       <link>https://anotherbug.com/2013/05/27/what-to-do-next-for-your-gtd-plan/</link>
       <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/05/27/what-to-do-next-for-your-gtd-plan/</guid>
       <description>GTD 下一步行动计划 A simple pictures shows your GTD plan for next step： That&amp;rsquo;s it!!</description>
     </item>
-    
     <item>
       <title>How to use wget to donwload the whole web folder</title>
       <link>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</link>
       <pubDate>Mon, 20 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</guid>
       <description>如何使用wget下载整个网站的文件夹 How to use wget to donwload the whole web folder 使用如下命令： wget -r -p -E -k -nH -np --cut-dirs=1 -P ~/Downloads/ http://99.198.110.38/Chinese/MP3s/13%E6%97%A7%E7%BA%A6%E8%AE%B2%E9%81%93/ That&amp;rsquo;s it!!</description>
     </item>
-    
     <item>
       <title>How to install third party beamer theme</title>
       <link>https://anotherbug.com/2013/05/18/how-to-install-third-party-beamer-theme/</link>
       <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/05/18/how-to-install-third-party-beamer-theme/</guid>
       <description>如何安装第三方的Beamer theme How to install third party beamer theme 为了安装Beamer theme 文件不破坏原有的TDS (Tex Directory Structure) ，可以将需要的第三方theme安装到如下目录：</description>
     </item>
-    
     <item>
       <title>How to crack the master lock</title>
       <link>https://anotherbug.com/2013/04/29/how-to-crack-master-lock/</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/04/29/how-to-crack-master-lock/</guid>
       <description>如何破解master lock的密码 原委 最近游泳不小心把爱锁丢失，无奈看到地上有一个废弃的master lock，捡了回来，死马当活马医吧。 破解</description>
     </item>
-    
     <item>
       <title>How to create Schulte Grid using Excel</title>
       <link>https://anotherbug.com/2013/04/29/how-to-create-schulte-grid-using-excel/</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/04/29/how-to-create-schulte-grid-using-excel/</guid>
       <description>如何用Excel做舒尔特方格 什么是舒尔特方格 舒尔特方格 (Schulte Grid) 是在一张方形卡片上画上 1cm × 1cm 的 25 个方格，格子内任意填写上阿拉伯数字 1 ~ 25 等共 25 个数</description>
     </item>
-    
     <item>
       <title>How to download a whole website using wget with chinese character support</title>
       <link>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</link>
       <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</guid>
       <description>如何使用wget下载整个网站同时支持中文命名 wget 下载整个网站 使用命令： wget -r -p -E -k -nH -np --cut-dirs=1 -P /path/to/save/ Website URL 支持中文 vi ~/.wgetrc 添加如下内容： --restrict-file-names=nocontrol --trust-server-names=on --content-disposition=on That&amp;rsquo;s it!!</description>
     </item>
-    
     <item>
       <title>Windows 下如何关闭特定端口</title>
       <link>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</guid>
       <description>netstat -aon|findstr &amp;quot;9050&amp;quot; TCP: 127.0.0.1:9050 0.0.0.0 LISTENING 2016 tasklist|findstr &amp;ldquo;2016&amp;rdquo; tor.exe 2016 Console 0 16,064 ctrl+alt+delete 打开任务管理器，找到tor.exe右键end process。 That&amp;rsquo;s it!!</description>
     </item>
-    
     <item>
       <title>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox</title>
       <link>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</guid>
       <description>Setup a multinode Cassandra using Ubuntu 12.04 and Virtualbox 1. Setup virtual machines (3 for exmaple) You should first setup one machine using virtualbox, setup JAVA environment, download the Cassandra source code Use Virtualbox&amp;rsquo;s virtualmanager function to copy another two ubuntu machines. Make sure to modify the hostname. Modify the /etc/hosts file. Machine summary 192.168.56.101 sjhadoop0 192.168.56.103 sjhadoop1 192.168.56.104 sjhadoop2 2. Config Cassandra Modify /conf/cassandra-env.shfile. MAX_HEAP_SIZE=&amp;amp;quot;512M&amp;amp;quot; HEAP_NEWSIZE=&amp;amp;quot;128M&amp;amp;quot; Modify /conf/cassandra.yaml file.</description>
     </item>
-    
     <item>
       <title>Linksys E1550 刷DD-WRT教程</title>
       <link>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</link>
       <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</guid>
       <description>Linksys E1550 刷DD-WRT教程 将路由器恢复出厂设置并且硬复位 （30/30/30复位）目的是清除nvran里面的记忆 下载对应E1550的DD-WRTb</description>
     </item>
-    
   </channel>
 </rss>

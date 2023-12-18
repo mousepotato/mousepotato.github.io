@@ -6,24 +6,21 @@
     <description>Recent content in android on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://anotherbug.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://anotherbug.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Samsung S6 Edge Install Lineage OS 17.1</title>
       <link>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</guid>
       <description>又开始折腾 Android ROM 了。上次是 7 年前在 Galaxy S3 上基于 CyanogenMod 进行的。这次主要是 Samsung S6 Edge 自带的 Android 7.0 版本太老了。 基本信息 Samsung S6 Edge 的 Model 是 SM-G925F开头，想刷版本</description>
     </item>
-    
     <item>
       <title>How to install CyanogenMod on Galaxy S3</title>
       <link>https://anotherbug.com/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</link>
       <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://anotherbug.com/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</guid>
       <description>Galaxy S3 安装CyanogenMod CyanogenMod是Android上一个开源的固件（ROM）管理和定制软件。玩转Andorid ROM必备。</description>
     </item>
-    
   </channel>
 </rss>
