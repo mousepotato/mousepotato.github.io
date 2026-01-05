@@ -5,13 +5,13 @@
     <description>Recent content on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 17 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://anotherbug.com/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
       <link>https://anotherbug.com/posts/</link>
-      <pubDate>Sun, 17 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
       
       <guid>https://anotherbug.com/posts/</guid>
       <description></description>
@@ -67,6 +67,346 @@
       
       <guid>https://anotherbug.com/archives/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://anotherbug.com/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://anotherbug.com/main/</guid>
+      <description>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.1//EN&#34;
+  &#34;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&#34;&gt;
+&lt;html xmlns=&#34;http://www.w3.org/1999/xhtml&#34; xml:lang=&#34;en&#34;&gt;
+
+&lt;head&gt;
+  &lt;meta name=&#34;generator&#34; content=&#34;jemdoc, see http://jemdoc.jaboc.net/&#34; /&gt;
+  &lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html;charset=utf-8&#34; /&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;jemdoc.css&#34; type=&#34;text/css&#34; /&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;person.css&#34; type=&#34;text/css&#34; /&gt;
+  &lt;title&gt;Shuangjiang Li &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&#34;layout-content&#34;&gt;
+    &lt;div id=&#34;toptitle&#34;&gt;
+      &lt;h1&gt;Shuangjiang Li&#39;s home page&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;table class=&#34;imgtable&#34; frame=vsides&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;img src=&#34;./pics/sli.jpg&#34; alt=&#34;sli&#34; /&gt;&amp;nbsp;
+        &lt;/td&gt;
+        &lt;td align=&#34;left&#34;&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+          &lt;p&gt;&lt;a href=&#34;https://anotherbug.com/main/&#34;&gt;Shuangjiang Li&lt;/a&gt;, Ph.D. &lt;a href=&#34;#&#34;&gt; [my resume] &lt;/a&gt;&lt;/p&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;p&gt;Staff Engineer at the &lt;a href=&#34;http://researchcenter.paloaltonetworks.com/&#34;&gt;Application and Threat Research Center&lt;/a&gt;, &lt;a href=&#34;http://www.paloaltonetworks.com/&#34;&gt;Palo Alto Networks Inc.&lt;/a&gt; from 2015.06 to 2017.08.
+            &lt;/br&gt;My main responsibilities are on the networking protocols as well as security R&amp;D on our next generation firewall (NGFW).&lt;/p&gt;
+          &lt;/tr&gt;
+           &lt;tr&gt;
+            Prior to joining &lt;a href=&#34;http://www.paloaltonetworks.com/&#34;&gt;Palo Alto Networks Inc.&lt;/a&gt;, I worked as a Teaching and Research Assistant at
+            &lt;/br&gt;
+             &lt;a href=&#34;http://aicip.eecs.utk.edu/wiki/Main_Page&#34;&gt;Advanced Imaging and Collaborative Information Processing (AICIP)&lt;/a&gt;
+            &lt;/br&gt;
+            &lt;a href=&#34;http://www.eecs.utk.edu/&#34;&gt;Department of Electrical Engineering and Computer Science&lt;/a&gt;
+            &lt;/br&gt;
+            &lt;a href=&#34;http://www.utk.edu/&#34;&gt;University of Tennessee, Knoxville&lt;/a&gt; under &lt;a href=&#34;http://www.eecs.utk.edu/people/faculty/fulltime/qi/main&#34;&gt;Professor Hairong Qi&lt;/a&gt;&lt;/p&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h2&gt;Contact&lt;/h2&gt;
+    &lt;p&gt;Email: sli22 at vols.utk.edu&lt;/a&gt;&lt;/p&gt;
+	&lt;p&gt;&lt;a href=&#34;https://scholar.google.com/citations?user=XWeX0LcAAAAJ&amp;hl=en&#34; target=&#34;_blank&#34;&gt; My Google Scholar Page&lt;/a&gt;&lt;/p&gt;
+    &lt;h2&gt;Education&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Ph.D., Computer Engineering, &lt;a href=&#34;http://www.utk.edu&#34;&gt;University of Tennessee&lt;/a&gt;, Dec. 2011 &amp;ndash; May 2015&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt; Dissertation: &lt;a href=&#34;./resources/dissertation-shuangjiangli2015.pdf&#34;&gt;Compressed Sensing in Resource-Constrained Environments: From Sensing Mechanism Design to Recovery Algorithms&lt;/a&gt;&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;M.Sc., Computer Engineering, &lt;a href=&#34;http://www.utk.edu&#34;&gt;University of Tennessee&lt;/a&gt;, Aug. 2009 &amp;ndash; Dec. 2011&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt; Thesis: &lt;a href=&#34;./resources/thesis-shuangjiangli2011.pdf&#34;&gt;Distributed Data Aggregation for Sparse Recovery in Wireless Sensor Networks&lt;/a&gt;&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;B.S., Electrical Engineering,
+          &lt;a href=&#34;http://saee.ustb.edu.cn/&#34;&gt;University of Science and Technology Beijing&lt;/a&gt;, Sept. 2005 &amp;ndash; Jun. 2009&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;
+          &lt;p&gt; Bachelor thesis: Improving the precision of GPS data using Real Time Kinematic (RTK) algorithm (in Chinese) &lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Research Interests&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Compressed Sensing &lt;a href=&#34;./resources/cs-recovery.pdf&#34;&gt;(CS recovery: A survey)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+		&lt;p&gt; Image/Video Processing, Hyperspectral Imaging, fMRI, and LIBS Spectra Analysis.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Mobile/Urban Sensing (energy efficiency, data processing, sensing applications)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Wireless Sensor Networks (WSNs)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Pattern Recognition &amp; Big Data Analysis&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Computer Networks and Security&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Publications&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, “A Douglas-Rachford splitting approach to Compressed Sensing image recovery using low-rank regularization”, IEEE Transactions on Image Processing, 2015, doi:10.1109/TIP.2015.2459653.
+        &amp;nbsp &lt;a href=&#34;./resources/2015-image-video-recovery-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2015-image-video-recovery-pub.pdf]&lt;/a&gt;&amp;nbsp &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Wei, Wang and Hairong, Qi and Bulent, Ayhan and Chiman, Kwan and Steven, Vance, “Low-rank tensor decomposition based anomaly detection for hyperspectral imagery,” IEEE International Conference on Image Processing (ICIP),Quebec
+          City, Canada, September 27-30, 2015.&amp;nbsp &lt;a href=&#34;./resources/2015-lowrank-tensor-detection-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2015-lowrank-tensor-detection-pub.pdf]&lt;/a&gt;&amp;nbsp &lt;font color=&#34;blue&#34;&gt;top 10% recognition among around 1300 accepted papers&lt;/font&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Sisi, Xiong and Yanjun, Yao and &lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Qing, Cao and Tian, He and Hairong, Qi and Leon, Tolbert and Yilu, Liu, “kBF: Towards approximate and bloom filter based Key-Value storage for cloud computing systems”, IEEE Transactions
+          on Cloud Computing, 2014, doi:10.1109/TCC.2014.2385063.&amp;nbsp &lt;a href=&#34;./resources/2015-kBF-systems-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2015-kBF-systems-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Wei, Wang and &lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi and Bulent, Ayhan and Chiman, Kwan and Steven, Vance, “Identify anomaly component by sparsity and low rank”, IEEE Workshop on Hyperspectral Image and Signal Processing: Evolution in Remote Sensor
+          (WHISPERS), In Press, Tokyo, Japan, June 2-5, 2015.&amp;nbsp &lt;a href=&#34;./resources/2015-lowrank-anomaly-detection-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2015-lowrank-anomaly-detection-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Rui, Guo and Li, He and Wei, Gao and Hairong, Qi and Gina, Owens, &amp;ldquo;Demo Abstract: MoodMagician - A Pervasive and Unobtrusive Emotion Sensing System using Mobile Phones for Improving Human Mental Health&amp;rdquo;,
+          12th ACM Conference on Embedded Networked Sensor Systems (SenSys 2014).&amp;nbsp &lt;a href=&#34;./resources/2014-emotion-sensing-demo-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2014-emotion-sensing-demo-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, &amp;ldquo;Compressed Dictionary Learning for Detecting Activations in fMRI using Double Sparsity&amp;rdquo;, 2nd IEEE Global conference on Signal and Information Processing, 2014.&amp;nbsp &lt;a href=&#34;./resources/2014-compressed-fMRI-detection-pub.pdf&#34;
+          style=&#34;color:red;&#34;&gt;[2014-compressed-fMRI-detection-pub.pdf]&lt;/a&gt;&amp;nbsp &lt;a href=&#34;./resources/2014-compressed-fMRI-detection-slides-pub.pdf&#34; style=&#34;color:blue;&#34;&gt;[slides.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, &amp;ldquo;Recursive Low-rank and Sparse Recovery of Surveillance Video using Compressed Sensing&amp;rdquo;, 8th ACM/IEEE International Conference on Distributed Smart Cameras, 2014.&amp;nbsp &lt;a href=&#34;./resources/2014-lowrank-video-pub.pdf&#34;
+          style=&#34;color:red;&#34;&gt;[2014-lowrank-video-pub.pdf]&lt;/a&gt;&amp;nbsp &lt;a href=&#34;./resources/2014-lowrank-video-slides-pub.pdf&#34; style=&#34;color:blue;&#34;&gt;[slides.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Wei, Wang and &lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, and Bulent, Ayhan and Chiman, Kwan and Steven, Vance, &amp;ldquo;Revisiting the preprocessing procedures for elemental concentration estimation based on chemcam LIBS on mars rover&amp;rdquo;, 6th IEEE
+          GRSS Workshop on Hyperspectral Image and Signal Processing, 2014.&amp;nbsp &lt;a href=&#34;./resources/2014-spectra-denoising-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2014-spectra-denoising-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, &amp;ldquo;Pattern-based compressed phone sensing&amp;rdquo;, 1st IEEE Global conference on Signal and Information Processing, 2013, pages 169–172.&amp;nbsp &lt;a href=&#34;./resources/2013-pattern-sensing-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2013-pattern-sensing-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, &amp;ldquo;Distributed data aggregation for sparse recovery in wireless sensor networks&amp;rdquo;, 9th IEEE international conference on Distributed Computing in Sensor Systems (DCoSS), 2013, pages 62–69.&amp;nbsp
+          &lt;a
+          href=&#34;./resources/2013-data-aggregation-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2013-data-aggregation-pub.pdf]&lt;/a&gt;&amp;nbsp &lt;a href=&#34;./resources/2013-data-aggregation-slides-pub.pdf&#34; style=&#34;color:blue;&#34;&gt;[slides.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Rui, Guo and &lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Li, He and Wei, Gao and Hairong, Qi and Gina, Owens, &amp;ldquo;Pervasive and unobtrusive emotion sensing for human mental health&amp;rdquo;, 7th International Conference on Pervasive Computing Technologies for
+          Healthcare, 2013, pages 436–439.&amp;nbsp &lt;a href=&#34;./resources/2013-emotion-sensing-pub.pdf&#34; style=&#34;color:red;&#34;&gt;[2013-emotion-sensing-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Jenson, Yin and Bulent, Ayhan and Chiman, Kwan and Wei, Wang and &lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi and Steven, Vance, &amp;ldquo;Enhancement of JMARS&amp;rdquo;, 44th Lunar and Planetary Science Conference, 2013.&amp;nbsp &lt;a href=&#34;./resources/2013-enhance-jmars-pub.pdf&#34;
+          style=&#34;color:red;&#34;&gt;[2013-enhance-JMARS-pub.pdf]&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;b&gt;Shuangjiang, Li&lt;/b&gt; and Hairong, Qi, &amp;ldquo;Sparse representation based band selection for hyperspectral images&amp;rdquo;, 18th IEEE International Conference on Image Processing (ICIP), 2011, pages 2693-2696.&amp;nbsp &lt;a href=&#34;./resources/2011-sparse-band-selection-pub.pdf&#34;
+          style=&#34;color:red;&#34;&gt;[2011-sparse-band-selection-pub.pdf]&lt;/a&gt; &lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Teaching&lt;/h2&gt;
+    &lt;p&gt;Teaching assistant at University of Tennessee for:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;CS140, Data Structures and Algorithms I, Spring 2013 &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;ECE335, Electronic Devices, Fall 2012&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;CS302, Data Structures and Algorithms II, Spring 2012 &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;ECE355, Computer System Fundamentals, Fall 2011&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;CS102/ECE206, An Introduction to Computer Science (C
+          &lt;tt&gt;&lt;/tt&gt;), Spring 2011 &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;CS102/ECE206, An Introduction to Computer Science (C
+          &lt;tt&gt;&lt;/tt&gt;), Fall 2010&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;CS140, Data Structures and Algorithms I, Spring 2010&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;CS102/ECE206, An Introduction to Computer Science (C
+          &lt;tt&gt;&lt;/tt&gt;), Fall 2009&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Awards and Honors&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Honorable recognition to be &#34;top 10%&#34; of accepted papers at The International Conference on Image Processing (ICIP) 2015&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Chancellor’s Extraordinary Professional Promise Award, University of Tennessee, 2013&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Student Senate Travel Award, University of Tennessee, 2013&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Passed doctoral qualify exam with the highest score, 96.88 out of 100, University of Tennessee, 2010&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;EECS Department Excellence Fellowship, University of Tennessee, 2009, 2010&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;First Prize Winner in the China Undergraduate Mathmatical Contest in Modelling (CUMCM) in Beijing, 2007&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;Academic Activities&lt;/h2&gt;
+    &lt;p&gt;&lt;b&gt; 1. Journal Reviewer&lt;/b&gt; (&lt;font color=&#34;red&#34;&gt;40+ papers in total&lt;/font&gt;)&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;https://www.editorialmanager.com/jmbe/default.aspx&#34; target=&#34;_blank&#34;&gt;Journal of Medical and Biological Engineering (JMBE) &lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://winet.ece.ufl.edu/tvt/&#34; target=&#34;_blank&#34;&gt;IEEE Transactions on Vehicular Technology (IEEE-TVT) &lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;https://spie.org/publications/journals/journal-of-electronic-imaging&#34; target=&#34;_blank&#34;&gt;Journal of Electronic Imaging (SPIE-JEI) &lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;https://www.hindawi.com/journals/js/&#34; target=&#34;_blank&#34;&gt;Journal of Sensors&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.oldcitypublishing.com/journals/ahswn-home/&#34; target=&#34;_blank&#34;&gt;Ad Hoc &amp;amp; Sensor Wireless Networks&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6245518&#34; target=&#34;_blank&#34;&gt;IEEE Geoscience and Remote Sensing Magazine (IEEE-GRSM)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2161-3915&#34; target=&#34;_blank&#34;&gt;IEEE Transactions on Emerging Telecommunications Technologies (IEEE-ETT)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.journals.elsevier.com/pervasive-and-mobile-computing&#34; target=&#34;_blank&#34;&gt;Elsevier: Pervasive and Mobile Computing (PMC)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.computer.org/web/tpds&#34; target=&#34;_blank&#34;&gt;IEEE Transactions on Parallel and Distributed Systems (TPDS) &lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.hindawi.com/journals/ijdsn/&#34; target=&#34;_blank&#34;&gt;International Journal of Distributed Sensor Networks (IJDSN)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.springer.com/computer/journal/11714&#34; target=&#34;_blank&#34;&gt; Springer: Frontiers of Information Technology &amp; Electronic Engineering &lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.itiis.org/&#34; target=&#34;_blank&#34;&gt;KSII Transactions on Internet and Information Systems (KSII)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.inderscience.com/jhome.php?jcode=ijahuc&#34; target=&#34;_blank&#34;&gt;International Journal of Ad Hoc and Ubiquitous Computing (IJAHUC)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.col.org.cn/&#34; target=&#34;_blank&#34;&gt;Chinese Optics Letters (COL)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?reload=true&amp;punumber=6287639&#34; target=&#34;_blank&#34;&gt;IEEE Access&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;&lt;b&gt; 2. Conference Reviewer &lt;/b&gt; (&lt;font color=&#34;red&#34;&gt;30+ papers in total&lt;/font&gt;)&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;2017 IEEE Int&#39;l Symposium on Circuits &amp; Systems (ISCAS)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Second International Workshop on Mobile Cloud Computing systems, Management, and Security (MCSMS-2016)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;The 7th International Conference on Ambient Systems, Networks and Technologies (ANT-2016)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;2016 IEEE Int&#39;l Symposium on Circuits &amp; Systems (ISCAS)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;2016 IEEE INFOCOM &lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;2015 IEEE Globecom&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;2015 IEEE Int&#39;l Symposium on Circuits &amp; Systems (ISCAS)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;2015 IEEE 82nd Vehicular Technology Conference (VTC)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;4th International Conference on Advances in Computing, Communications and Informatics (ICACCI­ 2015)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;TPC member GLOBECOM 2015 Workshop on Advances in Software Defined Radio Access Networks and Context­aware Cognitive Networks (SDRANCAN­2015)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;34rd IEEE International Performance Computing and Communications Conference (IPCCC 2015) &lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;&lt;b&gt; 3. Technical Program Committee/Chair &lt;/b&gt;&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+    &lt;p&gt;&lt;a href=&#34;http://ieee-smartworld.org/2017/smartworld/&#34; target=&#34;_blank&#34;&gt; IEEE Smart World Congress &lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    &lt;p&gt;IEEE Smart City Innovations 2017 (IEEE SCI 2017)&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;GLOBECOM 2015 Workshop on Advances in Software Defined Radio Access Networks and Context­aware Cognitive Networks (TPC)&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2&gt;Useful Resources&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;programming.html&#34;&gt;Programming&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&#34;http://www.grammar-monster.com/lessons/comma_with_dear_hello_and_hi.htm&#34; target=&#34;_blank&#34;&gt;Do You Use a Comman with Dear, Hello, and Hi?&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id=&#34;footer&#34;&gt;
+      &lt;div id=&#34;footer-text&#34;&gt;
+        Page generated 2017-02-15 00:33:17 PDT, by &lt;a href=&#34;http://jemdoc.jaboc.net/&#34;&gt;jemdoc&lt;/a&gt;.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src=&#34;https://www.googletagmanager.com/gtag/js?id=UA-11501178-3&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;UA-11501178-3&#39;);
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</description>
     </item>
     
     <item>

@@ -4,7 +4,67 @@
     <url>
       <loc>https://anotherbug.com/</loc>
       
-      <lastmod>2023-12-17T16:44:08-08:00</lastmod>
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/categories/</loc>
+      
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/posts/</loc>
+      
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/random-thoughts/</loc>
+      
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/2026/01/04/slop-syntropy-think/</loc>
+      
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/tags/</loc>
+      
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/categories/technique/</loc>
+      
+      <lastmod>2026-01-04T11:44:08-08:00</lastmod>
       
       
       
@@ -15,26 +75,6 @@
       <loc>https://anotherbug.com/2023/12/17/cc/</loc>
       
       <lastmod>2023-12-17T16:44:08-08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/posts/</loc>
-      
-      <lastmod>2023-12-17T16:44:08-08:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/categories/</loc>
-      
-      <lastmod>2022-06-19T22:56:32-07:00</lastmod>
       
       
       
@@ -53,16 +93,6 @@
   
     <url>
       <loc>https://anotherbug.com/categories/personal/</loc>
-      
-      <lastmod>2022-06-19T22:56:32-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/tags/</loc>
       
       <lastmod>2022-06-19T22:56:32-07:00</lastmod>
       
@@ -95,16 +125,6 @@
       <loc>https://anotherbug.com/2021/09/12/export-flomo/</loc>
       
       <lastmod>2021-09-12T00:00:52-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://anotherbug.com/categories/technique/</loc>
-      
-      <lastmod>2021-08-16T10:20:53-07:00</lastmod>
       
       
       
@@ -472,16 +492,6 @@
     </url>
   
     <url>
-      <loc>https://anotherbug.com/tags/random-thoughts/</loc>
-      
-      <lastmod>2020-07-31T00:23:26-07:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://anotherbug.com/2020/07/31/samsung-s6-edge-install-lineage-17/</loc>
       
       <lastmod>2020-07-31T00:23:26-07:00</lastmod>
@@ -604,6 +614,8 @@
     <url>
       <loc>https://anotherbug.com/tags/awk/</loc>
       
+      <lastmod>2016-05-18T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -611,6 +623,8 @@
   
     <url>
       <loc>https://anotherbug.com/2016/05/18/half-ironman-candidate-statistics/</loc>
+      
+      <lastmod>2016-05-18T00:00:00+00:00</lastmod>
       
       
       
@@ -620,6 +634,8 @@
     <url>
       <loc>https://anotherbug.com/tags/shell/</loc>
       
+      <lastmod>2016-05-18T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -627,6 +643,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/linux/</loc>
+      
+      <lastmod>2016-02-01T00:00:00+00:00</lastmod>
       
       
       
@@ -636,6 +654,8 @@
     <url>
       <loc>https://anotherbug.com/2016/02/01/screen-scrollback/</loc>
       
+      <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -643,6 +663,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/ubuntu/</loc>
+      
+      <lastmod>2016-02-01T00:00:00+00:00</lastmod>
       
       
       
@@ -652,6 +674,8 @@
     <url>
       <loc>https://anotherbug.com/2016/01/01/bash-pattern-match/</loc>
       
+      <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -659,6 +683,8 @@
   
     <url>
       <loc>https://anotherbug.com/2015/12/31/fitbit-hr-data-monitoring/</loc>
+      
+      <lastmod>2015-12-31T00:00:00+00:00</lastmod>
       
       
       
@@ -668,6 +694,8 @@
     <url>
       <loc>https://anotherbug.com/tags/nodejs/</loc>
       
+      <lastmod>2015-12-31T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -675,6 +703,8 @@
   
     <url>
       <loc>https://anotherbug.com/2015/11/15/box-content-apis-example/</loc>
+      
+      <lastmod>2015-11-15T00:00:00+00:00</lastmod>
       
       
       
@@ -684,6 +714,8 @@
     <url>
       <loc>https://anotherbug.com/tags/programming/</loc>
       
+      <lastmod>2015-11-15T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -691,6 +723,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/algorithm/</loc>
+      
+      <lastmod>2015-02-07T00:00:00+00:00</lastmod>
       
       
       
@@ -700,6 +734,8 @@
     <url>
       <loc>https://anotherbug.com/tags/leetcode/</loc>
       
+      <lastmod>2015-02-07T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -707,6 +743,8 @@
   
     <url>
       <loc>https://anotherbug.com/2015/02/07/leetcode-remove-duplicates-in-sorted-array/</loc>
+      
+      <lastmod>2015-02-07T00:00:00+00:00</lastmod>
       
       
       
@@ -716,6 +754,8 @@
     <url>
       <loc>https://anotherbug.com/2013/11/28/download-web-pictures-using-nodejs/</loc>
       
+      <lastmod>2013-11-28T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -723,6 +763,8 @@
   
     <url>
       <loc>https://anotherbug.com/2013/11/25/linux-screen-in-5-commands/</loc>
+      
+      <lastmod>2013-11-25T00:00:00+00:00</lastmod>
       
       
       
@@ -732,6 +774,8 @@
     <url>
       <loc>https://anotherbug.com/2013/10/20/how-to-be-efficient/</loc>
       
+      <lastmod>2013-10-20T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -739,6 +783,8 @@
   
     <url>
       <loc>https://anotherbug.com/2013/06/20/how-to-revert-github-source-code-to-a-specific-commit/</loc>
+      
+      <lastmod>2013-06-20T00:00:00+00:00</lastmod>
       
       
       
@@ -748,6 +794,8 @@
     <url>
       <loc>https://anotherbug.com/2013/06/14/how-to-read-memory-info-under-linux/</loc>
       
+      <lastmod>2013-06-14T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -755,6 +803,8 @@
   
     <url>
       <loc>https://anotherbug.com/2013/06/13/linux-dev-files/</loc>
+      
+      <lastmod>2013-06-13T00:00:00+00:00</lastmod>
       
       
       
@@ -764,6 +814,8 @@
     <url>
       <loc>https://anotherbug.com/2013/06/12/how-to-make-presentation-using-markdown/</loc>
       
+      <lastmod>2013-06-12T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -771,6 +823,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/markdown/</loc>
+      
+      <lastmod>2013-06-12T00:00:00+00:00</lastmod>
       
       
       
@@ -780,6 +834,8 @@
     <url>
       <loc>https://anotherbug.com/categories/research/</loc>
       
+      <lastmod>2013-06-12T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -787,6 +843,8 @@
   
     <url>
       <loc>https://anotherbug.com/2013/06/11/how-to-install-cyanogenmod-on-galaxy-s3/</loc>
+      
+      <lastmod>2013-06-11T00:00:00+00:00</lastmod>
       
       
       
@@ -796,6 +854,8 @@
     <url>
       <loc>https://anotherbug.com/2013/05/27/what-to-do-next-for-your-gtd-plan/</loc>
       
+      <lastmod>2013-05-27T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -803,6 +863,8 @@
   
     <url>
       <loc>https://anotherbug.com/2013/05/20/how-to-use-wget-to-download-the-whole-web-folder/</loc>
+      
+      <lastmod>2013-05-20T00:00:00+00:00</lastmod>
       
       
       
@@ -812,6 +874,8 @@
     <url>
       <loc>https://anotherbug.com/2013/05/18/how-to-install-third-party-beamer-theme/</loc>
       
+      <lastmod>2013-05-18T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -819,6 +883,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/latex/</loc>
+      
+      <lastmod>2013-05-18T00:00:00+00:00</lastmod>
       
       
       
@@ -828,6 +894,8 @@
     <url>
       <loc>https://anotherbug.com/2013/04/29/how-to-crack-master-lock/</loc>
       
+      <lastmod>2013-04-29T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -835,6 +903,8 @@
   
     <url>
       <loc>https://anotherbug.com/2013/04/29/how-to-create-schulte-grid-using-excel/</loc>
+      
+      <lastmod>2013-04-29T00:00:00+00:00</lastmod>
       
       
       
@@ -844,6 +914,8 @@
     <url>
       <loc>https://anotherbug.com/2013/04/28/how-to-download-whole-website-using-wget-with-chinese-character-support/</loc>
       
+      <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -851,6 +923,8 @@
   
     <url>
       <loc>https://anotherbug.com/2012/10/01/shutdown-specific-port-in-windows/</loc>
+      
+      <lastmod>2012-10-01T00:00:00+00:00</lastmod>
       
       
       
@@ -860,6 +934,8 @@
     <url>
       <loc>https://anotherbug.com/tags/cloud-computing/</loc>
       
+      <lastmod>2012-06-05T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -867,6 +943,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/hadoop/</loc>
+      
+      <lastmod>2012-06-05T00:00:00+00:00</lastmod>
       
       
       
@@ -876,6 +954,8 @@
     <url>
       <loc>https://anotherbug.com/2012/06/05/setup-a-multinode-cassandra-using-ubuntu-12-04-and-virtualbox/</loc>
       
+      <lastmod>2012-06-05T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -883,6 +963,8 @@
   
     <url>
       <loc>https://anotherbug.com/tags/virtualbox/</loc>
+      
+      <lastmod>2012-06-05T00:00:00+00:00</lastmod>
       
       
       
@@ -892,6 +974,8 @@
     <url>
       <loc>https://anotherbug.com/tags/dd-wrt/</loc>
       
+      <lastmod>2012-04-30T00:00:00+00:00</lastmod>
+      
       
       
       
@@ -899,6 +983,16 @@
   
     <url>
       <loc>https://anotherbug.com/2012/04/30/linksys-e1550-dd-dwr-how-to/</loc>
+      
+      <lastmod>2012-04-30T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://anotherbug.com/main/</loc>
       
       
       

@@ -6,31 +6,31 @@
     <description>Recent content in Categories on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jan 2026 11:44:08 -0800</lastBuildDate>
     <atom:link href="https://anotherbug.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>personal</title>
+      <title>Technique</title>
+      <link>https://anotherbug.com/categories/technique/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://anotherbug.com/categories/technique/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal</title>
       <link>https://anotherbug.com/categories/personal/</link>
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/categories/personal/</guid>
       <description></description>
     </item>
     <item>
-      <title>technique</title>
-      <link>https://anotherbug.com/categories/technique/</link>
-      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://anotherbug.com/categories/technique/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>product</title>
+      <title>Product</title>
       <link>https://anotherbug.com/categories/product/</link>
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/categories/product/</guid>
       <description></description>
     </item>
     <item>
-      <title>research</title>
+      <title>Research</title>
       <link>https://anotherbug.com/categories/research/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/categories/research/</guid>

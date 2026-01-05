@@ -6,10 +6,17 @@
     <description>Recent content in Tags on 鼠标土豆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jan 2026 11:44:08 -0800</lastBuildDate>
     <atom:link href="https://anotherbug.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>life</title>
+      <title>Random-Thoughts</title>
+      <link>https://anotherbug.com/tags/random-thoughts/</link>
+      <pubDate>Sun, 04 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://anotherbug.com/tags/random-thoughts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
       <link>https://anotherbug.com/tags/life/</link>
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/life/</guid>
@@ -23,154 +30,147 @@
       <description></description>
     </item>
     <item>
-      <title>windows</title>
+      <title>Windows</title>
       <link>https://anotherbug.com/tags/windows/</link>
       <pubDate>Sat, 07 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/windows/</guid>
       <description></description>
     </item>
     <item>
-      <title>hacks</title>
+      <title>Hacks</title>
       <link>https://anotherbug.com/tags/hacks/</link>
       <pubDate>Wed, 30 Jun 2021 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/hacks/</guid>
       <description></description>
     </item>
     <item>
-      <title>music</title>
+      <title>Music</title>
       <link>https://anotherbug.com/tags/music/</link>
       <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/music/</guid>
       <description></description>
     </item>
     <item>
-      <title>android</title>
+      <title>Android</title>
       <link>https://anotherbug.com/tags/android/</link>
       <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/android/</guid>
       <description></description>
     </item>
     <item>
-      <title>random-thoughts</title>
-      <link>https://anotherbug.com/tags/random-thoughts/</link>
-      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://anotherbug.com/tags/random-thoughts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>gtd</title>
+      <title>Gtd</title>
       <link>https://anotherbug.com/tags/gtd/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/gtd/</guid>
       <description></description>
     </item>
     <item>
-      <title>test</title>
+      <title>Test</title>
       <link>https://anotherbug.com/tags/test/</link>
       <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/test/</guid>
       <description></description>
     </item>
     <item>
-      <title>git</title>
+      <title>Git</title>
       <link>https://anotherbug.com/tags/git/</link>
       <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/git/</guid>
       <description></description>
     </item>
     <item>
-      <title>awk</title>
+      <title>Awk</title>
       <link>https://anotherbug.com/tags/awk/</link>
       <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/awk/</guid>
       <description></description>
     </item>
     <item>
-      <title>shell</title>
+      <title>Shell</title>
       <link>https://anotherbug.com/tags/shell/</link>
       <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/shell/</guid>
       <description></description>
     </item>
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://anotherbug.com/tags/linux/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/linux/</guid>
       <description></description>
     </item>
     <item>
-      <title>ubuntu</title>
+      <title>Ubuntu</title>
       <link>https://anotherbug.com/tags/ubuntu/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/ubuntu/</guid>
       <description></description>
     </item>
     <item>
-      <title>nodejs</title>
+      <title>Nodejs</title>
       <link>https://anotherbug.com/tags/nodejs/</link>
       <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/nodejs/</guid>
       <description></description>
     </item>
     <item>
-      <title>programming</title>
+      <title>Programming</title>
       <link>https://anotherbug.com/tags/programming/</link>
       <pubDate>Sun, 15 Nov 2015 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/programming/</guid>
       <description></description>
     </item>
     <item>
-      <title>algorithm</title>
+      <title>Algorithm</title>
       <link>https://anotherbug.com/tags/algorithm/</link>
       <pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/algorithm/</guid>
       <description></description>
     </item>
     <item>
-      <title>leetcode</title>
+      <title>Leetcode</title>
       <link>https://anotherbug.com/tags/leetcode/</link>
       <pubDate>Sat, 07 Feb 2015 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/leetcode/</guid>
       <description></description>
     </item>
     <item>
-      <title>markdown</title>
+      <title>Markdown</title>
       <link>https://anotherbug.com/tags/markdown/</link>
       <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
-      <title>latex</title>
+      <title>Latex</title>
       <link>https://anotherbug.com/tags/latex/</link>
       <pubDate>Sat, 18 May 2013 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/latex/</guid>
       <description></description>
     </item>
     <item>
-      <title>cloud-computing</title>
+      <title>Cloud-Computing</title>
       <link>https://anotherbug.com/tags/cloud-computing/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/cloud-computing/</guid>
       <description></description>
     </item>
     <item>
-      <title>hadoop</title>
+      <title>Hadoop</title>
       <link>https://anotherbug.com/tags/hadoop/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/hadoop/</guid>
       <description></description>
     </item>
     <item>
-      <title>virtualbox</title>
+      <title>Virtualbox</title>
       <link>https://anotherbug.com/tags/virtualbox/</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/virtualbox/</guid>
       <description></description>
     </item>
     <item>
-      <title>dd-wrt</title>
+      <title>Dd-Wrt</title>
       <link>https://anotherbug.com/tags/dd-wrt/</link>
       <pubDate>Mon, 30 Apr 2012 00:00:00 +0000</pubDate>
       <guid>https://anotherbug.com/tags/dd-wrt/</guid>
